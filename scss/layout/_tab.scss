@@ -1,0 +1,105 @@
+.dnn-tabs {
+  border: 0;
+  display: flex;
+  gap: 40px;
+  margin-left: 0 !important;
+
+  &::before {
+    display: none !important;
+  }
+
+  &.nav-tabs {
+    border-bottom: 0 !important;
+  }
+
+  &__item {
+    float: none;
+    border: 0;
+    // margin: 0 !important;
+  }
+
+  &__link {
+    padding: 24px 0px !important;
+    color: $grey-3;
+    line-height: $lh-100 !important;
+    border: 0 !important;
+    transition: all 0.3s ease;
+    border-radius: 20px 20px 0 0 !important;
+
+    &:hover {
+      color: $primary !important;
+      background-color: transparent !important;
+      border: 0 !important;
+      line-height: $lh-100 !important;
+    }
+  }
+
+  &__item.active &__link {
+    background-color: transparent;
+    border: 0 !important;
+    color: $primary !important;
+    border-bottom: 2px solid $primary !important;
+  }
+}
+
+@media all and (max-width: 1200px) {
+  .dnn-tabs {
+    gap: 20px;
+
+    &__item {
+      &.active {
+        .dnn-tabs {
+          &__link {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+
+    &__link {
+      font-size: 18px;
+      padding: 10px 0 5px !important;
+    }
+  }
+}
+
+@media all and (max-width: 992px) {
+  .dnn-tabs {
+    gap: 10px;
+
+    &__link {
+      font-size: 16px;
+    }
+
+    &__item {
+      &.active {
+        .dnn-tabs {
+          &__link {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 768px) {
+  .dnn-tabs {
+    flex-direction: column;
+    gap: 5px;
+
+    &__link {
+      font-size: 14px;
+    }
+
+    &__item {
+      &.active {
+        .dnn-tabs {
+          &__link {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}

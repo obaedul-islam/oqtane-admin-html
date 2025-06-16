@@ -1,0 +1,32 @@
+.add-intake {
+  &__title {
+    font-size: $fs-22;
+    font-weight: $fw-600;
+    color: $dark;
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 24px;
+  }
+
+  &__separator {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    font-size: $fs-22;
+    line-height: $lh-100;
+    color: $grey-3;
+    font-weight: $fw-700;
+  }
+
+  &__line {
+    display: inline-block;
+    flex-grow: 1;
+    flex-shrink: 1;
+    height: 1px;
+    background-color: $border-color;
+  }
+}

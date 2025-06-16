@@ -1,0 +1,33 @@
+.status-pill {
+  padding: 5px 12px;
+  border-radius: 30px;
+  font-size: $fs-14;
+  line-height: $lh-100;
+  white-space: nowrap;
+
+  &--sm {
+    padding: 2px 8px;
+    font-size: 10px;
+  }
+
+  &--default {
+    background-color: $blue-light;
+  }
+
+  &--success {
+    background-color: $success;
+  }
+
+  &--danger {
+    background-color: $danger-light;
+  }
+
+  &--warning {
+    background-color: $secondary-light;
+  }
+
+  &--primary {
+    background-color: $blue-light;
+    color: $primary-light;
+  }
+}

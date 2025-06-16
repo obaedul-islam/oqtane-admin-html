@@ -1,0 +1,451 @@
+.modal {
+  overflow-y: hidden !important;
+
+  &.confirm-modal {
+    left: 0 !important;
+    padding-left: 0 !important;
+  }
+
+  &-dialog {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 850px;
+    max-width: 96%;
+    margin-top: 0;
+  }
+
+  &-content {
+    width: 100%;
+    border-radius: 12px;
+    max-height: calc(100% - 30px);
+    overflow-y: auto !important;
+  }
+
+  &-body {
+    padding: 40px 30px 50px 30px;
+
+    @media all and (max-width: 767px) {
+      padding: 25px 15px 30px 15px;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+
+    @media all and (max-width: 767px) {
+      width: 64px;
+      height: 64px;
+    }
+
+    i {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 96px;
+      color: $danger;
+
+      @media all and (max-width: 767px) {
+        font-size: 56px;
+      }
+    }
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+
+    p {
+      text-align: center;
+      font-size: 18px;
+      font-weight: 400;
+      color: $danger;
+      margin-bottom: 5px;
+    }
+  }
+
+  &__text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p {
+      text-align: center;
+      font-size: 28px;
+      line-height: 34px;
+      font-weight: 600;
+      color: $dark;
+
+      @media all and (max-width: 767px) {
+        font-size: 20px;
+        line-height: 26px;
+      }
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 24px;
+  }
+
+  &__action {
+    border: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 172px;
+    padding: 8px 28px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+    text-align: center;
+    border: 1px solid $primary;
+    transition: all 0.3s ease-in-out, border 0.1s ease-in-out;
+
+    @media all and (max-width: 767px) {
+      width: 124px;
+      padding: 7px 16px;
+      font-size: 14px;
+      line-height: 18px;
+    }
+
+    &--primary {
+      background-color: $primary;
+      color: $white;
+
+      &:hover {
+        background-color: $primary-light;
+      }
+    }
+
+    &--outline {
+      background-color: $white;
+      color: $primary;
+
+      &:hover {
+        color: $white;
+        background-color: $primary;
+      }
+    }
+  }
+
+  .btn-close {
+    right: 20px;
+    top: 14px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 28px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    color: #1f1f1f;
+    font-size: 24px;
+    z-index: 100;
+
+    @media all and (max-width: 767px) {
+      right: 10px;
+      top: 10px;
+    }
+  }
+}
+
+.modal {
+  z-index: 10000 !important;
+  left: 80px !important;
+
+  &.edit {
+    .modal {
+      &-dialog {
+        width: 100% !important;
+        max-width: unset;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+
+      &-header {
+        padding: 0 0 0 40px;
+        display: flex;
+        justify-content: space-between;
+
+        &__btns {
+          display: flex;
+          gap: 12px;
+        }
+
+        .close-btn {
+          height: 87px;
+          width: 87px;
+          margin-left: auto;
+          display: inline-block;
+          background-color: $border-color;
+          border: 0;
+          span {
+            font-size: 30px;
+            font-weight: 700;
+            color: $dark;
+          }
+        }
+        &::before,
+        &::after {
+          content: unset;
+        }
+      }
+      &-body {
+        padding: 0 30px 30px;
+        max-height: calc(100vh - 110px);
+        overflow-y: auto;
+
+        &--wrapper {
+          margin: 0 auto;
+          max-width: 1070px;
+        }
+        &--content {
+          margin: 0 auto;
+          max-width: 670px;
+        }
+      }
+      &-footer {
+        padding-bottom: 30px;
+        &--content {
+          margin: 0 auto;
+          max-width: 670px;
+          display: flex;
+          gap: 20px;
+        }
+      }
+      &-content {
+        height: 100vh !important;
+        max-height: 100vh;
+        border-radius: 0;
+      }
+    }
+  }
+
+  &.if-modal {
+    .modal {
+      &-dialog {
+        @media all and (min-width: 768px) {
+          width: 1130px;
+          max-width: calc(100% - 20px);
+        }
+      }
+      &-content {
+        border-radius: 12px;
+      }
+
+      &-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        border-bottom: 0.8px solid $border-color;
+      }
+
+      &-title {
+        font-size: $fs-20;
+        color: $dark;
+        font-weight: $fw-700;
+        margin-right: auto;
+      }
+
+      &-close {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        background-color: transparent;
+        padding: 8px;
+        border: 0;
+        color: $dark;
+
+        i {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 22px;
+        }
+      }
+
+      &-body {
+        padding: 20px 90px 90px;
+      }
+    }
+  }
+  &-body {
+    &__sales-form-item {
+      margin-bottom: 20px;
+      &:nth-last-child(1),
+      &:nth-last-child(2) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &-container {
+    width: 1070px;
+    max-width: 96%;
+    margin: 0 auto;
+  }
+
+  &-footer {
+    background-color: white;
+  }
+
+  &-separator {
+    display: block;
+    width: 100%;
+    height: 0px;
+    border-bottom: 1px dashed $border-color;
+    margin: 32px 0 16px 0;
+  }
+}
+
+.promo-modal {
+  .modal {
+    &-body {
+      min-height: calc(100vh - 110px);
+    }
+  }
+}
+
+.tabular-layout {
+  display: flex;
+  padding-top: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid $border-color;
+  &:first-child {
+    padding-top: 0;
+  }
+
+  &__first {
+    width: 45%;
+  }
+
+  &__second {
+    width: 25%;
+  }
+
+  &__third {
+    width: 30%;
+  }
+
+  &__inner-container {
+    display: flex;
+  }
+
+  &__inner {
+    text-align-last: left;
+    width: 50%;
+  }
+}
+
+.if-modal {
+  &__title,
+  &__text {
+    font-size: $fs-18;
+    line-height: 1.5;
+  }
+
+  &__title {
+    color: $dark;
+    font-weight: $fw-700;
+    margin-bottom: 40px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__text {
+    color: $grey-3;
+    font-weight: $fw-400;
+    margin-bottom: 10px;
+  }
+}
+
+.modal.vr-modal {
+  .modal {
+    &-dialog {
+      @media all and (min-width: 768px) {
+        width: 1024px;
+        max-width: calc(100% - 20px);
+      }
+    }
+
+    &-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+
+    &-body {
+      padding: 50px 60px;
+    }
+
+    &-title {
+      font-size: 24px;
+      line-height: $lh-22;
+      font-weight: $fw-400;
+      color: #1d242d;
+    }
+
+    &-close {
+      width: 24px;
+      height: 24px;
+      background-color: #1d242d;
+      border: 1px solid #1d242d;
+      border-radius: 24px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 4px rgba(#b5b5b5, 0.15);
+
+      i {
+        font-size: 10px;
+        font-weight: 600;
+        color: $white;
+      }
+    }
+  }
+
+  // Adjust list table header height
+  .list-table .table thead tr {
+    height: 58px;
+
+    th {
+      font-size: 18px;
+      color: #353e4a;
+      font-weight: 500;
+    }
+  }
+
+  .list-table .table tr td {
+    font-size: 18px;
+    color: #1d242d;
+  }
+}

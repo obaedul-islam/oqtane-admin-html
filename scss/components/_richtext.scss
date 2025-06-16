@@ -1,0 +1,8 @@
+.rich-text {
+  &__lebel {
+    &:focus {
+      top: 10px;
+      font-size: 10px;
+    }
+  }
+}

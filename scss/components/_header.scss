@@ -1,0 +1,220 @@
+.header {
+  padding: 0 24px 0 45px;
+}
+
+.menubar {
+  display: flex;
+  align-items: center;
+  gap: 42px;
+  padding: 22px 0;
+
+  &__brand {
+    display: inline-flex;
+    align-items: center;
+    justify-content: start;
+    height: 56px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  &__logo {
+    height: 100%;
+    display: inline-block;
+    max-height: 56px;
+  }
+
+  &__search {
+    width: 360px;
+    height: 56px;
+    display: inline-block;
+  }
+
+  &__items {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 16px;
+  }
+
+  &__item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 56px;
+    width: 56px;
+    background-color: $grey-1-60;
+    border-radius: 56px;
+
+    position: relative;
+  }
+
+  &__icon {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    font-size: 26px;
+    color: $dark;
+  }
+
+  &__badge {
+    position: absolute;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: $danger;
+    top: 14px;
+    left: 30px;
+    border-radius: 10px;
+  }
+
+  &__dropdown {
+    display: inline-block;
+    width: 250px;
+    height: 56px;
+    border: none;
+    border-radius: 56px;
+    background-color: $grey-1-60;
+  }
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  padding: 0 !important;
+
+  &__avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 56px;
+  }
+
+  &__info {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 3px;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  .icon-drop-down {
+    color: $dark;
+    font-size: 20px;
+    margin-left: 8px;
+    font-weight: 600;
+  }
+}
+
+@media all and (max-width: 992px) {
+  .header {
+    padding: 10px;
+  }
+
+  .menubar {
+    &__brand {
+      height: unset;
+      max-width: 150px;
+    }
+
+    &__item {
+      width: 40px;
+      height: 40px;
+      border-radius: 40px;
+    }
+
+    &__icon {
+      width: 20px;
+      height: 20px;
+      font-size: 20px;
+    }
+
+    &__badge {
+      width: 8px;
+      height: 8px;
+      top: 10px;
+      left: 23px;
+    }
+
+    &__dropdown {
+      max-width: 200px;
+      height: 40px;
+    }
+  }
+
+  .user {
+    gap: 10px;
+
+    &__avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 40px;
+    }
+
+    &__name {
+      font-size: 14px !important;
+    }
+
+    &__role {
+      font-size: 12px !important;
+    }
+  }
+}
+
+@media all and (max-width: 768px) {
+  .menubar {
+    gap: 10px;
+    padding: 0;
+
+    &__logo {
+      width: 100px;
+      max-width: unset;
+    }
+
+    &__items {
+      gap: 10px;
+    }
+
+    &__item {
+      width: 30px;
+      height: 30px;
+      border-radius: 30px;
+    }
+
+    &__badge {
+      width: 8px;
+      height: 8px;
+      top: 8px;
+      left: 20px;
+    }
+  }
+
+  .user {
+    justify-content: space-between;
+    padding-right: 7px !important;
+
+    i {
+      font-size: 12px;
+    }
+
+    // &__avatar {
+    //   width: 20px;
+    //   height: 40px;
+    //   border-radius: 40px;
+    // }
+  }
+}

@@ -1,0 +1,28 @@
+.salesman-details {
+	display: flex;
+	gap: 32px;
+	&__left {
+		width: 330px;
+		.chip {
+			&__text {
+				background-color: $success;
+			}
+		}
+	}
+	&__right {
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+		justify-content: center;
+	}
+	&__image {
+		img {
+			width: 100%;
+			border-radius: 20px;
+		}
+	}
+
+	&__label-text {
+		margin-top: 20px;
+	}
+}

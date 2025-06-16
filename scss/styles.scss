@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
+
+@import 'base/variables';
+@import 'base/utils';
+@import 'base/global';
+@import 'base/typography';
+
+@import 'layout/dashboard';
+@import 'layout/main';
+@import 'layout/sidebar';
+@import 'layout/content';
+@import 'layout/footer';
+@import 'layout/slider';
+@import 'layout/tab';
+@import 'layout/accordion';
+
+@import 'components/header';
+@import 'components/input';
+@import 'components/buttons';
+@import 'components/card';
+@import 'components/actionbar';
+@import 'components/list-table';
+@import 'components/multiselect';
+@import 'components/chip';
+@import 'components/switch-button';
+@import 'components/modal';
+@import 'components/list-text-input';
+@import 'components/pill';
+@import 'components/searchbar';
+@import 'components/pagination';
+@import 'components/datepicker';
+@import 'components/daterange';
+// @import "components/toast";
+@import 'components/product';
+@import 'components/richtext';
+
+@import 'pages/add-product';
+@import 'pages/product-details';
+@import 'pages/question-list';
+@import 'pages/add-question';
+@import 'pages/sites.scss';
+@import 'pages/intake-form';
+@import 'pages/site-dashboard';
+@import 'pages/order-details';
+@import 'pages/patient-details';
+@import 'pages/salesman-details.scss';

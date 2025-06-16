@@ -1,0 +1,8 @@
+{
+  "liveServer.settings.https": {
+    "enable": true,
+    "cert": "E:/Office/Projects/DNNHTML/https/localhost.pem",
+    "key": "E:/Office/Projects/DNNHTML/https/localhost.key",
+    "passphrase": "Pass@123"
+  }
+}

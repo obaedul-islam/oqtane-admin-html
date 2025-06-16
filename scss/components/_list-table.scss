@@ -1,0 +1,162 @@
+.list-table {
+  &__img {
+    width: 58px;
+    height: 50px;
+    border-radius: 10px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  }
+
+  &__icon {
+    width: 45px;
+    height: 45px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background: rgba($secondary, 0.3);
+
+    i {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      font-size: 30px;
+      color: $dark;
+    }
+  }
+
+  &__btn {
+    width: 132px;
+  }
+
+  &__badge-btn {
+    padding: 7px 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 128px;
+  }
+
+  &__btn-badge {
+    min-width: 21px;
+    height: 21px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    background-color: $primary;
+    border-radius: 20px;
+    font-size: $fs-15;
+    line-height: $lh-100;
+    color: $white;
+  }
+
+  &__cell {
+    padding: 4px 0;
+  }
+
+  &__attrs {
+    margin-top: 10px;
+  }
+
+  .table {
+    margin-bottom: 0;
+
+    tr {
+      border: 0 !important;
+      height: 58px;
+      background-color: $white;
+
+      &:nth-of-type(even) {
+        background-color: $white;
+      }
+
+      &:nth-of-type(odd) {
+        background-color: $grey-1-40;
+      }
+
+      th {
+        font-size: $fs-14;
+        line-height: $lh-100;
+        font-weight: $fw-600;
+        vertical-align: middle;
+        border-bottom: 1px solid $border-color;
+        padding: 15px 16px;
+        background-color: $white;
+      }
+
+      td {
+        font-size: $fs-15;
+        padding: 4px 16px;
+        border: 0;
+        vertical-align: middle;
+      }
+
+      th:nth-child(1),
+      td:nth-child(1) {
+        padding-left: 20px;
+      }
+    }
+
+    th {
+      font-size: $fs-14;
+      line-height: $lh-100;
+      font-weight: $fw-600;
+      vertical-align: middle;
+      border-bottom: 1px solid $border-color;
+      padding: 15px 16px;
+      background-color: $white;
+      white-space: nowrap;
+    }
+
+    thead {
+      tr {
+        height: auto;
+        background-color: $white;
+      }
+    }
+  }
+}
+
+
+@media all and (max-width: 768px) {
+  .list-table {
+    .table {
+      tr {
+
+        th,
+        td {
+          padding: 5px 10px;
+        }
+      }
+    }
+  }
+
+  .sales {
+    &__header {
+      display: flex;
+      justify-content: space-between;
+
+      p {
+        font-size: 16px !important;
+      }
+
+      .view-link {
+        font-size: 14px;
+      }
+    }
+
+    &__item {
+      font-size: 14px;
+    }
+  }
+}

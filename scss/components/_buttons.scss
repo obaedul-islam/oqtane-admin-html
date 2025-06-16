@@ -1,0 +1,365 @@
+.dnn-btn {
+  background-color: transparent;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 1px solid transparent;
+  padding: 12px 20px;
+  font-size: $fs-18;
+  font-weight: 500;
+  line-height: $lh-100;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  text-decoration: none !important;
+  text-wrap: nowrap;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &--icon-btn {
+    padding: 2px;
+    color: $dark !important;
+    height: 24px;
+    width: 24px;
+    border-radius: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    i {
+      display: inline-block;
+      font-size: 22px;
+    }
+  }
+
+  &__primary {
+    background: $primary;
+    color: $white;
+
+    &:hover,
+    &:visited {
+      color: $white;
+    }
+  }
+
+  &__primary--lg {
+    padding: 24px 30px;
+    background: $primary;
+    color: $white;
+
+    &:hover,
+    &:visited {
+      color: $white;
+    }
+  }
+
+  &__primary--outline {
+    padding: 21px 20px;
+    border-color: $primary;
+    color: $primary;
+    background-color: $white;
+
+    &:hover,
+    &:visited {
+      color: $primary;
+    }
+
+    &__lg {
+      padding: 21px 20px;
+    }
+  }
+
+  &__grey--outline {
+    padding: 21px 20px;
+    border-color: $grey-3;
+    color: $grey-3;
+    background-color: $white;
+
+    &:hover,
+    &:visited {
+      color: $grey-3;
+    }
+  }
+
+  &__light {
+    padding: 10px 15px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: $lh-100;
+    color: $dark;
+    background-color: white;
+    border: 1px solid $border-color;
+    box-shadow: 0px 2px 4px 0px rgba($shadow-color, 0.15);
+    text-align: center;
+
+    &:hover,
+    &:visited {
+      color: $dark;
+    }
+  }
+
+  &__withicon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    i {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      font-size: 22px;
+    }
+  }
+
+  &__icon {
+    padding: 0;
+    width: 24px;
+    height: 24px;
+
+    i {
+      font-size: 22px;
+      color: $primary;
+    }
+  }
+
+  &__link {
+    color: $primary !important;
+    padding: 0;
+    border-bottom: 1px solid $primary;
+    border-radius: 0;
+
+    &:hover {
+      color: $primary-light !important;
+      border-bottom: 1px solid $primary-light;
+    }
+
+    &--dark {
+      color: $dark !important;
+    }
+
+    &--underline {
+      text-decoration: underline !important;
+    }
+  }
+
+  &__danger {
+    background-color: #ed254e;
+    color: #fff;
+  }
+
+  &__retake {
+    display: none;
+  }
+
+  &__crop {
+    display: none;
+  }
+}
+
+.dnn__close-btn {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  background-color: $dark;
+  border: 1px solid $dark;
+  border-radius: 24px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 4px rgba(#b5b5b5, 0.15);
+
+  i {
+    font-size: 10px;
+    font-weight: 600;
+    color: $white;
+  }
+}
+
+.action-group {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 6px 12px;
+  background-color: $white;
+  border: 1px solid $border-color;
+  border-radius: 30px;
+  box-shadow: 0px 0px 4px 0px rgba($shadow-color, 0.15);
+}
+
+.button-group {
+  display: inline-flex;
+  align-items: start;
+  justify-content: start;
+  height: 40px;
+
+  &__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 40px;
+    font-size: 16px;
+    padding: 5px 16px;
+    border: 1px solid $grey-3;
+    color: $dark;
+    background-color: $white;
+    transition: all 0.3s ease;
+
+    &:hover,
+    &.active {
+      background-color: $primary;
+      border-color: $primary;
+      color: $white;
+    }
+
+    &:first-of-type {
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+    }
+
+    &:last-of-type {
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+
+    &:not(&:first-of-type) {
+      border-left: 0;
+    }
+  }
+}
+
+.dnn-view-btn {
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  color: #275dad;
+  text-decoration: underline;
+
+  &:hover {
+    color: #275dad;
+  }
+}
+
+.dnn-loader {
+  display: inline-block;
+  border: 2px solid $blue-light;
+  border-top: 2px solid $primary-light;
+  border-radius: 50%;
+  margin-right: 8px;
+  width: 18px;
+  height: 18px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  animation: spin 1.3s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media all and (max-width: 992px) {
+  .dnn-btn {
+    &__primary {
+      padding: 10px 15px;
+      font-size: 14px;
+
+      &--outline {
+        padding: 10px 15px;
+        font-size: 14px;
+        border-color: #214e9a;
+        color: #214e9a;
+        background-color: #ffffff;
+      }
+
+      &--lg {
+        padding: 8px 15px;
+        font-size: 16px
+      }
+    }
+
+    &__grey {
+      &--outline {
+        padding: 8px 15px;
+        font-size: 16px;
+      }
+    }
+
+    &__icon {
+      width: 20px;
+      height: 20px;
+
+      i {
+        font-size: 18px;
+      }
+    }
+
+    &--icon-btn {
+      width: 20px;
+      height: 20px;
+
+      i {
+        display: inline-block;
+        font-size: 16px;
+      }
+    }
+
+
+  }
+
+  .action-group {
+    gap: 10px;
+    padding: 6px;
+    // background-color: #ffffff;
+    // border: 1px solid #eeeef0;
+    // border-radius: 30px;
+    // box-shadow: 0px 0px 4px 0px rgba(181, 181, 181, 0.15);
+  }
+}
+
+@media all and (max-width: 768px) {
+  .button-group {
+    height: 35px;
+
+    &__btn {
+      width: unset;
+      height: unset;
+      font-size: 12px;
+      padding: 8px;
+    }
+  }
+
+  .dnn-btn {
+    &__primary {
+      &--outline {
+        padding: 6px 12px;
+        font-size: 14px;
+      }
+    }
+
+    &__link {
+      font-size: 14px;
+    }
+
+    &__grey--outline {
+      padding: 8px 12px;
+      font-size: 14px;
+    }
+
+  }
+}

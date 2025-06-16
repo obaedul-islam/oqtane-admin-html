@@ -1,0 +1,51 @@
+.patient-details {
+	display: flex;
+	gap: 32px;
+	&__left {
+		width: 330px;
+		.chip {
+			&__text {
+				background-color: $success;
+			}
+		}
+	}
+	&__right {
+		flex-grow: 1;
+		.dnn-simple-card {
+			&:first-child {
+				margin-top: 0;
+			}
+			&__report-form {
+				margin-top: 25px;
+			}
+			&__list {
+				margin-top: 15px;
+				display: flex;
+				gap: 40px;
+				list-style: none;
+				padding-left: 20px;
+				button {
+					padding: 0;
+					background-color: transparent;
+					border: 0;
+					outline: 0;
+					color: $primary-light;
+					text-decoration: underline;
+					&:hover {
+						color: $primary-light;
+					}
+				}
+			}
+		}
+	}
+	&__image {
+		img {
+			width: 100%;
+			border-radius: 20px;
+		}
+	}
+
+	&__label-text {
+		margin-top: 20px;
+	}
+}

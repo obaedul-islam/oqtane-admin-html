@@ -1,0 +1,41 @@
+.chip {
+	&__text {
+		padding: 12px 15px;
+		margin: 0;
+		display: inline-block;
+		background-color: $secondary-light;
+		border-radius: 30px;
+
+		button {
+			box-shadow: none;
+			border: none;
+			outline: none;
+			background: transparent;
+
+			.icon-cross1 {
+				color: $grey-3;
+			}
+		}
+
+		&.bg-blue-light {
+			padding: 10px 12px;
+			background-color: $blue-light;
+		}
+	}
+}
+
+
+@media all and (max-width: 992px) {
+	.chip {
+		&__text {
+			padding: 5px 10px;
+			font-size: 14px;
+		}
+	}
+
+	.all-chips {
+		gap: 5px;
+	}
+}
+
+@media all and (max-width: 768px) {}

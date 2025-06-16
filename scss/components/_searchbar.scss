@@ -1,0 +1,27 @@
+.searchbar {
+  border-bottom: 1px solid $border-color;
+  padding-bottom: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__text {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 16px;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: $fs-22;
+    font-weight: $fw-600;
+  }
+
+  &__info {
+    margin: 0;
+    font-size: $fs-16;
+    color: $grey-3;
+  }
+}

@@ -1,0 +1,304 @@
+.dnn-card {
+  background-color: $white;
+  border-radius: 20px;
+  margin-bottom: 24px;
+  border: 1px solid $border-color;
+
+  &__header {
+    padding: 20px;
+    font-size: 24px;
+    color: $grey-3 !important;
+    line-height: 1;
+    border-bottom: 1px solid $border-color;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    position: relative;
+
+    &--tabs {
+      padding: 0 20px;
+    }
+
+    h3 {
+      margin-bottom: 0;
+      margin-top: 0;
+      font-weight: $fw-400 !important;
+      color: $grey-3 !important;
+      line-height: $lh-100;
+      font-size: $fs-24;
+    }
+  }
+
+  &__actions {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  &__action-prev,
+  &__action-next {
+    color: $dark;
+
+    i {
+      color: $dark;
+    }
+
+    &:disabled {
+      color: $grey-3;
+      cursor: not-allowed;
+
+      i {
+        color: $grey-3;
+      }
+    }
+  }
+
+  &__body {
+    padding: 20px;
+  }
+
+  .condition {
+    display: flex;
+    align-items: center;
+
+    &__label {
+      width: 200px;
+      font-size: 22px;
+      font-weight: 600;
+
+      &-position-top {
+        margin-top: -65px;
+      }
+    }
+  }
+}
+
+.list-card {
+  overflow: hidden;
+  margin-bottom: 20px;
+
+  &__table {
+    margin: -20px;
+
+    td {
+      &.multiple-action {
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+    }
+  }
+}
+
+.dnn-simple-card {
+  margin-top: 25px;
+  border: 1px solid $border-color;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.no-data {
+  min-height: calc(100vh - 360px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__content {
+    text-align: center;
+  }
+
+  &__desc {
+    color: $grey-3;
+    margin: 15px 0;
+  }
+}
+
+.quiz-card {
+  background-color: #f6f7f9;
+  border-radius: 20px;
+  padding: 24px 20px;
+  margin-bottom: 20px;
+
+  &__quiz {
+    margin-bottom: 16px;
+  }
+
+  &__ans p:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  &__label {
+    font-size: 12px;
+    line-height: 1;
+    color: #999fb9;
+    margin-bottom: 0;
+  }
+
+  &__text {
+    line-height: 1.5;
+    margin-bottom: 15px;
+    margin-top: 4px;
+  }
+}
+
+.sec-card {
+  background-color: #f6f7f9;
+  border-radius: 20px;
+  margin-bottom: 20px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &__header {
+    padding: 16px 20px;
+    border-bottom: 1px solid $grey-3;
+    position: relative;
+
+    .dnn__close-btn {
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 22px;
+      height: 22px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-size: $fs-18;
+    line-height: $lh-150;
+    font-weight: $fw-400;
+  }
+
+  &__body {
+    padding: 16px 20px 20px 20px;
+  }
+
+  &__section {
+    padding: 16px 20px;
+    border-bottom: 1px solid $grey-3;
+
+    &:last-of-type {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  &__footer {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+@media all and (max-width: 992px) {
+  .dnn-card {
+    &__body {
+      padding: 10px;
+      margin-top: 10px;
+
+      h2 {
+        font-size: 24px;
+      }
+    }
+
+    &__header {
+      font-size: 22px;
+      padding: 10px;
+      flex-direction: column;
+      align-items: start;
+
+      &--with-icon {
+        flex-direction: row;
+      }
+
+      h3 {
+        font-size: 20px;
+      }
+    }
+
+    &__actions {
+      flex-direction: column;
+      align-items: start;
+      gap: 10px;
+      margin-top: 15px;
+
+      &--with-icon {
+        margin-top: 0;
+        flex-direction: row;
+
+      }
+    }
+
+    .condition {
+      &__label {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .list-card {
+    &__table {
+      padding: 0 10px;
+    }
+  }
+
+  .sec-card {
+    &__header {
+      padding: 15px;
+    }
+
+    &__section {
+      padding: 15px;
+    }
+
+    &__body {
+      padding: 15px;
+    }
+  }
+
+  .list-card__table {
+    margin: 0;
+  }
+
+  .dnn-simple-card {
+    margin-top: 15px;
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+
+  // .table-responsive {
+  //   border-top: 0;
+  // }
+}
+
+@media all and (max-width: 768px) {
+  .sec-card {
+    &__header {
+      padding: 10px;
+    }
+
+    &__section {
+      padding: 10px;
+    }
+
+    &__body {
+      padding: 10px;
+    }
+  }
+
+  .dnn-card {
+    .condition {
+      &__label {
+        font-size: 14px;
+      }
+    }
+  }
+}

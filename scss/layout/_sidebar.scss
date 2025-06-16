@@ -1,0 +1,159 @@
+.sidebar {
+  width: 232px;
+  background-color: $white;
+  border-radius: 20px 0 0 20px;
+  padding: 0;
+  padding-right: 0;
+  height: 100%;
+  position: relative;
+  transition: all 0.4s ease;
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 20px 12px;
+    list-style: none;
+    gap: 8px;
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  &__item {
+    display: block;
+    border-radius: 30px;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    background-color: $white;
+    color: $dark;
+    text-decoration: none;
+    line-height: 1.2;
+    font-weight: 400;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    position: relative;
+
+    &:hover {
+      text-decoration: none;
+      color: $dark;
+      background-color: $secondary-light;
+    }
+
+    &--active {
+      background-color: $secondary-light;
+    }
+
+    &:visited {
+      color: $dark;
+    }
+  }
+
+  &__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    font-size: 20px;
+  }
+
+  &__text {
+    white-space: normal;
+    line-height: 1.2;
+  }
+
+  &__toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    outline: 0;
+    background-color: $secondary;
+    width: 22px;
+    height: 45px;
+    border-radius: 10px 0 0 10px;
+
+    position: absolute;
+    right: 0;
+    top: 280px;
+
+    i {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 10px;
+      height: 16px;
+      font-size: 16px;
+      color: $dark;
+      transition: all 0.4s ease;
+    }
+  }
+
+  &--collapsed {
+    width: 72px;
+    padding: 24px 0px;
+  }
+
+  &--collapsed &__items {
+    padding: 20px 8px;
+    gap: 4px;
+  }
+
+  &--collapsed &__text {
+    width: 0;
+    opacity: 0;
+    transition: all 0.4s ease;
+    display: none;
+  }
+
+  &--collapsed &__toggle {
+    i {
+      transform: rotateY(180deg);
+    }
+  }
+}
+
+
+@media all and (max-width: 768px) {
+  .sidebar {
+    width: 150px;
+
+    &--collapsed {
+      width: 60px;
+      padding: 15px 0px;
+    }
+
+    &__link {
+      padding: 5px;
+      justify-content: center;
+      gap: 5px;
+    }
+
+    &__icon {
+      font-size: 16px;
+    }
+
+    &__text {
+      font-size: 12px;
+    }
+
+    &__toggle {
+      width: 18px;
+      height: 30px;
+      border-radius: 5px 0 0 5px;
+
+      i {
+        font-size: 14px;
+      }
+    }
+
+    .sidebar__items {
+      align-items: start;
+    }
+  }
+}

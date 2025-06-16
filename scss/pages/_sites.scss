@@ -1,0 +1,31 @@
+.site-products {
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0;
+    border-bottom: 1px dashed $border-color;
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    color: $dark;
+    line-height: $lh-100;
+  }
+
+  &__label {
+    margin-bottom: 0;
+    color: $grey-3;
+    font-size: $fs-12;
+    line-height: $lh-100;
+  }
+
+  &__action {
+    display: inline-flex;
+    align-items: center;
+  }
+}

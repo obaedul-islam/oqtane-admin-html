@@ -1,0 +1,123 @@
+.custom-datepicker {
+  width: 100%;
+  display: block;
+  height: 68px;
+
+  &__input {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+  }
+
+  &__viewer {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    border-radius: 40px !important;
+    width: 100%;
+    height: 100%;
+    border: 1px solid $grey-3 !important;
+    padding: 12px 30px;
+    background-color: $white;
+    color: $dark;
+
+    span {
+      font-size: 18px;
+      font-weight: 400;
+      color: $dark;
+    }
+  }
+
+  &__label {
+    font-size: 12px;
+    line-height: 1;
+    color: #999fb9;
+    font-weight: 400;
+    position: absolute;
+    top: 12px;
+    transition: all 0.25s ease-in-out;
+  }
+
+  &__value {
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 40px;
+    padding: 38px 30px 12px 0px;
+    z-index: 10;
+    text-align: left;
+  }
+}
+
+.bootstrap-datetimepicker-widget.dropdown-menu {
+  width: 100% !important;
+  padding: 12px;
+  border-radius: 12px;
+  border: 0 !important;
+  box-shadow: 0 4px 16px rgba($black, 0.12) !important;
+
+  li {
+    width: 100% !important;
+  }
+
+  &::before,
+  &::after {
+    display: none !important;
+  }
+}
+
+.custom-datepicker {
+  .prev,
+  .next,
+  .picker-switch {
+    padding: 14px;
+    color: $dark;
+    font-family: $font-family;
+    font-size: $fs-16;
+    font-weight: $fw-500;
+
+    &:hover {
+      background-color: $blue-light !important;
+      color: $dark;
+    }
+  }
+
+  .dow {
+    padding: 16px;
+    color: $grey-3;
+    font-size: $fs-14;
+    font-weight: $fw-400;
+    line-height: $lh-22;
+    font-family: $font-family;
+  }
+
+  .day {
+    padding: 8px;
+    color: $dark;
+    font-family: $font-family;
+    font-weight: $fw-400;
+    font-size: $fs-14;
+
+    &.active {
+      background-color: $blue-light !important;
+      color: $dark;
+
+      &:hover {
+        color: $dark;
+      }
+    }
+
+    &:hover {
+      background-color: $blue-light !important;
+      color: $dark;
+    }
+  }
+
+  .accordion-toggle {
+    display: none;
+  }
+}
