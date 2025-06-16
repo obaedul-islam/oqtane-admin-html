@@ -1,20 +1,26 @@
 {
-  "name": "dnn-html",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "build:css": "sass scss/styles.scss css/styles.css",
-    "watch:css": "sass --watch scss/styles.scss:css/styles.css",
-    "prefix:css": "postcss css/styles.css --use autoprefixer -o css/styles.css",
-    "watch": "npm-run-all --parallel watch:css"
-  },
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "devDependencies": {
-    "autoprefixer": "^10.4.20",
-    "npm-run-all": "^4.1.5",
-    "postcss-cli": "^11.0.0",
-    "sass": "^1.77.8"
-  }
+	"name": "dnn-html",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"build:css": "sass scss/styles.scss css/styles.css",
+		"watch:css": "sass --watch scss/styles.scss:css/styles.css",
+		"liveServer": "live-server ./ --port=2400 --watch=css/styles.css,*.html,js/*.js --no-css-inject --browser=chrome --host=localhost --no-browser-cache",
+		"prefix:css": "postcss css/styles.css --use autoprefixer -o css/styles.css",
+		"watch": "npm-run-all --parallel watch:css",
+		"dev": "npm-run-all --parallel watch:css liveServer"
+	},
+	"author": "",
+	"license": "ISC",
+	"description": "",
+	"devDependencies": {
+		"autoprefixer": "^10.4.20",
+		"npm-run-all": "^4.1.5",
+		"postcss-cli": "^11.0.0",
+		"sass": "^1.77.8"
+	},
+	"dependencies": {
+		"live-server": "^1.2.2",
+		"postcss": "^8.5.2"
+	}
 }
