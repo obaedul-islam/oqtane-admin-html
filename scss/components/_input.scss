@@ -200,9 +200,9 @@
 
   &__inner {
     display: block;
-    height: 40px;
+    height: 68px;
     border: 1px solid $grey-3;
-    padding: 5px 30px;
+    padding: 12px 30px;
     border-radius: 40px;
     position: relative;
     background-color: $white;
@@ -224,7 +224,7 @@
     outline: 0;
     padding: 4px 0;
     position: absolute;
-    bottom: 6px;
+    bottom: 12px;
 
     &--textarea {
       height: 112px;
@@ -244,7 +244,7 @@
     color: $grey-3;
     font-weight: $fw-400;
     position: absolute;
-    top: 10px;
+    top: 24px;
     transition: all 0.25s ease-in-out;
   }
 
@@ -258,8 +258,8 @@
     font-size: 20px;
     font-weight: 400;
     color: $grey-3;
-    right: 20px;
-    top: 20px;
+    right: 30px;
+    top: 34px;
     transform: translateY(-50%);
   }
 
@@ -522,6 +522,21 @@
     &--filter {
       width: 200px;
     }
+
+    &__suffix {
+
+      width: 16px;
+      height: 16px;
+      font-size: 16px;
+      right: 15px;
+      top: 20px;
+    }
+
+    &__control {
+      bottom: 5px;
+
+
+    }
   }
 
   .dnn-search {
@@ -564,6 +579,7 @@
       height: 26px;
       font-size: 16px;
       padding: 8px 0;
+      bottom: 5px;
     }
 
     &__inner {

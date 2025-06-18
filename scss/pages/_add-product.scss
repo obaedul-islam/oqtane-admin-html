@@ -162,6 +162,13 @@
   .required-notes {
     margin-top: 30px;
   }
+
+  .dose-entry {
+    button.dnn-btn {
+      margin-top: 0;
+      padding: 5px !important;
+    }
+  }
 }
 
 @media all and (max-width: 992px) {
