@@ -1,10 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
-@import "../node_modules/bootstrap/scss/bootstrap";
+
+// @import "base/vendors/bootstrap/bootstrap";
+
+@import 'base/vendors/bootstrap/mixins';
+@import "base/vendors/bootstrap/functions";
+@import 'base/vendors/bootstrap/variables';
+@import 'base/vendors/bootstrap/maps';
+@import 'base/vendors/bootstrap/type';
+@import 'base/vendors/bootstrap/reboot';
+@import 'base/vendors/bootstrap/root';
+
 
 @import 'base/variables';
 @import 'base/utils';
-@import 'base/global';
 @import 'base/typography';
+@import 'base/global';
 
 @import 'layout/dashboard';
 @import 'layout/main';
@@ -14,6 +24,7 @@
 @import 'layout/slider';
 @import 'layout/tab';
 @import 'layout/accordion';
+
 
 @import 'components/header';
 @import 'components/input';
@@ -31,9 +42,11 @@
 @import 'components/pagination';
 @import 'components/datepicker';
 @import 'components/daterange';
-// @import "components/toast";
 @import 'components/product';
 @import 'components/richtext';
+// @import "components/toast";
+
+
 
 @import 'pages/add-product';
 @import 'pages/product-details';
