@@ -45,8 +45,29 @@
     width: 56px;
     background-color: $grey-1-60;
     border-radius: 56px;
-
     position: relative;
+
+    &__user {
+      background-color: rgba(240, 241, 245, 0.6);
+      border-top-right-radius: 56px;
+      border-bottom-right-radius: 56px;
+      border-top-left-radius: 56px;
+      border-bottom-left-radius: 56px;
+      padding: 15px;
+      padding-right: 16px;
+      color: #444 !important;
+    }
+
+    &__logout {
+      background-color: rgba(240, 241, 245, 0.6);
+      border-top-right-radius: 56px;
+      border-bottom-right-radius: 56px;
+      border-top-left-radius: 56px;
+      border-bottom-left-radius: 56px;
+      padding: 15px;
+      padding-right: 16px;
+      color: $primary;
+    }
   }
 
   &__icon {
@@ -75,6 +96,12 @@
     border: none;
     border-radius: 56px;
     background-color: $grey-1-60;
+
+    .dropdown-toggle {
+      &:after {
+        display: none;
+      }
+    }
   }
 }
 

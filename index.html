@@ -22,7 +22,6 @@
 		/>
 
 		<link rel="stylesheet" href="icons/style.css" />
-
 		<link rel="stylesheet" href="css/styles.css" />
 
 		<!--[if lt IE 9]>
@@ -48,13 +47,15 @@
 							<span class="menubar__badge"></span>
 						</a>
 
-						<div class="dropdown menubar__dropdown">
+						<a class="menubar__item__user" href="">Super Admin</a>
+						<a class="menubar__item__logout" href="">Logout</a>
+
+						<!-- <div class="dropdown menubar__dropdown">
 							<button
 								class="user dropdown-toggle"
-								type="button"
 								id="menu-dropdown"
-								data-toggle="dropdown"
-								aria-haspopup="true"
+								role="button"
+								data-bs-toggle="dropdown"
 								aria-expanded="false"
 							>
 								<img class="user__avatar" src="img/user.png" alt="avatar" />
@@ -67,11 +68,13 @@
 								<i class="icon-down_arrow"></i>
 							</button>
 							<ul class="dropdown-menu" aria-labelledby="menu-dropdown">
-								<li><a href="#">Action</a></li>
-								<li><a href="#">Another action</a></li>
-								<li><a href="#">Something else here</a></li>
+								<li><a class="dropdown-item" href="#">Action</a></li>
+								<li><a class="dropdown-item" href="#">Another action</a></li>
+								<li
+									><a class="dropdown-item" href="#">Something else here</a></li
+								>
 							</ul>
-						</div>
+						</div> -->
 					</div>
 				</nav>
 			</header>
@@ -139,22 +142,57 @@
 
 				<div class="tw-main__content">
 					<div class="content">
-						<div class="actionbar">
-							<div class="actionbar__breadcrumb">
-								<p class="text-uppercase fs-20 mb-0 fw-600">
-									<a href="#" class="text-grey-3">PRODUCTS</a>
-									<span class="text-grey-3">/</span>
-									<a href="#" class="text-primary">ADD NEW PRODUCT</a>
-								</p>
-							</div>
+						<div>
+							<div class="actionbar">
+								<div class="actionbar__breadcrumb">
+									<p class="text-uppercase fs-20 mb-0 fw-600">
+										<a href="#" class="text-grey-3">PRODUCTS List</a>
+										<span class="text-grey-3">/</span>
+										<a href="#" class="text-grey-3">ADD NEW PRODUCT</a>
+										<span class="text-grey-3">/</span>
+										<a href="#" class="text-primary">Step 1</a>
+									</p>
+								</div>
 
-							<button type="button" class="dnn-btn dnn-btn__primary">
-								Save
-							</button>
+								<button type="button" class="dnn-btn dnn-btn__primary">
+									Save
+								</button>
+							</div>
+							<div class="stepper">
+								<div class="stepper__status">
+									<div class="stepper__track">
+										<div class="stepper__step__wrapper">
+											<div class="stepper__step active">
+												<div class="stepper__step__bottom">
+													<span class="stepper__step-label active">Step 1</span>
+												</div>
+											</div>
+										</div>
+										<div class="stepper__step__wrapper">
+											<div class="stepper__step">
+												<div class="stepper__step__bottom">
+													<span class="stepper__step-label">Step 2</span>
+												</div>
+											</div>
+										</div>
+										<div class="stepper__step__wrapper">
+											<div class="stepper__step">
+												<div class="stepper__step__bottom">
+													<span class="stepper__step-label">Step 3</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 
 						<div class="dnn-card mb-0">
-							<div class="dnn-card__header">Add New Product</div>
+							<div class="dnn-card__header"
+								><p
+									>Add New Product <span class="text-primary">(Step 1)</span></p
+								></div
+							>
 							<div class="dnn-card__body">
 								<div class="row">
 									<div class="col-md-6">
@@ -323,17 +361,24 @@
 													</label>
 												</div>
 											</div>
-
 											<div class="col-md-6">
 												<div class="custom-input">
 													<label class="custom-input__inner">
-														<input
-															type="text"
-															class="custom-input__control"
-															placeholder=" "
-														/>
-														<span class="custom-input__label">Price</span>
-														<span class="custom-input__suffix">&dollar;</span>
+														<select
+															class="custom-input__control custom-input__select"
+														>
+															<option value="tablet">Select Pharmacy</option>
+															<option value="tablet">H Care Pharma</option>
+															<option value="capsule">Rizz Pharma</option>
+															<option value="syrup">NexGen Scientific</option>
+														</select>
+
+														<span class="custom-input__label">Pharmacy</span>
+														<span
+															class="custom-input__icon custom-input__suffix"
+														>
+															<i class="icon-down_arrow"></i>
+														</span>
 													</label>
 												</div>
 											</div>
@@ -371,11 +416,97 @@
 														<select
 															class="custom-input__control custom-input__select"
 														>
-															<option value="tablet">All</option>
+															<option value="tablet">Choose</option>
 															<option value="tablet">Tablet</option>
 															<option value="capsule">Capsule</option>
 															<option value="syrup">Syrup</option>
 															<option value="powder">Powder</option>
+														</select>
+
+														<span class="custom-input__label">Site</span>
+														<span
+															class="custom-input__icon custom-input__suffix"
+														>
+															<i class="icon-down_arrow"></i>
+														</span>
+													</label>
+												</div>
+											</div>
+										</div>
+
+										<div class="row mt-16">
+											<div class="col-md-6">
+												<div class="custom-input">
+													<label class="custom-input__inner">
+														<input
+															type="text"
+															class="custom-input__control"
+															placeholder=" "
+														/>
+														<span class="custom-input__label"> SKU </span>
+													</label>
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="custom-input">
+													<label class="custom-input__inner">
+														<select
+															class="custom-input__control custom-input__select"
+														>
+															<option value="tablet">Select Alignment </option>
+															<option value="tablet">Left</option>
+															<option value="capsule">Right</option>
+															<option value="syrup">Center</option>
+														</select>
+
+														<span class="custom-input__label"
+															>Recommend Content Alignment</span
+														>
+														<span
+															class="custom-input__icon custom-input__suffix"
+														>
+															<i class="icon-down_arrow"></i>
+														</span>
+													</label>
+												</div>
+											</div>
+										</div>
+
+										<div class="row mt-16">
+											<div class="col-md-6">
+												<div class="custom-input">
+													<label class="custom-input__inner">
+														<select
+															class="custom-input__control custom-input__select"
+														>
+															<option value="tablet">Select Benifit </option>
+															<option value="tablet">Benifit 1</option>
+															<option value="capsule">Benifit 2</option>
+															<option value="syrup">Benifit 3</option>
+														</select>
+
+														<span class="custom-input__label"
+															>Health Benefit</span
+														>
+														<span
+															class="custom-input__icon custom-input__suffix"
+														>
+															<i class="icon-down_arrow"></i>
+														</span>
+													</label>
+												</div>
+											</div>
+
+											<div class="col-md-6">
+												<div class="custom-input">
+													<label class="custom-input__inner">
+														<select
+															class="custom-input__control custom-input__select"
+														>
+															<option value="tablet">Select Category </option>
+															<option value="tablet">Hair loss</option>
+															<option value="capsule">Weight Loss</option>
+															<option value="syrup">Stemina</option>
 														</select>
 
 														<span class="custom-input__label">Category</span>
@@ -390,93 +521,198 @@
 										</div>
 
 										<div class="row mt-16">
-											<div class="col-xl-6">
-												<div class="dose-entry">
-													<div class="custom-input">
-														<label class="custom-input__inner">
-															<input
-																type="text"
-																class="custom-input__control"
-																placeholder=" "
-															/>
-															<span class="custom-input__label">
-																Dose Strength
-															</span>
-														</label>
-													</div>
-
-													<div class="custom-input">
-														<label class="custom-input__inner">
-															<input
-																type="text"
-																class="custom-input__control"
-																placeholder=" "
-															/>
-															<span class="custom-input__label"
-																>Dose Price</span
-															>
-															<span class="custom-input__suffix">&dollar;</span>
-														</label>
-														<span class="custom-input__error"
-															>Dose strength is required</span
+											<div class="col-md-6">
+												<div class="custom-input">
+													<label class="custom-input__inner">
+														<input
+															type="text"
+															class="custom-input__control"
+															placeholder=" "
+														/>
+														<span class="custom-input__label"
+															>Consultancy Fee</span
 														>
-													</div>
-
-													<button
-														type="button"
-														class="dnn-btn text-danger fs-30 p-2x"
-													>
-														<i class="icon-delete"></i>
-													</button>
+														<span class="custom-input__suffix">&dollar;</span>
+													</label>
 												</div>
-
-												<div class="dose-entry">
-													<div class="custom-input">
-														<label class="custom-input__inner">
-															<input
-																type="text"
-																class="custom-input__control"
-																placeholder=" "
-															/>
-															<span class="custom-input__label">
-																Dose Strength
-															</span>
-														</label>
-													</div>
-
-													<div class="custom-input">
-														<label class="custom-input__inner">
-															<input
-																type="text"
-																class="custom-input__control"
-																placeholder=" "
-															/>
-															<span class="custom-input__label"
-																>Dose Price</span
-															>
-															<span class="custom-input__suffix">&dollar;</span>
-														</label>
-													</div>
-
-													<button
-														type="button"
-														class="dnn-btn text-danger fs-30 p-2x"
-													>
-														<i class="icon-delete"></i>
-													</button>
+											</div>
+											<div class="col-md-6">
+												<div class="custom-input">
+													<label class="custom-input__inner">
+														<input
+															type="text"
+															class="custom-input__control"
+															placeholder=" "
+														/>
+														<span class="custom-input__label">Lab Charge</span>
+														<span class="custom-input__suffix">&dollar;</span>
+													</label>
 												</div>
-
-												<button
-													type="button"
-													class="dnn-btn dnn-btn__withicon dnn-btn__primary--outline"
-												>
-													<span>Add Dose</span>
-													<i class="icon-plus"></i>
-												</button>
 											</div>
 										</div>
 
 										<div class="row mt-16">
+											<div class="col-md-6">
+												<div class="custom-input">
+													<label class="custom-input__inner">
+														<select
+															class="custom-input__control custom-input__select"
+														>
+															<option value="tablet"
+																>Select Additional Product</option
+															>
+															<option value="tablet">Product 1</option>
+															<option value="capsule">Product 2</option>
+															<option value="syrup">Product 3</option>
+														</select>
+
+														<span class="custom-input__label"
+															>Additional Product</span
+														>
+														<span
+															class="custom-input__icon custom-input__suffix"
+														>
+															<i class="icon-down_arrow"></i>
+														</span>
+													</label>
+												</div>
+											</div>
+
+											<div class="col-md-6">
+												<div class="custom-input">
+													<label class="custom-input__inner">
+														<input
+															type="text"
+															class="custom-input__control"
+															placeholder=" "
+														/>
+														<span class="custom-input__label">
+															Top Product Ordering
+														</span>
+													</label>
+												</div>
+											</div>
+										</div>
+
+										<div class="row mt-16">
+											<div class="col-md-6">
+												<label class="custom-check mt-16">
+													<span class="custom-check__input">
+														<input type="checkbox" />
+														<span></span>
+													</span>
+
+													<span class="custom-check__label text-grey-3">
+														Compounded
+													</span>
+												</label>
+												<!--Checkbox End-->
+												<label class="custom-check mt-16">
+													<span class="custom-check__input">
+														<input type="checkbox" />
+														<span></span>
+													</span>
+
+													<span class="custom-check__label text-grey-3">
+														Per Month
+													</span>
+												</label>
+												<!--Checkbox End-->
+												<label class="custom-check mt-16">
+													<span class="custom-check__input">
+														<input type="checkbox" />
+														<span></span>
+													</span>
+
+													<span class="custom-check__label text-grey-3">
+														Generate Prescription for This Medicine
+													</span>
+												</label>
+												<!--Checkbox End-->
+												<label class="custom-check mt-16">
+													<span class="custom-check__input">
+														<input type="checkbox" />
+														<span></span>
+													</span>
+
+													<span class="custom-check__label text-grey-3">
+														Start With Lowest
+													</span>
+												</label>
+												<!--Checkbox End-->
+												<label class="custom-check mt-16">
+													<span class="custom-check__input">
+														<input type="checkbox" />
+														<span></span>
+													</span>
+
+													<span class="custom-check__label text-grey-3">
+														Quiz
+													</span>
+												</label>
+												<!--Checkbox End-->
+											</div>
+
+											<div class="col-md-6">
+												<label class="custom-check mt-16">
+													<span class="custom-check__input">
+														<input type="checkbox" />
+														<span></span>
+													</span>
+
+													<span class="custom-check__label text-grey-3">
+														Intake Form
+													</span>
+												</label>
+												<!--Checkbox End-->
+												<label class="custom-check mt-16">
+													<span class="custom-check__input">
+														<input type="checkbox" />
+														<span></span>
+													</span>
+
+													<span class="custom-check__label text-grey-3">
+														Controlled Medicine
+													</span>
+												</label>
+												<!--Checkbox End-->
+												<label class="custom-check mt-16">
+													<span class="custom-check__input">
+														<input type="checkbox" />
+														<span></span>
+													</span>
+
+													<span class="custom-check__label text-grey-3">
+														Out of Stock
+													</span>
+												</label>
+												<!--Checkbox End-->
+												<label class="custom-check mt-16">
+													<span class="custom-check__input">
+														<input type="checkbox" />
+														<span></span>
+													</span>
+
+													<span class="custom-check__label text-grey-3">
+														Lyophilized
+													</span>
+												</label>
+												<!--Checkbox End-->
+												<label class="custom-check mt-16">
+													<span class="custom-check__input">
+														<input type="checkbox" />
+														<span></span>
+													</span>
+
+													<span class="custom-check__label text-grey-3">
+														Prescription  Required
+													</span>
+												</label>
+												<!--Checkbox End-->
+											</div>
+										</div>
+
+										<div class="row mt-40">
 											<div class="col-md-6">
 												<div class="radio-group">
 													<p class="radio-group__label">Lab Report Required</p>
@@ -501,573 +737,74 @@
 														</label>
 													</div>
 												</div>
+											</div>
 
-												<!-- Add this class to disable the dropdown dnn-multiselect--disabled -->
+											<div class="col-md-6">
+												<div class="custom-input">
+													<div class="dnn-multiselect mt-16">
+														<div class="dnn-multiselect__select">
+															<select
+																id="dnn-state-dd"
+																class="form-select"
+																aria-label="Default select example"
+															>
+																<option value="lab">Select Lab Report</option>
+																<option value="lab2">Lab Report 2</option>
+																<option value="lab3">Lab Report 3</option>
+																<option value="lab4">Lab Report 4</option>
+																<option value="lab5">Lab Report 5</option>
+																<option value="lab6">Lab Report 6</option>
+															</select>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
 
-												<div class="dnn-multiselect mt-16">
-													<div class="dnn-multiselect__select">
+										<div class="row mt-16">
+											<div class="col-md-6">
+												<div class="custom-input">
+													<label class="custom-input__inner">
 														<select
-															id="dnn-lab-report-dd"
-															class="form-select"
-															aria-label="Default select example"
+															class="custom-input__control custom-input__select"
 														>
-															<option value="item1">
-																Lab Report 1 Lab Report 1 Lab Report 1
-															</option>
-															<option value="item2">
-																Lab Report 2 Lab Report 2
-															</option>
-															<option value="item3">Lab Report 3</option>
-															<option value="item4">Lab Report 4</option>
-															<option value="item5">Lab Report 5</option>
-															<option value="item6">Lab Report 6</option>
+															<option value="tablet">All </option>
+															<option value="tablet">State 1</option>
+															<option value="capsule">State 2</option>
+															<option value="syrup">State 3</option>
 														</select>
-													</div>
+
+														<span class="custom-input__label">State</span>
+														<span
+															class="custom-input__icon custom-input__suffix"
+														>
+															<i class="icon-down_arrow"></i>
+														</span>
+													</label>
 												</div>
 											</div>
 
 											<div class="col-md-6">
-												<div class="radio-group">
-													<p class="radio-group__label">
-														Prescription Required
-													</p>
-
-													<div class="radio-group__inputs">
-														<label class="custom-radio">
-															<span class="custom-radio__input">
-																<input
-																	name="prescription"
-																	type="radio"
-																	checked
-																/>
-																<span></span>
-															</span>
-
-															<span class="custom-radio__label">Yes</span>
-														</label>
-
-														<label class="custom-radio">
-															<span class="custom-radio__input">
-																<input name="prescription" type="radio" />
-																<span></span>
-															</span>
-
-															<span class="custom-radio__label">No</span>
-														</label>
-													</div>
-												</div>
-
-												<div class="dnn-multiselect mt-16">
-													<div class="dnn-multiselect__select">
+												<div class="custom-input">
+													<label class="custom-input__inner">
 														<select
-															id="dnn-state-dd"
-															class="form-select"
-															aria-label="Default select example"
+															class="custom-input__control custom-input__select"
 														>
-															<option value="state1">State 1</option>
-															<option value="state2">State 2</option>
-															<option value="state3">State 3</option>
-															<option value="state4">State 4</option>
-															<option value="state5">State 5</option>
-															<option value="state6">State 6</option>
+															<option value="tablet"
+																>Blood Sugar Control
+															</option>
+															<option value="tablet">Weight Loss</option>
 														</select>
-													</div>
-												</div>
-											</div>
-										</div>
 
-										<div class="row mt-16">
-											<div class="col-md-6">
-												<div class="custom-input custom-input--textarea">
-													<label
-														class="custom-input__inner custom-input__inner--textarea"
-													>
-														<textarea
-															type="text"
-															class="custom-input__control custom-input__control--textarea"
-															placeholder=" "
-														></textarea>
-														<span class="custom-input__label">Formula</span>
-													</label>
-												</div>
-											</div>
-
-											<div class="col-md-6">
-												<!-- <div class="custom-input custom-input--textarea">
-                          <label
-                            class="custom-input__inner custom-input__inner--textarea"
-                          >
-                            <textarea
-                              type="text"
-                              class="custom-input__control custom-input__control--textarea"
-                              placeholder=" "
-                            ></textarea>
-                            <span class="custom-input__label">Benifits</span>
-                          </label>
-                        </div> -->
-
-												<div class="list-input">
-													<span class="list-input__label">Benifits</span>
-													<div id="benifit-editor-rt"></div>
-												</div>
-											</div>
-										</div>
-
-										<div class="row mt-16">
-											<div class="col-md-6">
-												<div class="custom-input custom-input--textarea">
-													<label
-														class="custom-input__inner custom-input__inner--textarea"
-													>
-														<textarea
-															type="text"
-															class="custom-input__control custom-input__control--textarea"
-															placeholder=" "
-														></textarea>
 														<span class="custom-input__label"
-															>Side Effects</span
+															>Select Health Benefits</span
 														>
+														<span
+															class="custom-input__icon custom-input__suffix"
+														>
+															<i class="icon-down_arrow"></i>
+														</span>
 													</label>
-												</div>
-											</div>
-
-											<div class="col-md-6">
-												<div class="custom-input custom-input--textarea">
-													<label
-														class="custom-input__inner custom-input__inner--textarea"
-													>
-														<textarea
-															type="text"
-															class="custom-input__control custom-input__control--textarea"
-															placeholder=" "
-														></textarea>
-														<span class="custom-input__label">How to Use</span>
-													</label>
-												</div>
-											</div>
-										</div>
-
-										<div class="row mt-16">
-											<div class="col-md-6">
-												<div class="custom-input custom-input--textarea">
-													<label
-														class="custom-input__inner custom-input__inner--textarea"
-													>
-														<textarea
-															type="text"
-															class="custom-input__control custom-input__control--textarea"
-															placeholder=" "
-														></textarea>
-														<span class="custom-input__label"
-															>About the Product</span
-														>
-													</label>
-												</div>
-											</div>
-										</div>
-
-										<div class="row mt-16">
-											<div class="col-md-12">
-												<!-- <div class="custom-input custom-input--textarea">
-                          <label
-                            class="custom-input__inner custom-input__inner--textarea"
-                          >
-                            <textarea
-                              type="text"
-                              class="custom-input__control custom-input__control--textarea"
-                              placeholder=" "
-                            ></textarea>
-                            <span class="custom-input__label"
-                              >Refill Special Notes</span
-                            >
-                          </label>
-                        </div> -->
-
-												<div class="list-input">
-													<span class="list-input__label"
-														>Refill Special Notes</span
-													>
-													<div id="refill-editor-rt"></div>
-												</div>
-											</div>
-										</div>
-
-										<div class="row">
-											<div class="col-md-12">
-												<div class="add-sections">
-													<p class="mb-0 fs-24 text-grey-3">Added Sections</p>
-													<div class="add-sections__pannel">
-														<div class="custom-input">
-															<label class="custom-input__inner">
-																<input
-																	type="text"
-																	class="custom-input__control"
-																	placeholder=" "
-																/>
-																<span class="custom-input__label"
-																	>Short Description Title</span
-																>
-															</label>
-														</div>
-
-														<div
-															class="custom-input custom-input--textarea mt-16"
-														>
-															<label
-																class="custom-input__inner custom-input__inner--textarea"
-															>
-																<textarea
-																	type="text"
-																	class="custom-input__control custom-input__control--textarea"
-																	placeholder=" "
-																></textarea>
-																<span class="custom-input__label"
-																	>Short Description</span
-																>
-															</label>
-														</div>
-
-														<button
-															type="button"
-															class="add-sections__close-btn"
-														>
-															<i class="icon-cross"></i>
-														</button>
-													</div>
-												</div>
-											</div>
-										</div>
-
-										<div class="row">
-											<div class="col-md-12">
-												<!-- ========  Additional Block   ======== -->
-												<div class="sec-card">
-													<div class="sec-card__header">
-														<h5 class="sec-card__title">Additional Block</h5>
-														<button type="button" class="dnn__close-btn">
-															<i class="icon-cross"></i>
-														</button>
-													</div>
-
-													<div class="sec-card__body">
-														<div class="custom-input">
-															<label class="custom-input__inner">
-																<input
-																	type="text"
-																	class="custom-input__control"
-																	placeholder=" "
-																/>
-																<span class="custom-input__label">Title</span>
-															</label>
-														</div>
-
-														<div class="rich-text">
-															<label class="rich-text__label"
-																>Description</label
-															>
-															<div class="rt-editor"></div>
-														</div>
-													</div>
-												</div>
-
-												<!-- ========  Why This Product   ======== -->
-
-												<div class="sec-card">
-													<div class="sec-card__header">
-														<h5 class="sec-card__title">Why This Product</h5>
-														<button type="button" class="dnn__close-btn">
-															<i class="icon-cross"></i>
-														</button>
-													</div>
-
-													<div class="sec-card__body p-0">
-														<div class="sec-card__section">
-															<div class="rich-text rich-text--xs">
-																<label class="rich-text__label"
-																	>Section Title</label
-																>
-																<div class="rt-editor"></div>
-															</div>
-														</div>
-
-														<div class="sec-card__section">
-															<div class="rich-text rich-text--sm">
-																<label class="rich-text__label"
-																	>On Top Description</label
-																>
-																<div class="rt-editor"></div>
-															</div>
-
-															<div class="rich-text rich-text--sm">
-																<label class="rich-text__label"
-																	>Description on Hover</label
-																>
-																<div class="rt-editor"></div>
-															</div>
-
-															<div class="input-panel__block d-block mt-16">
-																<button
-																	type="button"
-																	class="dnn-btn dnn-btn__withicon dnn-btn__grey--outline"
-																>
-																	<span>Add Section Image</span>
-																	<i class="icon-plus"></i>
-																</button>
-															</div>
-														</div>
-
-														<div class="sec-card__section">
-															<div class="rich-text rich-text--sm">
-																<label class="rich-text__label"
-																	>Description</label
-																>
-																<div class="rt-editor"></div>
-															</div>
-
-															<div class="rich-text rich-text--sm">
-																<label class="rich-text__label"
-																	>Description on Hover</label
-																>
-																<div class="rt-editor"></div>
-															</div>
-
-															<div class="input-panel__block d-block mt-16">
-																<button
-																	type="button"
-																	class="dnn-btn dnn-btn__withicon dnn-btn__grey--outline"
-																>
-																	<span>Add Section Image</span>
-																	<i class="icon-plus"></i>
-																</button>
-															</div>
-														</div>
-													</div>
-
-													<div class="sec-card__footer">
-														<button class="dnn-btn dnn-btn__link" type="button">
-															Add More
-														</button>
-													</div>
-												</div>
-
-												<!-- ========  Shipping Information   ======== -->
-
-												<div class="sec-card">
-													<div class="sec-card__header">
-														<h5 class="sec-card__title">
-															Shipping Information
-														</h5>
-														<button type="button" class="dnn__close-btn">
-															<i class="icon-cross"></i>
-														</button>
-													</div>
-
-													<div class="sec-card__body p-0">
-														<div class="sec-card__section">
-															<div class="rich-text rich-text--xs">
-																<label class="rich-text__label"
-																	>Section Title</label
-																>
-																<div class="rt-editor"></div>
-															</div>
-
-															<div class="input-panel__block d-block mt-16">
-																<button
-																	type="button"
-																	class="dnn-btn dnn-btn__withicon dnn-btn__grey--outline"
-																>
-																	<span>Add Section Image</span>
-																	<i class="icon-plus"></i>
-																</button>
-															</div>
-														</div>
-
-														<div class="sec-card__section">
-															<div class="rich-text rich-text--xs">
-																<label class="rich-text__label">Label</label>
-																<div class="rt-editor"></div>
-															</div>
-
-															<div class="rich-text rich-text--xs">
-																<label class="rich-text__label">Title</label>
-																<div class="rt-editor"></div>
-															</div>
-
-															<div class="rich-text rich-text--sm">
-																<label class="rich-text__label"
-																	>Description</label
-																>
-																<div class="rt-editor"></div>
-															</div>
-														</div>
-
-														<div class="sec-card__section">
-															<div class="rich-text rich-text--xs">
-																<label class="rich-text__label">Label</label>
-																<div class="rt-editor"></div>
-															</div>
-
-															<div class="rich-text rich-text--xs">
-																<label class="rich-text__label">Title</label>
-																<div class="rt-editor"></div>
-															</div>
-
-															<div class="rich-text rich-text--sm">
-																<label class="rich-text__label"
-																	>Description</label
-																>
-																<div class="rt-editor"></div>
-															</div>
-														</div>
-													</div>
-
-													<div class="sec-card__footer">
-														<button class="dnn-btn dnn-btn__link" type="button">
-															Add More
-														</button>
-													</div>
-												</div>
-
-												<!-- ========  FAQ   ======== -->
-
-												<div class="sec-card">
-													<div class="sec-card__header">
-														<h5 class="sec-card__title">
-															Frequently Asked Questions (FAQ)
-														</h5>
-														<button type="button" class="dnn__close-btn">
-															<i class="icon-cross"></i>
-														</button>
-													</div>
-
-													<div class="sec-card__body p-0">
-														<div class="sec-card__section">
-															<div class="custom-input">
-																<label class="custom-input__inner">
-																	<input
-																		type="text"
-																		class="custom-input__control"
-																		placeholder=" "
-																	/>
-																	<span class="custom-input__label"
-																		>Section Title</span
-																	>
-																</label>
-															</div>
-														</div>
-
-														<div class="sec-card__section">
-															<div class="custom-input">
-																<label class="custom-input__inner">
-																	<input
-																		type="text"
-																		class="custom-input__control"
-																		placeholder=" "
-																	/>
-																	<span class="custom-input__label"
-																		>Question</span
-																	>
-																</label>
-															</div>
-
-															<div class="rich-text rich-text--sm">
-																<label class="rich-text__label">Answer</label>
-																<div class="rt-editor"></div>
-															</div>
-														</div>
-													</div>
-
-													<div class="sec-card__footer">
-														<button class="dnn-btn dnn-btn__link" type="button">
-															Add More
-														</button>
-													</div>
-												</div>
-
-												<!-- ========  SAFETY INFORMATION   ======== -->
-
-												<div class="sec-card">
-													<div class="sec-card__header">
-														<h5 class="sec-card__title">Safety Information</h5>
-														<button type="button" class="dnn__close-btn">
-															<i class="icon-cross"></i>
-														</button>
-													</div>
-
-													<div class="sec-card__body">
-														<div class="custom-input">
-															<label class="custom-input__inner">
-																<input
-																	type="text"
-																	class="custom-input__control"
-																	placeholder=" "
-																/>
-																<span class="custom-input__label">Title</span>
-															</label>
-														</div>
-
-														<div class="rich-text rich-text--xs">
-															<label class="rich-text__label">Subtitle</label>
-															<div class="rt-editor"></div>
-														</div>
-
-														<div class="input-panel__block d-block mt-16">
-															<div class="d-flex align-item-center gap-20">
-																<button
-																	type="button"
-																	class="dnn-btn dnn-btn__primary--lg w-300"
-																>
-																	Button
-																</button>
-
-																<div class="custom-input">
-																	<label class="custom-input__inner">
-																		<input
-																			type="text"
-																			class="custom-input__control"
-																			placeholder=" "
-																		/>
-																		<span class="custom-input__label"
-																			>Button Title</span
-																		>
-																	</label>
-																</div>
-
-																<label class="custom-check">
-																	<span class="custom-check__label"
-																		>Button Required</span
-																	>
-																	<span class="custom-check__input">
-																		<input type="checkbox" />
-																		<span></span>
-																	</span>
-																</label>
-															</div>
-														</div>
-
-														<div class="input-panel__block d-block mt-16">
-															<button
-																type="button"
-																class="dnn-btn dnn-btn__withicon dnn-btn__grey--outline"
-															>
-																<span>Add Background Image</span>
-																<i class="icon-plus"></i>
-															</button>
-														</div>
-
-														<div class="custom-input mt-16">
-															<label class="custom-input__inner">
-																<input
-																	type="text"
-																	class="custom-input__control"
-																	placeholder=" "
-																/>
-																<span class="custom-input__label"
-																	>Section Background Color</span
-																>
-															</label>
-														</div>
-													</div>
 												</div>
 											</div>
 										</div>
@@ -1080,71 +817,18 @@
 							<div class="col-md-12">
 								<div class="answer-type">
 									<!-- <h3 class="answer-type__title">Select Answer Type</h3> -->
-									<div class="answer-type__actions">
+									<div class="answer-type__actions justify-content-end">
 										<button
 											type="button"
 											id="answer-type-btn"
-											class="dnn-btn dnn-btn__withicon dnn-btn__primary--outline dnn-btn__primary--outline__lg"
+											class="dnn-btn dnn-btn__primary--xl"
 										>
-											<span>Add Section</span>
-											<i class="icon-plus"></i>
+											<span>Next</span>
 										</button>
-
-										<div class="answer-type__wrapper">
-											<div id="answer-types" class="answer-type__options">
-												<div
-													class="answer-type__option"
-													data-toggle="tooltip"
-													data-placement="top"
-													title="Additional Block"
-												>
-													<i class="icon-short_answer"></i>
-												</div>
-												<div
-													class="answer-type__option"
-													data-toggle="tooltip"
-													data-placement="top"
-													title="Why this product?"
-												>
-													<i class="icon-Why-this-product"></i>
-												</div>
-												<div
-													class="answer-type__option answer-type__option--active"
-													data-toggle="tooltip"
-													data-placement="top"
-													title="Shipping Information"
-												>
-													<i class="icon-Shipping-info"></i>
-												</div>
-												<div
-													class="answer-type__option"
-													data-toggle="tooltip"
-													data-placement="top"
-													title="FAQ"
-												>
-													<i class="icon-FAQ"></i>
-												</div>
-												<div
-													class="answer-type__option"
-													data-toggle="tooltip"
-													data-placement="top"
-													title="Safety information"
-												>
-													<i class="icon-Safety"></i>
-												</div>
-											</div>
-										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-
-						<button
-							class="dnn-btn dnn-btn__link add-sections__btn"
-							type="button"
-						>
-							Add New Section
-						</button>
 					</div>
 				</div>
 			</main>
@@ -1162,8 +846,8 @@
 		</div>
 
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-		<script src="vendors/jquery/jquery-2.2.4.min.js"></script>
-		<script src="vendors/bootstrap/js/bootstrap.min.js"></script>
+		<script src="js/vendors/jquery-3.7.1.min.js"></script>
+		<script src="js/vendors/bootstrap.bundle.min.js"></script>
 		<script src="vendors/swiper/package/swiper-bundle.min.js"></script>
 		<script src="vendors/bootstrap-multiselect/js/bootstrap-multiselect.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"></script>

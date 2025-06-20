@@ -1,14 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
 
-// @import "base/vendors/bootstrap/bootstrap";
-
-@import 'base/vendors/bootstrap/mixins';
+// 1. Required core first
 @import "base/vendors/bootstrap/functions";
-@import 'base/vendors/bootstrap/variables';
-@import 'base/vendors/bootstrap/maps';
-@import 'base/vendors/bootstrap/type';
-@import 'base/vendors/bootstrap/reboot';
-@import 'base/vendors/bootstrap/root';
+@import "base/vendors/bootstrap/variables";
+@import "base/vendors/bootstrap/maps";
+@import "base/vendors/bootstrap/mixins";
+
+// 2. Optional Bootstrap parts (utilities if customized)
+@import "base/vendors/bootstrap/root";
+@import "base/vendors/bootstrap/reboot";
+@import "base/vendors/bootstrap/type";
+
+// 3. Then rest of Bootstrap components (e.g., buttons, forms, etc.)
+@import "base/vendors/bootstrap/bootstrap"; // If this is a custom bundle
 
 
 @import 'base/variables';
@@ -30,6 +34,7 @@
 @import 'components/input';
 @import 'components/buttons';
 @import 'components/card';
+@import 'components/stepper';
 @import 'components/actionbar';
 @import 'components/list-table';
 @import 'components/multiselect';

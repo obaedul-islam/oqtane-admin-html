@@ -58,6 +58,18 @@
     }
   }
 
+  &__primary--xl {
+    padding: 24px 30px;
+    background: $primary;
+    color: $white;
+    min-width: 275px;
+
+    &:hover,
+    &:visited {
+      color: $white;
+    }
+  }
+
   &__primary--outline {
     padding: 21px 20px;
     border-color: $primary;
