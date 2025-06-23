@@ -1,1589 +1,1589 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <title>Thrivewell - Question List</title>
-
-    <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.min.css" />
-    <link
-      rel="stylesheet"
-      href="vendors/bootstrap-multiselect/css/bootstrap-multiselect.min.css"
-    />
-    <link rel="stylesheet" href="vendors/trumbowyg/trumbowyg.css" />
-    <link
-      href="https://cdn.quilljs.com/1.3.6/quill.snow.css"
-      rel="stylesheet"
-    />
-
-    <link rel="stylesheet" href="icons/style.css" />
-
-    <link rel="stylesheet" href="css/styles.css" />
-
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="dashboard">
-      <header class="header">
-        <nav class="menubar">
-          <a href="#" class="menubar__brand">
-            <img src="img/logo.svg" alt="Logo" class="menubar__logo" />
-          </a>
-
-          <div class="menubar__items">
-            <a class="menubar__item" href="#">
-              <i class="icon-message menubar__icon"></i>
-              <span class="menubar__badge"></span>
-            </a>
-            <a class="menubar__item" href="#">
-              <i class="icon-notification menubar__icon"></i>
-              <span class="menubar__badge"></span>
-            </a>
-
-            <div class="dropdown menubar__dropdown">
-              <button
-                class="user dropdown-toggle"
-                type="button"
-                id="menu-dropdown"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                <img class="user__avatar" src="img/user.png" alt="avatar" />
-
-                <div class="user__info">
-                  <p class="user__name fs-18 lh-100 text-dark">David Wayne</p>
-                  <p class="user__role fs-14 lh-100 text-grey-3">Super Admin</p>
-                </div>
-
-                <i class="icon-down_arrow"></i>
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="menu-dropdown">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </header>
-
-      <main class="main">
-        <aside class="sidebar">
-          <ul class="sidebar__items">
-            <li class="sidebar__item">
-              <a href="./product-details.html" class="sidebar__link">
-                <i class="icon-dashboard sidebar__icon"></i>
-                <span class="sidebar__text">Dashboard</span>
-              </a>
-            </li>
-            <li class="sidebar__item">
-              <a href="./product-list.html" class="sidebar__link">
-                <i class="icon-tablet sidebar__icon"></i>
-                <span class="sidebar__text">Product List</span>
-              </a>
-            </li>
-            <li class="sidebar__item">
-              <a href="./product-list.html" class="sidebar__link">
-                <i class="icon-product_list sidebar__icon"></i>
-                <span class="sidebar__text">Package List</span>
-              </a>
-            </li>
-            <li class="sidebar__item">
-              <a href="./intake-form-list.html" class="sidebar__link">
-                <i class="icon-intake_form sidebar__icon"></i>
-                <span class="sidebar__text">Intake Form</span>
-              </a>
-            </li>
-            <li class="sidebar__item">
-              <a
-                href="./question-list.html"
-                class="sidebar__link sidebar__link--active"
-              >
-                <i class="icon-questions sidebar__icon"></i>
-                <span class="sidebar__text">Questions</span>
-              </a>
-            </li>
-            <li class="sidebar__item">
-              <a href="./site-list.html" class="sidebar__link">
-                <i class="icon-globe sidebar__icon"></i>
-                <span class="sidebar__text">Site List</span>
-              </a>
-            </li>
-            <li class="sidebar__item">
-              <a href="#" class="sidebar__link">
-                <i class="icon-settings sidebar__icon"></i>
-                <span class="sidebar__text">Settings</span>
-              </a>
-            </li>
-          </ul>
-
-          <button type="button" class="sidebar__toggle">
-            <i class="icon-left-arrow"></i>
-          </button>
-        </aside>
-
-        <div class="tw-main__content">
-          <div class="content">
-            <div class="actionbar">
-              <div class="actionbar__title">
-                <p class="text-uppercase text-primary fs-20 mb-0 fw-600 lh-150">
-                  Questions
-                </p>
-              </div>
-
-              <div class="actionbar__actions">
-                <button
-                  type="button"
-                  id="add-group-btn"
-                  data-toggle="modal"
-                  data-target="#add-question-group"
-                  class="dnn-btn dnn-btn__primary"
-                >
-                  Add New Group
-                </button>
-                <button
-                  type="button"
-                  id="add-question-btn"
-                  class="dnn-btn dnn-btn__primary"
-                >
-                  Add New Question
-                </button>
-              </div>
-            </div>
-
-            <div class="dnn-card mb-0">
-              <div class="dnn-card__header dnn-card__header--tabs">
-                <ul class="nav nav-tabs dnn-tabs" role="tablist">
-                  <li role="presentation" class="dnn-tabs__item active">
-                    <a
-                      href="#active-questions"
-                      aria-controls="active-questions"
-                      role="tab"
-                      data-toggle="tab"
-                      class="dnn-tabs__link"
-                    >
-                      Active Questions
-                    </a>
-                  </li>
-
-                  <li role="presentation" class="dnn-tabs__item">
-                    <a
-                      href="#draft"
-                      aria-controls="draft"
-                      role="tab"
-                      data-toggle="tab"
-                      class="dnn-tabs__link"
-                      >Draft</a
-                    >
-                  </li>
-
-                  <li role="presentation" class="dnn-tabs__item">
-                    <a
-                      href="#question-group"
-                      aria-controls="question-group"
-                      role="tab"
-                      data-toggle="tab"
-                      class="dnn-tabs__link"
-                      >Question Group</a
-                    >
-                  </li>
-
-                  <li role="presentation" class="dnn-tabs__item">
-                    <a
-                      href="#deactivated-question"
-                      aria-controls="deactivated-question"
-                      role="tab"
-                      data-toggle="tab"
-                      class="dnn-tabs__link"
-                      >Deactivated Question</a
-                    >
-                  </li>
-                </ul>
-              </div>
-
-              <div class="dnn-card__body">
-                <!-- Tab panes -->
-                <div class="tab-content">
-                  <!-- 1ST TAB CONTENT : ACTIVE QUESTIONS -->
-                  <div
-                    role="tabpanel"
-                    class="tab-pane fade in active"
-                    id="active-questions"
-                  >
-                    <div class="panel-group dnn-accordion" id="accordion">
-                      <div class="panel dnn-accordion__panel">
-                        <div
-                          class="dnn-accordion__header"
-                          role="tab"
-                          id="headingOne"
-                        >
-                          <div class="dnn-accordion__header-content">
-                            <p class="dnn-accordion__label">Question</p>
-                            <p class="dnn-accordion__text">
-                              Have you ever been diagnosed with any of the
-                              following condition(s)?
-                            </p>
-
-                            <p class="dnn-accordion__label dnn-accordion__hide">
-                              Question Type
-                            </p>
-                            <p class="dnn-accordion__text dnn-accordion__hide">
-                              Required
-                            </p>
-                          </div>
-
-                          <div class="dnn-accordion__header-action">
-                            <div class="action-group">
-                              <button
-                                type="button"
-                                class="dnn-btn dnn-btn--icon-btn action-group__btn"
-                              >
-                                <i class="icon-edit"></i>
-                              </button>
-                              <a
-                                role="button"
-                                data-toggle="collapse"
-                                data-parent="#accordion"
-                                href="#collapseOne"
-                                class="dnn-btn dnn-btn--icon-btn action-group__btn dnn-accordion__toggle-btn"
-                              >
-                                <i class="icon-down_arrow"></i>
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          id="collapseOne"
-                          class="in dnn-accordion__collapse collapse"
-                          role="tabpanel"
-                          aria-labelledby="headingOne"
-                        >
-                          <div class="dnn-accordion__body">
-                            <p class="dnn-accordion__label">Question Intro</p>
-                            <p class="dnn-accordion__text">
-                              Lorem ipsum dolor sit amet, consectetur adipiscing
-                              elit, sed do eiusmod tempor incididunt ut labore
-                              et dolore magna aliqua. Ut enim ad minim veniam,
-                              quis nostrud exercitation ullamco laboris nisi ut
-                              aliquip ex ea commodo consequat.
-                            </p>
-
-                            <p class="dnn-accordion__label">Question Type</p>
-                            <p class="dnn-accordion__text">Required</p>
-
-                            <div class="row">
-                              <div class="col-md-6">
-                                <p class="dnn-accordion__label">Answer Type</p>
-
-                                <div
-                                  class="custom-input custom-input--disabled custom-input--centered mt-12"
-                                >
-                                  <label class="custom-input__inner">
-                                    <select
-                                      class="custom-input__control custom-input__select"
-                                      disabled
-                                    >
-                                      <option>Select</option>
-                                    </select>
-                                    <span
-                                      class="custom-input__icon custom-input__suffix"
-                                    >
-                                      <i class="icon-down_arrow"></i>
-                                    </span>
-                                  </label>
-                                </div>
-                              </div>
-                            </div>
-
-                            <div class="dnn-card mt-20">
-                              <div class="dnn-card__header">
-                                <h3>Condition</h3>
-                              </div>
-                              <div class="dnn-card__body">
-                                <div class="condition">
-                                  <p class="condition__label">If Selected</p>
-                                  <div class="condition-input flex-grow-1">
-                                    <div
-                                      class="custom-input custom-input--centered"
-                                    >
-                                      <label class="custom-input__inner">
-                                        <select
-                                          class="custom-input__control custom-input__select"
-                                        >
-                                          <option>
-                                            Abnormally high red blood cell count
-                                            (erythrocytosis or polycythemia)
-                                          </option>
-                                        </select>
-                                        <span
-                                          class="custom-input__icon custom-input__suffix"
-                                        >
-                                          <i class="icon-down_arrow"></i>
-                                        </span>
-                                      </label>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="condition mt-24">
-                                  <p class="condition__label">
-                                    Select Question
-                                  </p>
-                                  <div
-                                    class="condition-input custom-input--centered flex-grow-1"
-                                  >
-                                    <div class="custom-input">
-                                      <label class="custom-input__inner">
-                                        <input
-                                          type="text"
-                                          class="custom-input__control"
-                                          placeholder=" "
-                                          value="Since how long have you been suffering from this condition?"
-                                        />
-                                      </label>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-
-                            <div class="dnn-card mt-20">
-                              <div class="dnn-card__header">
-                                <h3>Condition</h3>
-                              </div>
-                              <div class="dnn-card__body">
-                                <div class="condition">
-                                  <p class="condition__label">If Selected</p>
-                                  <div class="condition-input flex-grow-1">
-                                    <div
-                                      class="custom-input custom-input--centered"
-                                    >
-                                      <label class="custom-input__inner">
-                                        <select
-                                          class="custom-input__control custom-input__select"
-                                        >
-                                          <option>
-                                            Abnormally high red blood cell count
-                                            (erythrocytosis or polycythemia)
-                                          </option>
-                                        </select>
-                                        <span
-                                          class="custom-input__icon custom-input__suffix"
-                                        >
-                                          <i class="icon-down_arrow"></i>
-                                        </span>
-                                      </label>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="condition mt-24">
-                                  <p class="condition__label">
-                                    Select Question
-                                  </p>
-                                  <div
-                                    class="condition-input custom-input--centered flex-grow-1"
-                                  >
-                                    <div class="custom-input">
-                                      <label class="custom-input__inner">
-                                        <input
-                                          type="text"
-                                          class="custom-input__control"
-                                          placeholder=" "
-                                          value="Since how long have you been suffering from this condition?"
-                                        />
-                                      </label>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-
-                            <div class="custom-input custom-input--centered">
-                              <label class="custom-input__inner">
-                                <select
-                                  class="custom-input__control custom-input__select"
-                                >
-                                  <option>Kidney disease</option>
-                                </select>
-                                <span
-                                  class="custom-input__icon custom-input__suffix"
-                                >
-                                  <i class="icon-down_arrow"></i>
-                                </span>
-                              </label>
-                            </div>
-
-                            <div
-                              class="custom-input custom-input--centered mt-24"
-                            >
-                              <label class="custom-input__inner">
-                                <select
-                                  class="custom-input__control custom-input__select"
-                                >
-                                  <option>
-                                    Liver disease (e.g., cirrhosis)
-                                  </option>
-                                </select>
-                                <span
-                                  class="custom-input__icon custom-input__suffix"
-                                >
-                                  <i class="icon-down_arrow"></i>
-                                </span>
-                              </label>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="panel dnn-accordion__panel">
-                        <div
-                          class="dnn-accordion__header"
-                          role="tab"
-                          id="headingTwo"
-                        >
-                          <div class="dnn-accordion__header-content">
-                            <p class="dnn-accordion__label">Question</p>
-                            <p class="dnn-accordion__text">
-                              Lorem ipsum dolor sit amet, consectetur adipiscing
-                              elit, sed do eiusmod tempor incididunt ut labore
-                              et dolore magna aliqua. Ut enim ad minim veniam?
-                            </p>
-
-                            <p class="dnn-accordion__label dnn-accordion__hide">
-                              Question Type
-                            </p>
-                            <p class="dnn-accordion__text dnn-accordion__hide">
-                              Required
-                            </p>
-                          </div>
-
-                          <div class="dnn-accordion__header-action">
-                            <div class="action-group">
-                              <button
-                                type="button"
-                                class="dnn-btn dnn-btn--icon-btn action-group__btn"
-                              >
-                                <i class="icon-edit"></i>
-                              </button>
-                              <a
-                                role="button"
-                                data-toggle="collapse"
-                                data-parent="#accordion"
-                                href="#collapseTwo"
-                                class="dnn-btn dnn-btn--icon-btn action-group__btn dnn-accordion__toggle-btn"
-                              >
-                                <i class="icon-down_arrow"></i>
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div
-                          id="collapseTwo"
-                          class="dnn-accordion__collapse collapse"
-                          role="tabpanel"
-                          aria-labelledby="headingTwo"
-                        >
-                          <div class="dnn-accordion__body">
-                            Anim pariatur cliche reprehenderit, enim eiusmod
-                            high life accusamus terry richardson ad squid. 3
-                            wolf moon officia aute, non cupidatat skateboard
-                            dolor brunch. Food truck quinoa nesciunt laborum
-                            eiusmod.
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- END 1ST TAB CONTENT : ACTIVE QUESTIONS -->
-
-                  <!-- 2ND TAB CONTENT : DRAFT QUESTIONS -->
-                  <div role="tabpanel" class="tab-pane fade" id="draft">
-                    draft
-                  </div>
-                  <!-- END 2ND TAB CONTENT : DRAFT QUESTIONS -->
-
-                  <!--  3RD TAB CONTENT : QUESTION GROUP  -->
-                  <div
-                    role="tabpanel"
-                    class="tab-pane fade"
-                    id="question-group"
-                  >
-                    <div class="panel-group dnn-accordion" id="accordion-2">
-                      <div
-                        class="panel dnn-accordion__panel dnn-accordion__panel--light"
-                      >
-                        <div
-                          class="dnn-accordion__header"
-                          role="tab"
-                          id="qga-heading-1"
-                        >
-                          <div class="dnn-accordion__header-content">
-                            <p class="dnn-accordion__label">Group Name</p>
-                            <p class="dnn-accordion__text">
-                              Personal questions
-                            </p>
-                          </div>
-
-                          <div class="dnn-accordion__header-action">
-                            <div class="dnn-accordion__info">
-                              <span class="dnn-accordion__info-text">
-                                Questions Selected
-                              </span>
-                              <span class="dnn-accordion__info-badge">3</span>
-                            </div>
-
-                            <div class="action-group">
-                              <button
-                                type="button"
-                                class="dnn-btn dnn-btn--icon-btn action-group__btn"
-                              >
-                                <i class="icon-edit"></i>
-                              </button>
-                              <a
-                                role="button"
-                                data-toggle="collapse"
-                                data-parent="#accordion-2"
-                                href="#qga-collapse-1"
-                                class="dnn-btn dnn-btn--icon-btn action-group__btn dnn-accordion__toggle-btn"
-                              >
-                                <i class="icon-down_arrow"></i>
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div
-                          id="qga-collapse-1"
-                          class="dnn-accordion__collapse collapse"
-                          role="tabpanel"
-                          aria-labelledby="qga-heading-1"
-                        >
-                          <div class="dnn-accordion__body">
-                            Anim pariatur cliche reprehenderit, enim eiusmod
-                            high life accusamus terry richardson ad squid. 3
-                            wolf moon officia aute, non cupidatat skateboard
-                            dolor brunch. Food truck quinoa nesciunt laborum
-                            eiusmod.
-                          </div>
-                        </div>
-                      </div>
-
-                      <div
-                        class="panel dnn-accordion__panel dnn-accordion__panel--light"
-                      >
-                        <div
-                          class="dnn-accordion__header"
-                          role="tab"
-                          id="qga-heading-2"
-                        >
-                          <div class="dnn-accordion__header-content">
-                            <p class="dnn-accordion__label">Group Name</p>
-                            <p class="dnn-accordion__text">
-                              Diabetics related questions
-                            </p>
-                          </div>
-
-                          <div class="dnn-accordion__header-action">
-                            <div class="dnn-accordion__info">
-                              <span class="dnn-accordion__info-text">
-                                Questions Selected
-                              </span>
-                              <span class="dnn-accordion__info-badge">13</span>
-                            </div>
-
-                            <div class="action-group">
-                              <button
-                                type="button"
-                                class="dnn-btn dnn-btn--icon-btn action-group__btn"
-                              >
-                                <i class="icon-edit"></i>
-                              </button>
-
-                              <a
-                                role="button"
-                                data-toggle="collapse"
-                                data-parent="#accordion-2"
-                                href="#qga-collapse-2"
-                                class="dnn-btn dnn-btn--icon-btn action-group__btn dnn-accordion__toggle-btn"
-                              >
-                                <i class="icon-down_arrow"></i>
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div
-                          id="qga-collapse-2"
-                          class="dnn-accordion__collapse collapse"
-                          role="tabpanel"
-                          aria-labelledby="qga-heading-2"
-                        >
-                          <div class="dnn-accordion__body">
-                            Anim pariatur cliche reprehenderit, enim eiusmod
-                            high life accusamus terry richardson ad squid. 3
-                            wolf moon officia aute, non cupidatat skateboard
-                            dolor brunch. Food truck quinoa nesciunt laborum
-                            eiusmod.
-                          </div>
-                        </div>
-                      </div>
-
-                      <div
-                        class="panel dnn-accordion__panel dnn-accordion__panel--light"
-                      >
-                        <div
-                          class="dnn-accordion__header"
-                          role="tab"
-                          id="qga-heading-3"
-                        >
-                          <div class="dnn-accordion__header-content">
-                            <p class="dnn-accordion__label">Group Name</p>
-                            <p class="dnn-accordion__text">
-                              Diabetics related questions
-                            </p>
-                          </div>
-
-                          <div class="dnn-accordion__header-action">
-                            <div class="dnn-accordion__info">
-                              <span class="dnn-accordion__info-text">
-                                Questions Selected
-                              </span>
-                              <span class="dnn-accordion__info-badge">3</span>
-                            </div>
-
-                            <div class="action-group">
-                              <button
-                                type="button"
-                                class="dnn-btn dnn-btn--icon-btn action-group__btn"
-                              >
-                                <i class="icon-edit"></i>
-                              </button>
-
-                              <a
-                                role="button"
-                                data-toggle="collapse"
-                                data-parent="#accordion-2"
-                                href="#qga-collapse-3"
-                                class="dnn-btn dnn-btn--icon-btn action-group__btn dnn-accordion__toggle-btn"
-                              >
-                                <i class="icon-down_arrow"></i>
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div
-                          id="qga-collapse-3"
-                          class="in dnn-accordion__collapse collapse"
-                          role="tabpanel"
-                          aria-labelledby="qga-heading-3"
-                        >
-                          <div class="dnn-accordion__body">
-                            <div
-                              class="panel-group dnn-accordion"
-                              id="accordion-3"
-                            >
-                              <div class="panel dnn-accordion__panel">
-                                <div
-                                  class="dnn-accordion__header"
-                                  role="tab"
-                                  id="qa-heading-1"
-                                >
-                                  <div class="dnn-accordion__header-content">
-                                    <p class="dnn-accordion__label">Question</p>
-                                    <p class="dnn-accordion__text">
-                                      Lorem ipsum dolor sit amet, consectetur
-                                      adipiscing elit, sed do eiusmod tempor
-                                      incididunt ut labore et dolore magna
-                                      aliqua. Ut enim ad minim veniam?
-                                    </p>
-                                  </div>
-
-                                  <div class="dnn-accordion__header-action">
-                                    <div class="action-group">
-                                      <a
-                                        role="button"
-                                        data-toggle="collapse"
-                                        data-parent="#accordion-3"
-                                        href="#qa-collapse-1"
-                                        class="dnn-btn dnn-btn--icon-btn action-group__btn dnn-accordion__toggle-btn"
-                                      >
-                                        <i class="icon-down_arrow"></i>
-                                      </a>
-                                    </div>
-                                  </div>
-                                </div>
-
-                                <div
-                                  id="qa-collapse-1"
-                                  class="dnn-accordion__collapse collapse"
-                                  role="tabpanel"
-                                  aria-labelledby="qa-heading-1"
-                                >
-                                  <div class="dnn-accordion__body">
-                                    Anim pariatur cliche reprehenderit, enim
-                                    eiusmod high life accusamus terry richardson
-                                    ad squid. 3 wolf moon officia aute, non
-                                    cupidatat skateboard dolor brunch. Food
-                                    truck quinoa nesciunt laborum eiusmod.
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div class="panel dnn-accordion__panel">
-                                <div
-                                  class="dnn-accordion__header"
-                                  role="tab"
-                                  id="qa-heading-2"
-                                >
-                                  <div class="dnn-accordion__header-content">
-                                    <p class="dnn-accordion__label">Question</p>
-                                    <p class="dnn-accordion__text">
-                                      Have you ever been diagnosed with any of
-                                      the following condition(s)?
-                                    </p>
-                                  </div>
-
-                                  <div class="dnn-accordion__header-action">
-                                    <div class="action-group">
-                                      <a
-                                        role="button"
-                                        data-toggle="collapse"
-                                        data-parent="#accordion-3"
-                                        href="#qa-collapse-2"
-                                        class="dnn-btn dnn-btn--icon-btn action-group__btn dnn-accordion__toggle-btn"
-                                      >
-                                        <i class="icon-down_arrow"></i>
-                                      </a>
-                                    </div>
-                                  </div>
-                                </div>
-
-                                <div
-                                  id="qa-collapse-2"
-                                  class="dnn-accordion__collapse collapse"
-                                  role="tabpanel"
-                                  aria-labelledby="qa-heading-2"
-                                >
-                                  <div class="dnn-accordion__body">
-                                    Anim pariatur cliche reprehenderit, enim
-                                    eiusmod high life accusamus terry richardson
-                                    ad squid. 3 wolf moon officia aute, non
-                                    cupidatat skateboard dolor brunch. Food
-                                    truck quinoa nesciunt laborum eiusmod.
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div class="panel dnn-accordion__panel">
-                                <div
-                                  class="dnn-accordion__header"
-                                  role="tab"
-                                  id="qa-heading-3"
-                                >
-                                  <div class="dnn-accordion__header-content">
-                                    <p class="dnn-accordion__label">Question</p>
-                                    <p class="dnn-accordion__text">
-                                      Have you ever been diagnosed with any of
-                                      the following condition(s)?
-                                    </p>
-                                  </div>
-
-                                  <div class="dnn-accordion__header-action">
-                                    <div class="action-group">
-                                      <a
-                                        role="button"
-                                        data-toggle="collapse"
-                                        data-parent="#accordion-3"
-                                        href="#qa-collapse-3"
-                                        class="dnn-btn dnn-btn--icon-btn action-group__btn dnn-accordion__toggle-btn"
-                                      >
-                                        <i class="icon-down_arrow"></i>
-                                      </a>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div
-                                  id="qa-collapse-3"
-                                  class="in dnn-accordion__collapse collapse"
-                                  role="tabpanel"
-                                  aria-labelledby="qa-heading-3"
-                                >
-                                  <div class="dnn-accordion__body">
-                                    <p class="dnn-accordion__label">
-                                      Question Intro
-                                    </p>
-                                    <p class="dnn-accordion__text">
-                                      Lorem ipsum dolor sit amet, consectetur
-                                      adipiscing elit, sed do eiusmod tempor
-                                      incididunt ut labore et dolore magna
-                                      aliqua. Ut enim ad minim veniam, quis
-                                      nostrud exercitation ullamco laboris nisi
-                                      ut aliquip ex ea commodo consequat.
-                                    </p>
-
-                                    <p class="dnn-accordion__label">
-                                      Question Type
-                                    </p>
-                                    <p class="dnn-accordion__text">Required</p>
-
-                                    <div class="row">
-                                      <div class="col-md-6">
-                                        <p class="dnn-accordion__label">
-                                          Answer Type
-                                        </p>
-
-                                        <div
-                                          class="custom-input custom-input--disabled custom-input--centered mt-12"
-                                        >
-                                          <label class="custom-input__inner">
-                                            <select
-                                              class="custom-input__control custom-input__select"
-                                              disabled
-                                            >
-                                              <option>Select</option>
-                                            </select>
-                                            <span
-                                              class="custom-input__icon custom-input__suffix"
-                                            >
-                                              <i class="icon-down_arrow"></i>
-                                            </span>
-                                          </label>
-                                        </div>
-                                      </div>
-                                    </div>
-
-                                    <div class="dnn-card mt-20">
-                                      <div class="dnn-card__header">
-                                        <h3>Condition</h3>
-                                      </div>
-                                      <div class="dnn-card__body">
-                                        <div class="condition">
-                                          <p class="condition__label">
-                                            If Selected
-                                          </p>
-                                          <div
-                                            class="condition-input flex-grow-1"
-                                          >
-                                            <div
-                                              class="custom-input custom-input--centered"
-                                            >
-                                              <label
-                                                class="custom-input__inner"
-                                              >
-                                                <select
-                                                  class="custom-input__control custom-input__select"
-                                                >
-                                                  <option>
-                                                    Abnormally high red blood
-                                                    cell count (erythrocytosis
-                                                    or polycythemia)
-                                                  </option>
-                                                </select>
-                                                <span
-                                                  class="custom-input__icon custom-input__suffix"
-                                                >
-                                                  <i
-                                                    class="icon-down_arrow"
-                                                  ></i>
-                                                </span>
-                                              </label>
-                                            </div>
-                                          </div>
-                                        </div>
-                                        <div class="condition mt-24">
-                                          <p class="condition__label">
-                                            Select Question
-                                          </p>
-                                          <div
-                                            class="condition-input custom-input--centered flex-grow-1"
-                                          >
-                                            <div class="custom-input">
-                                              <label
-                                                class="custom-input__inner"
-                                              >
-                                                <input
-                                                  type="text"
-                                                  class="custom-input__control"
-                                                  placeholder=" "
-                                                  value="Since how long have you been suffering from this condition?"
-                                                />
-                                              </label>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-
-                                    <div class="dnn-card mt-20">
-                                      <div class="dnn-card__header">
-                                        <h3>Condition</h3>
-                                      </div>
-                                      <div class="dnn-card__body">
-                                        <div class="condition">
-                                          <p class="condition__label">
-                                            If Selected
-                                          </p>
-                                          <div
-                                            class="condition-input flex-grow-1"
-                                          >
-                                            <div
-                                              class="custom-input custom-input--centered"
-                                            >
-                                              <label
-                                                class="custom-input__inner"
-                                              >
-                                                <select
-                                                  class="custom-input__control custom-input__select"
-                                                >
-                                                  <option>
-                                                    Abnormally high red blood
-                                                    cell count (erythrocytosis
-                                                    or polycythemia)
-                                                  </option>
-                                                </select>
-                                                <span
-                                                  class="custom-input__icon custom-input__suffix"
-                                                >
-                                                  <i
-                                                    class="icon-down_arrow"
-                                                  ></i>
-                                                </span>
-                                              </label>
-                                            </div>
-                                          </div>
-                                        </div>
-                                        <div class="condition mt-24">
-                                          <p class="condition__label">
-                                            Select Question
-                                          </p>
-                                          <div
-                                            class="condition-input custom-input--centered flex-grow-1"
-                                          >
-                                            <div class="custom-input">
-                                              <label
-                                                class="custom-input__inner"
-                                              >
-                                                <input
-                                                  type="text"
-                                                  class="custom-input__control"
-                                                  placeholder=" "
-                                                  value="Since how long have you been suffering from this condition?"
-                                                />
-                                              </label>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-
-                                    <div
-                                      class="custom-input custom-input--centered"
-                                    >
-                                      <label class="custom-input__inner">
-                                        <select
-                                          class="custom-input__control custom-input__select"
-                                        >
-                                          <option>Kidney disease</option>
-                                        </select>
-                                        <span
-                                          class="custom-input__icon custom-input__suffix"
-                                        >
-                                          <i class="icon-down_arrow"></i>
-                                        </span>
-                                      </label>
-                                    </div>
-
-                                    <div
-                                      class="custom-input custom-input--centered mt-24"
-                                    >
-                                      <label class="custom-input__inner">
-                                        <select
-                                          class="custom-input__control custom-input__select"
-                                        >
-                                          <option>
-                                            Liver disease (e.g., cirrhosis)
-                                          </option>
-                                        </select>
-                                        <span
-                                          class="custom-input__icon custom-input__suffix"
-                                        >
-                                          <i class="icon-down_arrow"></i>
-                                        </span>
-                                      </label>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div class="panel dnn-accordion__panel">
-                                <div
-                                  class="dnn-accordion__header"
-                                  role="tab"
-                                  id="qa-heading-4"
-                                >
-                                  <div class="dnn-accordion__header-content">
-                                    <p class="dnn-accordion__label">Question</p>
-                                    <p class="dnn-accordion__text">
-                                      Lorem ipsum dolor sit amet, consectetur
-                                      adipiscing elit, sed do eiusmod tempor
-                                      incididunt ut labore et dolore magna
-                                      aliqua. Ut enim ad minim veniam, quis
-                                      nostrud exercitation ullamco laboris nisi
-                                      ut aliquip ex ea commodo consequat. Duis
-                                      aute irure dolor in reprehenderit in
-                                      voluptate velit esse cillum dolore eu
-                                      fugiat nulla pariatur. Excepteur sint
-                                      occaecat cupidatat non proident, sunt in
-                                      culpa qui officia deserunt mollit anim id
-                                      est laborum.
-                                    </p>
-
-                                    <p
-                                      class="dnn-accordion__label dnn-accordion__hide"
-                                    >
-                                      Question Type
-                                    </p>
-                                    <p
-                                      class="dnn-accordion__text dnn-accordion__hide"
-                                    >
-                                      Required
-                                    </p>
-                                  </div>
-
-                                  <div class="dnn-accordion__header-action">
-                                    <div class="action-group">
-                                      <a
-                                        role="button"
-                                        data-toggle="collapse"
-                                        data-parent="#accordion-3"
-                                        href="#qa-collapse-4"
-                                        class="dnn-btn dnn-btn--icon-btn action-group__btn dnn-accordion__toggle-btn"
-                                      >
-                                        <i class="icon-down_arrow"></i>
-                                      </a>
-                                    </div>
-                                  </div>
-                                </div>
-
-                                <div
-                                  id="qa-collapse-4"
-                                  class="dnn-accordion__collapse collapse"
-                                  role="tabpanel"
-                                  aria-labelledby="qa-heading-4"
-                                >
-                                  <div class="dnn-accordion__body">
-                                    Anim pariatur cliche reprehenderit, enim
-                                    eiusmod high life accusamus terry richardson
-                                    ad squid. 3 wolf moon officia aute, non
-                                    cupidatat skateboard dolor brunch. Food
-                                    truck quinoa nesciunt laborum eiusmod.
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- END 3RD TAB CONTENT : QUESTION GROUP  -->
-
-                  <!--  4RTH TAB CONTENT : DEACTIVATED QUESTION  -->
-                  <div
-                    role="tabpanel"
-                    class="tab-pane fade"
-                    id="deactivated-question"
-                  >
-                    deactivated-question
-                  </div>
-                  <!-- END 4RTH TAB CONTENT : DEACTIVATED QUESTION  -->
-                </div>
-
-                <!-- Tab panes end -->
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-
-      <!-- Modal Start-->
-      <div
-        class="modal edit fade"
-        id="add-question-group"
-        tabindex="-1"
-        role="dialog"
-        aria-labelledby="myModalLabel"
-      >
-        <div class="modal-dialog w-100 m-0" role="document">
-          <div class="modal-content">
-            <div class="modal-header d-flex align-item-center">
-              <div
-                class="d-flex w-100 align-item-center justify-content-space-between pe-40"
-              >
-                <h4 class="fs-24 lh-36 text-left" id="myModalLabel">
-                  Add New Group
-                </h4>
-                <div class="modal-header__btns">
-                  <button type="button" class="dnn-btn dnn-btn__primary">
-                    Save Group
-                  </button>
-                </div>
-              </div>
-              <button
-                type="button"
-                class="close-btn"
-                data-dismiss="modal"
-                aria-label="Close"
-              >
-                <span class="icon-cross text-black" aria-hidden="true"></span>
-              </button>
-            </div>
-
-            <div class="modal-body">
-              <div class="modal-body--wrapper mt-40">
-                <div class="custom-input">
-                  <label class="custom-input__inner">
-                    <input
-                      type="text"
-                      class="custom-input__control"
-                      placeholder=" "
-                    />
-                    <span class="custom-input__label">Group Name</span>
-                  </label>
-                </div>
-
-                <div class="searchbar mt-16">
-                  <div class="searchbar__text">
-                    <h4 class="searchbar__title">Select Questions</h4>
-                    <p class="searchbar__info">
-                      (This is only a read-only mode)
-                    </p>
-                  </div>
-
-                  <div class="searchbar__actions">
-                    <div class="dnn-search">
-                      <input
-                        class="dnn-search__input dnn-search__input--grey dnn-search__input--md"
-                        type="text"
-                        placeholder="Search"
-                      />
-                      <i class="icon-search dnn-search__icon"></i>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="panel-group dnn-accordion mt-24" id="accordion-4">
-                  <div class="panel dnn-accordion__panel">
-                    <div
-                      class="dnn-accordion__header"
-                      role="tab"
-                      id="mqa-heading-1"
-                    >
-                      <div class="dnn-accordion__header-content">
-                        <p class="dnn-accordion__label">Question</p>
-                        <p class="dnn-accordion__text">
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit, sed do eiusmod tempor incididunt ut labore et
-                          dolore magna aliqua. Ut enim ad minim veniam?
-                        </p>
-                      </div>
-
-                      <div class="dnn-accordion__header-action">
-                        <div class="action-group">
-                          <a
-                            role="button"
-                            data-toggle="collapse"
-                            data-parent="#accordion-4"
-                            href="#mqa-collapse-1"
-                            class="dnn-btn dnn-btn--icon-btn action-group__btn dnn-accordion__toggle-btn"
-                          >
-                            <i class="icon-down_arrow"></i>
-                          </a>
-
-                          <label class="custom-check dnn-accordion__check">
-                            <span class="custom-check__input">
-                              <input type="checkbox" />
-                              <span></span>
-                            </span>
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div
-                      id="mqa-collapse-1"
-                      class="dnn-accordion__collapse collapse"
-                      role="tabpanel"
-                      aria-labelledby="mqa-heading-1"
-                    >
-                      <div class="dnn-accordion__body">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high
-                        life accusamus terry richardson ad squid. 3 wolf moon
-                        officia aute, non cupidatat skateboard dolor brunch.
-                        Food truck quinoa nesciunt laborum eiusmod.
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="panel dnn-accordion__panel">
-                    <div
-                      class="dnn-accordion__header"
-                      role="tab"
-                      id="mqa-heading-2"
-                    >
-                      <div class="dnn-accordion__header-content">
-                        <p class="dnn-accordion__label">Question</p>
-                        <p class="dnn-accordion__text">
-                          Have you ever been diagnosed with any of the following
-                          condition(s)?
-                        </p>
-                      </div>
-
-                      <div class="dnn-accordion__header-action">
-                        <div class="action-group">
-                          <a
-                            role="button"
-                            data-toggle="collapse"
-                            data-parent="#accordion-4"
-                            href="#mqa-collapse-2"
-                            class="dnn-btn dnn-btn--icon-btn action-group__btn dnn-accordion__toggle-btn"
-                          >
-                            <i class="icon-down_arrow"></i>
-                          </a>
-
-                          <label class="custom-check dnn-accordion__check">
-                            <span class="custom-check__input">
-                              <input type="checkbox" />
-                              <span></span>
-                            </span>
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div
-                      id="mqa-collapse-2"
-                      class="dnn-accordion__collapse collapse"
-                      role="tabpanel"
-                      aria-labelledby="mqa-heading-2"
-                    >
-                      <div class="dnn-accordion__body">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high
-                        life accusamus terry richardson ad squid. 3 wolf moon
-                        officia aute, non cupidatat skateboard dolor brunch.
-                        Food truck quinoa nesciunt laborum eiusmod.
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="panel dnn-accordion__panel">
-                    <div
-                      class="dnn-accordion__header"
-                      role="tab"
-                      id="mqa-heading-3"
-                    >
-                      <div class="dnn-accordion__header-content">
-                        <p class="dnn-accordion__label">Question</p>
-                        <p class="dnn-accordion__text">
-                          Have you ever been diagnosed with any of the following
-                          condition(s)?
-                        </p>
-                      </div>
-
-                      <div class="dnn-accordion__header-action">
-                        <div class="action-group">
-                          <a
-                            role="button"
-                            data-toggle="collapse"
-                            data-parent="#accordion-4"
-                            href="#mqa-collapse-3"
-                            class="dnn-btn dnn-btn--icon-btn action-group__btn dnn-accordion__toggle-btn"
-                          >
-                            <i class="icon-down_arrow"></i>
-                          </a>
-
-                          <label class="custom-check dnn-accordion__check">
-                            <span class="custom-check__input">
-                              <input type="checkbox" checked />
-                              <span></span>
-                            </span>
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      id="mqa-collapse-3"
-                      class="in dnn-accordion__collapse collapse"
-                      role="tabpanel"
-                      aria-labelledby="mqa-heading-3"
-                    >
-                      <div class="dnn-accordion__body">
-                        <p class="dnn-accordion__label">Question Intro</p>
-                        <p class="dnn-accordion__text">
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit, sed do eiusmod tempor incididunt ut labore et
-                          dolore magna aliqua. Ut enim ad minim veniam, quis
-                          nostrud exercitation ullamco laboris nisi ut aliquip
-                          ex ea commodo consequat.
-                        </p>
-
-                        <p class="dnn-accordion__label">Question Type</p>
-                        <p class="dnn-accordion__text">Required</p>
-
-                        <div class="row">
-                          <div class="col-md-6">
-                            <p class="dnn-accordion__label">Answer Type</p>
-
-                            <div
-                              class="custom-input custom-input--disabled custom-input--centered mt-12"
-                            >
-                              <label class="custom-input__inner">
-                                <select
-                                  class="custom-input__control custom-input__select"
-                                  disabled
-                                >
-                                  <option>Select</option>
-                                </select>
-                                <span
-                                  class="custom-input__icon custom-input__suffix"
-                                >
-                                  <i class="icon-down_arrow"></i>
-                                </span>
-                              </label>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="dnn-card mt-20">
-                          <div class="dnn-card__header">
-                            <h3>Condition</h3>
-                          </div>
-                          <div class="dnn-card__body">
-                            <div class="condition">
-                              <p class="condition__label">If Selected</p>
-                              <div class="condition-input flex-grow-1">
-                                <div
-                                  class="custom-input custom-input--centered"
-                                >
-                                  <label class="custom-input__inner">
-                                    <select
-                                      class="custom-input__control custom-input__select"
-                                    >
-                                      <option>
-                                        Abnormally high red blood cell count
-                                        (erythrocytosis or polycythemia)
-                                      </option>
-                                    </select>
-                                    <span
-                                      class="custom-input__icon custom-input__suffix"
-                                    >
-                                      <i class="icon-down_arrow"></i>
-                                    </span>
-                                  </label>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="condition mt-24">
-                              <p class="condition__label">Select Question</p>
-                              <div
-                                class="condition-input custom-input--centered flex-grow-1"
-                              >
-                                <div class="custom-input">
-                                  <label class="custom-input__inner">
-                                    <input
-                                      type="text"
-                                      class="custom-input__control"
-                                      placeholder=" "
-                                      value="Since how long have you been suffering from this condition?"
-                                    />
-                                  </label>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="dnn-card mt-20">
-                          <div class="dnn-card__header">
-                            <h3>Condition</h3>
-                          </div>
-                          <div class="dnn-card__body">
-                            <div class="condition">
-                              <p class="condition__label">If Selected</p>
-                              <div class="condition-input flex-grow-1">
-                                <div
-                                  class="custom-input custom-input--centered"
-                                >
-                                  <label class="custom-input__inner">
-                                    <select
-                                      class="custom-input__control custom-input__select"
-                                    >
-                                      <option>
-                                        Abnormally high red blood cell count
-                                        (erythrocytosis or polycythemia)
-                                      </option>
-                                    </select>
-                                    <span
-                                      class="custom-input__icon custom-input__suffix"
-                                    >
-                                      <i class="icon-down_arrow"></i>
-                                    </span>
-                                  </label>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="condition mt-24">
-                              <p class="condition__label">Select Question</p>
-                              <div
-                                class="condition-input custom-input--centered flex-grow-1"
-                              >
-                                <div class="custom-input">
-                                  <label class="custom-input__inner">
-                                    <input
-                                      type="text"
-                                      class="custom-input__control"
-                                      placeholder=" "
-                                      value="Since how long have you been suffering from this condition?"
-                                    />
-                                  </label>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="custom-input custom-input--centered">
-                          <label class="custom-input__inner">
-                            <select
-                              class="custom-input__control custom-input__select"
-                            >
-                              <option>Kidney disease</option>
-                            </select>
-                            <span
-                              class="custom-input__icon custom-input__suffix"
-                            >
-                              <i class="icon-down_arrow"></i>
-                            </span>
-                          </label>
-                        </div>
-
-                        <div class="custom-input custom-input--centered mt-24">
-                          <label class="custom-input__inner">
-                            <select
-                              class="custom-input__control custom-input__select"
-                            >
-                              <option>Liver disease (e.g., cirrhosis)</option>
-                            </select>
-                            <span
-                              class="custom-input__icon custom-input__suffix"
-                            >
-                              <i class="icon-down_arrow"></i>
-                            </span>
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="panel dnn-accordion__panel">
-                    <div
-                      class="dnn-accordion__header"
-                      role="tab"
-                      id="mqa-heading-4"
-                    >
-                      <div class="dnn-accordion__header-content">
-                        <p class="dnn-accordion__label">Question</p>
-                        <p class="dnn-accordion__text">
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit, sed do eiusmod tempor incididunt ut labore et
-                          dolore magna aliqua. Ut enim ad minim veniam, quis
-                          nostrud exercitation ullamco laboris nisi ut aliquip
-                          ex ea commodo consequat. Duis aute irure dolor in
-                          reprehenderit in voluptate velit esse cillum dolore eu
-                          fugiat nulla pariatur. Excepteur sint occaecat
-                          cupidatat non proident, sunt in culpa qui officia
-                          deserunt mollit anim id est laborum.
-                        </p>
-
-                        <p class="dnn-accordion__label dnn-accordion__hide">
-                          Question Type
-                        </p>
-                        <p class="dnn-accordion__text dnn-accordion__hide">
-                          Required
-                        </p>
-                      </div>
-
-                      <div class="dnn-accordion__header-action">
-                        <div class="action-group">
-                          <a
-                            role="button"
-                            data-toggle="collapse"
-                            data-parent="#accordion-4"
-                            href="#mqa-collapse-4"
-                            class="dnn-btn dnn-btn--icon-btn action-group__btn dnn-accordion__toggle-btn"
-                          >
-                            <i class="icon-down_arrow"></i>
-                          </a>
-
-                          <label class="custom-check dnn-accordion__check">
-                            <span class="custom-check__input">
-                              <input type="checkbox" />
-                              <span></span>
-                            </span>
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div
-                      id="mqa-collapse-4"
-                      class="dnn-accordion__collapse collapse"
-                      role="tabpanel"
-                      aria-labelledby="mqa-heading-4"
-                    >
-                      <div class="dnn-accordion__body">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high
-                        life accusamus terry richardson ad squid. 3 wolf moon
-                        officia aute, non cupidatat skateboard dolor brunch.
-                        Food truck quinoa nesciunt laborum eiusmod.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--Modal End-->
-
-      <footer class="footer">
-        <div class="footer__content">
-          <div class="footer__links">
-            <a href="#">Terms of use</a><a href="#">Privacy Policy</a>
-          </div>
-          <p class="text-grey-3 fs-13">
-            Copyright &copy; 2024 Thrivewell. All rights reserved.
-          </p>
-        </div>
-      </footer>
-    </div>
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="vendors/jquery/jquery-2.2.4.min.js"></script>
-    <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
-    <script src="vendors/swiper/package/swiper-bundle.min.js"></script>
-    <script src="vendors/bootstrap-multiselect/js/bootstrap-multiselect.min.js"></script>
-    <script src="vendors/trumbowyg/trumbowyg.js"></script>
-    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
-
-    <script src="js/main.js"></script>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<title>Thrivewell - Question List</title>
+
+		<link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.min.css" />
+		<link
+			rel="stylesheet"
+			href="vendors/bootstrap-multiselect/css/bootstrap-multiselect.min.css"
+		/>
+		<link rel="stylesheet" href="vendors/trumbowyg/trumbowyg.css" />
+		<link
+			href="https://cdn.quilljs.com/1.3.6/quill.snow.css"
+			rel="stylesheet"
+		/>
+
+		<link rel="stylesheet" href="icons/style.css" />
+
+		<link rel="stylesheet" href="css/styles.css" />
+
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="dashboard">
+			<header class="header">
+				<nav class="menubar">
+					<a href="#" class="menubar__brand">
+						<img src="img/logo.svg" alt="Logo" class="menubar__logo" />
+					</a>
+
+					<div class="menubar__items">
+						<a class="menubar__item" href="#">
+							<i class="icon-message menubar__icon"></i>
+							<span class="menubar__badge"></span>
+						</a>
+						<a class="menubar__item" href="#">
+							<i class="icon-notification menubar__icon"></i>
+							<span class="menubar__badge"></span>
+						</a>
+
+						<div class="dropdown menubar__dropdown">
+							<button
+								class="user dropdown-toggle"
+								type="button"
+								id="menu-dropdown"
+								data-toggle="dropdown"
+								aria-haspopup="true"
+								aria-expanded="false"
+							>
+								<img class="user__avatar" src="img/user.png" alt="avatar" />
+
+								<div class="user__info">
+									<p class="user__name fs-18 lh-100 text-dark">David Wayne</p>
+									<p class="user__role fs-14 lh-100 text-grey-3">Super Admin</p>
+								</div>
+
+								<i class="icon-down_arrow"></i>
+							</button>
+							<ul class="dropdown-menu" aria-labelledby="menu-dropdown">
+								<li><a href="#">Action</a></li>
+								<li><a href="#">Another action</a></li>
+								<li><a href="#">Something else here</a></li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+			</header>
+
+			<main class="main">
+				<aside class="sidebar">
+					<ul class="sidebar__items">
+						<li class="sidebar__item">
+							<a href="./product-details.html" class="sidebar__link">
+								<i class="icon-dashboard sidebar__icon"></i>
+								<span class="sidebar__text">Dashboard</span>
+							</a>
+						</li>
+						<li class="sidebar__item">
+							<a href="./product-list.html" class="sidebar__link">
+								<i class="icon-tablet sidebar__icon"></i>
+								<span class="sidebar__text">Product List</span>
+							</a>
+						</li>
+						<li class="sidebar__item">
+							<a href="./product-list.html" class="sidebar__link">
+								<i class="icon-product_list sidebar__icon"></i>
+								<span class="sidebar__text">Package List</span>
+							</a>
+						</li>
+						<li class="sidebar__item">
+							<a href="./intake-form-list.html" class="sidebar__link">
+								<i class="icon-intake_form sidebar__icon"></i>
+								<span class="sidebar__text">Intake Form</span>
+							</a>
+						</li>
+						<li class="sidebar__item">
+							<a
+								href="./question-list.html"
+								class="sidebar__link sidebar__link--active"
+							>
+								<i class="icon-questions sidebar__icon"></i>
+								<span class="sidebar__text">Questions</span>
+							</a>
+						</li>
+						<li class="sidebar__item">
+							<a href="./site-list.html" class="sidebar__link">
+								<i class="icon-globe sidebar__icon"></i>
+								<span class="sidebar__text">Site List</span>
+							</a>
+						</li>
+						<li class="sidebar__item">
+							<a href="#" class="sidebar__link">
+								<i class="icon-settings sidebar__icon"></i>
+								<span class="sidebar__text">Settings</span>
+							</a>
+						</li>
+					</ul>
+
+					<button type="button" class="sidebar__toggle">
+						<i class="icon-left-arrow"></i>
+					</button>
+				</aside>
+
+				<div class="tw-main__content">
+					<div class="content">
+						<div class="actionbar">
+							<div class="actionbar__title">
+								<p class="text-uppercase text-primary fs-20 mb-0 fw-600 lh-150">
+									Questions
+								</p>
+							</div>
+
+							<div class="actionbar__actions">
+								<button
+									type="button"
+									id="add-group-btn"
+									data-toggle="modal"
+									data-target="#add-question-group"
+									class="oqtane-btn oqtane-btn__primary"
+								>
+									Add New Group
+								</button>
+								<button
+									type="button"
+									id="add-question-btn"
+									class="oqtane-btn oqtane-btn__primary"
+								>
+									Add New Question
+								</button>
+							</div>
+						</div>
+
+						<div class="oqtane-card mb-0">
+							<div class="oqtane-card__header oqtane-card__header--tabs">
+								<ul class="nav nav-tabs dnn-tabs" role="tablist">
+									<li role="presentation" class="dnn-tabs__item active">
+										<a
+											href="#active-questions"
+											aria-controls="active-questions"
+											role="tab"
+											data-toggle="tab"
+											class="dnn-tabs__link"
+										>
+											Active Questions
+										</a>
+									</li>
+
+									<li role="presentation" class="dnn-tabs__item">
+										<a
+											href="#draft"
+											aria-controls="draft"
+											role="tab"
+											data-toggle="tab"
+											class="dnn-tabs__link"
+											>Draft</a
+										>
+									</li>
+
+									<li role="presentation" class="dnn-tabs__item">
+										<a
+											href="#question-group"
+											aria-controls="question-group"
+											role="tab"
+											data-toggle="tab"
+											class="dnn-tabs__link"
+											>Question Group</a
+										>
+									</li>
+
+									<li role="presentation" class="dnn-tabs__item">
+										<a
+											href="#deactivated-question"
+											aria-controls="deactivated-question"
+											role="tab"
+											data-toggle="tab"
+											class="dnn-tabs__link"
+											>Deactivated Question</a
+										>
+									</li>
+								</ul>
+							</div>
+
+							<div class="oqtane-card__body">
+								<!-- Tab panes -->
+								<div class="tab-content">
+									<!-- 1ST TAB CONTENT : ACTIVE QUESTIONS -->
+									<div
+										role="tabpanel"
+										class="tab-pane fade in active"
+										id="active-questions"
+									>
+										<div class="panel-group dnn-accordion" id="accordion">
+											<div class="panel dnn-accordion__panel">
+												<div
+													class="dnn-accordion__header"
+													role="tab"
+													id="headingOne"
+												>
+													<div class="dnn-accordion__header-content">
+														<p class="dnn-accordion__label">Question</p>
+														<p class="dnn-accordion__text">
+															Have you ever been diagnosed with any of the
+															following condition(s)?
+														</p>
+
+														<p class="dnn-accordion__label dnn-accordion__hide">
+															Question Type
+														</p>
+														<p class="dnn-accordion__text dnn-accordion__hide">
+															Required
+														</p>
+													</div>
+
+													<div class="dnn-accordion__header-action">
+														<div class="action-group">
+															<button
+																type="button"
+																class="oqtane-btn oqtane-btn--icon-btn action-group__btn"
+															>
+																<i class="icon-edit"></i>
+															</button>
+															<a
+																role="button"
+																data-toggle="collapse"
+																data-parent="#accordion"
+																href="#collapseOne"
+																class="oqtane-btn oqtane-btn--icon-btn action-group__btn dnn-accordion__toggle-btn"
+															>
+																<i class="icon-down_arrow"></i>
+															</a>
+														</div>
+													</div>
+												</div>
+												<div
+													id="collapseOne"
+													class="in dnn-accordion__collapse collapse"
+													role="tabpanel"
+													aria-labelledby="headingOne"
+												>
+													<div class="dnn-accordion__body">
+														<p class="dnn-accordion__label">Question Intro</p>
+														<p class="dnn-accordion__text">
+															Lorem ipsum dolor sit amet, consectetur adipiscing
+															elit, sed do eiusmod tempor incididunt ut labore
+															et dolore magna aliqua. Ut enim ad minim veniam,
+															quis nostrud exercitation ullamco laboris nisi ut
+															aliquip ex ea commodo consequat.
+														</p>
+
+														<p class="dnn-accordion__label">Question Type</p>
+														<p class="dnn-accordion__text">Required</p>
+
+														<div class="row">
+															<div class="col-md-6">
+																<p class="dnn-accordion__label">Answer Type</p>
+
+																<div
+																	class="custom-input custom-input--disabled custom-input--centered mt-12"
+																>
+																	<label class="custom-input__inner">
+																		<select
+																			class="custom-input__control custom-input__select"
+																			disabled
+																		>
+																			<option>Select</option>
+																		</select>
+																		<span
+																			class="custom-input__icon custom-input__suffix"
+																		>
+																			<i class="icon-down_arrow"></i>
+																		</span>
+																	</label>
+																</div>
+															</div>
+														</div>
+
+														<div class="oqtane-card mt-20">
+															<div class="oqtane-card__header">
+																<h3>Condition</h3>
+															</div>
+															<div class="oqtane-card__body">
+																<div class="condition">
+																	<p class="condition__label">If Selected</p>
+																	<div class="condition-input flex-grow-1">
+																		<div
+																			class="custom-input custom-input--centered"
+																		>
+																			<label class="custom-input__inner">
+																				<select
+																					class="custom-input__control custom-input__select"
+																				>
+																					<option>
+																						Abnormally high red blood cell count
+																						(erythrocytosis or polycythemia)
+																					</option>
+																				</select>
+																				<span
+																					class="custom-input__icon custom-input__suffix"
+																				>
+																					<i class="icon-down_arrow"></i>
+																				</span>
+																			</label>
+																		</div>
+																	</div>
+																</div>
+																<div class="condition mt-24">
+																	<p class="condition__label">
+																		Select Question
+																	</p>
+																	<div
+																		class="condition-input custom-input--centered flex-grow-1"
+																	>
+																		<div class="custom-input">
+																			<label class="custom-input__inner">
+																				<input
+																					type="text"
+																					class="custom-input__control"
+																					placeholder=" "
+																					value="Since how long have you been suffering from this condition?"
+																				/>
+																			</label>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<div class="oqtane-card mt-20">
+															<div class="oqtane-card__header">
+																<h3>Condition</h3>
+															</div>
+															<div class="oqtane-card__body">
+																<div class="condition">
+																	<p class="condition__label">If Selected</p>
+																	<div class="condition-input flex-grow-1">
+																		<div
+																			class="custom-input custom-input--centered"
+																		>
+																			<label class="custom-input__inner">
+																				<select
+																					class="custom-input__control custom-input__select"
+																				>
+																					<option>
+																						Abnormally high red blood cell count
+																						(erythrocytosis or polycythemia)
+																					</option>
+																				</select>
+																				<span
+																					class="custom-input__icon custom-input__suffix"
+																				>
+																					<i class="icon-down_arrow"></i>
+																				</span>
+																			</label>
+																		</div>
+																	</div>
+																</div>
+																<div class="condition mt-24">
+																	<p class="condition__label">
+																		Select Question
+																	</p>
+																	<div
+																		class="condition-input custom-input--centered flex-grow-1"
+																	>
+																		<div class="custom-input">
+																			<label class="custom-input__inner">
+																				<input
+																					type="text"
+																					class="custom-input__control"
+																					placeholder=" "
+																					value="Since how long have you been suffering from this condition?"
+																				/>
+																			</label>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<div class="custom-input custom-input--centered">
+															<label class="custom-input__inner">
+																<select
+																	class="custom-input__control custom-input__select"
+																>
+																	<option>Kidney disease</option>
+																</select>
+																<span
+																	class="custom-input__icon custom-input__suffix"
+																>
+																	<i class="icon-down_arrow"></i>
+																</span>
+															</label>
+														</div>
+
+														<div
+															class="custom-input custom-input--centered mt-24"
+														>
+															<label class="custom-input__inner">
+																<select
+																	class="custom-input__control custom-input__select"
+																>
+																	<option>
+																		Liver disease (e.g., cirrhosis)
+																	</option>
+																</select>
+																<span
+																	class="custom-input__icon custom-input__suffix"
+																>
+																	<i class="icon-down_arrow"></i>
+																</span>
+															</label>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="panel dnn-accordion__panel">
+												<div
+													class="dnn-accordion__header"
+													role="tab"
+													id="headingTwo"
+												>
+													<div class="dnn-accordion__header-content">
+														<p class="dnn-accordion__label">Question</p>
+														<p class="dnn-accordion__text">
+															Lorem ipsum dolor sit amet, consectetur adipiscing
+															elit, sed do eiusmod tempor incididunt ut labore
+															et dolore magna aliqua. Ut enim ad minim veniam?
+														</p>
+
+														<p class="dnn-accordion__label dnn-accordion__hide">
+															Question Type
+														</p>
+														<p class="dnn-accordion__text dnn-accordion__hide">
+															Required
+														</p>
+													</div>
+
+													<div class="dnn-accordion__header-action">
+														<div class="action-group">
+															<button
+																type="button"
+																class="oqtane-btn oqtane-btn--icon-btn action-group__btn"
+															>
+																<i class="icon-edit"></i>
+															</button>
+															<a
+																role="button"
+																data-toggle="collapse"
+																data-parent="#accordion"
+																href="#collapseTwo"
+																class="oqtane-btn oqtane-btn--icon-btn action-group__btn dnn-accordion__toggle-btn"
+															>
+																<i class="icon-down_arrow"></i>
+															</a>
+														</div>
+													</div>
+												</div>
+
+												<div
+													id="collapseTwo"
+													class="dnn-accordion__collapse collapse"
+													role="tabpanel"
+													aria-labelledby="headingTwo"
+												>
+													<div class="dnn-accordion__body">
+														Anim pariatur cliche reprehenderit, enim eiusmod
+														high life accusamus terry richardson ad squid. 3
+														wolf moon officia aute, non cupidatat skateboard
+														dolor brunch. Food truck quinoa nesciunt laborum
+														eiusmod.
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- END 1ST TAB CONTENT : ACTIVE QUESTIONS -->
+
+									<!-- 2ND TAB CONTENT : DRAFT QUESTIONS -->
+									<div role="tabpanel" class="tab-pane fade" id="draft">
+										draft
+									</div>
+									<!-- END 2ND TAB CONTENT : DRAFT QUESTIONS -->
+
+									<!--  3RD TAB CONTENT : QUESTION GROUP  -->
+									<div
+										role="tabpanel"
+										class="tab-pane fade"
+										id="question-group"
+									>
+										<div class="panel-group dnn-accordion" id="accordion-2">
+											<div
+												class="panel dnn-accordion__panel dnn-accordion__panel--light"
+											>
+												<div
+													class="dnn-accordion__header"
+													role="tab"
+													id="qga-heading-1"
+												>
+													<div class="dnn-accordion__header-content">
+														<p class="dnn-accordion__label">Group Name</p>
+														<p class="dnn-accordion__text">
+															Personal questions
+														</p>
+													</div>
+
+													<div class="dnn-accordion__header-action">
+														<div class="dnn-accordion__info">
+															<span class="dnn-accordion__info-text">
+																Questions Selected
+															</span>
+															<span class="dnn-accordion__info-badge">3</span>
+														</div>
+
+														<div class="action-group">
+															<button
+																type="button"
+																class="oqtane-btn oqtane-btn--icon-btn action-group__btn"
+															>
+																<i class="icon-edit"></i>
+															</button>
+															<a
+																role="button"
+																data-toggle="collapse"
+																data-parent="#accordion-2"
+																href="#qga-collapse-1"
+																class="oqtane-btn oqtane-btn--icon-btn action-group__btn dnn-accordion__toggle-btn"
+															>
+																<i class="icon-down_arrow"></i>
+															</a>
+														</div>
+													</div>
+												</div>
+
+												<div
+													id="qga-collapse-1"
+													class="dnn-accordion__collapse collapse"
+													role="tabpanel"
+													aria-labelledby="qga-heading-1"
+												>
+													<div class="dnn-accordion__body">
+														Anim pariatur cliche reprehenderit, enim eiusmod
+														high life accusamus terry richardson ad squid. 3
+														wolf moon officia aute, non cupidatat skateboard
+														dolor brunch. Food truck quinoa nesciunt laborum
+														eiusmod.
+													</div>
+												</div>
+											</div>
+
+											<div
+												class="panel dnn-accordion__panel dnn-accordion__panel--light"
+											>
+												<div
+													class="dnn-accordion__header"
+													role="tab"
+													id="qga-heading-2"
+												>
+													<div class="dnn-accordion__header-content">
+														<p class="dnn-accordion__label">Group Name</p>
+														<p class="dnn-accordion__text">
+															Diabetics related questions
+														</p>
+													</div>
+
+													<div class="dnn-accordion__header-action">
+														<div class="dnn-accordion__info">
+															<span class="dnn-accordion__info-text">
+																Questions Selected
+															</span>
+															<span class="dnn-accordion__info-badge">13</span>
+														</div>
+
+														<div class="action-group">
+															<button
+																type="button"
+																class="oqtane-btn oqtane-btn--icon-btn action-group__btn"
+															>
+																<i class="icon-edit"></i>
+															</button>
+
+															<a
+																role="button"
+																data-toggle="collapse"
+																data-parent="#accordion-2"
+																href="#qga-collapse-2"
+																class="oqtane-btn oqtane-btn--icon-btn action-group__btn dnn-accordion__toggle-btn"
+															>
+																<i class="icon-down_arrow"></i>
+															</a>
+														</div>
+													</div>
+												</div>
+
+												<div
+													id="qga-collapse-2"
+													class="dnn-accordion__collapse collapse"
+													role="tabpanel"
+													aria-labelledby="qga-heading-2"
+												>
+													<div class="dnn-accordion__body">
+														Anim pariatur cliche reprehenderit, enim eiusmod
+														high life accusamus terry richardson ad squid. 3
+														wolf moon officia aute, non cupidatat skateboard
+														dolor brunch. Food truck quinoa nesciunt laborum
+														eiusmod.
+													</div>
+												</div>
+											</div>
+
+											<div
+												class="panel dnn-accordion__panel dnn-accordion__panel--light"
+											>
+												<div
+													class="dnn-accordion__header"
+													role="tab"
+													id="qga-heading-3"
+												>
+													<div class="dnn-accordion__header-content">
+														<p class="dnn-accordion__label">Group Name</p>
+														<p class="dnn-accordion__text">
+															Diabetics related questions
+														</p>
+													</div>
+
+													<div class="dnn-accordion__header-action">
+														<div class="dnn-accordion__info">
+															<span class="dnn-accordion__info-text">
+																Questions Selected
+															</span>
+															<span class="dnn-accordion__info-badge">3</span>
+														</div>
+
+														<div class="action-group">
+															<button
+																type="button"
+																class="oqtane-btn oqtane-btn--icon-btn action-group__btn"
+															>
+																<i class="icon-edit"></i>
+															</button>
+
+															<a
+																role="button"
+																data-toggle="collapse"
+																data-parent="#accordion-2"
+																href="#qga-collapse-3"
+																class="oqtane-btn oqtane-btn--icon-btn action-group__btn dnn-accordion__toggle-btn"
+															>
+																<i class="icon-down_arrow"></i>
+															</a>
+														</div>
+													</div>
+												</div>
+
+												<div
+													id="qga-collapse-3"
+													class="in dnn-accordion__collapse collapse"
+													role="tabpanel"
+													aria-labelledby="qga-heading-3"
+												>
+													<div class="dnn-accordion__body">
+														<div
+															class="panel-group dnn-accordion"
+															id="accordion-3"
+														>
+															<div class="panel dnn-accordion__panel">
+																<div
+																	class="dnn-accordion__header"
+																	role="tab"
+																	id="qa-heading-1"
+																>
+																	<div class="dnn-accordion__header-content">
+																		<p class="dnn-accordion__label">Question</p>
+																		<p class="dnn-accordion__text">
+																			Lorem ipsum dolor sit amet, consectetur
+																			adipiscing elit, sed do eiusmod tempor
+																			incididunt ut labore et dolore magna
+																			aliqua. Ut enim ad minim veniam?
+																		</p>
+																	</div>
+
+																	<div class="dnn-accordion__header-action">
+																		<div class="action-group">
+																			<a
+																				role="button"
+																				data-toggle="collapse"
+																				data-parent="#accordion-3"
+																				href="#qa-collapse-1"
+																				class="oqtane-btn oqtane-btn--icon-btn action-group__btn dnn-accordion__toggle-btn"
+																			>
+																				<i class="icon-down_arrow"></i>
+																			</a>
+																		</div>
+																	</div>
+																</div>
+
+																<div
+																	id="qa-collapse-1"
+																	class="dnn-accordion__collapse collapse"
+																	role="tabpanel"
+																	aria-labelledby="qa-heading-1"
+																>
+																	<div class="dnn-accordion__body">
+																		Anim pariatur cliche reprehenderit, enim
+																		eiusmod high life accusamus terry richardson
+																		ad squid. 3 wolf moon officia aute, non
+																		cupidatat skateboard dolor brunch. Food
+																		truck quinoa nesciunt laborum eiusmod.
+																	</div>
+																</div>
+															</div>
+
+															<div class="panel dnn-accordion__panel">
+																<div
+																	class="dnn-accordion__header"
+																	role="tab"
+																	id="qa-heading-2"
+																>
+																	<div class="dnn-accordion__header-content">
+																		<p class="dnn-accordion__label">Question</p>
+																		<p class="dnn-accordion__text">
+																			Have you ever been diagnosed with any of
+																			the following condition(s)?
+																		</p>
+																	</div>
+
+																	<div class="dnn-accordion__header-action">
+																		<div class="action-group">
+																			<a
+																				role="button"
+																				data-toggle="collapse"
+																				data-parent="#accordion-3"
+																				href="#qa-collapse-2"
+																				class="oqtane-btn oqtane-btn--icon-btn action-group__btn dnn-accordion__toggle-btn"
+																			>
+																				<i class="icon-down_arrow"></i>
+																			</a>
+																		</div>
+																	</div>
+																</div>
+
+																<div
+																	id="qa-collapse-2"
+																	class="dnn-accordion__collapse collapse"
+																	role="tabpanel"
+																	aria-labelledby="qa-heading-2"
+																>
+																	<div class="dnn-accordion__body">
+																		Anim pariatur cliche reprehenderit, enim
+																		eiusmod high life accusamus terry richardson
+																		ad squid. 3 wolf moon officia aute, non
+																		cupidatat skateboard dolor brunch. Food
+																		truck quinoa nesciunt laborum eiusmod.
+																	</div>
+																</div>
+															</div>
+
+															<div class="panel dnn-accordion__panel">
+																<div
+																	class="dnn-accordion__header"
+																	role="tab"
+																	id="qa-heading-3"
+																>
+																	<div class="dnn-accordion__header-content">
+																		<p class="dnn-accordion__label">Question</p>
+																		<p class="dnn-accordion__text">
+																			Have you ever been diagnosed with any of
+																			the following condition(s)?
+																		</p>
+																	</div>
+
+																	<div class="dnn-accordion__header-action">
+																		<div class="action-group">
+																			<a
+																				role="button"
+																				data-toggle="collapse"
+																				data-parent="#accordion-3"
+																				href="#qa-collapse-3"
+																				class="oqtane-btn oqtane-btn--icon-btn action-group__btn dnn-accordion__toggle-btn"
+																			>
+																				<i class="icon-down_arrow"></i>
+																			</a>
+																		</div>
+																	</div>
+																</div>
+																<div
+																	id="qa-collapse-3"
+																	class="in dnn-accordion__collapse collapse"
+																	role="tabpanel"
+																	aria-labelledby="qa-heading-3"
+																>
+																	<div class="dnn-accordion__body">
+																		<p class="dnn-accordion__label">
+																			Question Intro
+																		</p>
+																		<p class="dnn-accordion__text">
+																			Lorem ipsum dolor sit amet, consectetur
+																			adipiscing elit, sed do eiusmod tempor
+																			incididunt ut labore et dolore magna
+																			aliqua. Ut enim ad minim veniam, quis
+																			nostrud exercitation ullamco laboris nisi
+																			ut aliquip ex ea commodo consequat.
+																		</p>
+
+																		<p class="dnn-accordion__label">
+																			Question Type
+																		</p>
+																		<p class="dnn-accordion__text">Required</p>
+
+																		<div class="row">
+																			<div class="col-md-6">
+																				<p class="dnn-accordion__label">
+																					Answer Type
+																				</p>
+
+																				<div
+																					class="custom-input custom-input--disabled custom-input--centered mt-12"
+																				>
+																					<label class="custom-input__inner">
+																						<select
+																							class="custom-input__control custom-input__select"
+																							disabled
+																						>
+																							<option>Select</option>
+																						</select>
+																						<span
+																							class="custom-input__icon custom-input__suffix"
+																						>
+																							<i class="icon-down_arrow"></i>
+																						</span>
+																					</label>
+																				</div>
+																			</div>
+																		</div>
+
+																		<div class="oqtane-card mt-20">
+																			<div class="oqtane-card__header">
+																				<h3>Condition</h3>
+																			</div>
+																			<div class="oqtane-card__body">
+																				<div class="condition">
+																					<p class="condition__label">
+																						If Selected
+																					</p>
+																					<div
+																						class="condition-input flex-grow-1"
+																					>
+																						<div
+																							class="custom-input custom-input--centered"
+																						>
+																							<label
+																								class="custom-input__inner"
+																							>
+																								<select
+																									class="custom-input__control custom-input__select"
+																								>
+																									<option>
+																										Abnormally high red blood
+																										cell count (erythrocytosis
+																										or polycythemia)
+																									</option>
+																								</select>
+																								<span
+																									class="custom-input__icon custom-input__suffix"
+																								>
+																									<i
+																										class="icon-down_arrow"
+																									></i>
+																								</span>
+																							</label>
+																						</div>
+																					</div>
+																				</div>
+																				<div class="condition mt-24">
+																					<p class="condition__label">
+																						Select Question
+																					</p>
+																					<div
+																						class="condition-input custom-input--centered flex-grow-1"
+																					>
+																						<div class="custom-input">
+																							<label
+																								class="custom-input__inner"
+																							>
+																								<input
+																									type="text"
+																									class="custom-input__control"
+																									placeholder=" "
+																									value="Since how long have you been suffering from this condition?"
+																								/>
+																							</label>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+
+																		<div class="oqtane-card mt-20">
+																			<div class="oqtane-card__header">
+																				<h3>Condition</h3>
+																			</div>
+																			<div class="oqtane-card__body">
+																				<div class="condition">
+																					<p class="condition__label">
+																						If Selected
+																					</p>
+																					<div
+																						class="condition-input flex-grow-1"
+																					>
+																						<div
+																							class="custom-input custom-input--centered"
+																						>
+																							<label
+																								class="custom-input__inner"
+																							>
+																								<select
+																									class="custom-input__control custom-input__select"
+																								>
+																									<option>
+																										Abnormally high red blood
+																										cell count (erythrocytosis
+																										or polycythemia)
+																									</option>
+																								</select>
+																								<span
+																									class="custom-input__icon custom-input__suffix"
+																								>
+																									<i
+																										class="icon-down_arrow"
+																									></i>
+																								</span>
+																							</label>
+																						</div>
+																					</div>
+																				</div>
+																				<div class="condition mt-24">
+																					<p class="condition__label">
+																						Select Question
+																					</p>
+																					<div
+																						class="condition-input custom-input--centered flex-grow-1"
+																					>
+																						<div class="custom-input">
+																							<label
+																								class="custom-input__inner"
+																							>
+																								<input
+																									type="text"
+																									class="custom-input__control"
+																									placeholder=" "
+																									value="Since how long have you been suffering from this condition?"
+																								/>
+																							</label>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+
+																		<div
+																			class="custom-input custom-input--centered"
+																		>
+																			<label class="custom-input__inner">
+																				<select
+																					class="custom-input__control custom-input__select"
+																				>
+																					<option>Kidney disease</option>
+																				</select>
+																				<span
+																					class="custom-input__icon custom-input__suffix"
+																				>
+																					<i class="icon-down_arrow"></i>
+																				</span>
+																			</label>
+																		</div>
+
+																		<div
+																			class="custom-input custom-input--centered mt-24"
+																		>
+																			<label class="custom-input__inner">
+																				<select
+																					class="custom-input__control custom-input__select"
+																				>
+																					<option>
+																						Liver disease (e.g., cirrhosis)
+																					</option>
+																				</select>
+																				<span
+																					class="custom-input__icon custom-input__suffix"
+																				>
+																					<i class="icon-down_arrow"></i>
+																				</span>
+																			</label>
+																		</div>
+																	</div>
+																</div>
+															</div>
+
+															<div class="panel dnn-accordion__panel">
+																<div
+																	class="dnn-accordion__header"
+																	role="tab"
+																	id="qa-heading-4"
+																>
+																	<div class="dnn-accordion__header-content">
+																		<p class="dnn-accordion__label">Question</p>
+																		<p class="dnn-accordion__text">
+																			Lorem ipsum dolor sit amet, consectetur
+																			adipiscing elit, sed do eiusmod tempor
+																			incididunt ut labore et dolore magna
+																			aliqua. Ut enim ad minim veniam, quis
+																			nostrud exercitation ullamco laboris nisi
+																			ut aliquip ex ea commodo consequat. Duis
+																			aute irure dolor in reprehenderit in
+																			voluptate velit esse cillum dolore eu
+																			fugiat nulla pariatur. Excepteur sint
+																			occaecat cupidatat non proident, sunt in
+																			culpa qui officia deserunt mollit anim id
+																			est laborum.
+																		</p>
+
+																		<p
+																			class="dnn-accordion__label dnn-accordion__hide"
+																		>
+																			Question Type
+																		</p>
+																		<p
+																			class="dnn-accordion__text dnn-accordion__hide"
+																		>
+																			Required
+																		</p>
+																	</div>
+
+																	<div class="dnn-accordion__header-action">
+																		<div class="action-group">
+																			<a
+																				role="button"
+																				data-toggle="collapse"
+																				data-parent="#accordion-3"
+																				href="#qa-collapse-4"
+																				class="oqtane-btn oqtane-btn--icon-btn action-group__btn dnn-accordion__toggle-btn"
+																			>
+																				<i class="icon-down_arrow"></i>
+																			</a>
+																		</div>
+																	</div>
+																</div>
+
+																<div
+																	id="qa-collapse-4"
+																	class="dnn-accordion__collapse collapse"
+																	role="tabpanel"
+																	aria-labelledby="qa-heading-4"
+																>
+																	<div class="dnn-accordion__body">
+																		Anim pariatur cliche reprehenderit, enim
+																		eiusmod high life accusamus terry richardson
+																		ad squid. 3 wolf moon officia aute, non
+																		cupidatat skateboard dolor brunch. Food
+																		truck quinoa nesciunt laborum eiusmod.
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- END 3RD TAB CONTENT : QUESTION GROUP  -->
+
+									<!--  4RTH TAB CONTENT : DEACTIVATED QUESTION  -->
+									<div
+										role="tabpanel"
+										class="tab-pane fade"
+										id="deactivated-question"
+									>
+										deactivated-question
+									</div>
+									<!-- END 4RTH TAB CONTENT : DEACTIVATED QUESTION  -->
+								</div>
+
+								<!-- Tab panes end -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+
+			<!-- Modal Start-->
+			<div
+				class="modal edit fade"
+				id="add-question-group"
+				tabindex="-1"
+				role="dialog"
+				aria-labelledby="myModalLabel"
+			>
+				<div class="modal-dialog w-100 m-0" role="document">
+					<div class="modal-content">
+						<div class="modal-header d-flex align-item-center">
+							<div
+								class="d-flex w-100 align-item-center justify-content-space-between pe-40"
+							>
+								<h4 class="fs-24 lh-36 text-left" id="myModalLabel">
+									Add New Group
+								</h4>
+								<div class="modal-header__btns">
+									<button type="button" class="oqtane-btn oqtane-btn__primary">
+										Save Group
+									</button>
+								</div>
+							</div>
+							<button
+								type="button"
+								class="close-btn"
+								data-dismiss="modal"
+								aria-label="Close"
+							>
+								<span class="icon-cross text-black" aria-hidden="true"></span>
+							</button>
+						</div>
+
+						<div class="modal-body">
+							<div class="modal-body--wrapper mt-40">
+								<div class="custom-input">
+									<label class="custom-input__inner">
+										<input
+											type="text"
+											class="custom-input__control"
+											placeholder=" "
+										/>
+										<span class="custom-input__label">Group Name</span>
+									</label>
+								</div>
+
+								<div class="searchbar mt-16">
+									<div class="searchbar__text">
+										<h4 class="searchbar__title">Select Questions</h4>
+										<p class="searchbar__info">
+											(This is only a read-only mode)
+										</p>
+									</div>
+
+									<div class="searchbar__actions">
+										<div class="dnn-search">
+											<input
+												class="dnn-search__input dnn-search__input--grey dnn-search__input--md"
+												type="text"
+												placeholder="Search"
+											/>
+											<i class="icon-search dnn-search__icon"></i>
+										</div>
+									</div>
+								</div>
+
+								<div class="panel-group dnn-accordion mt-24" id="accordion-4">
+									<div class="panel dnn-accordion__panel">
+										<div
+											class="dnn-accordion__header"
+											role="tab"
+											id="mqa-heading-1"
+										>
+											<div class="dnn-accordion__header-content">
+												<p class="dnn-accordion__label">Question</p>
+												<p class="dnn-accordion__text">
+													Lorem ipsum dolor sit amet, consectetur adipiscing
+													elit, sed do eiusmod tempor incididunt ut labore et
+													dolore magna aliqua. Ut enim ad minim veniam?
+												</p>
+											</div>
+
+											<div class="dnn-accordion__header-action">
+												<div class="action-group">
+													<a
+														role="button"
+														data-toggle="collapse"
+														data-parent="#accordion-4"
+														href="#mqa-collapse-1"
+														class="oqtane-btn oqtane-btn--icon-btn action-group__btn dnn-accordion__toggle-btn"
+													>
+														<i class="icon-down_arrow"></i>
+													</a>
+
+													<label class="custom-check dnn-accordion__check">
+														<span class="custom-check__input">
+															<input type="checkbox" />
+															<span></span>
+														</span>
+													</label>
+												</div>
+											</div>
+										</div>
+
+										<div
+											id="mqa-collapse-1"
+											class="dnn-accordion__collapse collapse"
+											role="tabpanel"
+											aria-labelledby="mqa-heading-1"
+										>
+											<div class="dnn-accordion__body">
+												Anim pariatur cliche reprehenderit, enim eiusmod high
+												life accusamus terry richardson ad squid. 3 wolf moon
+												officia aute, non cupidatat skateboard dolor brunch.
+												Food truck quinoa nesciunt laborum eiusmod.
+											</div>
+										</div>
+									</div>
+
+									<div class="panel dnn-accordion__panel">
+										<div
+											class="dnn-accordion__header"
+											role="tab"
+											id="mqa-heading-2"
+										>
+											<div class="dnn-accordion__header-content">
+												<p class="dnn-accordion__label">Question</p>
+												<p class="dnn-accordion__text">
+													Have you ever been diagnosed with any of the following
+													condition(s)?
+												</p>
+											</div>
+
+											<div class="dnn-accordion__header-action">
+												<div class="action-group">
+													<a
+														role="button"
+														data-toggle="collapse"
+														data-parent="#accordion-4"
+														href="#mqa-collapse-2"
+														class="oqtane-btn oqtane-btn--icon-btn action-group__btn dnn-accordion__toggle-btn"
+													>
+														<i class="icon-down_arrow"></i>
+													</a>
+
+													<label class="custom-check dnn-accordion__check">
+														<span class="custom-check__input">
+															<input type="checkbox" />
+															<span></span>
+														</span>
+													</label>
+												</div>
+											</div>
+										</div>
+
+										<div
+											id="mqa-collapse-2"
+											class="dnn-accordion__collapse collapse"
+											role="tabpanel"
+											aria-labelledby="mqa-heading-2"
+										>
+											<div class="dnn-accordion__body">
+												Anim pariatur cliche reprehenderit, enim eiusmod high
+												life accusamus terry richardson ad squid. 3 wolf moon
+												officia aute, non cupidatat skateboard dolor brunch.
+												Food truck quinoa nesciunt laborum eiusmod.
+											</div>
+										</div>
+									</div>
+
+									<div class="panel dnn-accordion__panel">
+										<div
+											class="dnn-accordion__header"
+											role="tab"
+											id="mqa-heading-3"
+										>
+											<div class="dnn-accordion__header-content">
+												<p class="dnn-accordion__label">Question</p>
+												<p class="dnn-accordion__text">
+													Have you ever been diagnosed with any of the following
+													condition(s)?
+												</p>
+											</div>
+
+											<div class="dnn-accordion__header-action">
+												<div class="action-group">
+													<a
+														role="button"
+														data-toggle="collapse"
+														data-parent="#accordion-4"
+														href="#mqa-collapse-3"
+														class="oqtane-btn oqtane-btn--icon-btn action-group__btn dnn-accordion__toggle-btn"
+													>
+														<i class="icon-down_arrow"></i>
+													</a>
+
+													<label class="custom-check dnn-accordion__check">
+														<span class="custom-check__input">
+															<input type="checkbox" checked />
+															<span></span>
+														</span>
+													</label>
+												</div>
+											</div>
+										</div>
+										<div
+											id="mqa-collapse-3"
+											class="in dnn-accordion__collapse collapse"
+											role="tabpanel"
+											aria-labelledby="mqa-heading-3"
+										>
+											<div class="dnn-accordion__body">
+												<p class="dnn-accordion__label">Question Intro</p>
+												<p class="dnn-accordion__text">
+													Lorem ipsum dolor sit amet, consectetur adipiscing
+													elit, sed do eiusmod tempor incididunt ut labore et
+													dolore magna aliqua. Ut enim ad minim veniam, quis
+													nostrud exercitation ullamco laboris nisi ut aliquip
+													ex ea commodo consequat.
+												</p>
+
+												<p class="dnn-accordion__label">Question Type</p>
+												<p class="dnn-accordion__text">Required</p>
+
+												<div class="row">
+													<div class="col-md-6">
+														<p class="dnn-accordion__label">Answer Type</p>
+
+														<div
+															class="custom-input custom-input--disabled custom-input--centered mt-12"
+														>
+															<label class="custom-input__inner">
+																<select
+																	class="custom-input__control custom-input__select"
+																	disabled
+																>
+																	<option>Select</option>
+																</select>
+																<span
+																	class="custom-input__icon custom-input__suffix"
+																>
+																	<i class="icon-down_arrow"></i>
+																</span>
+															</label>
+														</div>
+													</div>
+												</div>
+
+												<div class="oqtane-card mt-20">
+													<div class="oqtane-card__header">
+														<h3>Condition</h3>
+													</div>
+													<div class="oqtane-card__body">
+														<div class="condition">
+															<p class="condition__label">If Selected</p>
+															<div class="condition-input flex-grow-1">
+																<div
+																	class="custom-input custom-input--centered"
+																>
+																	<label class="custom-input__inner">
+																		<select
+																			class="custom-input__control custom-input__select"
+																		>
+																			<option>
+																				Abnormally high red blood cell count
+																				(erythrocytosis or polycythemia)
+																			</option>
+																		</select>
+																		<span
+																			class="custom-input__icon custom-input__suffix"
+																		>
+																			<i class="icon-down_arrow"></i>
+																		</span>
+																	</label>
+																</div>
+															</div>
+														</div>
+														<div class="condition mt-24">
+															<p class="condition__label">Select Question</p>
+															<div
+																class="condition-input custom-input--centered flex-grow-1"
+															>
+																<div class="custom-input">
+																	<label class="custom-input__inner">
+																		<input
+																			type="text"
+																			class="custom-input__control"
+																			placeholder=" "
+																			value="Since how long have you been suffering from this condition?"
+																		/>
+																	</label>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+
+												<div class="oqtane-card mt-20">
+													<div class="oqtane-card__header">
+														<h3>Condition</h3>
+													</div>
+													<div class="oqtane-card__body">
+														<div class="condition">
+															<p class="condition__label">If Selected</p>
+															<div class="condition-input flex-grow-1">
+																<div
+																	class="custom-input custom-input--centered"
+																>
+																	<label class="custom-input__inner">
+																		<select
+																			class="custom-input__control custom-input__select"
+																		>
+																			<option>
+																				Abnormally high red blood cell count
+																				(erythrocytosis or polycythemia)
+																			</option>
+																		</select>
+																		<span
+																			class="custom-input__icon custom-input__suffix"
+																		>
+																			<i class="icon-down_arrow"></i>
+																		</span>
+																	</label>
+																</div>
+															</div>
+														</div>
+														<div class="condition mt-24">
+															<p class="condition__label">Select Question</p>
+															<div
+																class="condition-input custom-input--centered flex-grow-1"
+															>
+																<div class="custom-input">
+																	<label class="custom-input__inner">
+																		<input
+																			type="text"
+																			class="custom-input__control"
+																			placeholder=" "
+																			value="Since how long have you been suffering from this condition?"
+																		/>
+																	</label>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+
+												<div class="custom-input custom-input--centered">
+													<label class="custom-input__inner">
+														<select
+															class="custom-input__control custom-input__select"
+														>
+															<option>Kidney disease</option>
+														</select>
+														<span
+															class="custom-input__icon custom-input__suffix"
+														>
+															<i class="icon-down_arrow"></i>
+														</span>
+													</label>
+												</div>
+
+												<div class="custom-input custom-input--centered mt-24">
+													<label class="custom-input__inner">
+														<select
+															class="custom-input__control custom-input__select"
+														>
+															<option>Liver disease (e.g., cirrhosis)</option>
+														</select>
+														<span
+															class="custom-input__icon custom-input__suffix"
+														>
+															<i class="icon-down_arrow"></i>
+														</span>
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="panel dnn-accordion__panel">
+										<div
+											class="dnn-accordion__header"
+											role="tab"
+											id="mqa-heading-4"
+										>
+											<div class="dnn-accordion__header-content">
+												<p class="dnn-accordion__label">Question</p>
+												<p class="dnn-accordion__text">
+													Lorem ipsum dolor sit amet, consectetur adipiscing
+													elit, sed do eiusmod tempor incididunt ut labore et
+													dolore magna aliqua. Ut enim ad minim veniam, quis
+													nostrud exercitation ullamco laboris nisi ut aliquip
+													ex ea commodo consequat. Duis aute irure dolor in
+													reprehenderit in voluptate velit esse cillum dolore eu
+													fugiat nulla pariatur. Excepteur sint occaecat
+													cupidatat non proident, sunt in culpa qui officia
+													deserunt mollit anim id est laborum.
+												</p>
+
+												<p class="dnn-accordion__label dnn-accordion__hide">
+													Question Type
+												</p>
+												<p class="dnn-accordion__text dnn-accordion__hide">
+													Required
+												</p>
+											</div>
+
+											<div class="dnn-accordion__header-action">
+												<div class="action-group">
+													<a
+														role="button"
+														data-toggle="collapse"
+														data-parent="#accordion-4"
+														href="#mqa-collapse-4"
+														class="oqtane-btn oqtane-btn--icon-btn action-group__btn dnn-accordion__toggle-btn"
+													>
+														<i class="icon-down_arrow"></i>
+													</a>
+
+													<label class="custom-check dnn-accordion__check">
+														<span class="custom-check__input">
+															<input type="checkbox" />
+															<span></span>
+														</span>
+													</label>
+												</div>
+											</div>
+										</div>
+
+										<div
+											id="mqa-collapse-4"
+											class="dnn-accordion__collapse collapse"
+											role="tabpanel"
+											aria-labelledby="mqa-heading-4"
+										>
+											<div class="dnn-accordion__body">
+												Anim pariatur cliche reprehenderit, enim eiusmod high
+												life accusamus terry richardson ad squid. 3 wolf moon
+												officia aute, non cupidatat skateboard dolor brunch.
+												Food truck quinoa nesciunt laborum eiusmod.
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--Modal End-->
+
+			<footer class="footer">
+				<div class="footer__content">
+					<div class="footer__links">
+						<a href="#">Terms of use</a><a href="#">Privacy Policy</a>
+					</div>
+					<p class="text-grey-3 fs-13">
+						Copyright &copy; 2024 Thrivewell. All rights reserved.
+					</p>
+				</div>
+			</footer>
+		</div>
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="vendors/jquery/jquery-2.2.4.min.js"></script>
+		<script src="vendors/bootstrap/js/bootstrap.min.js"></script>
+		<script src="vendors/swiper/package/swiper-bundle.min.js"></script>
+		<script src="vendors/bootstrap-multiselect/js/bootstrap-multiselect.min.js"></script>
+		<script src="vendors/trumbowyg/trumbowyg.js"></script>
+		<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+
+		<script src="js/main.js"></script>
+	</body>
 </html>

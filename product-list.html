@@ -127,33 +127,41 @@
 								</p>
 							</div>
 
-							<button type="button" class="dnn-btn dnn-btn__primary">
-								Add New Product
-							</button>
+							<div class="actionbar__actions">
+								<div class="dnn-search">
+									<input
+										class="dnn-search__input"
+										type="text"
+										placeholder="Search by name"
+									/>
+									<i class="icon-search dnn-search__icon"></i>
+								</div>
+								<a class="oqtane-btn oqtane-btn__primary"> Add New Product</a>
+							</div>
 						</div>
 
-						<div class="dnn-card list-card">
-							<div class="dnn-card__header dnn-card__header--with-icon">
-								<h3>Physical Product List</h3>
+						<div class="oqtane-card list-card">
+							<div class="oqtane-card__header oqtane-card__header--with-icon">
+								<h3> Product List</h3>
 
-								<div class="dnn-card__actions dnn-card__actions--with-icon">
+								<!-- <div class="oqtane-card__actions oqtane-card__actions--with-icon">
 									<button
 										type="button"
-										class="dnn-card__action-prev dnn-btn dnn-btn__icon"
+										class="oqtane-card__action-prev oqtane-btn oqtane-btn__icon"
 										disabled
 									>
 										<i class="icon-left-arrow"></i>
 									</button>
 									<button
 										type="button"
-										class="dnn-card__action-next dnn-btn dnn-btn__icon"
+										class="oqtane-card__action-next oqtane-btn oqtane-btn__icon"
 									>
 										<i class="icon-right-arrow"></i>
 									</button>
-								</div>
+								</div> -->
 							</div>
 
-							<div class="dnn-card__body">
+							<div class="oqtane-card__body">
 								<div class="list-card__table list-table">
 									<div class="table-responsive">
 										<table class="table table-striped">
@@ -161,11 +169,12 @@
 												<tr>
 													<th>Product Image</th>
 													<th>Product Name</th>
-													<th>Product Type</th>
+													<th>Medicine Type </th>
 													<th>Category</th>
 													<th>Last Update</th>
 													<th>Price</th>
-													<th>Details</th>
+													<th>Status</th>
+													<th>Action</th>
 												</tr>
 											</thead>
 											<tbody>
@@ -181,12 +190,117 @@
 													<td>14 August, 2024</td>
 													<td>$40.00</td>
 													<td>
-														<button
-															type="button"
-															class="dnn-btn dnn-btn__icon list-table__action"
+														<span class="status-pill status-pill--success">
+															Active
+														</span>
+													</td>
+													<td>
+														<a
+															class="oqtane-btn oqtane-btn__icon list-table__action"
 														>
 															<i class="icon-link"></i>
-														</button>
+														</a>
+
+														<a
+															class="oqtane-btn oqtane-btn__icon list-table__action"
+														>
+															<i class="icon-edit"></i>
+														</a>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<div class="list-table__img">
+															<img src="./img/product-1.png" alt="" />
+														</div>
+													</td>
+													<td
+														>2X Blend CJC-1295 No DAC (5mg) / Ipamorelin (5mg)
+													</td>
+													<td>Capsule</td>
+													<td>Hair fall</td>
+													<td>14 August, 2024</td>
+													<td>$40.00</td>
+													<td>
+														<span class="status-pill status-pill--danger">
+															Inactive
+														</span>
+													</td>
+													<td>
+														<a
+															class="oqtane-btn oqtane-btn__icon list-table__action"
+														>
+															<i class="icon-link"></i>
+														</a>
+
+														<a
+															class="oqtane-btn oqtane-btn__icon list-table__action"
+														>
+															<i class="icon-edit"></i>
+														</a>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<div class="list-table__img">
+															<img src="./img/product-1.png" alt="" />
+														</div>
+													</td>
+													<td>Hair Fast</td>
+													<td>Serum Cream </td>
+													<td>Hair fall</td>
+													<td>14 August, 2024</td>
+													<td>$40.00</td>
+													<td>
+														<span class="status-pill status-pill--danger">
+															Inactive
+														</span>
+													</td>
+													<td>
+														<a
+															class="oqtane-btn oqtane-btn__icon list-table__action"
+														>
+															<i class="icon-link"></i>
+														</a>
+
+														<a
+															class="oqtane-btn oqtane-btn__icon list-table__action"
+														>
+															<i class="icon-edit"></i>
+														</a>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<div class="list-table__img">
+															<img src="./img/product-1.png" alt="" />
+														</div>
+													</td>
+													<td>Hair Fast</td>
+													<td>Capsule</td>
+													<td
+														>Athletic Performance, Beauty and Hair Loss, Weight
+														Loss
+													</td>
+													<td>14 August, 2024</td>
+													<td>$40.00</td>
+													<td>
+														<span class="status-pill status-pill--success">
+															Active
+														</span>
+													</td>
+													<td>
+														<a
+															class="oqtane-btn oqtane-btn__icon list-table__action"
+														>
+															<i class="icon-link"></i>
+														</a>
+
+														<a
+															class="oqtane-btn oqtane-btn__icon list-table__action"
+														>
+															<i class="icon-edit"></i>
+														</a>
 													</td>
 												</tr>
 												<tr>
@@ -201,12 +315,22 @@
 													<td>14 August, 2024</td>
 													<td>$40.00</td>
 													<td>
-														<button
-															type="button"
-															class="dnn-btn dnn-btn__icon list-table__action"
+														<span class="status-pill status-pill--success">
+															Active
+														</span>
+													</td>
+													<td>
+														<a
+															class="oqtane-btn oqtane-btn__icon list-table__action"
 														>
 															<i class="icon-link"></i>
-														</button>
+														</a>
+
+														<a
+															class="oqtane-btn oqtane-btn__icon list-table__action"
+														>
+															<i class="icon-edit"></i>
+														</a>
 													</td>
 												</tr>
 												<tr>
@@ -221,72 +345,22 @@
 													<td>14 August, 2024</td>
 													<td>$40.00</td>
 													<td>
-														<button
-															type="button"
-															class="dnn-btn dnn-btn__icon list-table__action"
+														<span class="status-pill status-pill--success">
+															Active
+														</span>
+													</td>
+													<td>
+														<a
+															class="oqtane-btn oqtane-btn__icon list-table__action"
 														>
 															<i class="icon-link"></i>
-														</button>
-													</td>
-												</tr>
-												<tr>
-													<td>
-														<div class="list-table__img">
-															<img src="./img/product-1.png" alt="" />
-														</div>
-													</td>
-													<td>Hair Fast</td>
-													<td>Capsule</td>
-													<td>Hair fall</td>
-													<td>14 August, 2024</td>
-													<td>$40.00</td>
-													<td>
-														<button
-															type="button"
-															class="dnn-btn dnn-btn__icon list-table__action"
+														</a>
+
+														<a
+															class="oqtane-btn oqtane-btn__icon list-table__action"
 														>
-															<i class="icon-link"></i>
-														</button>
-													</td>
-												</tr>
-												<tr>
-													<td>
-														<div class="list-table__img">
-															<img src="./img/product-1.png" alt="" />
-														</div>
-													</td>
-													<td>Hair Fast</td>
-													<td>Capsule</td>
-													<td>Hair fall</td>
-													<td>14 August, 2024</td>
-													<td>$40.00</td>
-													<td>
-														<button
-															type="button"
-															class="dnn-btn dnn-btn__icon list-table__action"
-														>
-															<i class="icon-link"></i>
-														</button>
-													</td>
-												</tr>
-												<tr>
-													<td>
-														<div class="list-table__img">
-															<img src="./img/product-1.png" alt="" />
-														</div>
-													</td>
-													<td>Hair Fast</td>
-													<td>Capsule</td>
-													<td>Hair fall</td>
-													<td>14 August, 2024</td>
-													<td>$40.00</td>
-													<td>
-														<button
-															type="button"
-															class="dnn-btn dnn-btn__icon list-table__action"
-														>
-															<i class="icon-link"></i>
-														</button>
+															<i class="icon-edit"></i>
+														</a>
 													</td>
 												</tr>
 											</tbody>
@@ -339,95 +413,6 @@
 								<button type="button" class="dnn-pagination__btn">
 									<i class="icon-right-arrow"></i>
 								</button>
-							</div>
-						</div>
-
-						<div class="dnn-card list-card mb-0">
-							<div class="dnn-card__header dnn-card__header--with-icon">
-								<h3>Virtual Product List</h3>
-
-								<div class="dnn-card__actions dnn-card__actions--with-icon">
-									<button
-										type="button"
-										class="dnn-card__action-prev dnn-btn dnn-btn__icon"
-										disabled
-									>
-										<i class="icon-left-arrow"></i>
-									</button>
-									<button
-										type="button"
-										class="dnn-card__action-next dnn-btn dnn-btn__icon"
-									>
-										<i class="icon-right-arrow"></i>
-									</button>
-								</div>
-							</div>
-
-							<div class="dnn-card__body">
-								<div class="list-card__table list-table">
-									<div class="table-responsive">
-										<table class="table table-striped">
-											<thead>
-												<tr>
-													<th>Product Name</th>
-													<th>Product Type</th>
-													<th>Category</th>
-													<th>Last Updated</th>
-													<th>Price</th>
-													<th>Details</th>
-												</tr>
-											</thead>
-
-											<tbody>
-												<tr>
-													<td>Basic Membership</td>
-													<td>Virtual</td>
-													<td>Man's testosteron</td>
-													<td>14 August, 2024</td>
-													<td>$250.00</td>
-													<td>
-														<button
-															type="button"
-															class="dnn-btn dnn-btn__icon list-table__action"
-														>
-															<i class="icon-link"></i>
-														</button>
-													</td>
-												</tr>
-												<tr>
-													<td>Basic Membership</td>
-													<td>Virtual</td>
-													<td>Man's testosteron</td>
-													<td>14 August, 2024</td>
-													<td>$250.00</td>
-													<td>
-														<button
-															type="button"
-															class="dnn-btn dnn-btn__icon list-table__action"
-														>
-															<i class="icon-link"></i>
-														</button>
-													</td>
-												</tr>
-												<tr>
-													<td>Basic Membership</td>
-													<td>Virtual</td>
-													<td>Man's testosteron</td>
-													<td>14 August, 2024</td>
-													<td>$250.00</td>
-													<td>
-														<button
-															type="button"
-															class="dnn-btn dnn-btn__icon list-table__action"
-														>
-															<i class="icon-link"></i>
-														</button>
-													</td>
-												</tr>
-											</tbody>
-										</table>
-									</div>
-								</div>
 							</div>
 						</div>
 					</div>

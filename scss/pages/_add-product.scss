@@ -93,7 +93,7 @@
   gap: 10px;
   margin-bottom: 16px;
 
-  button.dnn-btn {
+  button.oqtane-btn {
     margin-top: 10px;
   }
 }
@@ -164,7 +164,7 @@
   }
 
   .dose-entry {
-    button.dnn-btn {
+    button.oqtane-btn {
       margin-top: 0;
       padding: 5px !important;
     }
@@ -228,7 +228,7 @@
 @media all and (max-width: 768px) {
   .dose-entry {
     button {
-      &.dnn-btn {
+      &.oqtane-btn {
         margin-top: 0;
         padding: 0 !important;
         font-size: 26px !important;

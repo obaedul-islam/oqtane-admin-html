@@ -1,633 +1,570 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      http-equiv="X-UA-Compatible"
-      content="IE=edge"
-    />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1"
-    />
+		<title>Dashboard | Patient Details</title>
 
-    <title>Dashboard | Patient Details</title>
+		<link
+			rel="stylesheet"
+			href="./../vendors/bootstrap/css/bootstrap.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="./../vendors/bootstrap-datetimepicker/bootstrap-datetimepicker.css"
+		/>
+		<link rel="stylesheet" href="./../icons/style.css" />
 
-    <link
-      rel="stylesheet"
-      href="./../vendors/bootstrap/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="./../vendors/bootstrap-datetimepicker/bootstrap-datetimepicker.css"
-    />
-    <link
-      rel="stylesheet"
-      href="./../icons/style.css"
-    />
+		<link rel="stylesheet" href="./../css/styles.css" />
 
-    <link
-      rel="stylesheet"
-      href="./../css/styles.css"
-    />
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
 
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
+	<body>
+		<div class="dashboard">
+			<header class="header">
+				<nav class="menubar">
+					<a href="#" class="menubar__brand">
+						<img src="./../img/logo.svg" alt="Logo" class="menubar__logo" />
+					</a>
 
-  <body>
-    <div class="dashboard">
-      <header class="header">
-        <nav class="menubar">
-          <a
-            href="#"
-            class="menubar__brand"
-          >
-            <img
-              src="./../img/logo.svg"
-              alt="Logo"
-              class="menubar__logo"
-            />
-          </a>
+					<div class="menubar__items">
+						<a class="menubar__item" href="#">
+							<i class="icon-message menubar__icon"></i>
+							<span class="menubar__badge"></span>
+						</a>
+						<a class="menubar__item" href="#">
+							<i class="icon-notification menubar__icon"></i>
+							<span class="menubar__badge"></span>
+						</a>
 
-          <div class="menubar__items">
-            <a
-              class="menubar__item"
-              href="#"
-            >
-              <i class="icon-message menubar__icon"></i>
-              <span class="menubar__badge"></span>
-            </a>
-            <a
-              class="menubar__item"
-              href="#"
-            >
-              <i class="icon-notification menubar__icon"></i>
-              <span class="menubar__badge"></span>
-            </a>
+						<div class="dropdown menubar__dropdown">
+							<button
+								class="user dropdown-toggle"
+								type="button"
+								id="menu-dropdown"
+								data-toggle="dropdown"
+								aria-haspopup="true"
+								aria-expanded="false"
+							>
+								<img
+									class="user__avatar"
+									src="./../img/user.png"
+									alt="avatar"
+								/>
 
-            <div class="dropdown menubar__dropdown">
-              <button
-                class="user dropdown-toggle"
-                type="button"
-                id="menu-dropdown"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                <img
-                  class="user__avatar"
-                  src="./../img/user.png"
-                  alt="avatar"
-                />
+								<div class="user__info">
+									<p class="user__name fs-18 lh-100 text-dark">David Wayne</p>
+									<p class="user__role fs-14 lh-100 text-grey-3">Super Admin</p>
+								</div>
 
-                <div class="user__info">
-                  <p class="user__name fs-18 lh-100 text-dark">David Wayne</p>
-                  <p class="user__role fs-14 lh-100 text-grey-3">Super Admin</p>
-                </div>
+								<i class="icon-down_arrow"></i>
+							</button>
+							<ul class="dropdown-menu" aria-labelledby="menu-dropdown">
+								<li><a href="#">Action</a></li>
+								<li><a href="#">Another action</a></li>
+								<li><a href="#">Something else here</a></li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+			</header>
 
-                <i class="icon-down_arrow"></i>
-              </button>
-              <ul
-                class="dropdown-menu"
-                aria-labelledby="menu-dropdown"
-              >
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </header>
+			<main class="main">
+				<aside class="sidebar">
+					<ul class="sidebar__items">
+						<li class="sidebar__item">
+							<a href="./dashboard.html" class="sidebar__link">
+								<i class="icon-dashboard sidebar__icon"></i>
+								<span class="sidebar__text">Dashboard</span>
+							</a>
+						</li>
+						<li class="sidebar__item">
+							<a href="./product-list.html" class="sidebar__link">
+								<i class="icon-tablet sidebar__icon"></i>
+								<span class="sidebar__text">Product List</span>
+							</a>
+						</li>
+						<li class="sidebar__item">
+							<a href="./order-details.html" class="sidebar__link">
+								<i class="icon-order-list sidebar__icon"></i>
+								<span class="sidebar__text">Order List</span>
+							</a>
+						</li>
+						<li class="sidebar__item">
+							<a href="./product-list.html" class="sidebar__link">
+								<i class="icon-product_list sidebar__icon"></i>
+								<span class="sidebar__text">Package List</span>
+							</a>
+						</li>
+						<li class="sidebar__item">
+							<a href="./product-list.html" class="sidebar__link">
+								<i class="icon-intake_form sidebar__icon"></i>
+								<span class="sidebar__text">Patient List</span>
+							</a>
+						</li>
+						<li class="sidebar__item">
+							<a href="./promo-code-list.html" class="sidebar__link">
+								<i class="icon-promo-code sidebar__icon"></i>
+								<span class="sidebar__text">Promo Code</span>
+							</a>
+						</li>
+						<li class="sidebar__item">
+							<a
+								href="./intake-form-list.html"
+								class="sidebar__link sidebar__link--active"
+							>
+								<i class="icon-intake_form sidebar__icon"></i>
+								<span class="sidebar__text">Intake Form</span>
+							</a>
+						</li>
+						<li class="sidebar__item">
+							<a href="./intake-form-list.html" class="sidebar__link">
+								<i class="icon-sales-associate sidebar__icon"></i>
+								<span class="sidebar__text">Sales Associate</span>
+							</a>
+						</li>
+						<li class="sidebar__item">
+							<a href="./question-list.html" class="sidebar__link">
+								<i class="icon-questions sidebar__icon"></i>
+								<span class="sidebar__text">Questions</span>
+							</a>
+						</li>
+						<li class="sidebar__item">
+							<a href="#" class="sidebar__link">
+								<i class="icon-settings sidebar__icon"></i>
+								<span class="sidebar__text">Settings</span>
+							</a>
+						</li>
+					</ul>
 
-      <main class="main">
-        <aside class="sidebar">
-          <ul class="sidebar__items">
-            <li class="sidebar__item">
-              <a
-                href="./dashboard.html"
-                class="sidebar__link"
-              >
-                <i class="icon-dashboard sidebar__icon"></i>
-                <span class="sidebar__text">Dashboard</span>
-              </a>
-            </li>
-            <li class="sidebar__item">
-              <a
-                href="./product-list.html"
-                class="sidebar__link"
-              >
-                <i class="icon-tablet sidebar__icon"></i>
-                <span class="sidebar__text">Product List</span>
-              </a>
-            </li>
-            <li class="sidebar__item">
-              <a
-                href="./order-details.html"
-                class="sidebar__link"
-              >
-                <i class="icon-order-list sidebar__icon"></i>
-                <span class="sidebar__text">Order List</span>
-              </a>
-            </li>
-            <li class="sidebar__item">
-              <a
-                href="./product-list.html"
-                class="sidebar__link"
-              >
-                <i class="icon-product_list sidebar__icon"></i>
-                <span class="sidebar__text">Package List</span>
-              </a>
-            </li>
-            <li class="sidebar__item">
-              <a
-                href="./product-list.html"
-                class="sidebar__link"
-              >
-                <i class="icon-intake_form sidebar__icon"></i>
-                <span class="sidebar__text">Patient List</span>
-              </a>
-            </li>
-            <li class="sidebar__item">
-              <a
-                href="./promo-code-list.html"
-                class="sidebar__link"
-              >
-                <i class="icon-promo-code sidebar__icon"></i>
-                <span class="sidebar__text">Promo Code</span>
-              </a>
-            </li>
-            <li class="sidebar__item">
-              <a
-                href="./intake-form-list.html"
-                class="sidebar__link sidebar__link--active"
-              >
-                <i class="icon-intake_form sidebar__icon"></i>
-                <span class="sidebar__text">Intake Form</span>
-              </a>
-            </li>
-            <li class="sidebar__item">
-              <a
-                href="./intake-form-list.html"
-                class="sidebar__link "
-              >
-                <i class="icon-sales-associate sidebar__icon"></i>
-                <span class="sidebar__text">Sales Associate</span>
-              </a>
-            </li>
-            <li class="sidebar__item">
-              <a
-                href="./question-list.html"
-                class="sidebar__link"
-              >
-                <i class="icon-questions sidebar__icon"></i>
-                <span class="sidebar__text">Questions</span>
-              </a>
-            </li>
-            <li class="sidebar__item">
-              <a
-                href="#"
-                class="sidebar__link"
-              >
-                <i class="icon-settings sidebar__icon"></i>
-                <span class="sidebar__text">Settings</span>
-              </a>
-            </li>
-          </ul>
+					<button type="button" class="sidebar__toggle">
+						<i class="icon-left-arrow"></i>
+					</button>
+				</aside>
 
-          <button
-            type="button"
-            class="sidebar__toggle"
-          >
-            <i class="icon-left-arrow"></i>
-          </button>
-        </aside>
+				<div class="tw-main__content">
+					<div class="content">
+						<div class="actionbar">
+							<div class="actionbar__title breadcrumb mb-0">
+								<p class="text-uppercase fs-20 mb-0 fw-600 lh-150">
+									<a href="#" class="actionbar__inactive">Patient List</a>
+									<a href="order-details.html" class="text-primary"
+										>Patient DETAILS
+									</a>
+								</p>
+							</div>
+						</div>
 
-        <div class="tw-main__content">
-          <div class="content">
-            <div class="actionbar">
-              <div class="actionbar__title breadcrumb mb-0">
-                <p class="text-uppercase  fs-20 mb-0 fw-600 lh-150">
-                  <a
-                    href="#"
-                    class="actionbar__inactive"
-                  >Patient List</a>
-                  <a
-                    href="order-details.html"
-                    class="text-primary"
-                  >Patient DETAILS </a>
-                </p>
-              </div>
+						<div class="oqtane-card list-card">
+							<div class="oqtane-card__header">
+								<h3>Patient Details</h3>
+								<button type="button" class="oqtane-btn oqtane-btn__icon">
+									<i class="icon-edit"></i>
+								</button>
+							</div>
+							<div class="oqtane-card__body">
+								<div class="patient-details">
+									<div class="patient-details__left">
+										<div class="patient-details__image">
+											<img src="../img/patient.png" alt="Patient" />
+										</div>
+										<h2 class="fw-700">James Watson</h2>
+										<div class="chip">
+											<p class="chip__text fs-15 lh-100"> Base Membership </p>
+										</div>
 
-            </div>
+										<div class="patient-details__label-text">
+											<label class="fs-12 fw-400 text-grey-3">Drug Name:</label>
+											<p>#hv_245789</p>
+										</div>
+										<div class="patient-details__label-text">
+											<label class="fs-12 fw-400 text-grey-3">Address:</label>
+											<p>2351 W. Northwest Hwy #2202 Dallas, TX 75220</p>
+										</div>
+										<div class="patient-details__label-text">
+											<label class="fs-12 fw-400 text-grey-3"
+												>Email Address:</label
+											>
+											<p>jameswatson@mail.com</p>
+										</div>
+										<div class="patient-details__label-text">
+											<label class="fs-12 fw-400 text-grey-3">Gender:</label>
+											<p>Male</p>
+										</div>
+										<div class="patient-details__label-text">
+											<label class="fs-12 fw-400 text-grey-3">Age:</label>
+											<p>June 21, 2024</p>
+										</div>
+										<div class="patient-details__label-text">
+											<label class="fs-12 fw-400 text-grey-3"
+												>Assigned Doctor:</label
+											>
+											<p>Dr. John Wick</p>
+										</div>
+										<div class="patient-details__label-text">
+											<label class="fs-12 fw-400 text-grey-3"
+												>Total Amount:</label
+											>
+											<p>$2000</p>
+										</div>
+										<div class="patient-details__label-text">
+											<label class="fs-12 fw-400 text-grey-3"
+												>Payment Status:</label
+											>
+											<div class="chip">
+												<p class="chip__text fs-15 lh-100 bg-blue-light">
+													Pending
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="patient-details__right">
+										<div class="dnn-simple-card">
+											<h2 class="fs-30 lh-12 fw-700 mt-0">
+												Oral Theron Tirzepatide Medication
+											</h2>
+											<p class="text-grey-3 fs-22 fw-500 lh-12">
+												Capsule | Hair Fall
+											</p>
+											<h2 class="fs-30 lh-12 fw-700">$<span>399</span></h2>
 
-            <div class="dnn-card list-card">
-              <div class="dnn-card__header">
-                <h3>Patient Details</h3>
-                <button
-                  type="button"
-                  class="dnn-btn dnn-btn__icon"
-                >
-                  <i class="icon-edit"></i>
-                </button>
-              </div>
-              <div class="dnn-card__body">
-                <div class="patient-details">
-                  <div class="patient-details__left">
-                    <div class="patient-details__image">
-                      <img
-                        src="../img/patient.png"
-                        alt="Patient"
-                      >
-                    </div>
-                    <h2 class="fw-700">James Watson</h2>
-                    <div class="chip">
-                      <p class="chip__text fs-15 lh-100">
-                        Base Membership
-                      </p>
-                    </div>
+											<div class="mt-20">
+												<h4 class="fs-22 lh-16 fw-600">About the Product:</h4>
+												<p>
+													Oral Tirzepatide Tablets, combining the actions of GIP
+													and GLP-1 receptor agonists, provide a new approach to
+													managing type 2 diabetes through oral administration.
+												</p>
+											</div>
+											<!--About Content End-->
 
-                    <div class="patient-details__label-text">
-                      <label class="fs-12 fw-400 text-grey-3">Drug Name:</label>
-                      <p>#hv_245789</p>
-                    </div>
-                    <div class="patient-details__label-text">
-                      <label class="fs-12 fw-400 text-grey-3">Address:</label>
-                      <p>2351 W. Northwest Hwy #2202 Dallas, TX 75220</p>
-                    </div>
-                    <div class="patient-details__label-text">
-                      <label class="fs-12 fw-400 text-grey-3">Email Address:</label>
-                      <p>jameswatson@mail.com</p>
-                    </div>
-                    <div class="patient-details__label-text">
-                      <label class="fs-12 fw-400 text-grey-3">Gender:</label>
-                      <p>Male</p>
-                    </div>
-                    <div class="patient-details__label-text">
-                      <label class="fs-12 fw-400 text-grey-3">Age:</label>
-                      <p>June 21, 2024</p>
-                    </div>
-                    <div class="patient-details__label-text">
-                      <label class="fs-12 fw-400 text-grey-3">Assigned Doctor:</label>
-                      <p>Dr. John Wick</p>
-                    </div>
-                    <div class="patient-details__label-text">
-                      <label class="fs-12 fw-400 text-grey-3">Total Amount:</label>
-                      <p>$2000</p>
-                    </div>
-                    <div class="patient-details__label-text">
-                      <label class="fs-12 fw-400 text-grey-3">Payment Status:</label>
-                      <div class="chip ">
-                        <p class="chip__text fs-15 lh-100 bg-blue-light">
-                          Pending
-                        </p>
-                      </div>
-                    </div>
+											<div class="dnn-simple-card__report-form">
+												<h4 class="fs-22 lh-16 fw-600"
+													>Reports & Intake Forms:</h4
+												>
+												<ul class="dnn-simple-card__list">
+													<li>
+														<button>Test Report</button>
+													</li>
+													<li>
+														<button
+															data-toggle="modal"
+															data-target="#modal-intake-form-view"
+															>Intake Form</button
+														>
+													</li>
+													<li>
+														<button
+															data-toggle="modal"
+															data-target="#modal-intake-form-view"
+															>View Prescription</button
+														>
+													</li>
+												</ul>
+											</div>
+											<!--Report & Intake  End-->
+										</div>
+										<!--Simple Card End-->
 
-                  </div>
-                  <div class="patient-details__right">
-                    <div class="dnn-simple-card">
-                      <h2 class="fs-30 lh-12 fw-700 mt-0">
-                        Oral Theron Tirzepatide Medication
-                      </h2>
-                      <p class="text-grey-3 fs-22 fw-500 lh-12">
-                        Capsule | Hair Fall
-                      </p>
-                      <h2 class="fs-30 lh-12 fw-700">$<span>399</span></h2>
+										<div class="dnn-simple-card">
+											<h2 class="fs-30 lh-12 fw-700 mt-0">
+												Cilicops Metaphoric
+											</h2>
+											<p class="text-grey-3 fs-22 fw-500 lh-12">
+												Capsule | Hair Fall
+											</p>
+											<h2 class="fs-30 lh-12 fw-700">$<span>399</span></h2>
+											<div class="mt-20">
+												<h4 class="fs-22 lh-16 fw-600">About the Product:</h4>
+												<p>
+													Oral Tirzepatide Tablets, combining the actions of GIP
+													and GLP-1 receptor agonists, provide a new approach to
+													managing type 2 diabetes through oral administration.
+												</p>
+											</div>
+											<!--About Content End-->
 
-                      <div class="mt-20">
-                        <h4 class="fs-22 lh-16 fw-600">About the Product:</h4>
-                        <p>
-                          Oral Tirzepatide Tablets, combining the actions of
-                          GIP and GLP-1 receptor agonists, provide a new
-                          approach to managing type 2 diabetes through oral
-                          administration.
-                        </p>
-                      </div>
-                      <!--About Content End-->
+											<div class="dnn-simple-card__report-form">
+												<h4 class="fs-22 lh-16 fw-600"
+													>Reports & Intake Forms:</h4
+												>
+												<ul class="dnn-simple-card__list">
+													<li>
+														<a href="">Test Report</a>
+													</li>
+													<li>
+														<a href="">Intake Form</a>
+													</li>
+													<li>
+														<a href="">View Prescription</a>
+													</li>
+												</ul>
+											</div>
+											<!--Report & Intake  End-->
+										</div>
+										<!--Simple Card End-->
 
-                      <div class="dnn-simple-card__report-form">
-                        <h4 class="fs-22 lh-16 fw-600">Reports & Intake Forms:</h4>
-                        <ul class="dnn-simple-card__list">
-                          <li>
-                            <button>Test Report</button>
-                          </li>
-                          <li>
-                            <button
-                              data-toggle="modal"
-                              data-target="#modal-intake-form-view"
-                            >Intake Form</button>
-                          </li>
-                          <li>
-                            <button
-                              data-toggle="modal"
-                              data-target="#modal-intake-form-view"
-                            >View Prescription</button>
-                          </li>
-                        </ul>
-                      </div>
-                      <!--Report & Intake  End-->
+										<div class="dnn-simple-card">
+											<h2 class="fs-30 lh-12 fw-700 mt-0">
+												Triptozena Cintoripe
+											</h2>
+											<p class="text-grey-3 fs-22 fw-500 lh-12">
+												Capsule | Hair Fall
+											</p>
+											<h2 class="fs-30 lh-12 fw-700">$<span>399</span></h2>
+											<div class="mt-20">
+												<h4 class="fs-22 lh-16 fw-600">About the Product:</h4>
+												<p>
+													Oral Tirzepatide Tablets, combining the actions of GIP
+													and GLP-1 receptor agonists, provide a new approach to
+													managing type 2 diabetes through oral administration.
+												</p>
+											</div>
+											<!--About Content End-->
 
-                    </div>
-                    <!--Simple Card End-->
+											<div class="dnn-simple-card__report-form">
+												<h4 class="fs-22 lh-16 fw-600"
+													>Reports & Intake Forms:</h4
+												>
+												<ul class="dnn-simple-card__list">
+													<li>
+														<a href="">Test Report</a>
+													</li>
+													<li>
+														<a href="">Intake Form</a>
+													</li>
+													<li>
+														<a href="">View Prescription</a>
+													</li>
+												</ul>
+											</div>
+											<!--Report & Intake  End-->
+										</div>
+										<!--Simple Card End-->
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
 
-                    <div class="dnn-simple-card">
-                      <h2 class="fs-30 lh-12 fw-700 mt-0">
-                        Cilicops Metaphoric
-                      </h2>
-                      <p class="text-grey-3 fs-22 fw-500 lh-12">
-                        Capsule | Hair Fall
-                      </p>
-                      <h2 class="fs-30 lh-12 fw-700">$<span>399</span></h2>
-                      <div class="mt-20">
-                        <h4 class="fs-22 lh-16 fw-600">About the Product:</h4>
-                        <p>
-                          Oral Tirzepatide Tablets, combining the actions of
-                          GIP and GLP-1 receptor agonists, provide a new
-                          approach to managing type 2 diabetes through oral
-                          administration.
-                        </p>
-                      </div>
-                      <!--About Content End-->
+			<footer class="footer">
+				<div class="footer__content">
+					<div class="footer__links">
+						<a href="#">Terms of use</a><a href="#">Privacy Policy</a>
+					</div>
+					<p class="text-grey-3 fs-13">
+						Copyright &copy; 2024 Thrivewell. All rights reserved.
+					</p>
+				</div>
+			</footer>
 
-                      <div class="dnn-simple-card__report-form">
-                        <h4 class="fs-22 lh-16 fw-600">Reports & Intake Forms:</h4>
-                        <ul class="dnn-simple-card__list">
-                          <li>
-                            <a href="">Test Report</a>
-                          </li>
-                          <li>
-                            <a href="">Intake Form</a>
-                          </li>
-                          <li>
-                            <a href="">View Prescription</a>
-                          </li>
-                        </ul>
-                      </div>
-                      <!--Report & Intake  End-->
-                    </div>
-                    <!--Simple Card End-->
+			<!-- Modal Start-->
+			<div
+				class="modal edit fade"
+				id="modal-intake-form-view"
+				tabindex="-1"
+				role="dialog"
+				aria-labelledby="myModalLabel"
+			>
+				<div class="modal-dialog" role="document" style="margin: 0">
+					<div class="modal-content">
+						<div class="modal-header">
+							<div
+								class="d-flex w-100 align-item-center justify-content-space-between pe-40"
+							>
+								<h4 class="fs-24 lh-36 text-left" id="myModalLabel">
+									Intake Form
+								</h4>
+							</div>
+							<div class="actionbar__actions pr-3x">
+								<button
+									type="button"
+									class="oqtane-btn oqtane-btn__primary"
+									data-toggle="modal"
+									data-target="#add-promocode-modal"
+								>
+									Print
+								</button>
 
-                    <div class="dnn-simple-card">
-                      <h2 class="fs-30 lh-12 fw-700 mt-0">
-                        Triptozena Cintoripe
-                      </h2>
-                      <p class="text-grey-3 fs-22 fw-500 lh-12">
-                        Capsule | Hair Fall
-                      </p>
-                      <h2 class="fs-30 lh-12 fw-700">$<span>399</span></h2>
-                      <div class="mt-20">
-                        <h4 class="fs-22 lh-16 fw-600">About the Product:</h4>
-                        <p>
-                          Oral Tirzepatide Tablets, combining the actions of
-                          GIP and GLP-1 receptor agonists, provide a new
-                          approach to managing type 2 diabetes through oral
-                          administration.
-                        </p>
-                      </div>
-                      <!--About Content End-->
+								<button
+									type="button"
+									class="oqtane-btn oqtane-btn__primary"
+									data-toggle="modal"
+									data-target="#add-promocode-modal"
+								>
+									Download PDF
+								</button>
+							</div>
+							<button
+								type="button"
+								class="close-btn"
+								data-dismiss="modal"
+								aria-label="Close"
+							>
+								<span class="icon-cross text-black" aria-hidden="true"></span>
+							</button>
+						</div>
 
-                      <div class="dnn-simple-card__report-form">
-                        <h4 class="fs-22 lh-16 fw-600">Reports & Intake Forms:</h4>
-                        <ul class="dnn-simple-card__list">
-                          <li>
-                            <a href="">Test Report</a>
-                          </li>
-                          <li>
-                            <a href="">Intake Form</a>
-                          </li>
-                          <li>
-                            <a href="">View Prescription</a>
-                          </li>
-                        </ul>
-                      </div>
-                      <!--Report & Intake  End-->
-                    </div>
-                    <!--Simple Card End-->
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
+						<div class="modal-body">
+							<div class="tabular-layout mt-4">
+								<div class="tabular-layout__first">
+									<p class="if-modal__title">Drug Name</p>
+									<p class="if-modal__text text-uppercase">
+										KYZATREX 200 MG CAPSULE
+									</p>
+								</div>
 
-      <footer class="footer">
-        <div class="footer__content">
-          <div class="footer__links">
-            <a href="#">Terms of use</a><a href="#">Privacy Policy</a>
-          </div>
-          <p class="text-grey-3 fs-13">
-            Copyright &copy; 2024 Thrivewell. All rights reserved.
-          </p>
-        </div>
-      </footer>
+								<div class="tabular-layout__second">
+									<p class="if-modal__title">Drug No</p>
+									<p class="if-modal__text text-uppercase">7381</p>
+								</div>
 
-      <!-- Modal Start-->
-      <div
-        class="modal edit fade"
-        id="modal-intake-form-view"
-        tabindex="-1"
-        role="dialog"
-        aria-labelledby="myModalLabel"
-      >
-        <div
-          class="modal-dialog"
-          role="document"
-          style="margin: 0;"
-        >
-          <div class="modal-content">
-            <div class="modal-header ">
-              <div class="d-flex w-100 align-item-center justify-content-space-between pe-40">
-                <h4
-                  class="fs-24 lh-36 text-left"
-                  id="myModalLabel"
-                >
-                  Intake Form
-                </h4>
-              </div>
-              <div class="actionbar__actions pr-3x">
-                <button
-                  type="button"
-                  class="dnn-btn dnn-btn__primary"
-                  data-toggle="modal"
-                  data-target="#add-promocode-modal"
-                >
-                  Print
-                </button>
+								<div class="tabular-layout__third">
+									<p class="if-modal__title">Diagnosis</p>
+									<p class="if-modal__text text-uppercase"
+										>SNOMED - 111551000</p
+									>
+								</div>
+							</div>
 
-                <button
-                  type="button"
-                  class="dnn-btn dnn-btn__primary"
-                  data-toggle="modal"
-                  data-target="#add-promocode-modal"
-                >
-                  Download PDF
-                </button>
-              </div>
-              <button
-                type="button"
-                class="close-btn"
-                data-dismiss="modal"
-                aria-label="Close"
-              >
-                <span
-                  class="icon-cross text-black"
-                  aria-hidden="true"
-                ></span>
-              </button>
-            </div>
+							<div class="tabular-layout mt-9 b-0">
+								<div class="tabular-layout__first">
+									<div class="tabular-layout__inner-container">
+										<div class="tabular-layout__inner">
+											<p class="if-modal__title">First Name</p>
+											<p class="if-modal__text">Michael</p>
+										</div>
+										<div class="labular-layout__inner">
+											<p class="if-modal__title">Last Name</p>
+											<p class="if-modal__text">Scott</p>
+										</div>
+									</div>
+								</div>
 
-            <div class="modal-body">
-              <div class="tabular-layout mt-4">
-                <div class="tabular-layout__first">
-                  <p class="if-modal__title">Drug Name</p>
-                  <p class="if-modal__text text-uppercase">
-                    KYZATREX 200 MG CAPSULE
-                  </p>
-                </div>
+								<div class="tabular-layout__second">
+									<p class="if-modal__title">Phone Number</p>
+									<p class="if-modal__text">505-681-3905</p>
+								</div>
 
-                <div class="tabular-layout__second">
-                  <p class="if-modal__title">Drug No</p>
-                  <p class="if-modal__text text-uppercase">7381</p>
-                </div>
+								<div class="tabular-layout__third">
+									<p class="if-modal__title">Email Address</p>
+									<p class="if-modal__text">michael.scott＠gmail.com</p>
+								</div>
+							</div>
 
-                <div class="tabular-layout__third">
-                  <p class="if-modal__title">Diagnosis</p>
-                  <p class="if-modal__text text-uppercase">SNOMED - 111551000</p>
-                </div>
-              </div>
+							<div class="tabular-layout">
+								<div class="tabular-layout__first">
+									<div class="tabular-layout__inner-container">
+										<div class="tabular-layout__inner">
+											<p class="if-modal__title">Sex</p>
+											<p class="if-modal__text">Male</p>
+										</div>
+										<div class="labular-layout__inner">
+											<p class="if-modal__title">Height</p>
+											<p class="if-modal__text">6 Feet 7 Inch</p>
+										</div>
+									</div>
+								</div>
 
-              <div class="tabular-layout mt-9  b-0">
-                <div class="tabular-layout__first">
-                  <div class="tabular-layout__inner-container">
-                    <div class="tabular-layout__inner">
-                      <p class="if-modal__title">First Name</p>
-                      <p class="if-modal__text">Michael</p>
-                    </div>
-                    <div class="labular-layout__inner">
-                      <p class="if-modal__title">Last Name</p>
-                      <p class="if-modal__text">Scott</p>
-                    </div>
-                  </div>
-                </div>
+								<div class="tabular-layout__second">
+									<p class="if-modal__title">Weight (LBS)</p>
+									<p class="if-modal__text">187 lbs</p>
+								</div>
 
-                <div class="tabular-layout__second">
-                  <p class="if-modal__title">Phone Number</p>
-                  <p class="if-modal__text">505-681-3905</p>
-                </div>
+								<div class="tabular-layout__third">
+									<p class="if-modal__title">Date of Birth</p>
+									<p class="if-modal__text">01-27-1981</p>
+								</div>
+							</div>
 
-                <div class="tabular-layout__third">
-                  <p class="if-modal__title">Email Address</p>
-                  <p class="if-modal__text">michael.scott＠gmail.com</p>
-                </div>
-              </div>
+							<div class="if-modal__qa mt-20">
+								<p class="if-modal__text">1. Are you diabetic?</p>
+								<p class="if-modal__title">- Yes</p>
 
-              <div class="tabular-layout">
-                <div class="tabular-layout__first">
-                  <div class="tabular-layout__inner-container">
-                    <div class="tabular-layout__inner">
-                      <p class="if-modal__title">Sex</p>
-                      <p class="if-modal__text">Male</p>
-                    </div>
-                    <div class="labular-layout__inner">
-                      <p class="if-modal__title">Height</p>
-                      <p class="if-modal__text">6 Feet 7 Inch</p>
-                    </div>
-                  </div>
-                </div>
+								<p class="if-modal__text">
+									2. Please list any oral medications or insulins you take (for
+									diabetics). If none, please answer 'none'.
+								</p>
+								<p class="if-modal__title">
+									- Metformin, Glipizide, Insulin Aspart (NovoLog), Insulin
+									Lispro (Humalog), Insulin Glargine (Lantus).
+								</p>
 
-                <div class="tabular-layout__second">
-                  <p class="if-modal__title">Weight (LBS)</p>
-                  <p class="if-modal__text">187 lbs</p>
-                </div>
+								<p class="if-modal__text">
+									3. Do you have high blood pressure or heart problems?
+								</p>
+								<p class="if-modal__title">- Yes</p>
 
-                <div class="tabular-layout__third">
-                  <p class="if-modal__title">Date of Birth</p>
-                  <p class="if-modal__text">01-27-1981</p>
-                </div>
-              </div>
+								<p class="if-modal__text">
+									4. List of oral medicines (for high blood pressure). Or answer
+									none.
+								</p>
+								<p class="if-modal__title">
+									- Metformin, Glipizide, Insulin Aspart (NovoLog), Insulin
+									Lispro (Humalog), Insulin Glargine (Lantus).
+								</p>
+								<p class="if-modal__text">
+									5. List of other oral medicines (for these conditions) . Or
+									answer none.
+								</p>
+								<p class="if-modal__title">
+									- Metformin, Glipizide, Insulin Aspart (NovoLog), Insulin
+									Lispro (Humalog), Insulin Glargine (Lantus).
+								</p>
 
-              <div class="if-modal__qa mt-20">
-                <p class="if-modal__text">1. Are you diabetic?</p>
-                <p class="if-modal__title">- Yes</p>
+								<p class="if-modal__text">
+									6. List of any other oral medicines (for other conditions) .
+									Or answer none.
+								</p>
+								<p class="if-modal__title">
+									- Metformin, Glipizide, Insulin Aspart (NovoLog), Insulin
+									Lispro (Humalog), Insulin Glargine (Lantus).
+								</p>
 
-                <p class="if-modal__text">
-                  2. Please list any oral medications or insulins you take (for
-                  diabetics). If none, please answer 'none'.
-                </p>
-                <p class="if-modal__title">
-                  - Metformin, Glipizide, Insulin Aspart (NovoLog), Insulin Lispro
-                  (Humalog), Insulin Glargine (Lantus).
-                </p>
+								<p class="if-modal__text"
+									>7. Are you allergic to any medication?</p
+								>
+								<p class="if-modal__title">- Yes</p>
 
-                <p class="if-modal__text">
-                  3. Do you have high blood pressure or heart problems?
-                </p>
-                <p class="if-modal__title">- Yes</p>
+								<p class="if-modal__text">
+									8. List any medicines you’re allergic to. Or answer none.
+								</p>
+								<p class="if-modal__title">
+									- Metformin, Glipizide, Insulin Aspart (NovoLog), Insulin
+									Lispro (Humalog), Insulin Glargine (Lantus).
+								</p>
 
-                <p class="if-modal__text">
-                  4. List of oral medicines (for high blood pressure). Or answer
-                  none.
-                </p>
-                <p class="if-modal__title">
-                  - Metformin, Glipizide, Insulin Aspart (NovoLog), Insulin Lispro
-                  (Humalog), Insulin Glargine (Lantus).
-                </p>
-                <p class="if-modal__text">
-                  5. List of other oral medicines (for these conditions) . Or answer none.
-                </p>
-                <p class="if-modal__title">
-                  - Metformin, Glipizide, Insulin Aspart (NovoLog), Insulin Lispro (Humalog), Insulin Glargine (Lantus).
-                </p>
+								<p class="if-modal__text">
+									9. Have you seen a doctor in the last 12 months?
+								</p>
+								<p class="if-modal__title"> - Yes </p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--Modal End-->
+		</div>
 
-                <p class="if-modal__text">
-                  6. List of any other oral medicines (for other conditions) . Or answer none.
-                </p>
-                <p class="if-modal__title">
-                  - Metformin, Glipizide, Insulin Aspart (NovoLog), Insulin Lispro (Humalog), Insulin Glargine (Lantus).
-                </p>
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="./../vendors/jquery/jquery-2.2.4.min.js"></script>
+		<script src="./../vendors/bootstrap/js/bootstrap.min.js"></script>
+		<script src="./../vendors/swiper/package/swiper-bundle.min.js"></script>
+		<script src="./../vendors/bootstrap-multiselect/js/bootstrap-multiselect.min.js"></script>
+		<script src="./../vendors/trumbowyg/trumbowyg.js"></script>
+		<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+		<script src="./../vendors/moment/moment.js"></script>
+		<script src="./../vendors/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
+		<script src="./../js/datepicker.js"></script>
 
-                <p class="if-modal__text">7. Are you allergic to any medication?</p>
-                <p class="if-modal__title">- Yes</p>
-
-                <p class="if-modal__text">
-                  8. List any medicines you’re allergic to. Or answer none.
-                </p>
-                <p class="if-modal__title">
-                  - Metformin, Glipizide, Insulin Aspart (NovoLog), Insulin Lispro (Humalog), Insulin Glargine (Lantus).
-                </p>
-
-                <p class="if-modal__text">
-                  9. Have you seen a doctor in the last 12 months?
-                </p>
-                <p class="if-modal__title">
-                  - Yes
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--Modal End-->
-    </div>
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="./../vendors/jquery/jquery-2.2.4.min.js"></script>
-    <script src="./../vendors/bootstrap/js/bootstrap.min.js"></script>
-    <script src="./../vendors/swiper/package/swiper-bundle.min.js"></script>
-    <script src="./../vendors/bootstrap-multiselect/js/bootstrap-multiselect.min.js"></script>
-    <script src="./../vendors/trumbowyg/trumbowyg.js"></script>
-    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
-    <script src="./../vendors/moment/moment.js"></script>
-    <script src="./../vendors/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
-    <script src="./../js/datepicker.js"></script>
-
-    <script src="./../js/main.js"></script>
-  </body>
-
+		<script src="./../js/main.js"></script>
+	</body>
 </html>

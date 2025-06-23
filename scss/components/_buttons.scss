@@ -1,4 +1,4 @@
-.dnn-btn {
+.oqtane-btn {
   background-color: transparent;
   display: inline-block;
   cursor: pointer;
@@ -181,7 +181,7 @@
   }
 }
 
-.dnn__close-btn {
+.oqtane__close-btn {
   width: 24px;
   height: 24px;
   position: absolute;
@@ -255,7 +255,7 @@
   }
 }
 
-.dnn-view-btn {
+.oqtane-view-btn {
   padding: 0;
   background-color: transparent;
   border: 0;
@@ -268,7 +268,7 @@
   }
 }
 
-.dnn-loader {
+.oqtane-loader {
   display: inline-block;
   border: 2px solid $blue-light;
   border-top: 2px solid $primary-light;
@@ -291,7 +291,7 @@
 }
 
 @media all and (max-width: 992px) {
-  .dnn-btn {
+  .oqtane-btn {
     &__primary {
       padding: 10px 15px;
       font-size: 14px;
@@ -361,7 +361,7 @@
     }
   }
 
-  .dnn-btn {
+  .oqtane-btn {
     &__primary {
       &--outline {
         padding: 6px 12px;
