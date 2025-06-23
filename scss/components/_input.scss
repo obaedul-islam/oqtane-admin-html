@@ -1,4 +1,4 @@
-.dnn-search {
+.oqtane-search {
   display: block;
   width: 100%;
 
@@ -47,7 +47,7 @@
   }
 }
 
-.dnn-filter {
+.oqtane-filter {
   display: block;
   width: 250px;
   position: relative;
@@ -539,7 +539,7 @@
     }
   }
 
-  .dnn-search {
+  .oqtane-search {
 
     &__icon {
       width: 20px;
@@ -559,7 +559,7 @@
 }
 
 @media all and (max-width: 992px) {
-  .dnn-search {
+  .oqtane-search {
     &__input {
       max-width: 200px;
       height: 35px;
@@ -627,7 +627,7 @@
 
 @media all and (max-width: 768px) {
 
-  .dnn-search {
+  .oqtane-search {
     &__input {
       max-width: 200px;
       height: 30px;

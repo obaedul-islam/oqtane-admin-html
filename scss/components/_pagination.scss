@@ -1,4 +1,4 @@
-.dnn-pagination {
+.oqtane-pagination {
   display: flex;
   align-items: center;
   justify-content: end;
@@ -106,7 +106,7 @@
 
 
 @media all and (max-width: 992px) {
-  .dnn-pagination {
+  .oqtane-pagination {
     &__btn {
 
       width: 35px;
@@ -144,7 +144,7 @@
 }
 
 @media all and (max-width: 768px) {
-  .dnn-pagination {
+  .oqtane-pagination {
     margin-bottom: 10px;
 
     &__btn {
@@ -183,7 +183,7 @@
   }
 }
 
-.dnn-pagination {
+.oqtane-pagination {
   display: flex;
   align-items: center;
   justify-content: end;
@@ -291,7 +291,7 @@
 
 
 @media all and (max-width: 992px) {
-  .dnn-pagination {
+  .oqtane-pagination {
     &__btn {
 
       width: 35px;
@@ -329,7 +329,7 @@
 }
 
 @media all and (max-width: 768px) {
-  .dnn-pagination {
+  .oqtane-pagination {
     margin-bottom: 10px;
 
     &__btn {
@@ -369,7 +369,7 @@
 }
 
 @media all and (max-width: 576px) {
-  .dnn-pagination {
+  .oqtane-pagination {
     gap: 5px;
     flex-wrap: wrap;
   }

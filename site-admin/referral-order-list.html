@@ -164,14 +164,14 @@
 							</div>
 
 							<div class="actionbar__actions">
-								<div class="dnn-search">
+								<div class="oqtane-search">
 									<input
-										class="dnn-search__input"
+										class="oqtane-search__input"
 										type="text"
 										placeholder="Search"
 										data-bind=" textInput: pagination.searchBy"
 									/>
-									<i class="icon-search dnn-search__icon"></i>
+									<i class="icon-search oqtane-search__icon"></i>
 								</div>
 
 								<button class="oqtane-btn oqtane-btn__primary" type="button">
@@ -261,40 +261,40 @@
 							</div>
 							<hr />
 
-							<div class="dnn-pagination">
-								<div class="dnn-pagination__goto">
-									<p class="dnn-pagination__text">Go To:</p>
+							<div class="oqtane-pagination">
+								<div class="oqtane-pagination__goto">
+									<p class="oqtane-pagination__text">Go To:</p>
 									<input
 										type="text"
-										class="dnn-pagination__input"
+										class="oqtane-pagination__input"
 										data-bind="textInput : pagination.newPage,  event: {keyup: choosePage}"
 									/>
 								</div>
 
-								<div class="dnn-pagination__row-count">
-									<p class="dnn-pagination__text">Show Rows:</p>
+								<div class="oqtane-pagination__row-count">
+									<p class="oqtane-pagination__text">Show Rows:</p>
 
-									<div class="dnn-pagination__select-container">
+									<div class="oqtane-pagination__select-container">
 										<select
-											class="dnn-pagination__select"
+											class="oqtane-pagination__select"
 											data-bind="options: pagination.pageSizes, value: pagination.pageSize, event:{ change: pageSizeChange} "
 										></select>
 
-										<span class="dnn-pagination__select-icon">
+										<span class="oqtane-pagination__select-icon">
 											<i class="icon-down_arrow"></i>
 										</span>
 									</div>
 								</div>
 
-								<div class="dnn-pagination__control">
+								<div class="oqtane-pagination__control">
 									<p
-										class="dnn-pagination__text"
+										class="oqtane-pagination__text"
 										data-bind="text: pagination.pageSummary"
 									></p>
 
 									<button
 										type="button"
-										class="dnn-pagination__btn"
+										class="oqtane-pagination__btn"
 										data-bind=" attr:{disabled: (pagination.newPage() == '' || pagination.newPage() == 1) }, click:previousPage"
 									>
 										<i class="icon-left-arrow"></i>
@@ -302,7 +302,7 @@
 
 									<button
 										type="button"
-										class="dnn-pagination__btn"
+										class="oqtane-pagination__btn"
 										data-bind="attr:{disabled: (pagination.newPage() == '' || pagination.newPage() == pagination.totalPage()) }, click:nextPage"
 									>
 										<i class="icon-right-arrow"></i>
@@ -310,7 +310,7 @@
 								</div>
 							</div>
 
-							<!--<div class="pagination dnn-pagination">
+							<!--<div class="pagination oqtane-pagination">
                   <a href="#"
                      style="color:darkred"
                      data-bind="click: previousPage, css: {'disabled': pagination.pageIndex() <= 0}">Previous</a>

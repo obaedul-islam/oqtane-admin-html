@@ -1,4 +1,4 @@
-.dnn-tabs {
+.oqtane-tabs {
   border: 0;
   display: flex;
   gap: 40px;
@@ -43,12 +43,12 @@
 }
 
 @media all and (max-width: 1200px) {
-  .dnn-tabs {
+  .oqtane-tabs {
     gap: 20px;
 
     &__item {
       &.active {
-        .dnn-tabs {
+        .oqtane-tabs {
           &__link {
             font-size: 18px;
           }
@@ -64,7 +64,7 @@
 }
 
 @media all and (max-width: 992px) {
-  .dnn-tabs {
+  .oqtane-tabs {
     gap: 10px;
 
     &__link {
@@ -73,7 +73,7 @@
 
     &__item {
       &.active {
-        .dnn-tabs {
+        .oqtane-tabs {
           &__link {
             font-size: 16px;
           }
@@ -84,7 +84,7 @@
 }
 
 @media all and (max-width: 768px) {
-  .dnn-tabs {
+  .oqtane-tabs {
     flex-direction: column;
     gap: 5px;
 
@@ -94,7 +94,7 @@
 
     &__item {
       &.active {
-        .dnn-tabs {
+        .oqtane-tabs {
           &__link {
             font-size: 14px;
           }

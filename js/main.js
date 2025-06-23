@@ -47,37 +47,37 @@ $(document).ready(function () {
 
 	// dnn multiselect dropdown
 
-	$("#dnn-lab-report-dd").multiselect({
+	$("#oqtane-lab-report-dd").multiselect({
 		nonSelectedText: "Select Lab Report",
 		includeSelectAllOption: true,
 		templates: {
 			button: `<button
             type="button"
-            class="multiselect dropdown-toggle dnn-multiselect__control" data-toggle="dropdown"
+            class="multiselect dropdown-toggle oqtane-multiselect__control" data-toggle="dropdown"
           >
-          <span class="multiselect-selected-text dnn-multiselect__text"></span>
+          <span class="multiselect-selected-text oqtane-multiselect__text"></span>
         </button>`,
 
-			popupContainer: `<div class="dnn-multiselect__container dropdown-menu"></div>`,
+			popupContainer: `<div class="oqtane-multiselect__container dropdown-menu"></div>`,
 
-			option: `<div class="dnn-multiselect__option multiselect-option"></div>`,
+			option: `<div class="oqtane-multiselect__option multiselect-option"></div>`,
 		},
 	});
 
-	$("#dnn-state-dd").multiselect({
+	$("#oqtane-state-dd").multiselect({
 		nonSelectedText: "Select State",
 		includeSelectAllOption: true,
 		templates: {
 			button: `<button
             type="button"
-            class="multiselect dropdown-toggle dnn-multiselect__control" data-toggle="dropdown"
+            class="multiselect dropdown-toggle oqtane-multiselect__control" data-toggle="dropdown"
           >
-          <span class="multiselect-selected-text dnn-multiselect__text"></span>
+          <span class="multiselect-selected-text oqtane-multiselect__text"></span>
         </button>`,
 
-			popupContainer: `<div class="dnn-multiselect__container dropdown-menu"></div>`,
+			popupContainer: `<div class="oqtane-multiselect__container dropdown-menu"></div>`,
 
-			option: `<div class="dnn-multiselect__option multiselect-option"></div>`,
+			option: `<div class="oqtane-multiselect__option multiselect-option"></div>`,
 		},
 	});
 
