@@ -45,7 +45,7 @@ $(document).ready(function () {
 	//   }
 	// });
 
-	// dnn multiselect dropdown
+	// Oqtane multiselect dropdown
 
 	$("#oqtane-lab-report-dd").multiselect({
 		nonSelectedText: "Select Lab Report",

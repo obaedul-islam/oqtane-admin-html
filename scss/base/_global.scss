@@ -33,7 +33,7 @@ a {
 }
 
 // Disabled global style
-.dnn-disabled {
+.oqtane-disabled {
   opacity: 0.65 !important;
   pointer-events: none;
   cursor: not-allowed;
@@ -51,7 +51,7 @@ a {
 
 // Bootstrap Reset
 
-// Dnn top blank space remove
+// Oqtane top blank space remove
 h2:has(+ .ContainerPane) {
   display: none !important;
 }
