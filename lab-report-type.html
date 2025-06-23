@@ -7,9 +7,21 @@
 
 		<title>Lab Report Type List</title>
 
-		<link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.min.css" />
-		<link rel="stylesheet" href="icons/style.css" />
+		<!-- <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.min.css" /> -->
+		<link
+			rel="stylesheet"
+			href="vendors/bootstrap-multiselect/css/bootstrap-multiselect.min.css"
+		/>
+		<link
+			href="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.snow.css"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/summernote-bs4.min.css"
+			rel="stylesheet"
+		/>
 
+		<link rel="stylesheet" href="icons/style.css" />
 		<link rel="stylesheet" href="css/styles.css" />
 
 		<!--[if lt IE 9]>
@@ -145,7 +157,9 @@
 									/>
 									<i class="icon-search oqtane-search__icon"></i>
 								</div>
-								<a class="oqtane-btn oqtane-btn__primary"> Add New Lab Report Type</a>
+								<a class="oqtane-btn oqtane-btn__primary">
+									Add New Lab Report Type</a
+								>
 							</div>
 						</div>
 
@@ -184,7 +198,6 @@
 											</thead>
 											<tbody>
 												<tr>
-												
 													<td>Hair Fast</td>
 													<td>Capsule</td>
 													<td>
@@ -207,10 +220,9 @@
 													</td>
 												</tr>
 												<tr>
-												
 													<td>Capsule</td>
 													<td>Hair fall</td>
-													
+
 													<td>
 														<span class="status-pill status-pill--danger">
 															Inactive
@@ -283,6 +295,59 @@
 							</div>
 						</div>
 					</div>
+					<!-- Lab Report Type list end-->
+
+					<div class="oqtane-card list-card">
+						<div class="oqtane-card__header oqtane-card__header--with-icon">
+							<h3>Manage Lab Report Type </h3>
+						</div>
+
+						<div class="oqtane-card__body">
+							<div class="oqtane-card__body__small-container">
+								<div class="custom-input mt-20">
+									<label class="custom-input__inner">
+										<input
+											type="text"
+											class="custom-input__control"
+											placeholder=""
+										/>
+										<span class="custom-input__label">Name</span>
+									</label>
+								</div>
+								<div class="sec-card__section border-0">
+									<div class="rich-text rich-text--xs">
+										<label class="rich-text__label">Description</label>
+										<div class="rt-editor"></div>
+									</div>
+								</div>
+								<label class="custom-check mt-4">
+									<span class="custom-check__label text-grey-3"> Status </span>
+									<span class="custom-check__input ml-5x">
+										<input type="checkbox" />
+										<span></span>
+									</span>
+								</label>
+								<div class="answer-type">
+									<div class="answer-type__actions justify-content-end">
+										<button
+											type="button"
+											id="answer-type-btn"
+											class="oqtane-btn oqtane-btn__primary--outline oqtane-btn__primary--outline__base"
+										>
+											<span>Cancel</span>
+										</button>
+										<button
+											type="button"
+											id="answer-type-btn"
+											class="oqtane-btn oqtane-btn__primary--base"
+										>
+											<span>Save</span>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</main>
 
@@ -299,8 +364,14 @@
 		</div>
 
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-		<script src="vendors/jquery/jquery-2.2.4.min.js"></script>
-		<script src="vendors/bootstrap/js/bootstrap.min.js"></script>
+		<script src="js/vendors/jquery-3.7.1.min.js"></script>
+		<script src="js/vendors/bootstrap.bundle.min.js"></script>
+		<script src="vendors/swiper/package/swiper-bundle.min.js"></script>
+		<script src="vendors/bootstrap-multiselect/js/bootstrap-multiselect.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/summernote-bs4.min.js"></script>
+		<script src="js/richtext.js"></script>
 
 		<script src="js/main.js"></script>
 	</body>

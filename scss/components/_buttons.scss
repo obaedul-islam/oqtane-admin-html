@@ -37,6 +37,7 @@
     }
   }
 
+
   &__primary {
     background: $primary;
     color: $white;
@@ -45,6 +46,13 @@
     &:visited {
       color: $white;
     }
+  }
+
+  &__primary--base {
+    padding: 15px 20px;
+    background: $primary;
+    color: $white;
+    min-width: 130px;
   }
 
   &__primary--lg {
@@ -70,6 +78,7 @@
     }
   }
 
+
   &__primary--outline {
     padding: 21px 20px;
     border-color: $primary;
@@ -79,6 +88,11 @@
     &:hover,
     &:visited {
       color: $primary;
+    }
+
+    &__base {
+      padding: 15px 20px;
+      min-width: 130px;
     }
 
     &__lg {
