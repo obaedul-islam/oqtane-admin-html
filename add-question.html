@@ -8,7 +8,7 @@
 		<title>Add Question</title>
 
 		<link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.min.css" />
-		<link rel="stylesheet" href="vendors/cropper/cropper.min.css" />
+		<link rel="stylesheet" href="scss/base/vendors/cropper/cropper.min.css" />
 		<link rel="stylesheet" href="icons/style.css" />
 
 		<link rel="stylesheet" href="css/styles.css" />
@@ -627,8 +627,8 @@
 																<button
 																	class="oqtane-btn oqtane-btn__link"
 																	type="button"
-																	data-toggle="modal"
-																	data-target="#radioButtonAnswer"
+																	data-bs-toggle="modal"
+																	data-bs-target="#radioButtonAnswer"
 																>
 																	Edit Values
 																</button>
@@ -637,8 +637,8 @@
 																	class="modal edit fade"
 																	id="radioButtonAnswer"
 																	tabindex="-1"
-																	role="dialog"
-																	aria-labelledby="myModalLabel"
+																	aria-labelledby="exampleModalLabel"
+																	aria-hidden="true"
 																>
 																	<div
 																		class="modal-dialog w-100 m-0"
@@ -822,7 +822,7 @@
 																					<button
 																						type="button"
 																						class="oqtane-btn oqtane-btn__primary--outline w-100 fw-500 p-20"
-																						data-dismiss="modal"
+																						data-bs-dismiss="modal"
 																					>
 																						Cancel
 																					</button>
@@ -1863,13 +1863,15 @@
 		</div>
 
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-		<script src="vendors/jquery/jquery-2.2.4.min.js"></script>
-		<script src="vendors/bootstrap/js/bootstrap.min.js"></script>
+		<script src="js/vendors/jquery-3.7.1.min.js"></script>
+		<script src="js/vendors/bootstrap.bundle.min.js"></script>
 		<script src="vendors/swiper/package/swiper-bundle.min.js"></script>
 		<script src="vendors/bootstrap-multiselect/js/bootstrap-multiselect.min.js"></script>
-		<script src="vendors/trumbowyg/trumbowyg.js"></script>
-		<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
-		<script src="vendors/cropper/cropper.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/summernote-bs4.min.js"></script>
+		<script src="js/richtext.js"></script>
+		<script src="js/vendors/cropper.min.js"></script>
 
 		<script src="js/main.js"></script>
 	</body>

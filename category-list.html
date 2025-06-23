@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<title>Category List</title>
+
+		<link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="icons/style.css" />
+
+		<link rel="stylesheet" href="css/styles.css" />
+
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="dashboard">
+			<header class="header">
+				<nav class="menubar">
+					<a href="#" class="menubar__brand">
+						<img src="img/logo.svg" alt="Logo" class="menubar__logo" />
+					</a>
+
+					<div class="menubar__items">
+						<a class="menubar__item" href="#">
+							<i class="icon-message menubar__icon"></i>
+							<span class="menubar__badge"></span>
+						</a>
+						<a class="menubar__item" href="#">
+							<i class="icon-notification menubar__icon"></i>
+							<span class="menubar__badge"></span>
+						</a>
+
+						<div class="dropdown menubar__dropdown">
+							<button
+								class="user dropdown-toggle"
+								type="button"
+								id="menu-dropdown"
+								data-toggle="dropdown"
+								aria-haspopup="true"
+								aria-expanded="false"
+							>
+								<img class="user__avatar" src="img/user.png" alt="avatar" />
+
+								<div class="user__info">
+									<p class="user__name fs-18 lh-100 text-dark">David Wayne</p>
+									<p class="user__role fs-14 lh-100 text-grey-3">Super Admin</p>
+								</div>
+
+								<i class="icon-down_arrow"></i>
+							</button>
+							<ul class="dropdown-menu" aria-labelledby="menu-dropdown">
+								<li><a href="#">Action</a></li>
+								<li><a href="#">Another action</a></li>
+								<li><a href="#">Something else here</a></li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+			</header>
+
+			<main class="main">
+				<aside class="sidebar">
+					<ul class="sidebar__items">
+						<li class="sidebar__item">
+							<a href="./product-details.html" class="sidebar__link">
+								<i class="icon-dashboard sidebar__icon"></i>
+								<span class="sidebar__text">Dashboard</span>
+							</a>
+						</li>
+						<li class="sidebar__item">
+							<a
+								href="./product-list.html"
+								class="sidebar__link sidebar__link--active"
+							>
+								<i class="icon-tablet sidebar__icon"></i>
+								<span class="sidebar__text">Category List</span>
+							</a>
+						</li>
+						<li class="sidebar__item">
+							<a href="./product-list.html" class="sidebar__link">
+								<i class="icon-product_list sidebar__icon"></i>
+								<span class="sidebar__text">Package List</span>
+							</a>
+						</li>
+						<li class="sidebar__item">
+							<a href="./intake-form-list.html" class="sidebar__link">
+								<i class="icon-intake_form sidebar__icon"></i>
+								<span class="sidebar__text">Intake Form</span>
+							</a>
+						</li>
+						<li class="sidebar__item">
+							<a href="./question-list.html" class="sidebar__link">
+								<i class="icon-questions sidebar__icon"></i>
+								<span class="sidebar__text">Questions</span>
+							</a>
+						</li>
+						<li class="sidebar__item">
+							<a href="./site-list.html" class="sidebar__link">
+								<i class="icon-globe sidebar__icon"></i>
+								<span class="sidebar__text">Site List</span>
+							</a>
+						</li>
+						<li class="sidebar__item">
+							<a href="#" class="sidebar__link">
+								<i class="icon-settings sidebar__icon"></i>
+								<span class="sidebar__text">Settings</span>
+							</a>
+						</li>
+					</ul>
+
+					<button type="button" class="sidebar__toggle">
+						<i class="icon-left-arrow"></i>
+					</button>
+				</aside>
+
+				<div class="tw-main__content">
+					<div class="content">
+						<div class="actionbar">
+							<div class="actionbar__title">
+								<p class="text-uppercase text-primary fs-20 mb-0 fw-600 lh-150">
+									Category List
+								</p>
+							</div>
+
+							<div class="actionbar__actions">
+								<div class="oqtane-search">
+									<input
+										class="oqtane-search__input"
+										type="text"
+										placeholder="Search by name"
+									/>
+									<i class="icon-search oqtane-search__icon"></i>
+								</div>
+								<a class="oqtane-btn oqtane-btn__primary"> Add New Category</a>
+							</div>
+						</div>
+
+						<div class="oqtane-card list-card">
+							<div class="oqtane-card__header oqtane-card__header--with-icon">
+								<h3> Category List</h3>
+
+								<!-- <div class="oqtane-card__actions oqtane-card__actions--with-icon">
+									<button
+										type="button"
+										class="oqtane-card__action-prev oqtane-btn oqtane-btn__icon"
+										disabled
+									>
+										<i class="icon-left-arrow"></i>
+									</button>
+									<button
+										type="button"
+										class="oqtane-card__action-next oqtane-btn oqtane-btn__icon"
+									>
+										<i class="icon-right-arrow"></i>
+									</button>
+								</div> -->
+							</div>
+
+							<div class="oqtane-card__body">
+								<div class="list-card__table list-table">
+									<div class="table-responsive">
+										<table class="table table-striped">
+											<thead>
+												<tr>
+													<th>Category Image</th>
+													<th>Category Name</th>
+													<th> Site List</th>
+													<th>Status</th>
+													<th>Action</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>
+														<div class="list-table__img">
+															<img src="./img/product-1.png" alt="" />
+														</div>
+													</td>
+													<td>Athletic Performance</td>
+													<td>NexGen</td>
+
+													<td>
+														<span class="status-pill status-pill--success">
+															Active
+														</span>
+													</td>
+													<td>
+														<a
+															class="oqtane-btn oqtane-btn__icon list-table__action"
+														>
+															<i class="icon-link"></i>
+														</a>
+
+														<a
+															class="oqtane-btn oqtane-btn__icon list-table__action"
+														>
+															<i class="icon-edit"></i>
+														</a>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<div class="list-table__img">
+															<img src="./img/product-1.png" alt="" />
+														</div>
+													</td>
+													<td>Athletic Performance</td>
+													<td>Rizz Pharma</td>
+
+													<td>
+														<span class="status-pill status-pill--danger">
+															Inactive
+														</span>
+													</td>
+													<td>
+														<a
+															class="oqtane-btn oqtane-btn__icon list-table__action"
+														>
+															<i class="icon-link"></i>
+														</a>
+
+														<a
+															class="oqtane-btn oqtane-btn__icon list-table__action"
+														>
+															<i class="icon-edit"></i>
+														</a>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<div class="list-table__img">
+															<img src="./img/product-1.png" alt="" />
+														</div>
+													</td>
+													<td>Athletic Performance</td>
+													<td>NexGen</td>
+
+													<td>
+														<span class="status-pill status-pill--success">
+															Active
+														</span>
+													</td>
+													<td>
+														<a
+															class="oqtane-btn oqtane-btn__icon list-table__action"
+														>
+															<i class="icon-link"></i>
+														</a>
+
+														<a
+															class="oqtane-btn oqtane-btn__icon list-table__action"
+														>
+															<i class="icon-edit"></i>
+														</a>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="oqtane-pagination">
+							<div class="oqtane-pagination__goto">
+								<p class="oqtane-pagination__text">Go To:</p>
+								<input type="text" class="oqtane-pagination__input" value="1" />
+							</div>
+
+							<div class="oqtane-pagination__row-count">
+								<p class="oqtane-pagination__text">Show Rows:</p>
+
+								<div class="oqtane-pagination__select-container">
+									<select class="oqtane-pagination__select">
+										<option value="10">10</option>
+										<option value="25">25</option>
+										<option value="50">50</option>
+										<option value="100">100</option>
+										<option value="500">500</option>
+									</select>
+
+									<span class="oqtane-pagination__select-icon">
+										<i class="icon-down_arrow"></i>
+									</span>
+								</div>
+							</div>
+
+							<div class="oqtane-pagination__control">
+								<p class="oqtane-pagination__text">
+									<span>1</span>
+									<span>-</span>
+									<span>10</span>
+									<span>of</span>
+									<span>553</span>
+								</p>
+
+								<button
+									type="button"
+									class="oqtane-pagination__btn oqtane-pagination__btn--disabled"
+									disabled
+								>
+									<i class="icon-left-arrow"></i>
+								</button>
+								<button type="button" class="oqtane-pagination__btn">
+									<i class="icon-right-arrow"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+
+			<footer class="footer">
+				<div class="footer__content">
+					<div class="footer__links">
+						<a href="#">Terms of use</a><a href="#">Privacy Policy</a>
+					</div>
+					<p class="text-grey-3 fs-13">
+						Copyright &copy; 2024 Thrivewell. All rights reserved.
+					</p>
+				</div>
+			</footer>
+		</div>
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="vendors/jquery/jquery-2.2.4.min.js"></script>
+		<script src="vendors/bootstrap/js/bootstrap.min.js"></script>
+
+		<script src="js/main.js"></script>
+	</body>
+</html>

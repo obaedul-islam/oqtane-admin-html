@@ -13,6 +13,7 @@
 
 // 3. Then rest of Bootstrap components (e.g., buttons, forms, etc.)
 @import "base/vendors/bootstrap/bootstrap"; // If this is a custom bundle
+@import "base/vendors/cropper/cropper.min.css"; // If this is a custom bundle
 
 
 @import 'base/variables';
@@ -63,3 +64,4 @@
 @import 'pages/order-details';
 @import 'pages/patient-details';
 @import 'pages/salesman-details.scss';
+@import 'pages/add-category';
