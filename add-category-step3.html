@@ -94,7 +94,7 @@
 						<li class="sidebar__item">
 							<a href="./product-list.html" class="sidebar__link">
 								<i class="icon-tablet sidebar__icon"></i>
-								<span class="sidebar__text">Product List</span>
+								<span class="sidebar__text">Category List</span>
 							</a>
 						</li>
 						<li class="sidebar__item">
@@ -146,11 +146,11 @@
 							<div class="actionbar">
 								<div class="actionbar__breadcrumb">
 									<p class="text-uppercase fs-20 mb-0 fw-600">
-										<a href="#" class="text-grey-3">PRODUCTS List</a>
+										<a href="#" class="text-grey-3">Category List</a>
 										<span class="text-grey-3">/</span>
-										<a href="#" class="text-grey-3">ADD NEW PRODUCT</a>
+										<a href="#" class="text-grey-3">ADD NEW Category</a>
 										<span class="text-grey-3">/</span>
-										<a href="#" class="text-primary">Step 2</a>
+										<a href="#" class="text-primary">Step 3</a>
 									</p>
 								</div>
 
@@ -169,16 +169,23 @@
 											</div>
 										</div>
 										<div class="stepper__step__wrapper">
+											<div class="stepper__step">
+												<div class="stepper__step__bottom">
+													<span class="stepper__step-label">Step 2</span>
+												</div>
+											</div>
+										</div>
+										<div class="stepper__step__wrapper">
 											<div class="stepper__step active">
 												<div class="stepper__step__bottom">
-													<span class="stepper__step-label active">Step 2</span>
+													<span class="stepper__step-label active">Step 3</span>
 												</div>
 											</div>
 										</div>
 										<div class="stepper__step__wrapper">
 											<div class="stepper__step">
 												<div class="stepper__step__bottom">
-													<span class="stepper__step-label">Step 3</span>
+													<span class="stepper__step-label">Step 4</span>
 												</div>
 											</div>
 										</div>
@@ -190,250 +197,177 @@
 						<div class="oqtane-card mb-0">
 							<div class="oqtane-card__header"
 								><p class="mb-0"
-									>Add New Product <span class="text-primary">(Step 2)</span></p
+									>Add New Category
+									<span class="text-primary">(Step 3)</span></p
 								></div
 							>
 							<div class="oqtane-card__body">
-								<div class="dose-entry">
-									<div class="custom-input">
-										<label class="custom-input__inner">
-											<input
-												type="text"
-												class="custom-input__control"
-												placeholder=" "
-											/>
-											<span class="custom-input__label"> Dose Strength </span>
-										</label>
+								<div class="row">
+									<div class="col-md-6">
+										<div class="custom-input">
+											<label class="custom-input__inner">
+												<input
+													type="text"
+													class="custom-input__control"
+													placeholder=" "
+												/>
+												<span class="custom-input__label">Section Title 1</span>
+											</label>
+										</div>
 									</div>
-
-									<div class="custom-input">
-										<label class="custom-input__inner">
-											<input
-												type="text"
-												class="custom-input__control"
-												placeholder=" "
-											/>
-											<span class="custom-input__label">Dose Price</span>
-											<span class="custom-input__suffix">&dollar;</span>
-										</label>
-										<span class="custom-input__error"
-											>Dose strength is required</span
-										>
+									<div class="col-md-6">
+										<div class="custom-input">
+											<label class="custom-input__inner">
+												<input
+													type="text"
+													class="custom-input__control"
+													placeholder=" "
+												/>
+												<span class="custom-input__label">Section Title 2</span>
+											</label>
+										</div>
 									</div>
-
-									<div class="custom-input">
-										<label class="custom-input__inner">
-											<input
-												type="text"
-												class="custom-input__control"
-												placeholder=" "
-											/>
-											<span class="custom-input__label">Package Month</span>
-											<span class="custom-input__suffix">&dollar;</span>
-										</label>
-										<span class="custom-input__error"
-											>Package months is required</span
-										>
-									</div>
-
-									<div class="d-flex gap-5 ps-20">
-										<label class="custom-check mt-16">
-											<span class="custom-check__input">
-												<input type="checkbox" />
-												<span></span>
-											</span>
-
-											<span class="custom-check__label text-grey-3">
-												Special
-											</span>
-										</label>
-										<label class="custom-check mt-16">
-											<span class="custom-check__input">
-												<input type="checkbox" />
-												<span></span>
-											</span>
-
-											<span class="custom-check__label text-grey-3">
-												Active
-											</span>
-										</label>
-									</div>
-
-									<button
-										type="button"
-										class="oqtane-btn text-danger fs-30 p-2x mt-1"
-									>
-										<i class="icon-delete"></i>
-									</button>
 								</div>
-								<!--dose entry end-->
-								<div class="dose-entry mt-20">
-									<div class="custom-input">
-										<label class="custom-input__inner">
-											<input
-												type="text"
-												class="custom-input__control"
-												placeholder=" "
-											/>
-											<span class="custom-input__label"> Dose Strength </span>
-										</label>
+
+								<div class="row mt-4">
+									<div class="col-sm-12">
+										<p class="fw-600 fs-22 text-dark">Upload Display Image</p>
+										<div class="photo-upload photo-upload__alt">
+											<div class="photo-upload__thumbnail">
+												<img
+													class="photo-upload__img"
+													src="img/person.png"
+													alt="thumbnail"
+												/>
+												<button
+													type="button"
+													class="oqtane-btn oqtane-btn__primary mt-5x oqtane-btn__retake"
+													id="retakeButton"
+												>
+													Retake
+												</button>
+											</div>
+										</div>
 									</div>
-
-									<div class="custom-input">
-										<label class="custom-input__inner">
-											<input
-												type="text"
-												class="custom-input__control"
-												placeholder=" "
-											/>
-											<span class="custom-input__label">Dose Price</span>
-											<span class="custom-input__suffix">&dollar;</span>
-										</label>
-										<span class="custom-input__error"
-											>Dose strength is required</span
-										>
-									</div>
-
-									<div class="custom-input">
-										<label class="custom-input__inner">
-											<input
-												type="text"
-												class="custom-input__control"
-												placeholder=" "
-											/>
-											<span class="custom-input__label">Package Month</span>
-											<span class="custom-input__suffix">&dollar;</span>
-										</label>
-										<span class="custom-input__error"
-											>Package months is required</span
-										>
-									</div>
-
-									<div class="d-flex gap-5 ps-20">
-										<label class="custom-check mt-16">
-											<span class="custom-check__input">
-												<input type="checkbox" />
-												<span></span>
-											</span>
-
-											<span class="custom-check__label text-grey-3">
-												Special
-											</span>
-										</label>
-										<label class="custom-check mt-16">
-											<span class="custom-check__input">
-												<input type="checkbox" />
-												<span></span>
-											</span>
-
-											<span class="custom-check__label text-grey-3">
-												Active
-											</span>
-										</label>
-									</div>
-
-									<button
-										type="button"
-										class="oqtane-btn text-danger fs-30 p-2x mt-1"
-									>
-										<i class="icon-delete"></i>
-									</button>
 								</div>
-								<!--dose entry end-->
-								<div class="dose-entry mt-20">
-									<div class="custom-input">
-										<label class="custom-input__inner">
-											<input
-												type="text"
-												class="custom-input__control"
-												placeholder=" "
-											/>
-											<span class="custom-input__label"> Dose Strength </span>
-										</label>
+
+								<div class="row mt-4">
+									<div class="col-sm-6">
+										<p class="fw-600 fs-22 text-dark">Bullet Point</p>
+										<div class="bullet-point">
+											<div class="bullet-point__icon">
+												<i class="icon-Enhanced-Mood--Mental-Clarity"></i>
+											</div>
+											<div>
+												<button
+													type="button"
+													class="oqtane-btn oqtane-btn__primary oqtane-btn__retake"
+													id="retakeButton"
+												>
+													Retake
+												</button>
+											</div>
+										</div>
 									</div>
-
-									<div class="custom-input">
-										<label class="custom-input__inner">
-											<input
-												type="text"
-												class="custom-input__control"
-												placeholder=" "
-											/>
-											<span class="custom-input__label">Dose Price</span>
-											<span class="custom-input__suffix">&dollar;</span>
-										</label>
-										<span class="custom-input__error"
-											>Dose strength is required</span
-										>
+									<div class="col-md-6">
+										<div class="custom-input custom-input--textarea mt-5">
+											<label
+												class="custom-input__inner custom-input__inner--textarea"
+											>
+												<textarea
+													type="text"
+													class="custom-input__control custom-input__control--textarea"
+													placeholder=" "
+												></textarea>
+												<span class="custom-input__label">Description</span>
+											</label>
+										</div>
 									</div>
+									<div class="col-md-6 mt-4">
+										<div class="custom-input">
+											<label class="custom-input__inner">
+												<select
+													class="custom-input__control custom-input__select"
+												>
+													<option value="tablet">1</option>
+													<option value="tablet">2</option>
+													<option value="capsule">3</option>
+												</select>
 
-									<div class="custom-input">
-										<label class="custom-input__inner">
-											<input
-												type="text"
-												class="custom-input__control"
-												placeholder=" "
-											/>
-											<span class="custom-input__label">Package Month</span>
-											<span class="custom-input__suffix">&dollar;</span>
-										</label>
-										<span class="custom-input__error"
-											>Package months is required</span
-										>
+												<span class="custom-input__label">Order</span>
+												<span class="custom-input__icon custom-input__suffix">
+													<i class="icon-down_arrow"></i>
+												</span>
+											</label>
+										</div>
 									</div>
-
-									<div class="d-flex gap-5 ps-20">
-										<label class="custom-check mt-16">
-											<span class="custom-check__input">
-												<input type="checkbox" />
-												<span></span>
-											</span>
-
-											<span class="custom-check__label text-grey-3">
-												Special
-											</span>
-										</label>
-										<label class="custom-check mt-16">
-											<span class="custom-check__input">
-												<input type="checkbox" />
-												<span></span>
-											</span>
-
-											<span class="custom-check__label text-grey-3">
-												Active
-											</span>
-										</label>
-									</div>
-
-									<button
-										type="button"
-										class="oqtane-btn text-danger fs-30 p-2x mt-1"
-									>
-										<i class="icon-delete"></i>
-									</button>
 								</div>
-								<!--dose entry end-->
-								<button
-									type="button"
-									class="oqtane-btn oqtane-btn__withicon oqtane-btn__primary--outline oqtane-btn__primary--outline__lg"
-								>
-									<span>Add Dose</span>
-									<i class="icon-plus"></i>
-								</button>
+
+								<hr />
+								<div class="row">
+									<div class="col-md-6">
+										<div
+											class="input-panel__block input-panel__block--alt d-block"
+										>
+											<button
+												type="button"
+												class="oqtane-btn oqtane-btn__withicon oqtane-btn__grey--outline"
+											>
+												<span>Add Icon</span>
+												<i class="icon-plus"></i>
+											</button>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="custom-input custom-input--textarea">
+											<label
+												class="custom-input__inner custom-input__inner--textarea"
+											>
+												<textarea
+													type="text"
+													class="custom-input__control custom-input__control--textarea"
+													placeholder=" "
+												></textarea>
+												<span class="custom-input__label">Description</span>
+											</label>
+										</div>
+									</div>
+									<div class="col-md-6 mt-4">
+										<div class="custom-input">
+											<label class="custom-input__inner">
+												<select
+													class="custom-input__control custom-input__select"
+												>
+													<option value="tablet">1</option>
+													<option value="tablet">2</option>
+													<option value="capsule">3</option>
+												</select>
+
+												<span class="custom-input__label">Order</span>
+												<span class="custom-input__icon custom-input__suffix">
+													<i class="icon-down_arrow"></i>
+												</span>
+											</label>
+										</div>
+									</div>
+									<div class="col-md-12 mt-4">
+										<button
+											type="button"
+											class="oqtane-btn oqtane-btn__withicon oqtane-btn__primary--outline"
+										>
+											<span>Add More</span>
+											<i class="icon-plus"></i>
+										</button>
+									</div>
+								</div>
 							</div>
 						</div>
 
 						<div class="row mt-16">
 							<div class="col-md-12">
 								<div class="answer-type">
+									<!-- <h3 class="answer-type__title">Select Answer Type</h3> -->
 									<div class="answer-type__actions justify-content-end">
-										<button
-											type="button"
-											id="answer-type-btn"
-											class="oqtane-btn oqtane-btn__primary--outline oqtane-btn__primary--outline__xl"
-										>
-											<span>Back</span>
-										</button>
 										<button
 											type="button"
 											id="answer-type-btn"
@@ -470,6 +404,7 @@
 		<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/summernote-bs4.min.js"></script>
 		<script src="js/richtext.js"></script>
+		<script src="js/vendors/cropper.min.js"></script>
 
 		<script src="js/main.js"></script>
 	</body>

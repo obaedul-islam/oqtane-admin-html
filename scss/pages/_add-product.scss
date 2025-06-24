@@ -5,13 +5,15 @@
   margin-top: 15px;
 
   &__thumbnail {
-    display: inline-block;
-    width: 200px;
-    height: 200px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
     border-radius: 20px;
     overflow: hidden;
-    padding: 0;
-    border: 0;
+    padding: 20px;
+    border: 1px dashed;
+    background-color: $grey-2;
   }
 
   &__img {
@@ -20,18 +22,19 @@
     border-radius: 20px;
   }
 
-  &__alt {
-    .photo-upload__thumbnail {
-      width: 100%;
-      height: unset;
-      border: 1px dashed $primary;
+  // &__alt {
+  //   .photo-upload__thumbnail {
+  //     width: 200px;
+  //     height: 200px;
+  //     border: 1px dashed $primary;
 
-      .photo-upload__img {
-        width: 100%;
-        height: 450px;
-      }
-    }
-  }
+  //     .photo-upload__img {
+  //       width: 100%;
+  //       height: 100%;
+  //       object-fit: cover;
+  //     }
+  //   }
+  // }
 }
 
 .required-notes {
