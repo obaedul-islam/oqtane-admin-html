@@ -44,7 +44,6 @@
   position: relative;
   margin-top: 16px;
   overflow: hidden;
-
   display: flex;
   flex-direction: column-reverse;
 
@@ -54,6 +53,12 @@
 
   &--sm {
     height: 140px;
+  }
+
+  &__equal-height {
+    height: 110px;
+    min-height: 150px;
+    margin-top: 33px;
   }
 
   &__label {
@@ -66,6 +71,8 @@
     color: $grey-3;
     transition: all 0.3s ease;
   }
+
+
 
   .ql {
     &-toolbar {
