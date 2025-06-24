@@ -515,6 +515,48 @@
   }
 }
 
+.textarea {
+  &__wrapper {
+    width: 100%;
+    position: relative;
+  }
+
+  &__label {
+    position: absolute;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    background: white;
+    padding: 0 4px;
+    font-size: 18px;
+    line-height: 1;
+    color: #999fb9;
+    font-weight: 400;
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    transition: all 0.25s ease-in-out;
+  }
+
+  &__field {
+    width: 100%;
+    padding: 30px 30px 12px;
+    font-size: 16px;
+    resize: vertical;
+    border: 1px solid #ccc;
+    outline: none;
+    background: transparent;
+    border-radius: 40px;
+    height: 150px;
+  }
+
+  // 👇 Correct way to target sibling label
+  &__field:focus+.textarea__label,
+  &__field:not(:placeholder-shown)+.textarea__label {
+    top: 10px;
+    left: 24px;
+    font-size: 12px;
+  }
+}
 
 @media all and (max-width: 1170px) {
   .custom-input {
