@@ -53,7 +53,8 @@ $(document).ready(function () {
 		templates: {
 			button: `<button
             type="button"
-            class="multiselect dropdown-toggle oqtane-multiselect__control" data-toggle="dropdown"
+            class="multiselect dropdown-toggle oqtane-multiselect__control"  data-bs-toggle="dropdown"
+    aria-expanded="false"
           >
           <span class="multiselect-selected-text oqtane-multiselect__text"></span>
         </button>`,
@@ -70,7 +71,8 @@ $(document).ready(function () {
 		templates: {
 			button: `<button
             type="button"
-            class="multiselect dropdown-toggle oqtane-multiselect__control" data-toggle="dropdown"
+            class="multiselect dropdown-toggle oqtane-multiselect__control"  data-bs-toggle="dropdown"
+    aria-expanded="false"
           >
           <span class="multiselect-selected-text oqtane-multiselect__text"></span>
         </button>`,
