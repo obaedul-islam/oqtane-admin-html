@@ -169,36 +169,36 @@
 											>
 												<div
 													class="oqtane-accordion__header"
-													role="tab"
 													id="ifa-heading-1"
 												>
 													<div class="oqtane-accordion__header-content">
 														<p class="oqtane-accordion__label">Group Name</p>
-														<p class="oqtane-accordion__text">
-															Personal questions
-														</p>
+														<p class="oqtane-accordion__text"
+															>Personal questions</p
+														>
 													</div>
 
 													<div class="oqtane-accordion__header-action">
 														<div class="oqtane-accordion__info">
-															<span class="oqtane-accordion__info-text">
-																Questions Selected
-															</span>
+															<span class="oqtane-accordion__info-text"
+																>Questions Selected</span
+															>
 															<span class="oqtane-accordion__info-badge"
 																>3</span
 															>
 														</div>
 
 														<div class="action-group">
-															<a
-																role="button"
-																data-toggle="collapse"
-																data-parent="#accordion-screen-1"
-																href="#ifa-collapse-1"
+															<button
+																type="button"
+																data-bs-toggle="collapse"
+																data-bs-target="#ifa-collapse-1"
+																aria-expanded="false"
+																aria-controls="ifa-collapse-1"
 																class="oqtane-btn oqtane-btn--icon-btn action-group__btn oqtane-accordion__toggle-btn"
 															>
 																<i class="icon-down_arrow"></i>
-															</a>
+															</button>
 
 															<button
 																type="button"
@@ -213,6 +213,7 @@
 												<div
 													id="ifa-collapse-1"
 													class="oqtane-accordion__collapse collapse"
+													data-bs-parent="#accordion-screen-1"
 													role="tabpanel"
 													aria-labelledby="ifa-heading-1"
 												>
@@ -240,36 +241,36 @@
 											>
 												<div
 													class="oqtane-accordion__header"
-													role="tab"
 													id="ifa-heading-2"
 												>
 													<div class="oqtane-accordion__header-content">
 														<p class="oqtane-accordion__label">Group Name</p>
-														<p class="oqtane-accordion__text">
-															Diabetics related questions
-														</p>
+														<p class="oqtane-accordion__text"
+															>Diabetics related questions</p
+														>
 													</div>
 
 													<div class="oqtane-accordion__header-action">
 														<div class="oqtane-accordion__info">
-															<span class="oqtane-accordion__info-text">
-																Questions Selected
-															</span>
+															<span class="oqtane-accordion__info-text"
+																>Questions Selected</span
+															>
 															<span class="oqtane-accordion__info-badge"
 																>3</span
 															>
 														</div>
 
 														<div class="action-group">
-															<a
-																role="button"
-																data-toggle="collapse"
-																data-parent="#accordion-screen-2"
-																href="#ifa-collapse-2"
+															<button
+																type="button"
+																data-bs-toggle="collapse"
+																data-bs-target="#ifa-collapse-2"
+																aria-expanded="false"
+																aria-controls="ifa-collapse-2"
 																class="oqtane-btn oqtane-btn--icon-btn action-group__btn oqtane-accordion__toggle-btn"
 															>
 																<i class="icon-down_arrow"></i>
-															</a>
+															</button>
 
 															<button
 																type="button"
@@ -286,170 +287,115 @@
 													class="oqtane-accordion__collapse collapse"
 													role="tabpanel"
 													aria-labelledby="ifa-heading-2"
+													data-bs-parent="#accordion-screen-2"
 												>
 													<div class="oqtane-accordion__body">
 														<div
 															class="panel-group oqtane-accordion"
 															id="accordion-3"
 														>
+															<!-- Question 1 -->
 															<div class="panel oqtane-accordion__panel">
 																<div
 																	class="oqtane-accordion__header"
-																	role="tab"
 																	id="qa-heading-1"
 																>
 																	<div class="oqtane-accordion__header-content">
 																		<p class="oqtane-accordion__label"
 																			>Question</p
 																		>
-																		<p class="oqtane-accordion__text">
-																			Lorem ipsum dolor sit amet, consectetur
-																			adipiscing elit, sed do eiusmod tempor
-																			incididunt ut labore et dolore magna
-																			aliqua. Ut enim ad minim veniam?
-																		</p>
+																		<p class="oqtane-accordion__text"
+																			>Lorem ipsum dolor sit amet...</p
+																		>
 																	</div>
-
 																	<div class="oqtane-accordion__header-action">
 																		<div class="action-group">
-																			<a
-																				role="button"
-																				data-toggle="collapse"
-																				data-parent="#accordion-3"
-																				href="#qa-collapse-1"
+																			<button
+																				type="button"
+																				data-bs-toggle="collapse"
+																				data-bs-target="#qa-collapse-1"
+																				aria-expanded="false"
+																				aria-controls="qa-collapse-1"
 																				class="oqtane-btn oqtane-btn--icon-btn action-group__btn oqtane-accordion__toggle-btn"
 																			>
 																				<i class="icon-down_arrow"></i>
-																			</a>
+																			</button>
 																		</div>
 																	</div>
 																</div>
-
 																<div
 																	id="qa-collapse-1"
 																	class="oqtane-accordion__collapse collapse"
 																	role="tabpanel"
 																	aria-labelledby="qa-heading-1"
+																	data-bs-parent="#accordion-3"
 																>
 																	<div class="oqtane-accordion__body">
 																		Anim pariatur cliche reprehenderit, enim
-																		eiusmod high life accusamus terry richardson
-																		ad squid. 3 wolf moon officia aute, non
-																		cupidatat skateboard dolor brunch. Food
-																		truck quinoa nesciunt laborum eiusmod.
+																		eiusmod high life accusamus terry
+																		richardson.
 																	</div>
 																</div>
 															</div>
 
+															<!-- Question 3 Expanded -->
 															<div class="panel oqtane-accordion__panel">
 																<div
 																	class="oqtane-accordion__header"
-																	role="tab"
-																	id="qa-heading-2"
-																>
-																	<div class="oqtane-accordion__header-content">
-																		<p class="oqtane-accordion__label"
-																			>Question</p
-																		>
-																		<p class="oqtane-accordion__text">
-																			Have you ever been diagnosed with any of
-																			the following condition(s)?
-																		</p>
-																	</div>
-
-																	<div class="oqtane-accordion__header-action">
-																		<div class="action-group">
-																			<a
-																				role="button"
-																				data-toggle="collapse"
-																				data-parent="#accordion-3"
-																				href="#qa-collapse-2"
-																				class="oqtane-btn oqtane-btn--icon-btn action-group__btn oqtane-accordion__toggle-btn"
-																			>
-																				<i class="icon-down_arrow"></i>
-																			</a>
-																		</div>
-																	</div>
-																</div>
-
-																<div
-																	id="qa-collapse-2"
-																	class="oqtane-accordion__collapse collapse"
-																	role="tabpanel"
-																	aria-labelledby="qa-heading-2"
-																>
-																	<div class="oqtane-accordion__body">
-																		Anim pariatur cliche reprehenderit, enim
-																		eiusmod high life accusamus terry richardson
-																		ad squid. 3 wolf moon officia aute, non
-																		cupidatat skateboard dolor brunch. Food
-																		truck quinoa nesciunt laborum eiusmod.
-																	</div>
-																</div>
-															</div>
-
-															<div class="panel oqtane-accordion__panel">
-																<div
-																	class="oqtane-accordion__header"
-																	role="tab"
 																	id="qa-heading-3"
 																>
 																	<div class="oqtane-accordion__header-content">
 																		<p class="oqtane-accordion__label"
 																			>Question</p
 																		>
-																		<p class="oqtane-accordion__text">
-																			Have you ever been diagnosed with any of
-																			the following condition(s)?
-																		</p>
+																		<p class="oqtane-accordion__text"
+																			>Have you ever been diagnosed with any of
+																			the following?</p
+																		>
 																	</div>
-
 																	<div class="oqtane-accordion__header-action">
 																		<div class="action-group">
-																			<a
-																				role="button"
-																				data-toggle="collapse"
-																				data-parent="#accordion-3"
-																				href="#qa-collapse-3"
+																			<button
+																				type="button"
+																				data-bs-toggle="collapse"
+																				data-bs-target="#qa-collapse-3"
+																				aria-expanded="true"
+																				aria-controls="qa-collapse-3"
 																				class="oqtane-btn oqtane-btn--icon-btn action-group__btn oqtane-accordion__toggle-btn"
 																			>
 																				<i class="icon-down_arrow"></i>
-																			</a>
+																			</button>
 																		</div>
 																	</div>
 																</div>
 																<div
 																	id="qa-collapse-3"
-																	class="in oqtane-accordion__collapse collapse"
+																	class="oqtane-accordion__collapse collapse show"
 																	role="tabpanel"
 																	aria-labelledby="qa-heading-3"
+																	data-bs-parent="#accordion-3"
 																>
 																	<div class="oqtane-accordion__body">
-																		<p class="oqtane-accordion__label">
-																			Question Intro
-																		</p>
-																		<p class="oqtane-accordion__text">
-																			Lorem ipsum dolor sit amet, consectetur
-																			adipiscing elit, sed do eiusmod tempor
-																			incididunt ut labore et dolore magna
-																			aliqua. Ut enim ad minim veniam, quis
-																			nostrud exercitation ullamco laboris nisi
-																			ut aliquip ex ea commodo consequat.
-																		</p>
+																		<p class="oqtane-accordion__label"
+																			>Question Intro</p
+																		>
+																		<p class="oqtane-accordion__text"
+																			>Lorem ipsum dolor sit amet, consectetur
+																			adipiscing elit...</p
+																		>
 
-																		<p class="oqtane-accordion__label">
-																			Question Type
-																		</p>
+																		<p class="oqtane-accordion__label"
+																			>Question Type</p
+																		>
 																		<p class="oqtane-accordion__text"
 																			>Required</p
 																		>
 
 																		<div class="row">
 																			<div class="col-md-6">
-																				<p class="oqtane-accordion__label">
-																					Answer Type
-																				</p>
-
+																				<p class="oqtane-accordion__label"
+																					>Answer Type</p
+																				>
 																				<div
 																					class="custom-input custom-input--disabled custom-input--centered mt-12"
 																				>
@@ -469,234 +415,6 @@
 																				</div>
 																			</div>
 																		</div>
-
-																		<div class="oqtane-card mt-20">
-																			<div class="oqtane-card__header">
-																				<h3>Condition</h3>
-																			</div>
-																			<div class="oqtane-card__body">
-																				<div class="condition">
-																					<p class="condition__label">
-																						If Selected
-																					</p>
-																					<div
-																						class="condition-input flex-grow-1"
-																					>
-																						<div
-																							class="custom-input custom-input--centered"
-																						>
-																							<label
-																								class="custom-input__inner"
-																							>
-																								<select
-																									class="custom-input__control custom-input__select"
-																								>
-																									<option>
-																										Abnormally high red blood
-																										cell count (erythrocytosis
-																										or polycythemia)
-																									</option>
-																								</select>
-																								<span
-																									class="custom-input__icon custom-input__suffix"
-																								>
-																									<i
-																										class="icon-down_arrow"
-																									></i>
-																								</span>
-																							</label>
-																						</div>
-																					</div>
-																				</div>
-																				<div class="condition mt-24">
-																					<p class="condition__label">
-																						Select Question
-																					</p>
-																					<div
-																						class="condition-input custom-input--centered flex-grow-1"
-																					>
-																						<div class="custom-input">
-																							<label
-																								class="custom-input__inner"
-																							>
-																								<input
-																									type="text"
-																									class="custom-input__control"
-																									placeholder=" "
-																									value="Since how long have you been suffering from this condition?"
-																								/>
-																							</label>
-																						</div>
-																					</div>
-																				</div>
-																			</div>
-																		</div>
-
-																		<div class="oqtane-card mt-20">
-																			<div class="oqtane-card__header">
-																				<h3>Condition</h3>
-																			</div>
-																			<div class="oqtane-card__body">
-																				<div class="condition">
-																					<p class="condition__label">
-																						If Selected
-																					</p>
-																					<div
-																						class="condition-input flex-grow-1"
-																					>
-																						<div
-																							class="custom-input custom-input--centered"
-																						>
-																							<label
-																								class="custom-input__inner"
-																							>
-																								<select
-																									class="custom-input__control custom-input__select"
-																								>
-																									<option>
-																										Abnormally high red blood
-																										cell count (erythrocytosis
-																										or polycythemia)
-																									</option>
-																								</select>
-																								<span
-																									class="custom-input__icon custom-input__suffix"
-																								>
-																									<i
-																										class="icon-down_arrow"
-																									></i>
-																								</span>
-																							</label>
-																						</div>
-																					</div>
-																				</div>
-																				<div class="condition mt-24">
-																					<p class="condition__label">
-																						Select Question
-																					</p>
-																					<div
-																						class="condition-input custom-input--centered flex-grow-1"
-																					>
-																						<div class="custom-input">
-																							<label
-																								class="custom-input__inner"
-																							>
-																								<input
-																									type="text"
-																									class="custom-input__control"
-																									placeholder=" "
-																									value="Since how long have you been suffering from this condition?"
-																								/>
-																							</label>
-																						</div>
-																					</div>
-																				</div>
-																			</div>
-																		</div>
-
-																		<div
-																			class="custom-input custom-input--centered"
-																		>
-																			<label class="custom-input__inner">
-																				<select
-																					class="custom-input__control custom-input__select"
-																				>
-																					<option>Kidney disease</option>
-																				</select>
-																				<span
-																					class="custom-input__icon custom-input__suffix"
-																				>
-																					<i class="icon-down_arrow"></i>
-																				</span>
-																			</label>
-																		</div>
-
-																		<div
-																			class="custom-input custom-input--centered mt-24"
-																		>
-																			<label class="custom-input__inner">
-																				<select
-																					class="custom-input__control custom-input__select"
-																				>
-																					<option>
-																						Liver disease (e.g., cirrhosis)
-																					</option>
-																				</select>
-																				<span
-																					class="custom-input__icon custom-input__suffix"
-																				>
-																					<i class="icon-down_arrow"></i>
-																				</span>
-																			</label>
-																		</div>
-																	</div>
-																</div>
-															</div>
-
-															<div class="panel oqtane-accordion__panel">
-																<div
-																	class="oqtane-accordion__header"
-																	role="tab"
-																	id="qa-heading-4"
-																>
-																	<div class="oqtane-accordion__header-content">
-																		<p class="oqtane-accordion__label"
-																			>Question</p
-																		>
-																		<p class="oqtane-accordion__text">
-																			Lorem ipsum dolor sit amet, consectetur
-																			adipiscing elit, sed do eiusmod tempor
-																			incididunt ut labore et dolore magna
-																			aliqua. Ut enim ad minim veniam, quis
-																			nostrud exercitation ullamco laboris nisi
-																			ut aliquip ex ea commodo consequat. Duis
-																			aute irure dolor in reprehenderit in
-																			voluptate velit esse cillum dolore eu
-																			fugiat nulla pariatur. Excepteur sint
-																			occaecat cupidatat non proident, sunt in
-																			culpa qui officia deserunt mollit anim id
-																			est laborum.
-																		</p>
-
-																		<p
-																			class="oqtane-accordion__label oqtane-accordion__hide"
-																		>
-																			Question Type
-																		</p>
-																		<p
-																			class="oqtane-accordion__text oqtane-accordion__hide"
-																		>
-																			Required
-																		</p>
-																	</div>
-
-																	<div class="oqtane-accordion__header-action">
-																		<div class="action-group">
-																			<a
-																				role="button"
-																				data-toggle="collapse"
-																				data-parent="#accordion-3"
-																				href="#qa-collapse-4"
-																				class="oqtane-btn oqtane-btn--icon-btn action-group__btn oqtane-accordion__toggle-btn"
-																			>
-																				<i class="icon-down_arrow"></i>
-																			</a>
-																		</div>
-																	</div>
-																</div>
-
-																<div
-																	id="qa-collapse-4"
-																	class="oqtane-accordion__collapse collapse"
-																	role="tabpanel"
-																	aria-labelledby="qa-heading-4"
-																>
-																	<div class="oqtane-accordion__body">
-																		Anim pariatur cliche reprehenderit, enim
-																		eiusmod high life accusamus terry richardson
-																		ad squid. 3 wolf moon officia aute, non
-																		cupidatat skateboard dolor brunch. Food
-																		truck quinoa nesciunt laborum eiusmod.
 																	</div>
 																</div>
 															</div>
@@ -724,18 +442,20 @@
 												>
 													<div class="oqtane-accordion__header-content">
 														<p class="oqtane-accordion__label">Question</p>
-														<p class="oqtane-accordion__text">
-															What type of smoker you are?
-														</p>
+														<p class="oqtane-accordion__text"
+															>What type of smoker you are?</p
+														>
 													</div>
 
 													<div class="oqtane-accordion__header-action">
 														<div class="action-group">
 															<a
 																role="button"
-																data-toggle="collapse"
-																data-parent="#accordion-screen-3"
+																data-bs-toggle="collapse"
+																data-bs-parent="#accordion-screen-3"
 																href="#ifa-collapse-3"
+																aria-expanded="false"
+																aria-controls="ifa-collapse-3"
 																class="oqtane-btn oqtane-btn--icon-btn action-group__btn oqtane-accordion__toggle-btn"
 															>
 																<i class="icon-down_arrow"></i>
@@ -758,13 +478,12 @@
 													aria-labelledby="ifa-heading-3"
 												>
 													<div class="oqtane-accordion__body bg-grey-1-60">
-														<p class="add-intake__title">
-															Screen 4 (Conditional)
-														</p>
+														<p class="add-intake__title"
+															>Screen 4 (Conditional)</p
+														>
 														<div class="oqtane-card mt-16">
 															<div class="oqtane-card__header">
 																<h3>Condition</h3>
-
 																<button
 																	type="button"
 																	class="oqtane__close-btn condition__close-btn"
@@ -798,9 +517,9 @@
 																	</div>
 																</div>
 																<div class="condition mt-24">
-																	<p class="condition__label">
-																		Select Question
-																	</p>
+																	<p class="condition__label"
+																		>Select Question</p
+																	>
 																	<div
 																		class="condition-input custom-input--centered flex-grow-1"
 																	>
@@ -861,9 +580,9 @@
 																	</div>
 																</div>
 																<div class="condition mt-24">
-																	<p class="condition__label">
-																		Select Question
-																	</p>
+																	<p class="condition__label"
+																		>Select Question</p
+																	>
 																	<div
 																		class="condition-input custom-input--centered flex-grow-1"
 																	>

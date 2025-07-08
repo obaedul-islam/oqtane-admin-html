@@ -76,6 +76,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
     p {
       text-align: center;
       font-size: 28px;
@@ -166,7 +167,7 @@
 
 .modal {
   z-index: 10000 !important;
-  left: 80px !important;
+
 
   &.edit {
     .modal {
@@ -196,17 +197,20 @@
           display: inline-block;
           background-color: $border-color;
           border: 0;
+
           span {
             font-size: 30px;
             font-weight: 700;
             color: $dark;
           }
         }
+
         &::before,
         &::after {
           content: unset;
         }
       }
+
       &-body {
         padding: 0 30px 30px;
         max-height: calc(100vh - 110px);
@@ -216,13 +220,16 @@
           margin: 0 auto;
           max-width: 1070px;
         }
+
         &--content {
           margin: 0 auto;
           max-width: 670px;
         }
       }
+
       &-footer {
         padding-bottom: 30px;
+
         &--content {
           margin: 0 auto;
           max-width: 670px;
@@ -230,6 +237,7 @@
           gap: 20px;
         }
       }
+
       &-content {
         height: 100vh !important;
         max-height: 100vh;
@@ -246,6 +254,7 @@
           max-width: calc(100% - 20px);
         }
       }
+
       &-content {
         border-radius: 12px;
       }
@@ -290,9 +299,11 @@
       }
     }
   }
+
   &-body {
     &__sales-form-item {
       margin-bottom: 20px;
+
       &:nth-last-child(1),
       &:nth-last-child(2) {
         margin-bottom: 0;
@@ -332,6 +343,7 @@
   padding-top: 30px;
   padding-bottom: 15px;
   border-bottom: 1px solid $border-color;
+
   &:first-child {
     padding-top: 0;
   }
@@ -359,6 +371,7 @@
 }
 
 .if-modal {
+
   &__title,
   &__text {
     font-size: $fs-18;
@@ -369,6 +382,7 @@
     color: $dark;
     font-weight: $fw-700;
     margin-bottom: 40px;
+
     &:last-child {
       margin-bottom: 0;
     }
