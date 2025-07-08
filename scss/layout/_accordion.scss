@@ -49,15 +49,21 @@
     }
   }
 
-  &__header:has(+ .in) {
-    border-bottom: 1px solid $border-color;
+  // &__header:has(+ .in) {
+  //   border-bottom: 1px solid $border-color;
 
-    .oqtane-accordion__hide {
-      transition: all 0.2s ease;
-      display: none;
-    }
+  //   .oqtane-accordion__hide {
+  //     transition: all 0.2s ease;
+  //     display: none;
+  //   }
 
-    .oqtane-accordion__toggle-btn {
+  //   .oqtane-accordion__toggle-btn {
+  //     transform: rotateZ(180deg);
+  //   }
+  // }
+
+  &__toggle-btn {
+    &[aria-expanded="true"] {
       transform: rotateZ(180deg);
     }
   }
