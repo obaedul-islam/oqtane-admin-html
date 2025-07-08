@@ -622,8 +622,8 @@
 											<button
 												class="oqtane-btn oqtane-btn__link"
 												type="button"
-												data-toggle="modal"
-												data-target="#add-single-question"
+												data-bs-toggle="modal"
+												data-bs-target="#add-single-question"
 											>
 												Add Single Question
 											</button>
@@ -649,9 +649,11 @@
 			<div
 				class="modal edit fade"
 				id="add-single-question"
+				data-bs-backdrop="static"
+				data-bs-keyboard="false"
 				tabindex="-1"
-				role="dialog"
-				aria-labelledby="myModalLabel"
+				aria-labelledby="staticBackdropLabel"
+				aria-hidden="true"
 			>
 				<div class="modal-dialog w-100 m-0" role="document">
 					<div class="modal-content">
@@ -671,7 +673,7 @@
 							<button
 								type="button"
 								class="close-btn"
-								data-dismiss="modal"
+								data-bs-dismiss="modal"
 								aria-label="Close"
 							>
 								<span class="icon-cross text-black" aria-hidden="true"></span>
@@ -704,6 +706,7 @@
 									class="panel-group oqtane-accordion mt-24"
 									id="inatake-single-accordion"
 								>
+									<!-- Panel 1 -->
 									<div class="panel oqtane-accordion__panel">
 										<div
 											class="oqtane-accordion__header"
@@ -714,23 +717,21 @@
 												<p class="oqtane-accordion__label">Question</p>
 												<p class="oqtane-accordion__text">
 													Lorem ipsum dolor sit amet, consectetur adipiscing
-													elit, sed do eiusmod tempor incididunt ut labore et
-													dolore magna aliqua. Ut enim ad minim veniam?
+													elit...
 												</p>
 											</div>
-
 											<div class="oqtane-accordion__header-action">
 												<div class="action-group">
 													<a
 														role="button"
-														data-toggle="collapse"
-														data-parent="#inatake-single-accordion"
+														data-bs-toggle="collapse"
 														href="#isqa-collapse-1"
+														aria-expanded="false"
+														aria-controls="isqa-collapse-1"
 														class="oqtane-btn oqtane-btn--icon-btn action-group__btn oqtane-accordion__toggle-btn"
 													>
 														<i class="icon-down_arrow"></i>
 													</a>
-
 													<label class="custom-check oqtane-accordion__check">
 														<span class="custom-check__input">
 															<input type="checkbox" />
@@ -740,7 +741,6 @@
 												</div>
 											</div>
 										</div>
-
 										<div
 											id="isqa-collapse-1"
 											class="oqtane-accordion__collapse collapse"
@@ -748,14 +748,12 @@
 											aria-labelledby="isq-heading-1"
 										>
 											<div class="oqtane-accordion__body">
-												Anim pariatur cliche reprehenderit, enim eiusmod high
-												life accusamus terry richardson ad squid. 3 wolf moon
-												officia aute, non cupidatat skateboard dolor brunch.
-												Food truck quinoa nesciunt laborum eiusmod.
+												Anim pariatur cliche reprehenderit...
 											</div>
 										</div>
 									</div>
 
+									<!-- Repeat for Panel 2 -->
 									<div class="panel oqtane-accordion__panel">
 										<div
 											class="oqtane-accordion__header"
@@ -769,19 +767,18 @@
 													condition(s)?
 												</p>
 											</div>
-
 											<div class="oqtane-accordion__header-action">
 												<div class="action-group">
 													<a
 														role="button"
-														data-toggle="collapse"
-														data-parent="#inatake-single-accordion"
+														data-bs-toggle="collapse"
 														href="#isqa-collapse-2"
+														aria-expanded="false"
+														aria-controls="isqa-collapse-2"
 														class="oqtane-btn oqtane-btn--icon-btn action-group__btn oqtane-accordion__toggle-btn"
 													>
 														<i class="icon-down_arrow"></i>
 													</a>
-
 													<label class="custom-check oqtane-accordion__check">
 														<span class="custom-check__input">
 															<input type="checkbox" />
@@ -791,7 +788,6 @@
 												</div>
 											</div>
 										</div>
-
 										<div
 											id="isqa-collapse-2"
 											class="oqtane-accordion__collapse collapse"
@@ -799,14 +795,12 @@
 											aria-labelledby="isq-heading-2"
 										>
 											<div class="oqtane-accordion__body">
-												Anim pariatur cliche reprehenderit, enim eiusmod high
-												life accusamus terry richardson ad squid. 3 wolf moon
-												officia aute, non cupidatat skateboard dolor brunch.
-												Food truck quinoa nesciunt laborum eiusmod.
+												Anim pariatur cliche reprehenderit...
 											</div>
 										</div>
 									</div>
 
+									<!-- Repeat for Panel 3 with detailed content if needed -->
 									<div class="panel oqtane-accordion__panel">
 										<div
 											class="oqtane-accordion__header"
@@ -820,19 +814,18 @@
 													condition(s)?
 												</p>
 											</div>
-
 											<div class="oqtane-accordion__header-action">
 												<div class="action-group">
 													<a
 														role="button"
-														data-toggle="collapse"
-														data-parent="#inatake-single-accordion"
+														data-bs-toggle="collapse"
 														href="#isqa-collapse-3"
+														aria-expanded="false"
+														aria-controls="isqa-collapse-3"
 														class="oqtane-btn oqtane-btn--icon-btn action-group__btn oqtane-accordion__toggle-btn"
 													>
 														<i class="icon-down_arrow"></i>
 													</a>
-
 													<label class="custom-check oqtane-accordion__check">
 														<span class="custom-check__input">
 															<input type="checkbox" checked />
@@ -844,178 +837,21 @@
 										</div>
 										<div
 											id="isqa-collapse-3"
-											class="in oqtane-accordion__collapse collapse"
+											class="oqtane-accordion__collapse collapse"
 											role="tabpanel"
 											aria-labelledby="isq-heading-3"
 										>
 											<div class="oqtane-accordion__body">
-												<p class="oqtane-accordion__label">Question Intro</p>
-												<p class="oqtane-accordion__text">
-													Lorem ipsum dolor sit amet, consectetur adipiscing
-													elit, sed do eiusmod tempor incididunt ut labore et
-													dolore magna aliqua. Ut enim ad minim veniam, quis
-													nostrud exercitation ullamco laboris nisi ut aliquip
-													ex ea commodo consequat.
-												</p>
-
-												<p class="oqtane-accordion__label">Question Type</p>
-												<p class="oqtane-accordion__text">Required</p>
-
-												<div class="row">
-													<div class="col-md-6">
-														<p class="oqtane-accordion__label">Answer Type</p>
-
-														<div
-															class="custom-input custom-input--disabled custom-input--centered mt-12"
-														>
-															<label class="custom-input__inner">
-																<select
-																	class="custom-input__control custom-input__select"
-																	disabled
-																>
-																	<option>Select</option>
-																</select>
-																<span
-																	class="custom-input__icon custom-input__suffix"
-																>
-																	<i class="icon-down_arrow"></i>
-																</span>
-															</label>
-														</div>
-													</div>
-												</div>
-
-												<div class="oqtane-card mt-20">
-													<div class="oqtane-card__header">
-														<h3>Condition</h3>
-													</div>
-													<div class="oqtane-card__body">
-														<div class="condition">
-															<p class="condition__label">If Selected</p>
-															<div class="condition-input flex-grow-1">
-																<div
-																	class="custom-input custom-input--centered"
-																>
-																	<label class="custom-input__inner">
-																		<select
-																			class="custom-input__control custom-input__select"
-																		>
-																			<option>
-																				Abnormally high red blood cell count
-																				(erythrocytosis or polycythemia)
-																			</option>
-																		</select>
-																		<span
-																			class="custom-input__icon custom-input__suffix"
-																		>
-																			<i class="icon-down_arrow"></i>
-																		</span>
-																	</label>
-																</div>
-															</div>
-														</div>
-														<div class="condition mt-24">
-															<p class="condition__label">Select Question</p>
-															<div
-																class="condition-input custom-input--centered flex-grow-1"
-															>
-																<div class="custom-input">
-																	<label class="custom-input__inner">
-																		<input
-																			type="text"
-																			class="custom-input__control"
-																			placeholder=" "
-																			value="Since how long have you been suffering from this condition?"
-																		/>
-																	</label>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-
-												<div class="oqtane-card mt-20">
-													<div class="oqtane-card__header">
-														<h3>Condition</h3>
-													</div>
-													<div class="oqtane-card__body">
-														<div class="condition">
-															<p class="condition__label">If Selected</p>
-															<div class="condition-input flex-grow-1">
-																<div
-																	class="custom-input custom-input--centered"
-																>
-																	<label class="custom-input__inner">
-																		<select
-																			class="custom-input__control custom-input__select"
-																		>
-																			<option>
-																				Abnormally high red blood cell count
-																				(erythrocytosis or polycythemia)
-																			</option>
-																		</select>
-																		<span
-																			class="custom-input__icon custom-input__suffix"
-																		>
-																			<i class="icon-down_arrow"></i>
-																		</span>
-																	</label>
-																</div>
-															</div>
-														</div>
-														<div class="condition mt-24">
-															<p class="condition__label">Select Question</p>
-															<div
-																class="condition-input custom-input--centered flex-grow-1"
-															>
-																<div class="custom-input">
-																	<label class="custom-input__inner">
-																		<input
-																			type="text"
-																			class="custom-input__control"
-																			placeholder=" "
-																			value="Since how long have you been suffering from this condition?"
-																		/>
-																	</label>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-
-												<div class="custom-input custom-input--centered">
-													<label class="custom-input__inner">
-														<select
-															class="custom-input__control custom-input__select"
-														>
-															<option>Kidney disease</option>
-														</select>
-														<span
-															class="custom-input__icon custom-input__suffix"
-														>
-															<i class="icon-down_arrow"></i>
-														</span>
-													</label>
-												</div>
-
-												<div class="custom-input custom-input--centered mt-24">
-													<label class="custom-input__inner">
-														<select
-															class="custom-input__control custom-input__select"
-														>
-															<option>Liver disease (e.g., cirrhosis)</option>
-														</select>
-														<span
-															class="custom-input__icon custom-input__suffix"
-														>
-															<i class="icon-down_arrow"></i>
-														</span>
-													</label>
-												</div>
+												<p
+													>Lorem ipsum dolor sit amet, consectetur adipisicing
+													elit. Quod, vel quidem! Magnam quia quas voluptatem
+													suscipit a aliquam id perferendis.</p
+												>
 											</div>
 										</div>
 									</div>
 
+									<!-- Repeat for Panel 4 -->
 									<div class="panel oqtane-accordion__panel">
 										<div
 											class="oqtane-accordion__header"
@@ -1026,40 +862,21 @@
 												<p class="oqtane-accordion__label">Question</p>
 												<p class="oqtane-accordion__text">
 													Lorem ipsum dolor sit amet, consectetur adipiscing
-													elit, sed do eiusmod tempor incididunt ut labore et
-													dolore magna aliqua. Ut enim ad minim veniam, quis
-													nostrud exercitation ullamco laboris nisi ut aliquip
-													ex ea commodo consequat. Duis aute irure dolor in
-													reprehenderit in voluptate velit esse cillum dolore eu
-													fugiat nulla pariatur. Excepteur sint occaecat
-													cupidatat non proident, sunt in culpa qui officia
-													deserunt mollit anim id est laborum.
-												</p>
-
-												<p
-													class="oqtane-accordion__label oqtane-accordion__hide"
-												>
-													Question Type
-												</p>
-												<p
-													class="oqtane-accordion__text oqtane-accordion__hide"
-												>
-													Required
+													elit...
 												</p>
 											</div>
-
 											<div class="oqtane-accordion__header-action">
 												<div class="action-group">
 													<a
 														role="button"
-														data-toggle="collapse"
-														data-parent="#inatake-single-accordion"
+														data-bs-toggle="collapse"
 														href="#isqa-collapse-4"
+														aria-expanded="false"
+														aria-controls="isqa-collapse-4"
 														class="oqtane-btn oqtane-btn--icon-btn action-group__btn oqtane-accordion__toggle-btn"
 													>
 														<i class="icon-down_arrow"></i>
 													</a>
-
 													<label class="custom-check oqtane-accordion__check">
 														<span class="custom-check__input">
 															<input type="checkbox" />
@@ -1069,7 +886,6 @@
 												</div>
 											</div>
 										</div>
-
 										<div
 											id="isqa-collapse-4"
 											class="oqtane-accordion__collapse collapse"
@@ -1077,10 +893,7 @@
 											aria-labelledby="isq-heading-4"
 										>
 											<div class="oqtane-accordion__body">
-												Anim pariatur cliche reprehenderit, enim eiusmod high
-												life accusamus terry richardson ad squid. 3 wolf moon
-												officia aute, non cupidatat skateboard dolor brunch.
-												Food truck quinoa nesciunt laborum eiusmod.
+												Anim pariatur cliche reprehenderit...
 											</div>
 										</div>
 									</div>
