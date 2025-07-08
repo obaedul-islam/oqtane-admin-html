@@ -80,7 +80,7 @@
 
 
   &__primary--outline {
-    padding: 21px 20px;
+    padding: 12px 20px;
     border-color: $primary;
     color: $primary;
     background-color: $white;
@@ -184,10 +184,6 @@
   &__danger {
     background-color: #ed254e;
     color: #fff;
-  }
-
-  &__retake {
-    // display: none;
   }
 
   &__crop {
