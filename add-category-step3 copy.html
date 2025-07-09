@@ -249,21 +249,40 @@
 											</div>
 										</div>
 									</div>
-									<div class="col-sm-12">
-										<div class="rich-text rich-text--xs">
-											<label class="rich-text__label">Description on Top</label>
-											<div class="rt-editor"></div>
-										</div>
-									</div>
-									<div class="col-sm-12">
-										<div class="rich-text rich-text--xs">
-											<label class="rich-text__label"
-												>Description on Hover</label
-											>
-											<div class="rt-editor"></div>
-										</div>
-									</div>
+								</div>
 
+								<div class="row mt-4">
+									<div class="col-sm-6">
+										<p class="fw-600 fs-22 text-dark">Bullet Point</p>
+										<div class="bullet-point">
+											<div class="bullet-point__icon">
+												<i class="icon-Enhanced-Mood--Mental-Clarity"></i>
+											</div>
+											<div>
+												<button
+													type="button"
+													class="oqtane-btn oqtane-btn__primary oqtane-btn__retake"
+													id="retakeButton"
+												>
+													Retake
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="custom-input custom-input--textarea mt-5">
+											<label
+												class="custom-input__inner custom-input__inner--textarea"
+											>
+												<textarea
+													type="text"
+													class="custom-input__control custom-input__control--textarea"
+													placeholder=" "
+												></textarea>
+												<span class="custom-input__label">Description</span>
+											</label>
+										</div>
+									</div>
 									<div class="col-md-6 mt-4">
 										<div class="custom-input">
 											<label class="custom-input__inner">
@@ -285,102 +304,34 @@
 								</div>
 
 								<hr />
-
-								<div class="row mt-3">
-									<div class="col-sm-12">
-										<div class="photo-dropzone">
-											<div class="dropzone">
-												<input type="file" id="dropzone-input" />
-												<label class="dropzone__area" for="dropzone-input">
-													<div class="dropzone__content">
-														<p class="text-dark fs-22 fw-600 mb-0">
-															Choose a file or drag and drop here
-														</p>
-														<p class="text-grey-3 fs-18 fw-400">
-															Maximum file size up to 50 MB.
-														</p>
-
-														<span class="oqtane-btn oqtane-btn__primary">
-															Browse Files
-														</span>
-													</div>
-												</label>
-											</div>
-
-											<div class="preview">
-												<div class="preview__thumbnail">
-													<img
-														class="preview__thumbnail--img"
-														src="img/placeholder-img.png"
-														alt="thumbnail"
-													/>
-
-													<button type="button" class="preview__thumbnail--btn">
-														<i class="icon-cross"></i>
-													</button>
-												</div>
-												<div class="preview__thumbnail">
-													<img
-														class="preview__thumbnail--img"
-														src="img/placeholder-img.png"
-														alt="thumbnail"
-													/>
-
-													<button type="button" class="preview__thumbnail--btn">
-														<i class="icon-cross"></i>
-													</button>
-												</div>
-												<div class="preview__thumbnail">
-													<img
-														class="preview__thumbnail--img"
-														src="img/placeholder-img.png"
-														alt="thumbnail"
-													/>
-
-													<button type="button" class="preview__thumbnail--btn">
-														<i class="icon-cross"></i>
-													</button>
-												</div>
-												<div class="preview__thumbnail">
-													<img
-														class="preview__thumbnail--img"
-														src="img/placeholder-img.png"
-														alt="thumbnail"
-													/>
-
-													<button type="button" class="preview__thumbnail--btn">
-														<i class="icon-cross"></i>
-													</button>
-												</div>
-												<div class="preview__thumbnail">
-													<img
-														class="preview__thumbnail--img"
-														src="img/placeholder-img.png"
-														alt="thumbnail"
-													/>
-
-													<button type="button" class="preview__thumbnail--btn">
-														<i class="icon-cross"></i>
-													</button>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="col-sm-12">
-										<div class="rich-text rich-text--xs">
-											<label class="rich-text__label">Description on Top</label>
-											<div class="rt-editor"></div>
-										</div>
-									</div>
-									<div class="col-sm-12">
-										<div class="rich-text rich-text--xs">
-											<label class="rich-text__label"
-												>Description on Hover</label
+								<div class="row">
+									<div class="col-md-6">
+										<div
+											class="input-panel__block input-panel__block--alt d-block"
+										>
+											<button
+												type="button"
+												class="oqtane-btn oqtane-btn__withicon oqtane-btn__grey--outline"
 											>
-											<div class="rt-editor"></div>
+												<span>Add Icon</span>
+												<i class="icon-plus"></i>
+											</button>
 										</div>
 									</div>
-
+									<div class="col-md-6">
+										<div class="custom-input custom-input--textarea">
+											<label
+												class="custom-input__inner custom-input__inner--textarea"
+											>
+												<textarea
+													type="text"
+													class="custom-input__control custom-input__control--textarea"
+													placeholder=" "
+												></textarea>
+												<span class="custom-input__label">Description</span>
+											</label>
+										</div>
+									</div>
 									<div class="col-md-6 mt-4">
 										<div class="custom-input">
 											<label class="custom-input__inner">
@@ -399,14 +350,23 @@
 											</label>
 										</div>
 									</div>
+									<div class="col-md-12 mt-4">
+										<button
+											type="button"
+											class="oqtane-btn oqtane-btn__withicon oqtane-btn__primary--outline"
+										>
+											<span>Add More</span>
+											<i class="icon-plus"></i>
+										</button>
+									</div>
 								</div>
 
 								<!--dose entry end-->
 								<button
 									type="button"
-									class="oqtane-btn oqtane-btn__withicon oqtane-btn__primary--outline oqtane-btn__primary--outline__lg mt-3"
+									class="oqtane-btn oqtane-btn__withicon oqtane-btn__primary--outline oqtane-btn__primary--outline__lg"
 								>
-									<span>Add More</span>
+									<span>Add Dose</span>
 									<i class="icon-plus"></i>
 								</button>
 							</div>
