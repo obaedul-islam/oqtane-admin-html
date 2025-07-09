@@ -47,7 +47,7 @@
 								class="user dropdown-toggle"
 								type="button"
 								id="menu-dropdown"
-								data-toggle="dropdown"
+								data-bs-toggle="dropdown"
 								aria-haspopup="true"
 								aria-expanded="false"
 							>
@@ -137,21 +137,204 @@
 							<div class="actionbar__actions">
 								<button
 									type="button"
-									id="add-group-btn"
-									data-toggle="modal"
-									data-target="#add-question-group"
+									id="add-question-btn"
+									class="oqtane-btn oqtane-btn__primary"
+									data-bs-toggle="modal"
+									data-bs-target="#addAnswerType"
+								>
+									Add New Question
+								</button>
+								<button
+									type="button"
+									data-bs-toggle="modal"
+									data-bs-target="#add-question-group"
 									class="oqtane-btn oqtane-btn__primary"
 								>
 									Add New Group
 								</button>
-								<button
-									type="button"
-									id="add-question-btn"
-									class="oqtane-btn oqtane-btn__primary"
-								>
-									Add New Question
-								</button>
 							</div>
+							<!-- Modal Start-->
+							<div
+								class="modal edit fade"
+								id="addAnswerType"
+								tabindex="-1"
+								role="dialog"
+								aria-labelledby="myModalLabel"
+							>
+								<div class="modal-dialog w-100 m-0" role="document">
+									<div class="modal-content">
+										<div class="modal-header d-flex align-item-center">
+											<div
+												class="d-flex w-100 align-item-center justify-content-space-between pe-40"
+											>
+												<h4 class="fs-24 lh-36 text-left" id="myModalLabel">
+													Add Questions
+												</h4>
+												<div class="modal-header__btns">
+													<button
+														type="button"
+														class="oqtane-btn oqtane-btn__primary--outline"
+													>
+														Save as Draft
+													</button>
+													<button
+														type="button"
+														class="oqtane-btn oqtane-btn__primary"
+													>
+														Add Question to List
+													</button>
+												</div>
+											</div>
+											<button
+												type="button"
+												class="close-btn"
+												data-bs-dismiss="modal"
+												aria-label="Close"
+											>
+												<span
+													class="icon-cross text-black"
+													aria-hidden="true"
+												></span>
+											</button>
+										</div>
+										<div class="modal-body mt-32">
+											<div class="modal-body--wrapper">
+												<div class="custom-input">
+													<label class="custom-input__inner">
+														<input
+															type="text"
+															class="custom-input__control"
+															placeholder=" "
+														/>
+														<span class="custom-input__label">Question</span>
+													</label>
+												</div>
+
+												<div class="custom-input custom-input--textarea mt-16">
+													<label
+														class="custom-input__inner custom-input__inner--textarea"
+													>
+														<textarea
+															type="text"
+															class="custom-input__control custom-input__control--textarea"
+															placeholder=" "
+														></textarea>
+														<span class="custom-input__label"
+															>Question Intro</span
+														>
+													</label>
+												</div>
+
+												<div class="answer-type mt-40">
+													<!-- <h3 class="answer-type__title">Select Answer Type</h3> -->
+													<div class="answer-type__actions">
+														<button
+															type="button"
+															id="answer-type-btn-2"
+															class="oqtane-btn oqtane-btn__withicon oqtane-btn__primary--outline"
+														>
+															<span>Add Answer Type</span>
+															<i class="icon-plus"></i>
+														</button>
+
+														<div class="answer-type__wrapper">
+															<div
+																id="answer-types-2"
+																class="answer-type__options"
+															>
+																<div
+																	class="answer-type__option"
+																	data-toggle="tooltip"
+																	data-placement="top"
+																	title="Short Answer"
+																>
+																	<i class="icon-short_answer"></i>
+																</div>
+																<div
+																	class="answer-type__option"
+																	data-toggle="tooltip"
+																	data-placement="top"
+																	title="Long Answer"
+																>
+																	<i class="icon-paragraph"></i>
+																</div>
+																<div
+																	class="answer-type__option"
+																	data-toggle="tooltip"
+																	data-placement="top"
+																	title="Radio"
+																>
+																	<i class="icon-radio_button"></i>
+																</div>
+																<div
+																	class="answer-type__option answer-type__option--active"
+																	data-toggle="tooltip"
+																	data-placement="top"
+																	title="Dropdown"
+																>
+																	<i class="icon-drop_down"></i>
+																</div>
+																<div
+																	class="answer-type__option"
+																	data-toggle="tooltip"
+																	data-placement="top"
+																	title="Checkbox"
+																>
+																	<i class="icon-checkbox"></i>
+																</div>
+																<div
+																	class="answer-type__option"
+																	data-toggle="tooltip"
+																	data-placement="top"
+																	title="Date"
+																>
+																	<i class="icon-calendar"></i>
+																</div>
+																<div
+																	class="answer-type__option"
+																	data-toggle="tooltip"
+																	data-placement="top"
+																	title="Time"
+																>
+																	<i class="icon-clock"></i>
+																</div>
+
+																<div
+																	class="answer-type__option"
+																	data-toggle="tooltip"
+																	data-placement="top"
+																	title="Height"
+																>
+																	<i class="icon-height"></i>
+																</div>
+
+																<div
+																	class="answer-type__option"
+																	data-toggle="tooltip"
+																	data-placement="top"
+																	title="Weight"
+																>
+																	<i class="icon-weight"></i>
+																</div>
+
+																<div
+																	class="answer-type__option"
+																	data-toggle="tooltip"
+																	data-placement="top"
+																	title="Button/CTA"
+																>
+																	<i class="icon-button"></i>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--Modal End-->
 						</div>
 
 						<div class="oqtane-card mb-0">
@@ -548,7 +731,7 @@
 															<a
 																role="button"
 																data-bs-toggle="collapse"
-																data-parent="#accordion-2"
+																data-bs-parent="#accordion-2"
 																href="#qga-collapse-1"
 																class="oqtane-btn oqtane-btn--icon-btn action-group__btn oqtane-accordion__toggle-btn"
 															>
@@ -610,7 +793,7 @@
 															<a
 																role="button"
 																data-bs-toggle="collapse"
-																data-parent="#accordion-2"
+																data-bs-parent="#accordion-2"
 																href="#qga-collapse-2"
 																class="oqtane-btn oqtane-btn--icon-btn action-group__btn oqtane-accordion__toggle-btn"
 															>
@@ -672,7 +855,7 @@
 															<a
 																role="button"
 																data-bs-toggle="collapse"
-																data-parent="#accordion-2"
+																data-bs-parent="#accordion-2"
 																href="#qga-collapse-3"
 																class="oqtane-btn oqtane-btn--icon-btn action-group__btn oqtane-accordion__toggle-btn"
 															>
@@ -715,8 +898,8 @@
 																		<div class="action-group">
 																			<a
 																				role="button"
-																				data-toggle="collapse"
-																				data-parent="#accordion-3"
+																				data-bs-toggle="collapse"
+																				data-bs-parent="#accordion-3"
 																				href="#qa-collapse-1"
 																				class="oqtane-btn oqtane-btn--icon-btn action-group__btn oqtane-accordion__toggle-btn"
 																			>
@@ -762,8 +945,8 @@
 																		<div class="action-group">
 																			<a
 																				role="button"
-																				data-toggle="collapse"
-																				data-parent="#accordion-3"
+																				data-bs-toggle="collapse"
+																				data-bs-parent="#accordion-3"
 																				href="#qa-collapse-2"
 																				class="oqtane-btn oqtane-btn--icon-btn action-group__btn oqtane-accordion__toggle-btn"
 																			>
@@ -809,8 +992,8 @@
 																		<div class="action-group">
 																			<a
 																				role="button"
-																				data-toggle="collapse"
-																				data-parent="#accordion-3"
+																				data-bs-toggle="collapse"
+																				data-bs-parent="#accordion-3"
 																				href="#qa-collapse-3"
 																				class="oqtane-btn oqtane-btn--icon-btn action-group__btn oqtane-accordion__toggle-btn"
 																			>
@@ -1075,8 +1258,8 @@
 																		<div class="action-group">
 																			<a
 																				role="button"
-																				data-toggle="collapse"
-																				data-parent="#accordion-3"
+																				data-bs-toggle="collapse"
+																				data-bs-parent="#accordion-3"
 																				href="#qa-collapse-4"
 																				class="oqtane-btn oqtane-btn--icon-btn action-group__btn oqtane-accordion__toggle-btn"
 																			>
@@ -1153,7 +1336,7 @@
 							<button
 								type="button"
 								class="close-btn"
-								data-dismiss="modal"
+								data-bs-dismiss="modal"
 								aria-label="Close"
 							>
 								<span class="icon-cross text-black" aria-hidden="true"></span>
@@ -1216,8 +1399,8 @@
 												<div class="action-group">
 													<a
 														role="button"
-														data-toggle="collapse"
-														data-parent="#accordion-4"
+														data-bs-toggle="collapse"
+														data-bs-parent="#accordion-4"
 														href="#mqa-collapse-1"
 														class="oqtane-btn oqtane-btn--icon-btn action-group__btn oqtane-accordion__toggle-btn"
 													>
@@ -1267,8 +1450,8 @@
 												<div class="action-group">
 													<a
 														role="button"
-														data-toggle="collapse"
-														data-parent="#accordion-4"
+														data-bs-toggle="collapse"
+														data-bs-parent="#accordion-4"
 														href="#mqa-collapse-2"
 														class="oqtane-btn oqtane-btn--icon-btn action-group__btn oqtane-accordion__toggle-btn"
 													>
@@ -1318,8 +1501,8 @@
 												<div class="action-group">
 													<a
 														role="button"
-														data-toggle="collapse"
-														data-parent="#accordion-4"
+														data-bs-toggle="collapse"
+														data-bs-parent="#accordion-4"
 														href="#mqa-collapse-3"
 														class="oqtane-btn oqtane-btn--icon-btn action-group__btn oqtane-accordion__toggle-btn"
 													>
@@ -1545,8 +1728,8 @@
 												<div class="action-group">
 													<a
 														role="button"
-														data-toggle="collapse"
-														data-parent="#accordion-4"
+														data-bs-toggle="collapse"
+														data-bs-parent="#accordion-4"
 														href="#mqa-collapse-4"
 														class="oqtane-btn oqtane-btn--icon-btn action-group__btn oqtane-accordion__toggle-btn"
 													>
