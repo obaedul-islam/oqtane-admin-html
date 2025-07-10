@@ -150,7 +150,7 @@
 										<span class="text-grey-3">/</span>
 										<a href="#" class="text-grey-3">ADD NEW Category</a>
 										<span class="text-grey-3">/</span>
-										<a href="#" class="text-primary">Step 3</a>
+										<a href="#" class="text-primary">Step 4</a>
 									</p>
 								</div>
 
@@ -176,16 +176,16 @@
 											</div>
 										</div>
 										<div class="stepper__step__wrapper">
-											<div class="stepper__step active">
+											<div class="stepper__step">
 												<div class="stepper__step__bottom">
-													<span class="stepper__step-label active">Step 3</span>
+													<span class="stepper__step-label">Step 3</span>
 												</div>
 											</div>
 										</div>
 										<div class="stepper__step__wrapper">
-											<div class="stepper__step">
+											<div class="stepper__step active">
 												<div class="stepper__step__bottom">
-													<span class="stepper__step-label">Step 4</span>
+													<span class="stepper__step-label active">Step 4</span>
 												</div>
 											</div>
 										</div>
@@ -198,62 +198,79 @@
 							<div class="oqtane-card__header"
 								><p class="mb-0"
 									>Add New Category
-									<span class="text-primary">(Step 3)</span></p
+									<span class="text-primary">(Step 4)</span></p
 								></div
 							>
 							<div class="oqtane-card__body">
 								<div class="row">
-									<div class="col-md-6">
-										<div class="custom-input">
-											<label class="custom-input__inner">
-												<input
-													type="text"
-													class="custom-input__control"
-													placeholder=" "
-												/>
-												<span class="custom-input__label">Section Title 1</span>
-											</label>
-										</div>
-									</div>
-									<div class="col-md-6">
-										<div class="custom-input">
-											<label class="custom-input__inner">
-												<input
-													type="text"
-													class="custom-input__control"
-													placeholder=" "
-												/>
-												<span class="custom-input__label">Section Title 2</span>
-											</label>
-										</div>
-									</div>
-								</div>
-
-								<div class="row mt-4">
-									<div class="col-sm-12">
-										<p class="fw-600 fs-22 text-dark">Upload Display Image</p>
-										<div class="photo-upload photo-upload__alt">
-											<div class="photo-upload__thumbnail w-100">
-												<img
-													class="photo-upload__img"
-													src="img/person.png"
-													alt="thumbnail"
-												/>
-												<button
-													type="button"
-													class="oqtane-btn oqtane-btn__primary mt-5x oqtane-btn__retake"
-													id="retakeButton"
-												>
-													Retake
-												</button>
-											</div>
+									<div class="col-md-12">
+										<div class="rich-text rich-text--xs mt-0">
+											<label class="rich-text__label">Section Title</label>
+											<div class="rt-editor"></div>
 										</div>
 									</div>
 								</div>
 
 								<div class="row mt-4">
 									<div class="col-sm-6">
-										<p class="fw-600 fs-22 text-dark">Bullet Point</p>
+										<div class="cover-photo">
+											<div class="additional-photo mt-0">
+												<p class="fw-600 fs-22 text-dark">Upload Hero Image</p>
+
+												<div class="photo-dropzone">
+													<div class="dropzone">
+														<input type="file" id="dropzone-input" />
+														<label
+															class="dropzone__area dropzone__area__alt"
+															for="dropzone-input"
+														>
+															<div class="dropzone__content">
+																<p class="text-dark fs-22 fw-600 mb-0">
+																	Choose a file or drag and drop here
+																</p>
+																<p class="text-grey-3 fs-18 fw-400">
+																	Maximum file size up to 50 MB.
+																</p>
+
+																<span class="oqtane-btn oqtane-btn__primary">
+																	Browse Files
+																</span>
+															</div>
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<p class="fw-600 fs-22 text-dark">Upload Display Image</p>
+										<div class="photo-upload photo-upload__alt">
+											<div class="photo-upload__thumbnail w-100">
+												<img
+													class="photo-upload__img"
+													src="img/product-1.png"
+													alt="thumbnail"
+												/>
+												<div class="dropzone__image text-center">
+													<div id="uploadedImage"></div>
+													<div class="d-flex justify-content-center">
+														<button
+															type="button"
+															class="oqtane-btn oqtane-btn__primary mt-5x oqtane-btn__retake"
+															id="retakeButton"
+														>
+															Retake
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="row mt-4">
+									<p class="fw-600 fs-22 text-dark">Bullet Point</p>
+									<div class="col-sm-6">
 										<div class="bullet-point">
 											<div class="bullet-point__icon">
 												<i class="icon-Enhanced-Mood--Mental-Clarity"></i>
@@ -270,17 +287,9 @@
 										</div>
 									</div>
 									<div class="col-md-6">
-										<div class="custom-input custom-input--textarea mt-5">
-											<label
-												class="custom-input__inner custom-input__inner--textarea"
-											>
-												<textarea
-													type="text"
-													class="custom-input__control custom-input__control--textarea"
-													placeholder=" "
-												></textarea>
-												<span class="custom-input__label">Description</span>
-											</label>
+										<div class="rich-text rich-text--xs mt-0">
+											<label class="rich-text__label">Section Title</label>
+											<div class="rt-editor"></div>
 										</div>
 									</div>
 									<div class="col-md-6 mt-4">
@@ -300,64 +309,6 @@
 												</span>
 											</label>
 										</div>
-									</div>
-								</div>
-
-								<hr />
-								<div class="row">
-									<div class="col-md-6">
-										<div
-											class="input-panel__block input-panel__block--alt d-block"
-										>
-											<button
-												type="button"
-												class="oqtane-btn oqtane-btn__withicon oqtane-btn__grey--outline"
-											>
-												<span>Add Icon</span>
-												<i class="icon-plus"></i>
-											</button>
-										</div>
-									</div>
-									<div class="col-md-6">
-										<div class="custom-input custom-input--textarea">
-											<label
-												class="custom-input__inner custom-input__inner--textarea"
-											>
-												<textarea
-													type="text"
-													class="custom-input__control custom-input__control--textarea"
-													placeholder=" "
-												></textarea>
-												<span class="custom-input__label">Description</span>
-											</label>
-										</div>
-									</div>
-									<div class="col-md-6 mt-4">
-										<div class="custom-input">
-											<label class="custom-input__inner">
-												<select
-													class="custom-input__control custom-input__select"
-												>
-													<option value="tablet">1</option>
-													<option value="tablet">2</option>
-													<option value="capsule">3</option>
-												</select>
-
-												<span class="custom-input__label">Order</span>
-												<span class="custom-input__icon custom-input__suffix">
-													<i class="icon-down_arrow"></i>
-												</span>
-											</label>
-										</div>
-									</div>
-									<div class="col-md-12 mt-4">
-										<button
-											type="button"
-											class="oqtane-btn oqtane-btn__withicon oqtane-btn__primary--outline"
-										>
-											<span>Add More</span>
-											<i class="icon-plus"></i>
-										</button>
 									</div>
 								</div>
 
