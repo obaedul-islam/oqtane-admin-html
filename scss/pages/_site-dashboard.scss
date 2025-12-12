@@ -70,6 +70,10 @@
     padding: 22px 20px;
     border-radius: 12px;
 
+    &.bg-success {
+      background-color: $success !important;
+    }
+
     &--purple {
       background-color: $purple;
     }
