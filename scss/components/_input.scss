@@ -222,6 +222,10 @@
       border-radius: 40px;
       height: 150px;
     }
+
+    &--alt {
+      height: 42px;
+    }
   }
 
   &__control {
@@ -614,7 +618,6 @@
   .oqtane-search {
     &__input {
       max-width: 200px;
-      height: 35px;
       border-radius: 30px;
       font-size: 14px !important;
       padding: 10px 15px 10px 40px;
@@ -627,12 +630,12 @@
       top: 10px;
     }
 
-    &__control {
-      height: 26px;
-      font-size: 16px;
-      padding: 8px 0;
-      bottom: 5px;
-    }
+    // &__control {
+    //   height: 26px;
+    //   font-size: 16px;
+    //   padding: 8px 0;
+    //   bottom: 5px;
+    // }
 
     &__inner {
       height: 35px;
@@ -649,9 +652,9 @@
       }
     }
 
-    &__select {
-      padding: 5px 30px 0px 16px !important;
-    }
+    // &__select {
+    //   padding: 5px 30px 0px 16px !important;
+    // }
   }
 
   .radio-group {
