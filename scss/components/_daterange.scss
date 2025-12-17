@@ -29,15 +29,15 @@
 		}
 	}
 
-	&::after {
-		content: "\e91b";
-		font-family: "icomoon";
-		font-size: 20px;
-		position: absolute;
-		z-index: 0;
-		top: 7px;
-		right: 16px;
-	}
+	// &::after {
+	// 	content: "\e91b";
+	// 	font-family: "icomoon";
+	// 	font-size: 20px;
+	// 	position: absolute;
+	// 	z-index: 0;
+	// 	top: 5px;
+	// 	right: 16px;
+	// }
 }
 
 .daterangepicker td.active,
