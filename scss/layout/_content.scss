@@ -1,20 +1,23 @@
 .tw-main__content {
-  flex-grow: 1;
-  width: calc(100% - 232px);
-  overflow-x: hidden;
-  overflow-y: auto;
-  padding: 20px;
+	flex-grow: 1;
+	width: calc(100% - 232px);
+	overflow-x: hidden;
+	overflow-y: auto;
+	padding: 20px;
 }
 
 .content {
-  width: 100%;
-  position: relative;
+	width: 100%;
+	position: relative;
+	& > a {
+		display: inline;
+	}
 }
 
 @media all and (max-width: 768px) {
-  .tw-main {
-    &__content {
-      padding: 10px;
-    }
-  }
+	.tw-main {
+		&__content {
+			padding: 10px;
+		}
+	}
 }

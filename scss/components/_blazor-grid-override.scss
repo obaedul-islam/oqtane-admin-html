@@ -1,58 +1,59 @@
 .list-table {
-  .table {
+	.table {
+		// text-align: center;
+		thead {
+			tr {
+				th {
+					color: $black;
+					font-size: $fs-16;
+					padding-left: 11px !important;
 
-    // text-align: center;
-    thead {
-      tr {
-        th {
-          color: $black;
-          font-size: $fs-16;
-          padding-left: 11px !important;
+					&:first-child {
+					}
 
-          &:first-child {}
+					&:last-child {
+						padding-right: 40px !important;
+					}
+				}
+			}
+		}
 
-          &:last-child {
-            padding-right: 40px !important;
-          }
-        }
-      }
-    }
+		tbody {
+			tr {
+				&:last-child {
+					border-bottom: 0px !important;
+				}
 
-    tbody {
-      tr {
-        &:last-child {
-          border-bottom: 0px !important;
-        }
+				td {
+					color: $black;
+					padding-left: 10px !important;
 
-        td {
-          color: $black;
-          padding-left: 10px !important;
+					&:first-child {
+						padding-left: 15px !important;
+						// padding-right: 5px !important;
+					}
 
-          &:first-child {
-            padding-left: 15px !important;
-            // padding-right: 5px !important;
-          }
+					&:last-child {
+						padding-right: 15px !important;
+					}
 
-          &:last-child {
-            padding-right: 15px !important;
-          }
+					.theme-btn__accent {
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
 
-          .theme-btn__accent {
-            text-decoration: none;
-          }
-        }
-
-      }
-
-    }
-  }
-
-  .quickgrid[theme=default] .col-title {
-    padding: 0;
-  }
+	.quickgrid[theme="default"] .col-title {
+		padding: 0;
+		&:hover {
+			background-color: unset;
+		}
+	}
 }
 
 .paginator {
-  border-top: 0 !important;
-  padding: 20px 10px !important;
+	border-top: 0 !important;
+	padding: 20px 10px !important;
 }
