@@ -206,8 +206,6 @@
   display: block;
   width: 100%;
 
-
-
   &__inner {
     display: block;
     height: 68px;
@@ -243,6 +241,18 @@
     &--textarea {
       height: 112px;
       resize: none;
+    }
+  }
+
+  &__multiselect {
+    position: relative;
+
+    .dnn-multiselect__icon {
+      position: absolute;
+      top: 50%;
+      right: 30px;
+      transform: translateY(-50%);
+
     }
   }
 

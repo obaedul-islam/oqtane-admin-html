@@ -740,22 +740,19 @@
 											</div>
 
 											<div class="col-md-6">
-												<div class="custom-input">
+												<div class="custom-input custom-input__multiselect">
 													<div class="oqtane-multiselect mt-16">
-														<div class="oqtane-multiselect__select">
-															<select
-																id="oqtane-state-dd"
-																class="form-select"
-																aria-label="Default select example"
-															>
-																<option value="lab">Select Lab Report</option>
-																<option value="lab2">Lab Report 2</option>
-																<option value="lab3">Lab Report 3</option>
-																<option value="lab4">Lab Report 4</option>
-																<option value="lab5">Lab Report 5</option>
-																<option value="lab6">Lab Report 6</option>
-															</select>
-														</div>
+														<select id="oqtane-state-dd" multiple="multiple">
+															<option value="lab">Select Lab Report</option>
+															<option value="lab2">Lab Report 2</option>
+															<option value="lab3">Lab Report 3</option>
+															<option value="lab4">Lab Report 4</option>
+															<option value="lab5">Lab Report 5</option>
+															<option value="lab6">Lab Report 6</option>
+														</select>
+														<span class="dnn-multiselect__icon">
+															<i class="icon-down_arrow"></i>
+														</span>
 													</div>
 												</div>
 											</div>
@@ -810,11 +807,7 @@
 
 											<div class="col-md-6">
 												<div class="oqtane-multiselect mt-16">
-													<select
-														id="oqtane-state-dd"
-														multiple="multiple"
-														class="form-select"
-													>
+													<select id="oqtane-state-dd" multiple="multiple">
 														<option value="state1">State 1</option>
 														<option value="state2">State 2</option>
 														<option value="state3">State 3</option>
