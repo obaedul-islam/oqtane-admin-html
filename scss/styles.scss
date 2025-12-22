@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap");
 
 // 1. Required core first
 @import "base/vendors/bootstrap/functions";
@@ -15,54 +15,51 @@
 @import "base/vendors/bootstrap/bootstrap"; // If this is a custom bundle
 @import "base/vendors/cropper/cropper.min.css"; // If this is a custom bundle
 
-@import 'base/variables';
-@import 'base/utils';
-@import 'base/typography';
-@import 'base/global';
+@import "base/variables";
+@import "base/utils";
+@import "base/typography";
+@import "base/global";
 
-@import 'layout/dashboard';
-@import 'layout/main';
-@import 'layout/sidebar';
-@import 'layout/content';
-@import 'layout/footer';
-@import 'layout/slider';
-@import 'layout/tab';
-@import 'layout/accordion';
+@import "layout/dashboard";
+@import "layout/main";
+@import "layout/sidebar";
+@import "layout/content";
+@import "layout/footer";
+@import "layout/slider";
+@import "layout/tab";
+@import "layout/accordion";
 
-
-@import 'components/header';
-@import 'components/input';
-@import 'components/buttons';
-@import 'components/card';
-@import 'components/stepper';
-@import 'components/actionbar';
-@import 'components/list-table';
-@import 'components/multiselect';
-@import 'components/chip';
-@import 'components/switch-button';
-@import 'components/modal';
-@import 'components/list-text-input';
-@import 'components/pill';
-@import 'components/searchbar';
-@import 'components/pagination';
-@import 'components/datepicker';
-@import 'components/daterange';
-@import 'components/product';
-@import 'components/richtext';
+@import "components/header";
+@import "components/input";
+@import "components/buttons";
+@import "components/card";
+@import "components/stepper";
+@import "components/actionbar";
+@import "components/list-table";
+@import "components/multiselect";
+@import "components/chip";
+@import "components/switch-button";
+@import "components/modal";
+@import "components/list-text-input";
+@import "components/pill";
+@import "components/searchbar";
+@import "components/pagination";
+@import "components/datepicker";
+@import "components/daterange";
+@import "components/product";
+@import "components/richtext";
 @import "components/blazor-grid-override";
 @import "components/grid";
 // @import "components/toast";
 
-
-
-@import 'pages/add-product';
-@import 'pages/product-details';
-@import 'pages/question-list';
-@import 'pages/add-question';
-@import 'pages/sites.scss';
-@import 'pages/intake-form';
-@import 'pages/site-dashboard';
-@import 'pages/order-details';
-@import 'pages/patient-details';
-@import 'pages/salesman-details.scss';
-@import 'pages/add-category';
+@import "pages/add-product";
+@import "pages/product-details";
+@import "pages/question-list";
+@import "pages/add-question";
+@import "pages/sites.scss";
+@import "pages/intake-form";
+@import "pages/site-dashboard";
+@import "pages/order-details";
+@import "pages/patient-details";
+@import "pages/salesman-details.scss";
+@import "pages/add-category";
