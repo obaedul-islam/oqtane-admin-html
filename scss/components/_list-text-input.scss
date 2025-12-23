@@ -1,155 +1,148 @@
 .list-input {
-  height: 150px;
-  border-radius: 40px;
-  border: 1px solid $grey-3;
-  padding: 12px 30px;
-  position: relative;
+	height: 150px;
+	border-radius: 40px;
+	border: 1px solid $grey-3;
+	padding: 12px 30px;
+	position: relative;
 
-  &__label {
-    font-size: $fs-12;
-    color: $grey-3;
-    position: absolute;
-    top: 12px;
-  }
+	&__label {
+		font-size: $fs-12;
+		color: $grey-3;
+		position: absolute;
+		top: 12px;
+	}
 
-  .trumbowyg-box {
-    min-height: unset;
-    border: unset;
-    padding: unset;
-    margin-top: 20px;
-    max-height: 104px;
-    overflow-y: auto;
-  }
+	.trumbowyg-box {
+		min-height: unset;
+		border: unset;
+		padding: unset;
+		margin-top: 20px;
+		max-height: 104px;
+		overflow-y: auto;
+	}
 
-  .trumbowyg-button-pane {
-    display: none;
-  }
+	.trumbowyg-button-pane {
+		display: none;
+	}
 
-  .trumbowyg-editor {
-    padding: unset;
-    line-height: $lh-100;
-    min-height: 100px;
+	.trumbowyg-editor {
+		padding: unset;
+		line-height: $lh-100;
+		min-height: 100px;
 
-    ul {
-      padding-left: 12px;
-    }
-  }
+		ul {
+			padding-left: 12px;
+		}
+	}
 }
 
 .rich-text {
-  background-color: $white;
-  min-height: 180px;
-  border-radius: 40px;
-  border: 1px solid $grey-3;
-  position: relative;
-  margin-top: 16px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column-reverse;
+	background-color: $white;
+	min-height: 180px;
+	border-radius: 40px;
+	border: 1px solid $grey-3;
+	position: relative;
+	margin-top: 16px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column-reverse;
 
-  &--xs {
-    height: 110px;
-  }
+	&--xs {
+		height: 110px;
+	}
 
-  &--sm {
-    height: 140px;
-  }
+	&--sm {
+		height: 140px;
+	}
 
-  &__equal-height {
-    height: 110px;
-    min-height: 150px;
-    margin-top: 33px;
-  }
+	&__equal-height {
+		height: 110px;
+		min-height: 150px;
+		margin-top: 33px;
+	}
 
-  &__label {
-    position: absolute;
-    left: 30px;
-    top: 24px;
-    font-size: $fs-18;
-    line-height: $lh-100;
-    font-weight: $fw-400;
-    color: $grey-3;
-    transition: all 0.3s ease;
-  }
+	&__label {
+		position: absolute;
+		left: 30px;
+		top: 24px;
+		font-size: $fs-18;
+		line-height: $lh-100;
+		font-weight: $fw-400;
+		color: $grey-3;
+		transition: all 0.3s ease;
+	}
 
+	.ql {
+		&-toolbar {
+			border: 0;
+			background-color: $border-color;
+			padding: 0px 32px;
 
+			button {
+				&.ql-active {
+					background: $white;
+				}
+			}
+		}
 
-  .ql {
-    &-toolbar {
-      border: 0;
-      background-color: $border-color;
-      padding: 0px 32px;
+		&-formats {
+			margin: 0 !important;
+		}
 
-      button {
-        padding: 11px !important;
-        width: 40px;
-        height: 40px;
+		&-container {
+			border: 0;
+			max-height: calc(100% - 70px);
+		}
 
-        &.ql-active {
-          background: $white;
-        }
-      }
-    }
-
-    &-formats {
-      margin: 0 !important;
-    }
-
-    &-container {
-      border: 0;
-      max-height: calc(100% - 70px);
-    }
-
-    &-editor {
-      padding-inline: 30px;
-      padding-block: 10px;
-      padding-top: 5px;
-      font-size: 16px;
-    }
-  }
+		&-editor {
+			padding-inline: 30px;
+			padding-block: 10px;
+			padding-top: 5px;
+			font-size: 16px;
+		}
+	}
 }
 
-
 @media all and (max-width: 992px) {
-  .list-input {
-    height: 40px;
-    border-radius: 12px;
-    padding: 8px 20px
-  }
+	.list-input {
+		height: 40px;
+		border-radius: 12px;
+		padding: 8px 20px;
+	}
 
-  .rich-text {
-    height: 150px;
-    border-radius: 20px;
+	.rich-text {
+		height: 150px;
+		border-radius: 20px;
 
-    &__label {
-      top: 10px;
-      left: 20px;
-    }
+		&__label {
+			top: 10px;
+			left: 20px;
+		}
 
-    .ql-editor {
-      padding-inline: 20px;
-    }
-  }
+		.ql-editor {
+			padding-inline: 20px;
+		}
+	}
 }
 
 @media all and (max-width: 768px) {
-  .rich-text {
-    height: 120px;
+	.rich-text {
+		height: 120px;
 
-    &__label {
-      left: 10px;
-      top: 10px;
-      font-size: 14px;
-    }
+		&__label {
+			left: 10px;
+			top: 10px;
+			font-size: 14px;
+		}
 
-    .ql-toolbar {
-      padding: 0px 5px;
+		.ql-toolbar {
+			padding: 0px 5px;
 
-      button {
-        padding: 5px !important;
-        width: 25px;
-        height: 25px;
-      }
-    }
-  }
+			button {
+				padding: 5px !important;
+				width: 25px;
+				height: 25px;
+			}
+		}
+	}
 }
