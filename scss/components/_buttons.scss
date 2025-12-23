@@ -84,6 +84,7 @@
     border-color: $primary;
     color: $primary;
     background-color: $white;
+    text-align: center;
 
     &:hover,
     &:visited {
@@ -361,6 +362,11 @@
       &--lg {
         padding: 8px 15px;
         font-size: 16px
+      }
+
+      &__base {
+        padding: 10px 15px;
+        font-size: 14px;
       }
     }
 
