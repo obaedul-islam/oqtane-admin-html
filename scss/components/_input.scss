@@ -575,14 +575,14 @@
 @media all and (max-width: 1170px) {
   .custom-input {
     &__inner {
-      height: 40px;
-      padding: 6px 20px;
+      height: 60px;
+      padding: 10px 20px;
       border-radius: 30px;
     }
 
     &__label {
       font-size: 16px;
-      top: 10px;
+      top: 20px;
     }
 
     &--filter {
@@ -595,13 +595,16 @@
       height: 16px;
       font-size: 16px;
       right: 15px;
-      top: 20px;
+      top: 27px;
     }
 
     &__control {
       bottom: 5px;
+      font-size: 16px;
+    }
 
-
+    &__select {
+      padding: 5px 40px 0px 22px;
     }
   }
 
@@ -637,7 +640,7 @@
   .custom-input {
     &__label {
       font-size: 16px;
-      top: 10px;
+      top: 20px;
     }
 
     // &__control {
@@ -648,18 +651,22 @@
     // }
 
     &__inner {
-      height: 35px;
-      padding: 6px 20px;
+
+      padding: 5px 20px;
       border-radius: 30px;
     }
 
     &--filter {
       .custom-input {
         &__suffix {
-          top: 15px;
+          top: 30px;
           right: 15px;
         }
       }
+    }
+
+    &__control {
+      font-size: 14px;
     }
 
     // &__select {
@@ -713,51 +720,16 @@
           font-size: 14px;
         }
 
-        &__suffix {
-          top: 12px;
-          right: 10px;
-        }
+
       }
     }
 
-    &__inner {
-      height: 30px;
-      padding: 6px 10px;
-      border-radius: 30px;
-    }
 
     &__icon {
       font-size: 16px;
     }
 
-    &__label {
-      font-size: 14px;
-      top: 6px;
-      left: 10px;
-    }
 
-    &__control {
-      font-size: 14px;
-      bottom: 4px;
-      padding: 3px 0;
-      left: 10px;
-    }
-
-    &__control:focus~&__label,
-    &__control:not(:placeholder-shown)~&__label {
-      top: 2px;
-      left: 10px;
-      font-size: $fs-12;
-    }
-
-    &__suffix {
-      width: 18px;
-      height: 18px;
-      font-size: 16px;
-      right: 10px;
-      top: 15px;
-      transform: translateY(-50%);
-    }
 
   }
 
