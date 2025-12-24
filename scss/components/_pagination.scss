@@ -23,8 +23,8 @@
 
   &__input {
     display: inline-block;
-    height: 38px;
-    width: 62px;
+    height: 48px;
+    width: 100px;
     outline: 0;
     border: 2px solid $border-color;
     box-shadow: none;
@@ -60,6 +60,12 @@
     appearance: none;
     position: absolute;
     z-index: 9;
+
+    &:focus-visible {
+      border: 0;
+      outline: 0;
+      box-shadow: none;
+    }
   }
 
   &__select-icon {
