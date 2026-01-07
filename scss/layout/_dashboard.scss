@@ -4,14 +4,21 @@
   height: 100vh;
 }
 
-.modal-button{
+.modal-button {
   width: 275px;
   height: 68px;
 }
 
-.custom-input--with-icon{
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
+.custom-input--with-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+@media all and (max-width: 768px) {
+  .modal-button {
+    width: 150px;
+    height: 40px;
+  }
 }
