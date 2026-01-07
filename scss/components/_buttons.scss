@@ -440,3 +440,24 @@
 
   }
 }
+
+.toggle-details-content {
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  transform: translateY(-50%);
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 5px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  z-index: 100;
+  white-space: nowrap;
+  margin-right: 10px;
+
+  &.d-none {
+    display: none !important;
+  }
+}
