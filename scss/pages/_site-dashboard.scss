@@ -52,6 +52,10 @@
     color: $grey-3;
     text-decoration: underline !important;
 
+    &-alt {
+      color: $primary-light;
+    }
+
     &:hover {
       color: $grey-3;
     }
