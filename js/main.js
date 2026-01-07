@@ -303,6 +303,11 @@ $(document).ready(function () {
 		var chart = new ApexCharts(chartEl, options);
 		chart.render();
 	}
+
+	// Toggle details buttons
+	$(document).on("click", ".toggle-details-btn", function () {
+		$(this).siblings(".toggle-details-content").toggleClass("d-none");
+	});
 });
 
 const imageInput = document.getElementById("inputImage");
