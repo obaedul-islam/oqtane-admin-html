@@ -1,6 +1,10 @@
 .modal {
 	overflow-y: hidden !important;
 
+	&-xl {
+		width: 100% !important;
+	}
+
 	&.confirm-modal {
 		left: 0 !important;
 		padding-left: 0 !important;
@@ -112,7 +116,9 @@
 		line-height: 25px;
 		text-align: center;
 		border: 1px solid $primary;
-		transition: all 0.3s ease-in-out, border 0.1s ease-in-out;
+		transition:
+			all 0.3s ease-in-out,
+			border 0.1s ease-in-out;
 
 		@media all and (max-width: 767px) {
 			width: 124px;
@@ -223,7 +229,7 @@
 				&--wrapper {
 					margin: 0 auto;
 					max-width: 1070px;
-					
+
 					&__max-width {
 						max-width: 570px;
 					}
