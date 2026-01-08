@@ -610,9 +610,6 @@
 
 
 						<div class="modal-body--wrapper modal-body--wrapper__max-width mt-20">
-
-
-
 							<div class="radio-group mb-20">
 								<p class="radio-group__label">Refund Type</p>
 
@@ -658,8 +655,50 @@
 									<div class="">
 										<button type="button"
 											class="oqtane-btn oqtane-btn__primary--outline modal-button"
-										 data-bs-dismiss="modal" aria-label="Close"
-											>
+											data-bs-dismiss="modal" aria-label="Close">
+											Cancel
+										</button>
+										<button type="button" class="oqtane-btn oqtane-btn__primary modal-button"
+											data-bs-toggle="modal" data-bs-target="#refundModal">
+											Submit
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--Child Refund Modal Start-->
+		<div class="modal edit fade" id="refundModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog w-100 m-0" role="document">
+				<div class="modal-content">
+					<div class="modal-header d-flex align-item-center">
+						<div class="d-flex w-100 align-item-center justify-content-space-between pe-40">
+							<h4 class="fs-24 lh-36 text-left" id="myModalLabel">
+								Warning: Issuing Refund
+							</h4>
+						</div>
+						<button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close">
+							<span class="icon-cross text-black" aria-hidden="true"></span>
+						</button>
+					</div>
+					<div class="modal-body mt-32">
+						<div class="modal-body--wrapper modal-body--wrapper__max-width mt-20">
+							<h4 class="fs-30 text-center mt-80" id="myModalLabel">
+								Are you sure you want to issue a refund?
+							</h4>
+
+
+							<div class="answer-type mt-40">
+								<!-- <h3 class="answer-type__title">Select Answer Type</h3> -->
+								<div class="answer-type__actions justify-content-center">
+									<div class="">
+										<button type="button"
+											class="oqtane-btn oqtane-btn__primary--outline modal-button"
+											data-bs-dismiss="modal" aria-label="Close">
 											Cancel
 										</button>
 										<button type="button" class="oqtane-btn oqtane-btn__primary modal-button">
@@ -672,8 +711,12 @@
 					</div>
 				</div>
 			</div>
-			<!--Modal End-->
+
 		</div>
+		<!--Child Refund Modal End-->
+
+		<!--Modal End-->
+
 
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="../js/vendors/jquery-3.7.1.min.js"></script>
