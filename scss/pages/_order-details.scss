@@ -8,10 +8,8 @@
 	}
 
 	&__table {
-		display: flex;
-		justify-content: space-between;
-
-		&__info-text {}
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
 	}
 
 	&__label {
@@ -105,7 +103,8 @@
 		padding-bottom: 50px;
 
 		&__table {
-			display: flex;
+
+			grid-template-columns: repeat(2, 1fr);
 
 
 			&__info-text {
@@ -145,7 +144,7 @@
 @media all and (max-width: 768px) {
 	.order {
 		&__table {
-			flex-direction: column;
+			grid-template-columns: repeat(1, 1fr);
 
 			&__info-text {
 
