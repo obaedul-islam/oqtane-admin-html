@@ -70,7 +70,7 @@
     padding: 24px 30px;
     background: $primary;
     color: $white;
-    min-width: 275px;
+    // min-width: 275px;
 
     &:hover,
     &:visited {
@@ -410,6 +410,8 @@
 }
 
 @media all and (max-width: 768px) {
+
+
   .button-group {
     height: 35px;
 
@@ -428,6 +430,7 @@
         font-size: 14px;
       }
     }
+
 
     &__link {
       font-size: 14px;
