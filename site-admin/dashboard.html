@@ -152,6 +152,129 @@
 						</div>
 					</div>
 
+					<button type="button" class="theme theme-btn__primary" id="liveToastBtn"
+						>Show live toast</button
+					>
+
+					<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+						<div
+							id="liveToast"
+							class="toast hide"
+							role="alert"
+							aria-live="assertive"
+							aria-atomic="true"
+						>
+							<div
+								class="toast__success d-flex align-items-center justify-content-between"
+							>
+								<div class="d-flex align-items-center gap-3">
+									<i class="icon-completed fs-md-32 text-primary"></i>
+									<div>
+										<h5
+											class="site__heading-six fs-md-12 fs-16 fw-bold text-secondary text-start"
+											>Payment Successful
+										</h5>
+										<div class="fw-500 fs-md-6 fs-14">
+											Hello, world! This is a toast message.</div
+										>
+									</div>
+								</div>
+
+								<button
+									type="button"
+									class="btn-close"
+									data-bs-dismiss="toast"
+									aria-label="Close"
+								>
+									<i class="icon-cross text-primary"></i>
+								</button>
+							</div>
+							<!-- Toast Succeess -->
+
+							<div
+								class="toast__warning d-flex align-items-center justify-content-between"
+							>
+								<div class="d-flex align-items-center gap-3">
+									<i class="icon-warning-fill fs-md-32 text-primary"></i>
+									<div>
+										<h5
+											class="site__heading-six fs-md-18 fs-16 fw-bold text-secondary text-start"
+											>Warning
+										</h5>
+										<div class="fw-500 fs-md-6 fs-14">
+											Hello, world! This is a toast message.</div
+										>
+									</div>
+								</div>
+
+								<button
+									type="button"
+									class="btn-close"
+									data-bs-dismiss="toast"
+									aria-label="Close"
+								>
+									<i class="icon-cross"></i>
+								</button>
+							</div>
+							<!-- Toast Warning -->
+							<div
+								class="toast__danger d-flex align-items-center justify-content-between"
+							>
+								<div class="d-flex align-items-center gap-3">
+									<i class="icon-cross_filled fs-md-32 text-primary"></i>
+									<div>
+										<h5
+											class="site__heading-six fs-md-18 fs-16 fw-bold text-secondary text-start"
+											>Error
+										</h5>
+										<div class="fw-500 fs-md-6 fs-14">
+											Hello, world! This is a toast message.</div
+										>
+									</div>
+								</div>
+
+								<button
+									type="button"
+									class="btn-close"
+									data-bs-dismiss="toast"
+									aria-label="Close"
+								>
+									<i class="icon-cross"></i>
+								</button>
+							</div>
+							<!-- Toast Danger -->
+
+							<!-- Toast Information -->
+							<div
+								class="toast__information d-flex align-items-center justify-content-between"
+							>
+								<div class="d-flex align-items-center gap-3">
+									<i class="icon-info-zpeptides fs-md-32 text-primary"></i>
+									<div>
+										<h5
+											class="site__heading-six fs-md-18 fs-16 fw-bold text-secondary text-start"
+											>Information
+										</h5>
+										<div class="fw-500 fs-md-6 fs-14">
+											Hello, world! This is a toast message.</div
+										>
+									</div>
+								</div>
+
+								<button
+									type="button"
+									class="btn-close"
+									data-bs-dismiss="toast"
+									aria-label="Close"
+								>
+									<i class="icon-cross"></i>
+								</button>
+							</div>
+							<!-- Toast Information -->
+						</div>
+					</div>
+
+
 					<div class="oqtane-card list-card">
 						<div class="oqtane-card__body">
 							<div class="dashboard-wrapper">
@@ -475,6 +598,8 @@
 			</div>
 		</main>
 
+		
+
 		<footer class="footer">
 			<div class="footer__content">
 				<div class="footer__links">
@@ -611,9 +736,6 @@
 
 
 						<div class="modal-body--wrapper modal-body--wrapper__max-width mt-20">
-
-
-
 							<div class="radio-group mb-20">
 								<p class="radio-group__label">Refund Type</p>
 
@@ -659,8 +781,50 @@
 									<div class="">
 										<button type="button"
 											class="oqtane-btn oqtane-btn__primary--outline modal-button"
-										 data-bs-dismiss="modal" aria-label="Close"
-											>
+											data-bs-dismiss="modal" aria-label="Close">
+											Cancel
+										</button>
+										<button type="button" class="oqtane-btn oqtane-btn__primary modal-button"
+											data-bs-toggle="modal" data-bs-target="#refundModal">
+											Submit
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--Child Refund Modal Start-->
+		<div class="modal edit fade" id="refundModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog w-100 m-0" role="document">
+				<div class="modal-content">
+					<div class="modal-header d-flex align-item-center">
+						<div class="d-flex w-100 align-item-center justify-content-space-between pe-40">
+							<h4 class="fs-24 lh-36 text-left" id="myModalLabel">
+								Warning: Issuing Refund
+							</h4>
+						</div>
+						<button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close">
+							<span class="icon-cross text-black" aria-hidden="true"></span>
+						</button>
+					</div>
+					<div class="modal-body mt-32">
+						<div class="modal-body--wrapper modal-body--wrapper__max-width mt-20">
+							<h4 class="fs-30 text-center mt-80" id="myModalLabel">
+								Are you sure you want to issue a refund?
+							</h4>
+
+
+							<div class="answer-type mt-40">
+								<!-- <h3 class="answer-type__title">Select Answer Type</h3> -->
+								<div class="answer-type__actions justify-content-center">
+									<div class="">
+										<button type="button"
+											class="oqtane-btn oqtane-btn__primary--outline modal-button"
+											data-bs-dismiss="modal" aria-label="Close">
 											Cancel
 										</button>
 										<button type="button" class="oqtane-btn oqtane-btn__primary modal-button">
@@ -673,8 +837,12 @@
 					</div>
 				</div>
 			</div>
-			<!--Modal End-->
+
 		</div>
+		<!--Child Refund Modal End-->
+
+		<!--Modal End-->
+
 
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="../js/vendors/jquery-3.7.1.min.js"></script>
