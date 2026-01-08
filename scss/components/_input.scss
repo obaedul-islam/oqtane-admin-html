@@ -24,8 +24,15 @@
     &-text {
       width: 80px;
       height: 53px;
-      border: 1px solid #E2E2E2;
+      border: 1px solid $border-color;
       border-radius: 26.5px;
+      text-align: left;
+      padding: 10px;
+      &:focus{
+        border-color:  $border-color;
+        outline: 0;
+        box-shadow: none;
+      }
     }
 
     &-alt {
