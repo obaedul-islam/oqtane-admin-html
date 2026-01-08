@@ -223,6 +223,10 @@
 				&--wrapper {
 					margin: 0 auto;
 					max-width: 1070px;
+
+					&-alt{
+						max-width: 658px;
+					}
 					
 					&__max-width {
 						max-width: 570px;

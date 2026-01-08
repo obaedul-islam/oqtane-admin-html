@@ -21,6 +21,13 @@
     padding: 10px 20px 10px 48px;
     color: $grey-3;
 
+    &-text {
+      width: 80px;
+      height: 53px;
+      border: 1px solid #E2E2E2;
+      border-radius: 26.5px;
+    }
+
     &-alt {
       max-width: 560px;
       width: 546px;
@@ -30,7 +37,7 @@
       padding-left: 45px;
       margin: 0 auto;
       position: relative;
-      
+
       &__icon {
         position: absolute;
         display: inline-flex;
@@ -69,6 +76,10 @@
     left: 16px;
     transform: translateY(-50%);
   }
+}
+
+.max-width {
+  max-width: 546px;
 }
 
 .oqtane-filter {
