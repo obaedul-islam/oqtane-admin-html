@@ -172,12 +172,17 @@
 								<button
 									class="oqtane-btn oqtane-btn__primary--outline mr-3"
 									data-bs-toggle="modal"
-									data-bs-target="#addAnswerType"
+									data-bs-target="#rejectModal"
 									type="button"
 								>
 									Reject Offer
 								</button>
-								<button class="oqtane-btn oqtane-btn__primary" type="button">
+								<button
+									data-bs-toggle="modal"
+									data-bs-target="#addAnswerType"
+									class="oqtane-btn oqtane-btn__primary"
+									type="button"
+								>
 									Add Offer Product
 								</button>
 							</div>
@@ -763,6 +768,67 @@
 				</div>
 			</footer>
 
+			<div
+				class="modal edit fade"
+				id="rejectModal"
+				tabindex="-1"
+				role="dialog"
+				aria-labelledby="rejectModalLabel"
+			>
+				<div class="modal-dialog w-100 m-0" role="document">
+					<div class="modal-content">
+						<div class="modal-header d-flex align-item-center">
+							<div
+								class="d-flex w-100 align-item-center justify-content-space-between pe-40"
+							>
+								<h4 class="fs-24 lh-36 text-left" id="myModalLabel">
+									Warning: Cancelling Upsell
+								</h4>
+							</div>
+							<button
+								type="button"
+								class="close-btn"
+								data-bs-dismiss="modal"
+								aria-label="Close"
+							>
+								<span class="icon-cross text-black" aria-hidden="true"></span>
+							</button>
+						</div>
+						<div class="modal-body mt-32">
+							<div
+								class="modal-body--wrapper modal-body--wrapper__max-width mt-20"
+							>
+								<h4 class="fs-30 text-center mt-80" id="myModalLabel">
+									Are you sure you want to cancel upsell for this order?
+								</h4>
+
+								<div class="answer-type mt-40">
+									<!-- <h3 class="answer-type__title">Select Answer Type</h3> -->
+									<div class="answer-type__actions justify-content-center">
+										<div class="">
+											<button
+												type="button"
+												class="oqtane-btn oqtane-btn__primary--outline modal-button"
+												data-bs-dismiss="modal"
+												aria-label="Close"
+											>
+												No
+											</button>
+											<button
+												type="button"
+												class="oqtane-btn oqtane-btn__primary modal-button"
+											>
+												Yes
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
 			<!-- Modal Start-->
 			<div
 				class="modal fade vr-modal"
@@ -844,142 +910,137 @@
 					</div>
 				</div>
 			</div>
-			<!--Modal End-->
 
 			<!-- Modal Start-->
-		<div class="modal edit fade" id="addAnswerType" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-			<div class="modal-dialog w-100 m-0" role="document">
-				<div class="modal-content">
-					<div class="modal-header d-flex align-item-center">
-						<div class="d-flex w-100 align-item-center justify-content-space-between pe-40">
-							<h4 class="fs-24 lh-36 text-left" id="myModalLabel">
-								Add Offer Product
-							</h4>
+			<div
+				class="modal edit fade"
+				id="addAnswerType"
+				tabindex="-1"
+				role="dialog"
+				aria-labelledby="myModalLabel"
+			>
+				<div class="modal-dialog w-100 m-0" role="document">
+					<div class="modal-content">
+						<div class="modal-header d-flex align-item-center">
+							<div
+								class="d-flex w-100 align-item-center justify-content-space-between pe-40"
+							>
+								<h4 class="fs-24 lh-36 text-left" id="myModalLabel">
+									Add Offer Product
+								</h4>
+							</div>
+							<button
+								type="button"
+								class="close-btn"
+								data-bs-dismiss="modal"
+								aria-label="Close"
+							>
+								<span class="icon-cross text-black" aria-hidden="true"></span>
+							</button>
 						</div>
-						<button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close">
-							<span class="icon-cross text-black" aria-hidden="true"></span>
-						</button>
-					</div>
-					<div class="modal-body mt-32">
-						<div class="modal-body--wrapper modal-body--wrapper-alt mt-20">
-							<div class="d-flex justify-content-center mb-4">
-								<div class="oqtane-search position-relative max-width">
-									<input class="oqtane-search__input oqtane-search__input-alt" type="text"
-										placeholder="Search" />
-									<i class="icon-search oqtane-search__input-alt__icon"></i>
+						<div class="modal-body mt-32">
+							<div class="modal-body--wrapper modal-body--wrapper-alt mt-20">
+								<div class="d-flex justify-content-center mb-4">
+									<div class="oqtane-search position-relative max-width">
+										<input
+											class="oqtane-search__input oqtane-search__input-alt"
+											type="text"
+											placeholder="Search"
+										/>
+										<i class="icon-search oqtane-search__input-alt__icon"></i>
+									</div>
 								</div>
-							</div>
-							<div class="order__table order__table--alt  mt-20">
+								<div class="order__table order__table--alt mt-20">
+									<div class="order__table__info-text">
+										<label class="fs-12 fw-400 text-grey-3">Product Name</label>
+									</div>
 
-								<div class="order__table__info-text">
-									<label class="fs-12 fw-400 text-grey-3">Product Name</label>
-									
+									<div class="order__table__info-text">
+										<label class="fs-12 fw-400 text-grey-3">Strength</label>
+									</div>
+
+									<div class="order__table__info-text">
+										<label class="fs-12 fw-400 text-grey-3"
+											>Product Quantity</label
+										>
+									</div>
+
+									<div class="order__table__info-text">
+										<label class="fs-12 fw-400 text-grey-3">Price</label>
+									</div>
 								</div>
+								<div class="order__table order__table--alt mt-20">
+									<div class="order__table__info-text">
+										<p>Cagrilintide</p>
+									</div>
 
-
-
-								<div class="order__table__info-text">
-									<label class="fs-12 fw-400 text-grey-3">Strength</label>
-										
-								</div>
-
-
-
-								<div class="order__table__info-text">
-									<label class="fs-12 fw-400 text-grey-3">Product Quantity</label>
-										
-								</div>
-
-
-
-								<div class="order__table__info-text">
-									<label class="fs-12 fw-400 text-grey-3">Price</label>
-								</div>
-
-							</div>
-							<div class="order__table order__table--alt  mt-20">
-
-								<div class="order__table__info-text">
-									
-									<p>Cagrilintide</p>
-								</div>
-
-
-
-								<div class="order__table__info-text">
-									
+									<div class="order__table__info-text">
 										<p>10mg</p>
-								</div>
+									</div>
 
-
-
-								<div class="order__table__info-text">
-									
+									<div class="order__table__info-text">
 										<div class="oqtane-search">
-											<input class="oqtane-search__input-text text-center" type="text"
-												placeholder="2" />
+											<input
+												class="oqtane-search__input-text text-center"
+												type="text"
+												placeholder="2"
+											/>
 										</div>
-								</div>
+									</div>
 
-
-
-								<div class="order__table__info-text">
-									
+									<div class="order__table__info-text">
 										<p>$450</p>
+									</div>
 								</div>
+								<div class="order__table order__table--alt mt-4">
+									<div class="order__table__info-text">
+										<p>BPC-157</p>
+									</div>
 
-							</div>
-							<div class="order__table order__table--alt  mt-4">
+									<div class="order__table__info-text">
+										<p>5mg</p>
+									</div>
 
-								<div class="order__table__info-text">
-									<p>BPC-157</p>
-								</div>
+									<div class="order__table__info-text">
+										<div class="oqtane-search">
+											<input
+												class="oqtane-search__input-text"
+												type="text"
+												placeholder="2"
+											/>
+										</div>
+									</div>
 
-
-
-								<div class="order__table__info-text">
-									<p>5mg</p>
-								</div>
-
-
-
-								<div class="order__table__info-text">
-									<div class="oqtane-search">
-										<input class="oqtane-search__input-text" type="text" placeholder="2" />
+									<div class="order__table__info-text">
+										<p>$475</p>
 									</div>
 								</div>
 
-
-
-								<div class="order__table__info-text">
-									<p>$475</p>
-								</div>
-
-							</div>
-
-							<div class="row order__table order__table--alt ">
-
-								<div class="answer-type__actions justify-content-center">
-									<div class="mt-20 d-md-flex gap-20">
-										<button type="button"
-											class="oqtane-btn oqtane-btn__primary--outline modal-button"
-											data-bs-dismiss="modal" aria-label="Close">
-											Cancel
-										</button>
-										<button type="button" class="oqtane-btn oqtane-btn__primary modal-button ml-20">
-											Confirm
-										</button>
+								<div class="row order__table order__table--alt">
+									<div class="answer-type__actions justify-content-center">
+										<div class="mt-20 d-md-flex gap-20">
+											<button
+												type="button"
+												class="oqtane-btn oqtane-btn__primary--outline modal-button"
+												data-bs-dismiss="modal"
+												aria-label="Close"
+											>
+												Cancel
+											</button>
+											<button
+												type="button"
+												class="oqtane-btn oqtane-btn__primary modal-button ml-20"
+											>
+												Confirm
+											</button>
+										</div>
 									</div>
 								</div>
 							</div>
+							<!-- <hr class="bg-border-color" /> -->
 						</div>
-						<!-- <hr class="bg-border-color" /> -->
-					</div>
 
-
-					<div class="modal-body--wrapper modal-body--wrapper__max-width mt-20">
-
-
+						<!-- <div class="modal-body--wrapper modal-body--wrapper__max-width mt-20"> -->
 
 						<!-- <div class="radio-group mb-20">
 								<p class="radio-group__label">Refund Type</p>
@@ -1034,189 +1095,6 @@
 									</div>
 								</div>
 							</div> -->
-					</div>
-				</div>
-			</div>
-			<!--Modal End-->
-
-			<!-- Modal Start-->
-			<div
-				class="modal edit fade"
-				id="addAnswerType"
-				tabindex="-1"
-				role="dialog"
-				aria-labelledby="myModalLabel"
-			>
-				<div class="modal-dialog modal-xl m-0" role="document">
-					<div class="modal-content">
-						<div class="modal-header d-flex align-item-center">
-							<div
-								class="d-flex w-100 align-item-center justify-content-space-between pe-40"
-							>
-								<h4 class="fs-24 lh-36 text-left" id="myModalLabel">
-									Refund
-								</h4>
-							</div>
-							<button
-								type="button"
-								class="close-btn"
-								data-bs-dismiss="modal"
-								aria-label="Close"
-							>
-								<span class="icon-cross text-black" aria-hidden="true"></span>
-							</button>
-						</div>
-						<div class="modal-body mt-32">
-							<div class="modal-body--wrapper modal-body--wrapper mt-20">
-								<div class="oqtane-simple-card">
-									<p class="fs-22 fw-600">Product Information:</p>
-
-									<div class="row order__table mt-0">
-										<div class="col-md-3">
-											<div class="order__table__info-text">
-												<label class="fs-12 fw-400 text-grey-3"
-													>Drug Nam:</label
-												>
-												<p>Kyzartrex</p>
-											</div>
-										</div>
-										<div class="col-md-3">
-											<div class="order__table__info-text">
-												<label class="fs-12 fw-400 text-grey-3">Type:</label>
-												<p>Product Type</p>
-											</div>
-										</div>
-
-										<div class="col-md-3">
-											<div class="order__table__info-text">
-												<label class="fs-12 fw-400 text-grey-3">Category</label>
-												<p>Weight Loss</p>
-											</div>
-										</div>
-
-										<div class="col-md-3">
-											<div class="order__table__info-text">
-												<label class="fs-12 fw-400 text-grey-3"
-													>Quantity:</label
-												>
-												<p>1</p>
-											</div>
-										</div>
-
-										<div class="col-md-3">
-											<div class="order__table__info-text">
-												<label class="fs-12 fw-400 text-grey-3">Price</label>
-												<p>Rx-12548</p>
-											</div>
-										</div>
-
-										<div class="col-md-3">
-											<div class="order__table__info-text">
-												<label class="fs-12 fw-400 text-grey-3"
-													>Refill Course</label
-												>
-												<p>www.Rx.com</p>
-											</div>
-										</div>
-
-										<div class="col-md-3">
-											<div class="order__table__info-text">
-												<label class="fs-12 fw-400 text-grey-3"
-													>Refill Interval</label
-												>
-												<p>Squeeze Bottle</p>
-											</div>
-										</div>
-
-										<div class="col-md-3">
-											<div class="order__table__info-text">
-												<label class="fs-12 fw-400 text-grey-3">State:</label>
-												<p>14-22584-22</p>
-											</div>
-										</div>
-									</div>
-								</div>
-								<hr class="bg-border-color" />
-							</div>
-
-							<div
-								class="modal-body--wrapper modal-body--wrapper__max-width mt-20"
-							>
-								<div class="radio-group mb-20">
-									<p class="radio-group__label">Refund Type</p>
-
-									<div class="radio-group__inputs">
-										<label class="custom-radio">
-											<span class="custom-radio__input">
-												<input name="refundType" type="radio" />
-												<span></span>
-											</span>
-
-											<span class="custom-radio__label">Custom</span>
-										</label>
-
-										<label class="custom-radio">
-											<span class="custom-radio__input">
-												<input name="refundType" type="radio" checked />
-												<span></span>
-											</span>
-
-											<span class="custom-radio__label">Full</span>
-										</label>
-									</div>
-								</div>
-								<div class="custom-input custom-input--with-icon">
-									<label class="custom-input__inner custom-input__inner-number">
-										<input
-											type="number"
-											class="custom-input__control"
-											placeholder=" "
-										/>
-										<span class="custom-input__label">Refund Amount</span>
-										<span class="custom-input__suffix"
-											><i class="icon-dollar"></i
-										></span>
-									</label>
-								</div>
-
-								<div class="custom-input custom-input--textarea mt-16">
-									<label
-										class="custom-input__inner custom-input__inner--textarea"
-									>
-										<textarea
-											type="text"
-											class="custom-input__control custom-input__control--textarea"
-											placeholder=" "
-										></textarea>
-										<span class="custom-input__label">Refund Reason</span>
-									</label>
-								</div>
-
-								<div class="answer-type mt-40">
-									<!-- <h3 class="answer-type__title">Select Answer Type</h3> -->
-									<div class="answer-type__actions justify-content-center">
-										<div class="">
-											<button
-												type="button"
-												class="oqtane-btn oqtane-btn__primary--outline modal-button"
-												data-bs-dismiss="modal"
-												aria-label="Close"
-											>
-												Cancel
-											</button>
-											<button
-												type="button"
-												class="oqtane-btn oqtane-btn__primary modal-button"
-												data-bs-toggle="modal"
-												data-bs-target="#refundModal"
-											>
-												Submit
-											</button>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
 					</div>
 				</div>
 			</div>
