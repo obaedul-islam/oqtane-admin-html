@@ -14,16 +14,21 @@
 		&__info-text {
 			width: 330px;
 		}
-		&--alt{
+
+		&--alt {
 			display: flex;
-			justify-content: space-between;
+			justify-content: center;
 			align-items: center;
-			gap: 100px;
-			.order__table__info-text{
-				width: unset;
+
+			.order__table__info-text {
+				width: 170px;
+
+				&:last-child {
+					width: 100px;
+				}
 			}
 		}
-		
+
 	}
 
 	&__label {
