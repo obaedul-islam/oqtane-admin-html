@@ -8,20 +8,22 @@
 	}
 
 	&__table {
-		display: flex;
-		justify-content: space-between;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
 
 		&__info-text {
 			width: 330px;
 		}
 		&--alt{
-			// justify-content: center;
+			display: flex;
+			justify-content: space-between;
 			align-items: center;
 			gap: 100px;
 			.order__table__info-text{
 				width: unset;
 			}
 		}
+		
 	}
 
 	&__label {
@@ -115,7 +117,8 @@
 		padding-bottom: 50px;
 
 		&__table {
-			display: flex;
+
+			grid-template-columns: repeat(2, 1fr);
 
 
 			&__info-text {
@@ -155,7 +158,7 @@
 @media all and (max-width: 768px) {
 	.order {
 		&__table {
-			flex-direction: column;
+			grid-template-columns: repeat(1, 1fr);
 
 			&__info-text {
 
