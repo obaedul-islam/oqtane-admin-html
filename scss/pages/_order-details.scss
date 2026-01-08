@@ -10,6 +10,20 @@
 	&__table {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
+
+		&__info-text {
+			width: 330px;
+		}
+		&--alt{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			gap: 100px;
+			.order__table__info-text{
+				width: unset;
+			}
+		}
+		
 	}
 
 	&__label {
