@@ -1,581 +1,674 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-		<title>Dashboard</title>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-		<link
-			rel="stylesheet"
-			href="./../vendors/bootstrap/css/bootstrap.min.css"
-		/>
-		<link
-			rel="stylesheet"
-			href="./../vendors/bootstrap-datetimepicker/bootstrap-datetimepicker.css"
-		/>
-		<link rel="stylesheet" href="./../icons/style.css" />
+	<title>Dashboard</title>
 
-		<link rel="stylesheet" href="./../css/styles.css" />
+	<link rel="stylesheet" href="./../vendors/bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="./../vendors/bootstrap-datetimepicker/bootstrap-datetimepicker.css" />
+	<link rel="stylesheet" href="./../icons/style.css" />
 
-		<!--[if lt IE 9]>
+	<link rel="stylesheet" href="./../css/styles.css" />
+
+	<!--[if lt IE 9]>
 			<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
-	</head>
+</head>
 
-	<body>
-		<div class="dashboard">
-			<header class="header">
-				<nav class="menubar">
-					<a href="#" class="menubar__brand">
-						<img src="./../img/logo.svg" alt="Logo" class="menubar__logo" />
+<body>
+	<div class="dashboard">
+		<header class="header">
+			<nav class="menubar">
+				<a href="#" class="menubar__brand">
+					<img src="./../img/logo.svg" alt="Logo" class="menubar__logo" />
+				</a>
+
+				<div class="menubar__items">
+					<a class="menubar__item" href="#">
+						<i class="icon-message menubar__icon"></i>
+						<span class="menubar__badge"></span>
+					</a>
+					<a class="menubar__item" href="#">
+						<i class="icon-notification menubar__icon"></i>
+						<span class="menubar__badge"></span>
 					</a>
 
-					<div class="menubar__items">
-						<a class="menubar__item" href="#">
-							<i class="icon-message menubar__icon"></i>
-							<span class="menubar__badge"></span>
-						</a>
-						<a class="menubar__item" href="#">
-							<i class="icon-notification menubar__icon"></i>
-							<span class="menubar__badge"></span>
-						</a>
+					<div class="dropdown menubar__dropdown">
+						<button class="user dropdown-toggle" type="button" id="menu-dropdown" data-toggle="dropdown"
+							aria-haspopup="true" aria-expanded="false">
+							<img class="user__avatar" src="./../img/user.png" alt="avatar" />
 
-						<div class="dropdown menubar__dropdown">
-							<button
-								class="user dropdown-toggle"
-								type="button"
-								id="menu-dropdown"
-								data-toggle="dropdown"
-								aria-haspopup="true"
-								aria-expanded="false"
-							>
-								<img
-									class="user__avatar"
-									src="./../img/user.png"
-									alt="avatar"
-								/>
-
-								<div class="user__info">
-									<p class="user__name fs-18 lh-100 text-dark">David Wayne</p>
-									<p class="user__role fs-14 lh-100 text-grey-3">Super Admin</p>
-								</div>
-
-								<i class="icon-down_arrow"></i>
-							</button>
-							<ul class="dropdown-menu" aria-labelledby="menu-dropdown">
-								<li><a href="#">Action</a></li>
-								<li><a href="#">Another action</a></li>
-								<li><a href="#">Something else here</a></li>
-							</ul>
-						</div>
-					</div>
-				</nav>
-			</header>
-
-			<main class="main">
-				<aside class="sidebar">
-					<ul class="sidebar__items">
-						<li class="sidebar__item">
-							<a href="./dashboard.html" class="sidebar__link">
-								<i class="icon-dashboard sidebar__icon"></i>
-								<span class="sidebar__text">Dashboard</span>
-							</a>
-						</li>
-						<li class="sidebar__item">
-							<a href="./product-list.html" class="sidebar__link">
-								<i class="icon-tablet sidebar__icon"></i>
-								<span class="sidebar__text">Product List</span>
-							</a>
-						</li>
-						<li class="sidebar__item">
-							<a href="./order-details.html" class="sidebar__link">
-								<i class="icon-order-list sidebar__icon"></i>
-								<span class="sidebar__text">Order List</span>
-							</a>
-						</li>
-						<li class="sidebar__item">
-							<a href="./product-list.html" class="sidebar__link">
-								<i class="icon-product_list sidebar__icon"></i>
-								<span class="sidebar__text">Package List</span>
-							</a>
-						</li>
-						<li class="sidebar__item">
-							<a href="./product-list.html" class="sidebar__link">
-								<i class="icon-intake_form sidebar__icon"></i>
-								<span class="sidebar__text">Patient List</span>
-							</a>
-						</li>
-						<li class="sidebar__item">
-							<a href="./promo-code-list.html" class="sidebar__link">
-								<i class="icon-promo-code sidebar__icon"></i>
-								<span class="sidebar__text">Promo Code</span>
-							</a>
-						</li>
-						<li class="sidebar__item">
-							<a
-								href="./intake-form-list.html"
-								class="sidebar__link sidebar__link--active"
-							>
-								<i class="icon-intake_form sidebar__icon"></i>
-								<span class="sidebar__text">Intake Form</span>
-							</a>
-						</li>
-						<li class="sidebar__item">
-							<a href="./intake-form-list.html" class="sidebar__link">
-								<i class="icon-sales-associate sidebar__icon"></i>
-								<span class="sidebar__text">Sales Associate</span>
-							</a>
-						</li>
-						<li class="sidebar__item">
-							<a href="./question-list.html" class="sidebar__link">
-								<i class="icon-questions sidebar__icon"></i>
-								<span class="sidebar__text">Questions</span>
-							</a>
-						</li>
-						<li class="sidebar__item">
-							<a href="#" class="sidebar__link">
-								<i class="icon-settings sidebar__icon"></i>
-								<span class="sidebar__text">Settings</span>
-							</a>
-						</li>
-					</ul>
-
-					<button type="button" class="sidebar__toggle">
-						<i class="icon-left-arrow"></i>
-					</button>
-				</aside>
-
-				<div class="tw-main__content">
-					<div class="content">
-						<div class="actionbar">
-							<div class="actionbar__title breadcrumb mb-0">
-								<p class="text-uppercase fs-20 mb-0 fw-600 lh-150">
-									<a href="#" class="actionbar__inactive">Order List</a>
-									<a href="order-details.html" class="text-primary"
-										>Order DETAILS (Order By Website)</a
-									>
-								</p>
+							<div class="user__info">
+								<p class="user__name fs-18 lh-100 text-dark">David Wayne</p>
+								<p class="user__role fs-14 lh-100 text-grey-3">Super Admin</p>
 							</div>
 
-							<div class="actionbar__actions">
-								<div class="oqtane-search">
+							<i class="icon-down_arrow"></i>
+						</button>
+						<ul class="dropdown-menu" aria-labelledby="menu-dropdown">
+							<li><a href="#">Action</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
+
+		<main class="main">
+			<aside class="sidebar">
+				<ul class="sidebar__items">
+					<li class="sidebar__item">
+						<a href="./dashboard.html" class="sidebar__link">
+							<i class="icon-dashboard sidebar__icon"></i>
+							<span class="sidebar__text">Dashboard</span>
+						</a>
+					</li>
+					<li class="sidebar__item">
+						<a href="./product-list.html" class="sidebar__link">
+							<i class="icon-tablet sidebar__icon"></i>
+							<span class="sidebar__text">Product List</span>
+						</a>
+					</li>
+					<li class="sidebar__item">
+						<a href="./order-details.html" class="sidebar__link">
+							<i class="icon-order-list sidebar__icon"></i>
+							<span class="sidebar__text">Order List</span>
+						</a>
+					</li>
+					<li class="sidebar__item">
+						<a href="./product-list.html" class="sidebar__link">
+							<i class="icon-product_list sidebar__icon"></i>
+							<span class="sidebar__text">Package List</span>
+						</a>
+					</li>
+					<li class="sidebar__item">
+						<a href="./product-list.html" class="sidebar__link">
+							<i class="icon-intake_form sidebar__icon"></i>
+							<span class="sidebar__text">Patient List</span>
+						</a>
+					</li>
+					<li class="sidebar__item">
+						<a href="./promo-code-list.html" class="sidebar__link">
+							<i class="icon-promo-code sidebar__icon"></i>
+							<span class="sidebar__text">Promo Code</span>
+						</a>
+					</li>
+					<li class="sidebar__item">
+						<a href="./intake-form-list.html" class="sidebar__link sidebar__link--active">
+							<i class="icon-intake_form sidebar__icon"></i>
+							<span class="sidebar__text">Intake Form</span>
+						</a>
+					</li>
+					<li class="sidebar__item">
+						<a href="./intake-form-list.html" class="sidebar__link">
+							<i class="icon-sales-associate sidebar__icon"></i>
+							<span class="sidebar__text">Sales Associate</span>
+						</a>
+					</li>
+					<li class="sidebar__item">
+						<a href="./question-list.html" class="sidebar__link">
+							<i class="icon-questions sidebar__icon"></i>
+							<span class="sidebar__text">Questions</span>
+						</a>
+					</li>
+					<li class="sidebar__item">
+						<a href="#" class="sidebar__link">
+							<i class="icon-settings sidebar__icon"></i>
+							<span class="sidebar__text">Settings</span>
+						</a>
+					</li>
+				</ul>
+
+				<button type="button" class="sidebar__toggle">
+					<i class="icon-left-arrow"></i>
+				</button>
+			</aside>
+
+			<div class="tw-main__content">
+				<div class="content">
+					<div class="actionbar">
+						<div class="actionbar__title breadcrumb mb-0">
+							<p class="text-uppercase fs-20 mb-0 fw-600 lh-150">
+								<a href="#" class="actionbar__inactive">Order List</a>
+								<a href="order-details.html" class="text-primary">Order DETAILS (Order By Website)</a>
+							</p>
+						</div>
+
+						<div class="actionbar__actions">
+							<!-- <div class="oqtane-search">
 									<input
 										class="oqtane-search__input"
 										type="text"
 										placeholder="Search"
 									/>
 									<i class="icon-search oqtane-search__icon"></i>
-								</div>
-							</div>
+								</div> -->
+							<button class="oqtane-btn oqtane-btn__primary--outline mr-3" data-bs-toggle="modal"
+								data-bs-target="#addAnswerType" type="button">
+								Reject Offer
+							</button>
+							<button class="oqtane-btn oqtane-btn__primary" type="button">
+								Add Offer Product
+							</button>
 						</div>
+					</div>
 
-						<div class="oqtane-card list-card">
-							<div class="oqtane-card__header">
-								<h3>Order Details</h3>
-							</div>
-							<div class="oqtane-card__body">
-								<h2 class="fw-700">Order ID: #HV125</h2>
-								<div class="oqtane-simple-card">
-									<p class="fs-22 fw-600">Order Status:</p>
+					<div class="oqtane-card list-card">
+						<div class="oqtane-card__header">
+							<h3>Order Details</h3>
+						</div>
+						<div class="oqtane-card__body">
+							<h2 class="fw-700">Order ID: #HV125</h2>
+							<div class="oqtane-simple-card">
+								<p class="fs-22 fw-600">Order Status:</p>
 
-									<div class="order">
-										<div class="order__info">
-											<p class="order__label">
-												Date: <span class="fw-400">12/28/2024</span>
-											</p>
-											<p class="order__label">
-												Medicine Name: <span class="fw-400">Kyzartrex</span>
-											</p>
-											<p class="order__label">
-												Order ID:<span class="fw-400">#7387</span>
-											</p>
-											<p class="order__label">
-												Tracking ID:<span class="fw-400">#7387</span>
-											</p>
-										</div>
-										<div class="order__status">
-											<div class="order__track">
-												<div class="tracker">
-													<span class="tracker__single active"></span>
-													<span class="tracker__single"></span>
-													<!-- <span class="tracker__single"></span> -->
-													<span class="tracker__single"></span>
-													<span class="tracker__single"></span>
-												</div>
-												<div class="order__step active">
-													<span class="order__step-label active">Received</span>
-												</div>
-												<div class="order__step active">
-													<span class="order__step-label active"
-														>Processing</span
-													>
-												</div>
-												<div class="order__step">
-													<span class="order__step-label"
-														>Awaiting Shipment</span
-													>
-												</div>
-												<div class="order__step">
-													<span class="order__step-label">Shipped</span>
-													<a
-														class="order__step-label order__step-label--bottom"
-														style="text-decoration: underline; font-size: 15px"
-														target="_blank"
-														>Track_ID_HG-003</a
-													>
-												</div>
+								<div class="order">
+									<div class="order__info">
+										<p class="order__label">
+											Date: <span class="fw-400">12/28/2024</span>
+										</p>
+										<p class="order__label">
+											Medicine Name: <span class="fw-400">Kyzartrex</span>
+										</p>
+										<p class="order__label">
+											Order ID:<span class="fw-400">#7387</span>
+										</p>
+										<p class="order__label">
+											Tracking ID:<span class="fw-400">#7387</span>
+										</p>
+									</div>
+									<div class="order__status">
+										<div class="order__track">
+											<div class="tracker">
+												<span class="tracker__single active"></span>
+												<span class="tracker__single"></span>
+												<!-- <span class="tracker__single"></span> -->
+												<span class="tracker__single"></span>
+												<span class="tracker__single"></span>
+											</div>
+											<div class="order__step active">
+												<span class="order__step-label active">Received</span>
+											</div>
+											<div class="order__step active">
+												<span class="order__step-label active">Processing</span>
+											</div>
+											<div class="order__step">
+												<span class="order__step-label">Awaiting Shipment</span>
+											</div>
+											<div class="order__step">
+												<span class="order__step-label">Shipped</span>
+												<a class="order__step-label order__step-label--bottom"
+													style="text-decoration: underline; font-size: 15px"
+													target="_blank">Track_ID_HG-003</a>
+											</div>
 
-												<div class="order__step">
-													<span class="order__step-label">Delivered</span>
-												</div>
+											<div class="order__step">
+												<span class="order__step-label">Delivered</span>
 											</div>
 										</div>
 									</div>
 								</div>
+							</div>
 
-								<div class="oqtane-simple-card">
-									<p class="fs-22 fw-600">Prescriber details:</p>
+							<div class="oqtane-simple-card">
+								<p class="fs-22 fw-600">Prescriber details:</p>
 
-									<div class="order__table mt-0">
-										<div class="order__table__info-text">
-											<label class="fs-12 fw-400 text-grey-3">Name:</label>
-											<p>James Smith</p>
-										</div>
-										<div class="order__table__info-text">
-											<label class="fs-12 fw-400 text-grey-3">DEA:</label>
-											<p>BB1234563</p>
-										</div>
-										<div class="order__table__info-text">
-											<label class="fs-12 fw-400 text-grey-3">NPI:</label>
-											<p>1635489225</p>
-										</div>
-										<div class="order__table__info-text">
-											<label class="fs-12 fw-400 text-grey-3">Specialty:</label>
-											<p>-</p>
-										</div>
+								<div class="order__table mt-0">
+									<div class="order__table__info-text">
+										<label class="fs-12 fw-400 text-grey-3">Name:</label>
+										<p>James Smith</p>
+									</div>
+									<div class="order__table__info-text">
+										<label class="fs-12 fw-400 text-grey-3">DEA:</label>
+										<p>BB1234563</p>
+									</div>
+									<div class="order__table__info-text">
+										<label class="fs-12 fw-400 text-grey-3">NPI:</label>
+										<p>1635489225</p>
+									</div>
+									<div class="order__table__info-text">
+										<label class="fs-12 fw-400 text-grey-3">Specialty:</label>
+										<p>-</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="oqtane-simple-card">
+								<p class="fs-22 fw-600">Patient details:</p>
+
+								<div class="order__table mt-0">
+									<div class="order__table__info-text">
+										<label class="fs-12 fw-400 text-grey-3">Name:</label>
+										<p>James Smith</p>
+									</div>
+									<div class="order__table__info-text">
+										<label class="fs-12 fw-400 text-grey-3">Gender:</label>
+										<p>Male</p>
+									</div>
+									<div class="order__table__info-text">
+										<label class="fs-12 fw-400 text-grey-3">Cell Number:</label>
+										<p>+111-2458-22</p>
+									</div>
+									<div class="order__table__info-text">
+										<label class="fs-12 fw-400 text-grey-3">Email:</label>
+										<p>jamesmsith@gmail.com</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="oqtane-simple-card">
+								<p class="fs-22 fw-600">Order details:</p>
+
+								<div class="order__table mt-0">
+									<div class="order__table__info-text">
+										<label class="fs-12 fw-400 text-grey-3">Drug Name:</label>
+										<p>#hv_245789</p>
+									</div>
+									<div class="order__table__info-text">
+										<label class="fs-12 fw-400 text-grey-3">Transaction Date:</label>
+										<p>dd/mm/yy</p>
+									</div>
+									<div class="order__table__info-text">
+										<label class="fs-12 fw-400 text-grey-3">RPH Initials:</label>
+										<p>David Watson</p>
+									</div>
+									<div class="order__table__info-text">
+										<label class="fs-12 fw-400 text-grey-3">Pharmacy Receive Date:</label>
+										<p>dd/mm/yy</p>
 									</div>
 								</div>
 
-								<div class="oqtane-simple-card">
-									<p class="fs-22 fw-600">Patient details:</p>
-
-									<div class="order__table mt-0">
-										<div class="order__table__info-text">
-											<label class="fs-12 fw-400 text-grey-3">Name:</label>
-											<p>James Smith</p>
-										</div>
-										<div class="order__table__info-text">
-											<label class="fs-12 fw-400 text-grey-3">Gender:</label>
-											<p>Male</p>
-										</div>
-										<div class="order__table__info-text">
-											<label class="fs-12 fw-400 text-grey-3"
-												>Cell Number:</label
-											>
-											<p>+111-2458-22</p>
-										</div>
-										<div class="order__table__info-text">
-											<label class="fs-12 fw-400 text-grey-3">Email:</label>
-											<p>jamesmsith@gmail.com</p>
-										</div>
+								<div class="order__table">
+									<div class="order__table__info-text">
+										<label class="fs-12 fw-400 text-grey-3">Rx Number:</label>
+										<p>Rx-12548</p>
+									</div>
+									<div class="order__table__info-text">
+										<label class="fs-12 fw-400 text-grey-3">Rx Source:</label>
+										<p>www.Rx.com</p>
+									</div>
+									<div class="order__table__info-text">
+										<label class="fs-12 fw-400 text-grey-3">Dispense Using:</label>
+										<p>Squeeze Bottle</p>
+									</div>
+									<div class="order__table__info-text">
+										<label class="fs-12 fw-400 text-grey-3">Fill Number:</label>
+										<p>14-22584-22</p>
 									</div>
 								</div>
 
-								<div class="oqtane-simple-card">
-									<p class="fs-22 fw-600">Order details:</p>
-
-									<div class="order__table mt-0">
-										<div class="order__table__info-text">
-											<label class="fs-12 fw-400 text-grey-3">Drug Name:</label>
-											<p>#hv_245789</p>
-										</div>
-										<div class="order__table__info-text">
-											<label class="fs-12 fw-400 text-grey-3"
-												>Transaction Date:</label
-											>
-											<p>dd/mm/yy</p>
-										</div>
-										<div class="order__table__info-text">
-											<label class="fs-12 fw-400 text-grey-3"
-												>RPH Initials:</label
-											>
-											<p>David Watson</p>
-										</div>
-										<div class="order__table__info-text">
-											<label class="fs-12 fw-400 text-grey-3"
-												>Pharmacy Receive Date:</label
-											>
-											<p>dd/mm/yy</p>
-										</div>
+								<div class="order__table">
+									<div class="order__table__info-text">
+										<label class="fs-12 fw-400 text-grey-3">Fill Date:</label>
+										<p>dd/mm/yy</p>
 									</div>
-
-									<div class="order__table">
-										<div class="order__table__info-text">
-											<label class="fs-12 fw-400 text-grey-3">Rx Number:</label>
-											<p>Rx-12548</p>
-										</div>
-										<div class="order__table__info-text">
-											<label class="fs-12 fw-400 text-grey-3">Rx Source:</label>
-											<p>www.Rx.com</p>
-										</div>
-										<div class="order__table__info-text">
-											<label class="fs-12 fw-400 text-grey-3"
-												>Dispense Using:</label
-											>
-											<p>Squeeze Bottle</p>
-										</div>
-										<div class="order__table__info-text">
-											<label class="fs-12 fw-400 text-grey-3"
-												>Fill Number:</label
-											>
-											<p>14-22584-22</p>
-										</div>
+									<div class="order__table__info-text">
+										<label class="fs-12 fw-400 text-grey-3">Written Date:</label>
+										<p>dd/mm/yy</p>
 									</div>
-
-									<div class="order__table">
-										<div class="order__table__info-text">
-											<label class="fs-12 fw-400 text-grey-3">Fill Date:</label>
-											<p>dd/mm/yy</p>
-										</div>
-										<div class="order__table__info-text">
-											<label class="fs-12 fw-400 text-grey-3"
-												>Written Date:</label
-											>
-											<p>dd/mm/yy</p>
-										</div>
-										<div class="order__table__info-text">
-											<label class="fs-12 fw-400 text-grey-3">Fill Time:</label>
-											<p>14 August, 2024</p>
-										</div>
-										<div class="order__table__info-text">
-											<label class="fs-12 fw-400 text-grey-3"
-												>Refill Exp. Date:</label
-											>
-											<p>dd/mm/yy</p>
-										</div>
+									<div class="order__table__info-text">
+										<label class="fs-12 fw-400 text-grey-3">Fill Time:</label>
+										<p>14 August, 2024</p>
 									</div>
-
-									<div class="order__table">
-										<div class="order__table__info-text">
-											<label class="fs-12 fw-400 text-grey-3"
-												>Prescriber Sent Date:</label
-											>
-											<p>dd/mm/yy</p>
-										</div>
-										<div class="order__table__info-text">
-											<label class="fs-12 fw-400 text-grey-3"
-												>Item UPC Code:</label
-											>
-											<p>#er-30257</p>
-										</div>
-										<div class="order__table__info-text">
-											<label class="fs-12 fw-400 text-grey-3"
-												>LOT Number:</label
-											>
-											<p>30256</p>
-										</div>
-										<div class="order__table__info-text">
-											<label class="fs-12 fw-400 text-grey-3"
-												>Rx Serial Number:</label
-											>
-											<p>Txi57s0</p>
-										</div>
-									</div>
-
-									<div class="order__table">
-										<div class="order__table__info-text">
-											<label class="fs-12 fw-400 text-grey-3">Retail:</label>
-											<p>#RT-1020</p>
-										</div>
-										<div class="order__table__info-text">
-											<label class="fs-12 fw-400 text-grey-3">Billed:</label>
-											<p>$320</p>
-										</div>
-										<div class="order__table__info-text">
-											<label class="fs-12 fw-400 text-grey-3">Rx Mark:</label>
-											<p>-</p>
-										</div>
+									<div class="order__table__info-text">
+										<label class="fs-12 fw-400 text-grey-3">Refill Exp. Date:</label>
+										<p>dd/mm/yy</p>
 									</div>
 								</div>
 
-								<div class="oqtane-simple-card">
-									<p class="fs-22 fw-600">Medicine Information:</p>
+								<div class="order__table">
+									<div class="order__table__info-text">
+										<label class="fs-12 fw-400 text-grey-3">Prescriber Sent Date:</label>
+										<p>dd/mm/yy</p>
+									</div>
+									<div class="order__table__info-text">
+										<label class="fs-12 fw-400 text-grey-3">Item UPC Code:</label>
+										<p>#er-30257</p>
+									</div>
+									<div class="order__table__info-text">
+										<label class="fs-12 fw-400 text-grey-3">LOT Number:</label>
+										<p>30256</p>
+									</div>
+									<div class="order__table__info-text">
+										<label class="fs-12 fw-400 text-grey-3">Rx Serial Number:</label>
+										<p>Txi57s0</p>
+									</div>
+								</div>
 
-									<div class="order__table mt-0">
+								<div class="order__table">
+									<div class="order__table__info-text">
+										<label class="fs-12 fw-400 text-grey-3">Retail:</label>
+										<p>#RT-1020</p>
+									</div>
+									<div class="order__table__info-text">
+										<label class="fs-12 fw-400 text-grey-3">Billed:</label>
+										<p>$320</p>
+									</div>
+									<div class="order__table__info-text">
+										<label class="fs-12 fw-400 text-grey-3">Rx Mark:</label>
+										<p>-</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="oqtane-simple-card">
+								<p class="fs-22 fw-600">Medicine Information:</p>
+
+								<div class="order__table mt-0">
+									<div class="order__table__info-text">
+										<label class="fs-12 fw-400 text-grey-3">Drug Name</label>
+										<p>Kyzartrex</p>
+									</div>
+									<div class="order__table__info-text">
+										<label class="fs-12 fw-400 text-grey-3">Type</label>
+										<p>dd/mm/yy</p>
+									</div>
+									<div class="order__table__info-text">
+										<label class="fs-12 fw-400 text-grey-3">Category</label>
+										<p>David Watson</p>
+									</div>
+									<div class="order__table__info-text">
+										<label class="fs-12 fw-400 text-grey-3">Quantity</label>
+										<p>dd/mm/yy</p>
+									</div>
+								</div>
+
+								<div class="order__table">
+									<div class="order__table__info-text">
+										<label class="fs-12 fw-400 text-grey-3">Price</label>
+										<p>12</p>
+									</div>
+									<div class="order__table__info-text">
+										<label class="fs-12 fw-400 text-grey-3">Refill Course</label>
+										<p>40</p>
+									</div>
+									<div class="order__table__info-text">
+										<label class="fs-12 fw-400 text-grey-3">Refill Interval</label>
+										<p>Squeeze Bottle</p>
+									</div>
+									<div class="order__table__info-text">
+										<label class="fs-12 fw-400 text-grey-3">State</label>
+										<p>Texas</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="oqtane-simple-card">
+								<p class="fs-22 fw-600">Document Information:</p>
+
+								<div class="order__table mt-0">
+									<div class="order__table__info-text">
+										<p class="fs-12 fw-400 text-grey-3">Prescription</p>
+										<button class="oqtane-btn oqtane-btn__link" type="button">
+											View
+										</button>
+									</div>
+									<div class="order__table__info-text">
+										<p class="fs-12 fw-400 text-grey-3">Lab Reports</p>
+										<button class="oqtane-btn oqtane-btn__link" type="button" data-toggle="modal"
+											data-target="#view-reports-modal">
+											View (5)
+										</button>
+									</div>
+									<div class="order__table__info-text">
+										<p class="fs-12 fw-400 text-grey-3">Driving License</p>
+										<button class="oqtane-btn oqtane-btn__link" type="button">
+											View
+										</button>
+									</div>
+									<div class="order__table__info-text">
+										<p class="fs-12 fw-400 text-grey-3">Intake Form:</p>
+										<button class="oqtane-btn oqtane-btn__link" type="button">
+											View
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<footer class="footer">
+			<div class="footer__content">
+				<div class="footer__links">
+					<a href="#">Terms of use</a><a href="#">Privacy Policy</a>
+				</div>
+				<p class="text-grey-3 fs-13">
+					Copyright &copy; 2024 Thrivewell. All rights reserved.
+				</p>
+			</div>
+		</footer>
+
+		<!-- Modal Start-->
+		<div class="modal fade vr-modal" id="view-reports-modal" tabindex="-1" role="dialog"
+			aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content overflow-h">
+					<div class="modal-header">
+						<h4 class="modal-title">Lab Reports</h4>
+
+						<button type="button" class="modal-close" data-dismiss="modal" aria-label="Close">
+							<i class="icon-cross"></i>
+						</button>
+					</div>
+					<div class="modal-body p-0">
+						<div class="list-table">
+							<div class="table-responsive">
+								<table class="table table-striped bb">
+									<thead>
+										<tr>
+											<th>Report Name</th>
+											<th>File Type</th>
+											<th>Details</th>
+										</tr>
+									</thead>
+
+									<tbody>
+										<tr>
+											<td>CVC Report</td>
+											<td class="text-uppercase">PDF</td>
+											<td>
+												<button type="button" class="oqtane-btn oqtane-btn__link">
+													View
+												</button>
+											</td>
+										</tr>
+
+										<tr>
+											<td>Biilirubin</td>
+											<td class="text-uppercase">jpg</td>
+											<td>
+												<button type="button" class="oqtane-btn oqtane-btn__link">
+													View
+												</button>
+											</td>
+										</tr>
+
+										<tr>
+											<td>Ammonia</td>
+											<td class="text-uppercase">png</td>
+											<td>
+												<button type="button" class="oqtane-btn oqtane-btn__link">
+													View
+												</button>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--Modal End-->
+
+		<!-- Modal Start-->
+		<div class="modal edit fade" id="addAnswerType" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog w-100 m-0" role="document">
+				<div class="modal-content">
+					<div class="modal-header d-flex align-item-center">
+						<div class="d-flex w-100 align-item-center justify-content-space-between pe-40">
+							<h4 class="fs-24 lh-36 text-left" id="myModalLabel">
+								Add Offer Product
+							</h4>
+						</div>
+						<button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close">
+							<span class="icon-cross text-black" aria-hidden="true"></span>
+						</button>
+					</div>
+					<div class="modal-body mt-32">
+						<div class="modal-body--wrapper modal-body--wrapper mt-20">
+							<div class="">
+								<div class="oqtane-search">
+								<input class="oqtane-search__input" type="text" placeholder="Search" />
+								<i class="icon-search oqtane-search__icon"></i>
+							</div>
+								<div class="row order__table mt-0">
+									<div class="col-md-3">
 										<div class="order__table__info-text">
-											<label class="fs-12 fw-400 text-grey-3">Drug Name</label>
-											<p>Kyzartrex</p>
+											<label class="fs-12 fw-400 text-grey-3">Product Name</label>
+											<p>Cagrilintide</p>
 										</div>
+									</div>
+									<div class="col-md-3">
 										<div class="order__table__info-text">
-											<label class="fs-12 fw-400 text-grey-3">Type</label>
-											<p>dd/mm/yy</p>
-										</div>
-										<div class="order__table__info-text">
-											<label class="fs-12 fw-400 text-grey-3">Category</label>
-											<p>David Watson</p>
-										</div>
-										<div class="order__table__info-text">
-											<label class="fs-12 fw-400 text-grey-3">Quantity</label>
-											<p>dd/mm/yy</p>
+											<label class="fs-12 fw-400 text-grey-3">Strength</label>
+											<p>10mg</p>
 										</div>
 									</div>
 
-									<div class="order__table">
+									<div class="col-md-3">
+										<div class="order__table__info-text">
+											<label class="fs-12 fw-400 text-grey-3">Product Quantity</label>
+											<div class="oqtane-search">
+												<input class="oqtane-search__input" type="text" placeholder="2" />
+											</div>	
+										</div>
+									</div>
+
+									<div class="col-md-3">
 										<div class="order__table__info-text">
 											<label class="fs-12 fw-400 text-grey-3">Price</label>
-											<p>12</p>
-										</div>
-										<div class="order__table__info-text">
-											<label class="fs-12 fw-400 text-grey-3"
-												>Refill Course</label
-											>
-											<p>40</p>
-										</div>
-										<div class="order__table__info-text">
-											<label class="fs-12 fw-400 text-grey-3"
-												>Refill Interval</label
-											>
-											<p>Squeeze Bottle</p>
-										</div>
-										<div class="order__table__info-text">
-											<label class="fs-12 fw-400 text-grey-3">State</label>
-											<p>Texas</p>
+											<p>$450</p>
 										</div>
 									</div>
-								</div>
 
-								<div class="oqtane-simple-card">
-									<p class="fs-22 fw-600">Document Information:</p>
-
-									<div class="order__table mt-0">
+									<div class="col-md-3">
 										<div class="order__table__info-text">
-											<p class="fs-12 fw-400 text-grey-3">Prescription</p>
-											<button class="oqtane-btn oqtane-btn__link" type="button">
-												View
-											</button>
-										</div>
-										<div class="order__table__info-text">
-											<p class="fs-12 fw-400 text-grey-3">Lab Reports</p>
-											<button
-												class="oqtane-btn oqtane-btn__link"
-												type="button"
-												data-toggle="modal"
-												data-target="#view-reports-modal"
-											>
-												View (5)
-											</button>
-										</div>
-										<div class="order__table__info-text">
-											<p class="fs-12 fw-400 text-grey-3">Driving License</p>
-											<button class="oqtane-btn oqtane-btn__link" type="button">
-												View
-											</button>
-										</div>
-										<div class="order__table__info-text">
-											<p class="fs-12 fw-400 text-grey-3">Intake Form:</p>
-											<button class="oqtane-btn oqtane-btn__link" type="button">
-												View
-											</button>
+											<!-- <label class="fs-12 fw-400 text-grey-3">Price</label> -->
+											<p>BPC-157</p>
 										</div>
 									</div>
+
+									<div class="col-md-3">
+										<div class="order__table__info-text">
+											<!-- <label class="fs-12 fw-400 text-grey-3">Refill Course</label> -->
+											<p>5mg</p>
+										</div>
+									</div>
+
+									<div class="col-md-3">
+										<div class="order__table__info-text">
+											<!-- <label class="fs-12 fw-400 text-grey-3">Refill Interval</label> -->
+											<div class="oqtane-search">
+												<input class="oqtane-search__input" type="text" placeholder="2" />
+											</div>	
+										</div>
+									</div>
+
+									<div class="col-md-3">
+										<div class="order__table__info-text">
+											<!-- <label class="fs-12 fw-400 text-grey-3">State:</label> -->
+											<p>$475</p>
+										</div>
+									</div>
+									<div class="answer-type__actions justify-content-center">
+									<div class="">
+										<button type="button"
+											class="oqtane-btn oqtane-btn__primary--outline modal-button"
+											data-bs-dismiss="modal" aria-label="Close">
+											Cancel
+										</button>
+										<button type="button" class="oqtane-btn oqtane-btn__primary modal-button ml-20">
+											Confirm
+										</button>
+									</div>
+								</div>
+								</div>
+								<div class="answer-type mt-40">
+								
+							</div>
+							</div>
+							<!-- <hr class="bg-border-color" /> -->
+						</div>
+
+
+						<div class="modal-body--wrapper modal-body--wrapper__max-width mt-20">
+
+
+
+							<!-- <div class="radio-group mb-20">
+								<p class="radio-group__label">Refund Type</p>
+
+								<div class="radio-group__inputs">
+									<label class="custom-radio">
+										<span class="custom-radio__input">
+											<input name="refundType" type="radio" />
+											<span></span>
+										</span>
+
+										<span class="custom-radio__label">Custom</span>
+									</label>
+
+									<label class="custom-radio">
+										<span class="custom-radio__input">
+											<input name="refundType" type="radio" checked />
+											<span></span>
+										</span>
+
+										<span class="custom-radio__label">Full</span>
+									</label>
 								</div>
 							</div>
-						</div>
-					</div>
-				</div>
-			</main>
-
-			<footer class="footer">
-				<div class="footer__content">
-					<div class="footer__links">
-						<a href="#">Terms of use</a><a href="#">Privacy Policy</a>
-					</div>
-					<p class="text-grey-3 fs-13">
-						Copyright &copy; 2024 Thrivewell. All rights reserved.
-					</p>
-				</div>
-			</footer>
-
-			<!-- Modal Start-->
-			<div
-				class="modal fade vr-modal"
-				id="view-reports-modal"
-				tabindex="-1"
-				role="dialog"
-				aria-labelledby="myModalLabel"
-			>
-				<div class="modal-dialog" role="document">
-					<div class="modal-content overflow-h">
-						<div class="modal-header">
-							<h4 class="modal-title">Lab Reports</h4>
-
-							<button
-								type="button"
-								class="modal-close"
-								data-dismiss="modal"
-								aria-label="Close"
-							>
-								<i class="icon-cross"></i>
-							</button>
-						</div>
-						<div class="modal-body p-0">
-							<div class="list-table">
-								<div class="table-responsive">
-									<table class="table table-striped bb">
-										<thead>
-											<tr>
-												<th>Report Name</th>
-												<th>File Type</th>
-												<th>Details</th>
-											</tr>
-										</thead>
-
-										<tbody>
-											<tr>
-												<td>CVC Report</td>
-												<td class="text-uppercase">PDF</td>
-												<td>
-													<button
-														type="button"
-														class="oqtane-btn oqtane-btn__link"
-													>
-														View
-													</button>
-												</td>
-											</tr>
-
-											<tr>
-												<td>Biilirubin</td>
-												<td class="text-uppercase">jpg</td>
-												<td>
-													<button
-														type="button"
-														class="oqtane-btn oqtane-btn__link"
-													>
-														View
-													</button>
-												</td>
-											</tr>
-
-											<tr>
-												<td>Ammonia</td>
-												<td class="text-uppercase">png</td>
-												<td>
-													<button
-														type="button"
-														class="oqtane-btn oqtane-btn__link"
-													>
-														View
-													</button>
-												</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
+							<div class="custom-input custom-input--with-icon">
+								<label class="custom-input__inner custom-input__inner-number">
+									<input type="number" class="custom-input__control" placeholder=" " />
+									<span class="custom-input__label">Refund Amount</span>
+									<span class="custom-input__suffix"><i class="icon-dollar"></i></span>
+								</label>
 							</div>
+
+							<div class="custom-input custom-input--textarea mt-16">
+								<label class="custom-input__inner custom-input__inner--textarea">
+									<textarea type="text" class="custom-input__control custom-input__control--textarea"
+										placeholder=" "></textarea>
+									<span class="custom-input__label">Refund Reason</span>
+								</label>
+							</div> -->
+
+							<!-- <div class="answer-type mt-40">
+								<div class="answer-type__actions justify-content-center gap-20">
+									<div class="">
+										<button type="button"
+											class="oqtane-btn oqtane-btn__primary--outline modal-button"
+											data-bs-dismiss="modal" aria-label="Close">
+											Cancel
+										</button>
+										<button type="button" class="oqtane-btn oqtane-btn__primary modal-button">
+											Confirm
+										</button>
+									</div>
+								</div>
+							</div> -->
 						</div>
 					</div>
 				</div>
@@ -584,8 +677,8 @@
 		</div>
 
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-		<script src="./../vendors/jquery/jquery-2.2.4.min.js"></script>
-		<script src="./../vendors/bootstrap/js/bootstrap.min.js"></script>
+		<script src="../js/vendors/jquery-3.7.1.min.js"></script>
+		<script src="../js/vendors/bootstrap.bundle.min.js"></script>
 		<script src="./../vendors/swiper/package/swiper-bundle.min.js"></script>
 		<script src="./../vendors/bootstrap-multiselect/js/bootstrap-multiselect.min.js"></script>
 		<script src="./../vendors/trumbowyg/trumbowyg.js"></script>
@@ -593,7 +686,11 @@
 		<script src="./../vendors/moment/moment.js"></script>
 		<script src="./../vendors/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
 		<script src="./../js/datepicker.js"></script>
+		<script src="./../js/date-range-picker.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+		<script src="./../js/datepicker.js"></script>
 
 		<script src="./../js/main.js"></script>
-	</body>
+</body>
+
 </html>
