@@ -7,6 +7,15 @@
 		margin-bottom: 20px;
 	}
 
+	&__table {
+		display: flex;
+		justify-content: space-between;
+
+		&__info-text {
+			width: 330px;
+		}
+	}
+
 	&__label {
 		font-family: "poppins", sans-serif;
 		font-size: $fs-18;
@@ -98,10 +107,11 @@
 		padding-bottom: 50px;
 
 		&__table {
-			display: block;
-			gap: 5px;
+			display: flex;
+
 
 			&__info-text {
+				width: 330px;
 
 				p {
 					font-size: 14px;
@@ -140,6 +150,7 @@
 			flex-direction: column;
 
 			&__info-text {
+
 				p {
 					font-size: 14px;
 				}
@@ -147,6 +158,7 @@
 		}
 
 		&__step {
+			top: 2px;
 			width: 15px;
 			height: 15px;
 		}
