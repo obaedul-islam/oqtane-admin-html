@@ -21,6 +21,30 @@
     padding: 10px 20px 10px 48px;
     color: $grey-3;
 
+    &-alt {
+      max-width: 560px;
+      width: 546px;
+      height: 67px;
+      border: 1px solid #E2E2E2;
+      border-radius: 33.5px;
+      padding-left: 45px;
+      margin: 0 auto;
+      position: relative;
+      
+      &__icon {
+        position: absolute;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        font-size: 20px;
+        top: 50%;
+        left: 16px;
+        transform: translateY(-50%);
+      }
+    }
+
     &--grey {
       background-color: $grey-1-60;
     }
