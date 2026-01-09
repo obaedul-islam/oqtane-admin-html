@@ -1,0 +1,13 @@
+.dropdown {
+  &-toggle {
+    &::after {
+      border: 0 !important;
+    }
+  }
+
+  &-menu {
+    &__items {
+      min-width: 80px;
+    }
+  }
+}
