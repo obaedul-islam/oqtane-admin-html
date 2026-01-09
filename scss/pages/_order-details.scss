@@ -1,5 +1,5 @@
 .order {
-	padding: 20px 20px 50px;
+	padding: 20px 0px 20px 0px;
 
 	&__info {
 		display: flex;
@@ -160,7 +160,31 @@
 	}
 }
 
+@media all and (max-width: 1024px) {
+	.order {
+		&__table {
+			grid-template-columns: repeat(2, 1fr);
+
+
+		}
+	}
+}
+
+@media all and (max-width: 1440px) {
+	.order {
+		&__table {
+			grid-template-columns: repeat(2, 1fr);
+
+
+		}
+	}
+}
+
 @media all and (max-width: 768px) {
+	.oqtane-simple-card-wrapper {
+		padding: 0px 5px 5px 5px;
+	}
+
 	.order {
 		&__table {
 			grid-template-columns: repeat(1, 1fr);
@@ -173,25 +197,127 @@
 			}
 		}
 
-		&__step {
-			top: 2px;
-			width: 15px;
-			height: 15px;
-		}
-
-		&__step-label {
-			font-size: 12px;
+		&__label {
+			font-size: 12px !important;
 		}
 
 		&__status {
-			padding: 10px 20px;
+			padding: 20px 10px;
+			padding-bottom: 0;
+		}
+
+		&__track {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 30px;
+
+			.tracker {
+				position: absolute;
+				top: 10px;
+				left: 10px;
+				width: 2px;
+				height: calc(100% - 20px);
+				display: flex;
+				flex-direction: column;
+
+				&__single {
+					height: 25% !important;
+					width: 2px !important;
+					background-color: $grey-3;
+
+					&.active {
+						background: $primary;
+					}
+				}
+			}
+		}
+
+		&__step {
+			width: 20px;
+			height: 20px;
+			position: relative;
+			top: 0;
+		}
+
+		&__step-label {
+			font-size: 14px;
+			top: 50%;
+			left: 40px;
+			transform: translateY(-50%);
+			white-space: normal;
+			text-align: left;
+			width: max-content;
+
+			&--bottom {
+				top: auto;
+				bottom: -25px;
+				left: 40px;
+				transform: none;
+				font-size: 12px;
+			}
+		}
+
+
+
+
+		&__info {
+			flex-direction: column;
+			gap: 15px;
 		}
 	}
 
 }
 
 @media all and (max-width: 576px) {
+	// .order {
+
+	//
+	// &__step {
+	// 	width: 12px;
+	// 	height: 12px;
+	// }
+
+	// &__step-label {
+	// 	font-size: 10px;
+	// 	top: -26px;
+
+	// 	&--bottom {
+	// 		font-size: 9px;
+	// 		top: 26px;
+	// 	}
+	// }
+
+	// &__status {
+	// 	padding: 10px 0;
+	// 	padding-bottom: 0;
+	// }
+
+	// &__track {
+	// 	min-width: 400px;
+	// }
 	.order {
+		&__status {
+			padding: 15px 5px;
+			padding-bottom: 0;
+		}
+
+		&__step {
+			width: 16px;
+			height: 16px;
+		}
+
+		&__step-label {
+			font-size: 13px;
+			left: 35px;
+
+			&--bottom {
+				font-size: 11px;
+				left: 35px;
+			}
+		}
+
+
+		//
 		&__table {
 			&__info-text {
 				p {
@@ -202,8 +328,26 @@
 	}
 }
 
+@media all and (max-width: 375px) {
+	.order {
+		&__track {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 30px;
+
+			.tracker {
+
+				left: 7px !important;
+
+			}
+		}
+	}
+}
+
+
+
 @media only screen and (max-width: 1024px) {
 	.order__track .tracker__single {
-		width: 23.5% !important;
+		width: 24% !important;
 	}
 }
