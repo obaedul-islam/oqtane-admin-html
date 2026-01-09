@@ -1,0 +1,327 @@
+// .dropdown {
+// 	&__selection {
+// 		max-width: 285px;
+// 		margin: 0 auto;
+// 		position: relative;
+
+// 		button {
+// 			width: 100%;
+// 			display: flex;
+// 			justify-content: space-between;
+// 			align-items: center;
+// 			text-align: left;
+// 			background: transparent;
+// 			color: white;
+// 			border: 0;
+// 			outline: 0;
+// 			font-size: 16px;
+// 			padding: 0;
+// 			border-radius: 12px;
+
+// 			span {
+// 				color: white;
+// 				flex-grow: 1;
+// 				border: 0.8px solid white;
+// 				border-right: 0;
+// 				border-radius: 12px 0 0 12px;
+// 				padding: 8px 0 9px 20px;
+// 			}
+
+// 			i {
+// 				padding: 11px 12px;
+// 				height: 100%;
+// 				border: 0.8px solid white;
+// 				border-left: 1px solid white;
+// 				border-radius: 0 12px 12px 0;
+// 				font-size: 18px;
+// 				color: white;
+// 			}
+// 		}
+
+// 		ul {
+// 			border-radius: 12px;
+// 			padding: 0;
+
+// 			&.dropdown-menu {
+// 				width: 100%;
+// 				background: $blue-3;
+// 			}
+
+// 			li {
+// 				width: 100%;
+
+// 				&:hover {
+// 					// background-color: rgba($secondary, 0.7) !important;
+// 					border-radius: 12px;
+// 				}
+
+// 				a {
+// 					padding: 8px 16px;
+// 					color: white;
+// 					cursor: pointer;
+
+// 					&:hover {
+// 						border-radius: 12px;
+// 						color: $yellow;
+// 					}
+// 				}
+// 			}
+// 		}
+
+// 		&__alt {
+// 			display: flex;
+// 			gap: 20px;
+// 			max-width: unset;
+
+// 			.select-items {
+// 				min-width: 120px;
+// 				left: unset;
+// 				width: unset;
+// 				width: 100%;
+// 				display: flex;
+// 				justify-content: space-between;
+// 				align-items: center;
+// 				text-align: left;
+// 				background: transparent;
+// 				color: $red;
+// 				border: 1px solid $red;
+// 				outline: 0;
+// 				font-size: 16px;
+// 				font-weight: 500;
+// 				padding: 15px 10px;
+// 				border-radius: 40px;
+
+// 				&:nth-child(2) {
+// 					min-width: 140px;
+// 				}
+
+// 				&:focus,
+// 				&:focus-visible {
+// 					outline: 0;
+// 					box-shadow: 0;
+// 				}
+// 			}
+
+// 			option {
+// 				background-color: $blue-2;
+// 				color: $blue-2;
+
+// 				&:hover {
+// 					background-color: $blue-2;
+// 					color: $blue-2;
+// 				}
+// 			}
+
+// 			.dropdown-value {
+// 				min-width: 120px;
+// 				left: unset;
+// 				width: unset;
+// 			}
+
+// 			.dropdown-menu {
+// 				min-width: 120px;
+// 			}
+
+// 			button {
+// 				border: 1px solid white;
+// 				padding: 15px 20px;
+// 				display: flex;
+// 				gap: 10px;
+// 				width: 120px;
+
+// 				span {
+// 					font-size: 18px;
+// 					padding: 0;
+// 					border: 0;
+// 				}
+
+// 				i {
+// 					font-size: 18px;
+// 					border-left: 0;
+// 					padding: 0;
+// 					border: 0;
+// 				}
+// 			}
+// 		}
+
+// 		&__date {
+// 			display: flex;
+// 			gap: 20px;
+// 			width: 100%;
+// 			max-width: 100% !important;
+// 			margin: auto 0;
+// 			position: relative;
+
+// 			.select-items {
+// 				min-width: 140px;
+// 				left: unset;
+// 				width: unset;
+// 				width: 100%;
+// 				display: flex;
+// 				justify-content: space-between;
+// 				align-items: center;
+// 				text-align: left;
+// 				background: transparent;
+// 				color: $red;
+// 				border: 1px solid $red;
+// 				outline: 0;
+// 				font-size: 16px;
+// 				font-weight: 700;
+// 				padding: 20px 15px;
+// 				border-radius: 40px;
+// 				position: relative;
+// 				appearance: none;
+// 				-webkit-appearance: none;
+// 				-moz-appearance: none;
+
+// 				&:nth-child(2) {
+// 					min-width: 195px;
+// 				}
+
+// 				&:focus,
+// 				&:focus-visible {
+// 					outline: 0;
+// 					box-shadow: 0;
+// 				}
+// 			}
+
+// 			&__items {
+// 				position: relative;
+
+// 				&::after {
+// 					content: "\e911";
+// 					font-family: "icomoon";
+// 					position: absolute;
+// 					z-index: -1;
+// 					top: 50%;
+// 					right: 15px;
+// 					transform: translateY(-50%);
+// 					font-size: 20px;
+// 					font-weight: 700;
+// 					line-height: 1;
+// 					color: $red;
+// 				}
+// 			}
+
+// 			option {
+// 				background-color: $white !important;
+// 				color: $gray-dark;
+
+// 				&:hover {
+// 					background-color: rgba($white, 1) !important;
+// 					color: white;
+// 				}
+// 			}
+
+// 			&-md {
+// 				gap: 8px;
+// 				.select__options {
+// 					width: 100%;
+// 					min-width: 0;        // 🔥 important
+// 					padding: 15px 40px 15px 15px; // icon space
+// 					border-radius: 40px;
+// 					padding: 15px 15px;
+// 					color: $gray-dark;
+// 					min-width: unset;
+// 				}
+// 				.select__wrapper {
+// 					flex: 1 1 0;
+// 					width: 100%;
+// 					position: relative;
+// 					&::after {
+// 						color: $gray-dark;
+// 					}
+// 				}
+// 				@media all and (max-width: 576px) {
+// 					.select__options {
+// 						font-size: 12px;
+// 						padding: 12.5px 10px;
+// 					}
+// 					.select__wrapper {
+// 						&::after {
+// 							font-size: 14px;
+// 							top: 24px;
+// 							right: 10px;
+// 						}
+// 					}
+// 				}
+// 			}
+
+// 			.dropdown-value {
+// 				min-width: 120px;
+// 				left: unset;
+// 				width: unset;
+// 			}
+
+// 			.dropdown-menu {
+// 				min-width: 120px;
+// 			}
+
+// 			button {
+// 				border: 1px solid white;
+// 				padding: 15px 20px;
+// 				display: flex;
+// 				gap: 10px;
+// 				width: 120px;
+
+// 				span {
+// 					font-size: 18px;
+// 					padding: 0;
+// 					border: 0;
+// 				}
+
+// 				i {
+// 					font-size: 18px;
+// 					border-left: 0;
+// 					padding: 0;
+// 					border: 0;
+// 				}
+// 			}
+// 		}
+// 	}
+// }
+
+
+// @media only screen and (max-width: 992px) {
+// 	.dropdown__selection {
+// 		max-width: 285px;
+// 		margin-left: 20px;
+// 	}
+
+//     .dropdown {
+// 		&__selection {
+// 			&__date {
+// 				.select-items {
+// 					min-width: 90px;
+// 					font-size: 14px;
+// 					padding: 15px 10px;
+// 					color: #04fcff;
+
+// 					&:nth-child(2) {
+// 						min-width: 120px;
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+// }
+
+// @media only screen and (max-width: 768px) {
+// 	.dropdown__selection {
+// 		margin-left: 0;
+// 	}
+
+//     	.dropdown {
+// 		&__selection {
+// 			&__date {
+// 				gap: 10px;
+
+// 				.select-items {
+// 					min-width: 80px;
+// 					font-size: 14px;
+// 					padding: 12px 8px;
+// 				}
+// 			}
+// 		}
+// 	}
+// }
