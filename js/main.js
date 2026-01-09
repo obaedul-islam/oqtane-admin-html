@@ -389,3 +389,154 @@ if (
 		imageInput.click();
 	});
 }
+
+
+
+//Search input multiple option added
+(function () {
+			var suggestions = [
+				"Cagrilintide, 50mg",
+				"Cagrilintide, 10mg",
+				"Testosterone",
+				"CBC",
+				"Ibuprofen",
+				"Metformin",
+				"Lisinopril"
+			];
+
+			function attach(input) {
+				var container = input.closest('.oqtane-search');
+				var wrapper = container.querySelector('.multi-select');
+				var chipsWrap = wrapper.querySelector('.selected-chips');
+
+				// Create dropdown wrapper
+				var dropdownWrapper = document.createElement('div');
+				dropdownWrapper.className = 'dropdown-wrapper';
+				var list = document.createElement('ul');
+				list.className = 'suggestions-list';
+				var footer = document.createElement('div');
+				footer.className = 'dropdown-footer';
+				footer.innerHTML = '<a class="btn-sm-custom btn-cancel">Cancel</a><a class="btn-sm-custom btn-add">Add</a>';
+
+				dropdownWrapper.appendChild(list);
+				dropdownWrapper.appendChild(footer);
+				wrapper.appendChild(dropdownWrapper);
+
+				var menuList = container.querySelector('ul.suggestions-list.d-none');
+				if (menuList) menuList.remove(); // Clean up old list if exists
+
+
+				var selected = [];
+				var tempSelected = [];
+
+				function renderList(items) {
+					list.innerHTML = items.map(function (i) {
+						var isChecked = tempSelected.indexOf(i) !== -1 ? 'checked' : '';
+						return '<li><input type="checkbox" class="custom-checkbox" ' + isChecked + '><span>' + i + '</span></li>'
+					}).join('');
+				}
+
+				function renderChips() {
+					chipsWrap.innerHTML = selected.map(function (s, idx) {
+						return '<span class="chip" data-idx="' + idx + '">' + s + '<span class="remove" aria-hidden>×</span></span>'
+					}).join('');
+				}
+
+				function availableSuggestions(q) {
+					var ql = (q || '').toLowerCase();
+					return suggestions.filter(function (s) {
+						// Show all suggestions, check status handled in renderList
+						return (!ql || s.toLowerCase().indexOf(ql) !== -1);
+					});
+				}
+
+				function openDropdown() {
+					tempSelected = [...selected]; // Reset temp to committed state
+					renderList(availableSuggestions(input.value.trim()));
+					dropdownWrapper.classList.add('show');
+				}
+
+				function closeDropdown() {
+					dropdownWrapper.classList.remove('show');
+				}
+
+				input.addEventListener('focus', openDropdown);
+				input.addEventListener('input', function () { renderList(availableSuggestions(input.value.trim())) });
+
+				// Toggle checkbox on list item click
+				list.addEventListener('mousedown', function (ev) {
+					// prevent input blur
+					ev.preventDefault();
+					var li = ev.target.closest('li');
+					if (!li) return;
+					var val = li.querySelector('span').textContent;
+					var idx = tempSelected.indexOf(val);
+					if (idx === -1) tempSelected.push(val);
+					else tempSelected.splice(idx, 1);
+
+					// Re-render to update checkboxes
+					renderList(availableSuggestions(input.value.trim()));
+				});
+
+				// Footer actions
+				footer.addEventListener('mousedown', function (ev) { ev.preventDefault(); }); // Prevent blur
+
+				// footer.querySelector('.btn-cancel').addEventListener('click', function (ev) {
+				// 	ev.preventDefault();
+				// 	ev.stopPropagation();
+				// 	closeDropdown();
+				// });
+
+				// footer.querySelector('.btn-add').addEventListener('click', function (ev) {
+				// 	ev.preventDefault();
+				// 	ev.stopPropagation();
+				// 	selected = [...tempSelected];
+				// 	renderChips();
+				// 	input.value = '';
+				// 	closeDropdown();
+				// });
+
+				// remove chip
+				chipsWrap.addEventListener('click', function (ev) {
+					var chip = ev.target.closest('.chip');
+					if (!chip) return;
+					var idx = parseInt(chip.getAttribute('data-idx'), 10);
+					if (!isNaN(idx)) { selected.splice(idx, 1); renderChips(); }
+				});
+
+				// backspace to remove last
+				input.addEventListener('keydown', function (ev) {
+					if (ev.key === 'Backspace' && input.value === '' && selected.length) {
+						selected.pop(); renderChips();
+					}
+				});
+
+				// hide on blur 
+				input.addEventListener('blur', function () { setTimeout(closeDropdown, 200) });
+			}
+
+			document.addEventListener('DOMContentLoaded', function () {
+				var inputs = document.querySelectorAll('.with-suggestions');
+				for (var i = 0; i < inputs.length; i++) {
+					var input = inputs[i];
+					// ensure structure: wrap existing input into multi-select if not already
+					var container = input.closest('.oqtane-search');
+					if (!container) continue;
+					var existingWrapper = container.querySelector('.multi-select');
+					if (!existingWrapper) {
+						var wrapper = document.createElement('div'); wrapper.className = 'multi-select-wrapper';
+						var inner = document.createElement('div'); inner.className = 'multi-select';
+						var chips = document.createElement('div'); chips.className = 'selected-chips';
+						// List will be added in attach()
+
+						container.insertBefore(wrapper, input);
+						wrapper.appendChild(inner);
+						inner.appendChild(chips);
+						inner.appendChild(input);
+					}
+				}
+				// reselect inputs after DOM operations
+				inputs = document.querySelectorAll('.with-suggestions');
+				for (i = 0; i < inputs.length; i++) attach(inputs[i]);
+			});
+		})();

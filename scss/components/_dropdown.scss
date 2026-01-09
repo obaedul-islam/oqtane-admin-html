@@ -1,0 +1,35 @@
+.dropdown {
+  &-toggle {
+    &::after {
+      border: 0 !important;
+    }
+  }
+
+  &-menu {
+    &__items {
+      min-width: unset;
+      z-index: 10;
+      height: unset;
+
+      button {
+        display: block;
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-left: 10px;
+        padding-right: 10px;
+        line-height: 1.5;
+        border-bottom: 1px solid rgba($grey-1, 0.5);
+        transition: .3s;
+        font-size: 16px;
+
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+  }
+}
+
+.dropstart .dropdown-toggle::before {
+  border: 0 !important;
+}

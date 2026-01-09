@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?1r2uhj');
-  src:  url('fonts/icomoon.eot?1r2uhj#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.woff2?1r2uhj') format('woff2'),
-    url('fonts/icomoon.ttf?1r2uhj') format('truetype'),
-    url('fonts/icomoon.woff?1r2uhj') format('woff'),
-    url('fonts/icomoon.svg?1r2uhj#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?e3dih0');
+  src:  url('fonts/icomoon.eot?e3dih0#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.woff2?e3dih0') format('woff2'),
+    url('fonts/icomoon.ttf?e3dih0') format('truetype'),
+    url('fonts/icomoon.woff?e3dih0') format('woff'),
+    url('fonts/icomoon.svg?e3dih0#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -182,9 +182,6 @@
 .icon-dollar:before {
   content: "\e968";
 }
-.icon-Payment-Cancel:before {
-  content: "\e964";
-}
 .icon-arrow1:before {
   content: "\e948";
 }
@@ -301,6 +298,9 @@
 }
 .icon-medicine:before {
   content: "\e96b";
+}
+.icon-Payment-Cancel:before {
+  content: "\e964";
 }
 .icon-left-arrow:before {
   content: "\e92e";
