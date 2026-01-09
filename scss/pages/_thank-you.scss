@@ -1,0 +1,19 @@
+.thank-you-img {
+  height: 189.74px;
+}
+
+
+@media all and (max-width: 768px) {
+
+  .thank-you-img {
+    height: 140px;
+  }
+
+  .thank-you-text {
+    font-size: 18px !important;
+  }
+
+  .thank-you-title {
+    font-size: 24px !important;
+  }
+}

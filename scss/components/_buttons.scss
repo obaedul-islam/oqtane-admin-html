@@ -202,8 +202,8 @@
     flex-shrink: 0;
     flex-grow: 0;
     display: inline-block;
-    border: 2px solid $blue-light;
-    border-top: 2px solid $grey-3;
+    border: 2px solid $secondary;
+    border-top: 2px solid white;
     border-radius: 50px;
     width: 18px;
     height: 18px;
@@ -456,7 +456,7 @@
   display: flex;
   align-items: center;
   gap: 5px;
-  z-index: 100;
+  z-index: 0;
   white-space: nowrap;
   margin-right: 10px;
 

@@ -51,6 +51,7 @@
 @import "components/blazor-grid-override";
 @import "components/grid";
 @import "components/toast";
+@import "components/dropdown";
 
 @import "pages/add-product";
 @import "pages/product-details";
@@ -64,3 +65,4 @@
 @import "pages/salesman-details.scss";
 @import "pages/add-category";
 // @import "pages/customer-information";
+@import "pages/thank-you";
