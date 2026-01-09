@@ -5,15 +5,21 @@
 		display: flex;
 		gap: 30px;
 		margin-bottom: 20px;
+
+
 	}
 
 	&__table {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
 
-		// &__info-text {
-		// 	width: 330px;
-		// }
+		&__info-text {
+			width: 330px;
+
+			p {
+				text-wrap: nowrap;
+			}
+		}
 
 		&--alt {
 			display: flex;
@@ -22,6 +28,12 @@
 
 			.order__table__info-text {
 				width: 170px;
+
+
+				p {
+					text-wrap: nowrap;
+				}
+
 
 				&:last-child {
 					width: 100px;
