@@ -116,6 +116,26 @@
 	}
 }
 
+
+
+@media all and (max-width: 1440px) {
+	.order {
+		&__table {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+}
+
+@media all and (max-width: 1024px) {
+	.order {
+		&__table {
+			grid-template-columns: repeat(2, 1fr);
+
+
+		}
+	}
+}
+
 @media all and (max-width: 992px) {
 	.order {
 		padding-top: 0;
@@ -157,26 +177,6 @@
 
 	.order__track .tracker__single {
 		width: 24% !important;
-	}
-}
-
-@media all and (max-width: 1024px) {
-	.order {
-		&__table {
-			grid-template-columns: repeat(2, 1fr);
-
-
-		}
-	}
-}
-
-@media all and (max-width: 1440px) {
-	.order {
-		&__table {
-			grid-template-columns: repeat(2, 1fr);
-
-
-		}
 	}
 }
 
