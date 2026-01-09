@@ -413,13 +413,19 @@
 
   .oqtane-btn {
     &__primary--xl {
-      min-width: 150px;
 
+      padding: 8px 20px;
+      font-size: 14px;
+      width: 150px;
+      height: 40px;
 
     }
 
     &__primary--outline__xl {
-      min-width: 150px;
+      padding: 8px 20px;
+      font-size: 14px;
+      width: 150px;
+      height: 40px;
 
 
     }
