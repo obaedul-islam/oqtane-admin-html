@@ -450,13 +450,13 @@ if (
 						var text = it[labelField];
 						var isChecked = tempSelected.indexOf(id) !== -1 ? 'checked' : '';
 						return [
-							'<li data-id="' + id + '">',
+							'<li data-id="' + id + '" class="mt-4">',
 								'<label class="custom-check">',
 									'<span class="custom-check__input">',
 										'<input type="checkbox" ' + isChecked + '>',
 										'<span></span>',
 									'</span>',
-									'<span class="custom-check__label text-grey-3">' + text + '</span>',
+									'<span class="custom-check__label text-dark">' + text + '</span>',
 								'</label>',
 							'</li>'
 						].join('');
