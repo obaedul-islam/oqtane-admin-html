@@ -46,6 +46,12 @@
       margin: 0 auto;
       position: relative;
 
+      @media screen and (max-width: 992px) {
+        max-width: 560px !important;
+        width: 546px;
+        height: 67px !important;
+      }
+
       &__icon {
         position: absolute;
         display: inline-flex;
@@ -102,6 +108,12 @@
   list-style: none;
   margin: 0;
   padding: 6px 0;
+
+  &--multi {
+    li:not(:last-child) {
+      border-bottom: 1px solid rgba( #F0F1F5, 0.6);
+    }
+  }
 }
 
 .suggestions-list li {
