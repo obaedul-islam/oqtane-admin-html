@@ -449,7 +449,17 @@ if (
 						var id = it[keyField];
 						var text = it[labelField];
 						var isChecked = tempSelected.indexOf(id) !== -1 ? 'checked' : '';
-						return '<li data-id="' + id + '"><input type="checkbox" class="custom-checkbox" ' + isChecked + '><span>' + text + '</span></li>'
+						return [
+							'<li data-id="' + id + '">',
+								'<label class="custom-check">',
+									'<span class="custom-check__input">',
+										'<input type="checkbox" ' + isChecked + '>',
+										'<span></span>',
+									'</span>',
+									'<span class="custom-check__label text-grey-3">' + text + '</span>',
+								'</label>',
+							'</li>'
+						].join('');
 					}).join('');
 				}
 
