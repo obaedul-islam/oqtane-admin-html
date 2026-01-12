@@ -395,13 +395,10 @@ if (
 //Search input multiple option added
 (function () {
 			var suggestions = [
-				"Cagrilintide, 50mg",
-				"Cagrilintide, 10mg",
-				"Testosterone",
-				"CBC",
-				"Ibuprofen",
-				"Metformin",
-				"Lisinopril"
+				"Cagrilintide Injectable Solution ",
+				"GHK-CU Injectable Solution",
+				"Thymosin Beta-4",
+				"BPC-157",
 			];
 
 			function attach(input) {
@@ -480,21 +477,6 @@ if (
 
 				// Footer actions
 				footer.addEventListener('mousedown', function (ev) { ev.preventDefault(); }); // Prevent blur
-
-				// footer.querySelector('.btn-cancel').addEventListener('click', function (ev) {
-				// 	ev.preventDefault();
-				// 	ev.stopPropagation();
-				// 	closeDropdown();
-				// });
-
-				// footer.querySelector('.btn-add').addEventListener('click', function (ev) {
-				// 	ev.preventDefault();
-				// 	ev.stopPropagation();
-				// 	selected = [...tempSelected];
-				// 	renderChips();
-				// 	input.value = '';
-				// 	closeDropdown();
-				// });
 
 				// remove chip
 				chipsWrap.addEventListener('click', function (ev) {

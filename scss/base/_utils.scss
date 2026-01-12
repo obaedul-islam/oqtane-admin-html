@@ -38,6 +38,7 @@ $color-list: (
 	"grey-3": $grey-3,
 	"grey-1-40": $grey-1-40,
 	"grey-1-60": $grey-1-60,
+	"gray-dark": $gray-dark,
 	"primary": $primary,
 	"primary-light": $primary-light,
 	"primary-x-light": $primary-x-light,
@@ -47,11 +48,21 @@ $color-list: (
 	"white": $white,
 	"danger": $danger,
 	"black": $black,
+	"blue-1": $blue-1,
+	"blue-2": $blue-2,
+	"blue-3": $blue-3,
 	"blue-light": $blue-light,
 	"border-color": $border-color,
 	"success": $success,
 	"danger-light": $danger-light,
 	"purple": $purple,
+	// "$gray-normal": $gray-normal,
+	// "$primary-deep": $primary-deep,
+	// "$green-lighter": $green-lighter,
+	// "$gray-light-2": $gray-light-2,
+	// "$gray-lighter": $gray-lighter,
+	// "$black-deep": $black-deep,
+	
 );
 
 $spacing-list: (
