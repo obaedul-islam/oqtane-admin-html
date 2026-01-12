@@ -393,14 +393,16 @@ if (
 
 
 //Search input multiple option added
-(function () {
+(function (items, selectedItems) {
 			// suggestions as objects with id + name
-			var suggestions = [
+			var defaultSuggestions = [
 				{ id: 'cagr', name: 'Cagrilintide Injectable Solution' },
 				{ id: 'ghk', name: 'GHK-CU Injectable Solution' },
 				{ id: 'thymosin', name: 'Thymosin Beta-4' },
 				{ id: 'bpc157', name: 'BPC-157' },
 			];
+			// use passed `items` array if provided, otherwise default
+			var suggestions = Array.isArray(items) && items.length ? items : defaultSuggestions;
 
 			function attach(input) {
 				var keyField = input.dataset.multiKey || 'id';
@@ -412,11 +414,11 @@ if (
 
 				// Create dropdown wrapper
 				var dropdownWrapper = document.createElement('div');
-				dropdownWrapper.className = 'dropdown-wrapper';
+				dropdownWrapper.className = 'dropdown-wrapper rounded-4';
 				var list = document.createElement('ul');
 				list.className = 'suggestions-list';
 				var footer = document.createElement('div');
-				footer.className = 'dropdown-footer';
+				footer.className = 'dropdown-footer rounded-4';
 				footer.innerHTML = '<a class="btn-sm-custom btn-add">Add</a><a class="btn-sm-custom btn-cancel">Cancel</a>';
 
 				dropdownWrapper.appendChild(list);
@@ -426,7 +428,16 @@ if (
 				var menuList = container.querySelector('ul.suggestions-list.d-none');
 				if (menuList) menuList.remove(); // Clean up old list if exists
 
-				var selected = [];// stored as ids
+				// stored as ids; initialize from `selectedItems` parameter if provided
+				var selected = [];
+				if (Array.isArray(selectedItems) && selectedItems.length) {
+					// normalize selectedItems to ids according to keyField
+					selected = selectedItems.map(function (si) {
+						if (si == null) return si;
+						if (typeof si === 'object') return si[keyField] || si.id || String(si);
+						return String(si);
+					});
+				}
 				var tempSelected = [];
 
 				function findById(id) {
@@ -469,6 +480,10 @@ if (
 				}
 
 				input.addEventListener('focus', openDropdown);
+				input.addEventListener('click', function (e) { // open on every click
+					e.stopPropagation();
+					if (!dropdownWrapper.classList.contains('show')) openDropdown();
+				});
 				input.addEventListener('input', function () { renderList(availableSuggestions(input.value.trim())) });
 
 				// Toggle checkbox on list item click
@@ -508,9 +523,17 @@ if (
 					btnCancel.addEventListener('click', function (ev) {
 						ev.preventDefault();
 						tempSelected = [...selected];
+						// do not change `selected`, just close
 						closeDropdown();
 					});
 				}
+
+				// Close dropdown when clicking outside
+				document.addEventListener('click', function (ev) {
+					if (!container.contains(ev.target)) {
+						closeDropdown();
+					}
+				});
 
 				// remove chip
 				chipsWrap.addEventListener('click', function (ev) {
@@ -529,6 +552,8 @@ if (
 
 				// hide on blur 
 				// input.addEventListener('blur', function () { setTimeout(closeDropdown, 200) });
+				// initial render of chips (in case `selected` has values)
+				renderChips();
 			}
 
 			document.addEventListener('DOMContentLoaded', function () {
