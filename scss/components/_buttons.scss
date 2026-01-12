@@ -70,7 +70,7 @@
     padding: 24px 30px;
     background: $primary;
     color: $white;
-    min-width: 150px;
+    min-width: 275px;
 
     &:hover,
     &:visited {
@@ -411,6 +411,25 @@
 
 @media all and (max-width: 768px) {
 
+  .oqtane-btn {
+    &__primary--xl {
+
+      padding: 8px 20px;
+      font-size: 14px;
+      width: 150px;
+      height: 40px;
+
+    }
+
+    &__primary--outline__xl {
+      padding: 8px 20px;
+      font-size: 14px;
+      width: 150px;
+      height: 40px;
+
+
+    }
+  }
 
   .button-group {
     height: 35px;
