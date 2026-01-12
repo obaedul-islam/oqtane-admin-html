@@ -393,27 +393,33 @@ if (
 
 
 //Search input multiple option added
-(function () {
-			var suggestions = [
-				"Cagrilintide Injectable Solution ",
-				"GHK-CU Injectable Solution",
-				"Thymosin Beta-4",
-				"BPC-157",
+(function (items, selectedItems) {
+			// suggestions as objects with id + name
+			var defaultSuggestions = [
+				{ id: 'cagr', name: 'Cagrilintide Injectable Solution' },
+				{ id: 'ghk', name: 'GHK-CU Injectable Solution' },
+				{ id: 'thymosin', name: 'Thymosin Beta-4' },
+				{ id: 'bpc157', name: 'BPC-157' },
 			];
+			// use passed `items` array if provided, otherwise default
+			var suggestions = Array.isArray(items) && items.length ? items : defaultSuggestions;
 
 			function attach(input) {
+				var keyField = input.dataset.multiKey || 'id';
+				var labelField = input.dataset.multiLabel || 'name';
+
 				var container = input.closest('.oqtane-search');
 				var wrapper = container.querySelector('.multi-select');
 				var chipsWrap = wrapper.querySelector('.selected-chips');
 
 				// Create dropdown wrapper
 				var dropdownWrapper = document.createElement('div');
-				dropdownWrapper.className = 'dropdown-wrapper';
+				dropdownWrapper.className = 'dropdown-wrapper rounded-4';
 				var list = document.createElement('ul');
 				list.className = 'suggestions-list';
 				var footer = document.createElement('div');
-				footer.className = 'dropdown-footer';
-				footer.innerHTML = '<a class="btn-sm-custom btn-cancel">Cancel</a><a class="btn-sm-custom btn-add">Add</a>';
+				footer.className = 'dropdown-footer rounded-4';
+				footer.innerHTML = '<a class="btn-sm-custom btn-add">Add</a><a class="btn-sm-custom btn-cancel">Cancel</a>';
 
 				dropdownWrapper.appendChild(list);
 				dropdownWrapper.appendChild(footer);
@@ -422,28 +428,54 @@ if (
 				var menuList = container.querySelector('ul.suggestions-list.d-none');
 				if (menuList) menuList.remove(); // Clean up old list if exists
 
-
+				// stored as ids; initialize from `selectedItems` parameter if provided
 				var selected = [];
+				if (Array.isArray(selectedItems) && selectedItems.length) {
+					// normalize selectedItems to ids according to keyField
+					selected = selectedItems.map(function (si) {
+						if (si == null) return si;
+						if (typeof si === 'object') return si[keyField] || si.id || String(si);
+						return String(si);
+					});
+				}
 				var tempSelected = [];
 
+				function findById(id) {
+					return suggestions.find(function (s) { return s[keyField] === id; });
+				}
+
 				function renderList(items) {
-					list.innerHTML = items.map(function (i) {
-						var isChecked = tempSelected.indexOf(i) !== -1 ? 'checked' : '';
-						return '<li><input type="checkbox" class="custom-checkbox" ' + isChecked + '><span>' + i + '</span></li>'
+					list.innerHTML = items.map(function (it) {
+						var id = it[keyField];
+						var text = it[labelField];
+						var isChecked = tempSelected.indexOf(id) !== -1 ? 'checked' : '';
+						return [
+							'<li data-id="' + id + '" class="mt-4">',
+								'<label class="custom-check">',
+									'<span class="custom-check__input">',
+										'<input type="checkbox" ' + isChecked + '>',
+										'<span></span>',
+									'</span>',
+									'<span class="custom-check__label text-dark">' + text + '</span>',
+								'</label>',
+							'</li>'
+						].join('');
 					}).join('');
 				}
 
 				function renderChips() {
 					chipsWrap.innerHTML = selected.map(function (s, idx) {
-						return '<span class="chip" data-idx="' + idx + '">' + s + '<span class="remove" aria-hidden>×</span></span>'
+						var obj = findById(s);
+						var label = obj ? obj[labelField] : s;
+						return '<span class="chip" data-idx="' + idx + '">' + label + '<span class="remove" aria-hidden>×</span></span>'
 					}).join('');
 				}
 
 				function availableSuggestions(q) {
 					var ql = (q || '').toLowerCase();
 					return suggestions.filter(function (s) {
-						// Show all suggestions, check status handled in renderList
-						return (!ql || s.toLowerCase().indexOf(ql) !== -1);
+						var txt = (s[labelField] || '').toLowerCase();
+						return (!ql || txt.indexOf(ql) !== -1);
 					});
 				}
 
@@ -458,17 +490,20 @@ if (
 				}
 
 				input.addEventListener('focus', openDropdown);
+				input.addEventListener('click', function (e) { // open on every click
+					e.stopPropagation();
+					if (!dropdownWrapper.classList.contains('show')) openDropdown();
+				});
 				input.addEventListener('input', function () { renderList(availableSuggestions(input.value.trim())) });
 
 				// Toggle checkbox on list item click
 				list.addEventListener('mousedown', function (ev) {
-					// prevent input blur
 					ev.preventDefault();
 					var li = ev.target.closest('li');
 					if (!li) return;
-					var val = li.querySelector('span').textContent;
-					var idx = tempSelected.indexOf(val);
-					if (idx === -1) tempSelected.push(val);
+					var id = li.getAttribute('data-id');
+					var idx = tempSelected.indexOf(id);
+					if (idx === -1) tempSelected.push(id);
 					else tempSelected.splice(idx, 1);
 
 					// Re-render to update checkboxes
@@ -477,6 +512,38 @@ if (
 
 				// Footer actions
 				footer.addEventListener('mousedown', function (ev) { ev.preventDefault(); }); // Prevent blur
+
+				// Add / Cancel buttons
+				var btnAdd = footer.querySelector('.btn-add');
+				var btnCancel = footer.querySelector('.btn-cancel');
+
+				if (btnAdd) {
+					btnAdd.addEventListener('click', function (ev) {
+						ev.preventDefault();
+						selected = [...tempSelected];
+						// renderChips();
+						closeDropdown();
+						// Log selected values as objects
+						var selectedObjects = selected.map(function (id) { return findById(id); }).filter(Boolean);
+						console.log('Selected items:', selectedObjects);
+					});
+				}
+
+				if (btnCancel) {
+					btnCancel.addEventListener('click', function (ev) {
+						ev.preventDefault();
+						tempSelected = [...selected];
+						// do not change `selected`, just close
+						closeDropdown();
+					});
+				}
+
+				// Close dropdown when clicking outside
+				document.addEventListener('click', function (ev) {
+					if (!container.contains(ev.target)) {
+						closeDropdown();
+					}
+				});
 
 				// remove chip
 				chipsWrap.addEventListener('click', function (ev) {
@@ -494,7 +561,9 @@ if (
 				});
 
 				// hide on blur 
-				input.addEventListener('blur', function () { setTimeout(closeDropdown, 200) });
+				// input.addEventListener('blur', function () { setTimeout(closeDropdown, 200) });
+				// initial render of chips (in case `selected` has values)
+				renderChips();
 			}
 
 			document.addEventListener('DOMContentLoaded', function () {

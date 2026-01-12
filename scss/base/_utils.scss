@@ -56,13 +56,14 @@ $color-list: (
 	"success": $success,
 	"danger-light": $danger-light,
 	"purple": $purple,
+	"cyan-light": $cyan-light,
 	// "$gray-normal": $gray-normal,
 	// "$primary-deep": $primary-deep,
 	// "$green-lighter": $green-lighter,
 	// "$gray-light-2": $gray-light-2,
 	// "$gray-lighter": $gray-lighter,
 	// "$black-deep": $black-deep,
-	
+
 );
 
 $spacing-list: (
@@ -480,6 +481,10 @@ $spacing-list: (
 
 	&-20 {
 		border-radius: 20px;
+	}
+
+	&-30 {
+		border-radius: 30px;
 	}
 
 	&-full {
