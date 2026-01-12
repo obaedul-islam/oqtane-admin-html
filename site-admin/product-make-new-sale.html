@@ -153,10 +153,45 @@
 							</div>
 						</div>
 
+						<div class="stepper">
+								<div class="stepper__status">
+									<div class="stepper__track">
+										<div class="stepper__step__wrapper">
+											<div class="stepper__step active">
+												<div class="stepper__step__bottom">
+													<span class="stepper__step-label active">Product</span>
+												</div>
+											</div>
+										</div>
+										<div class="stepper__step__wrapper">
+											<div class="stepper__step active">
+												<div class="stepper__step__bottom">
+													<span class="stepper__step-label active">Customer Info</span>
+												</div>
+											</div>
+										</div>
+										<div class="stepper__step__wrapper">
+											<div class="stepper__step active">
+												<div class="stepper__step__bottom">
+													<span class="stepper__step-label active">Payment</span>
+												</div>
+											</div>
+										</div>
+										<div class="stepper__step__wrapper">
+											<div class="stepper__step  ">
+												<div class="stepper__step__bottom">
+													<span class="stepper__step-label  ">Success</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+						</div>
+
 							<div class="oqtane-card mb-0">
-							<div class="oqtane-card__header d-flex justify-content-between align-items-start">
+							<div class="oqtane-card__header d-flex justify-content-between align-items-md-center">
 								<p class="mb-0">Selected Product</p>
-								<div class="oqtane-search position-relative max-width">
+								<div class="oqtane-search position-relative d-inline-block w-auto">
 										<input
 											class="oqtane-search__input oqtane-search__input-alt2 with-suggestions"
 											type="text"
@@ -268,22 +303,7 @@
 													</span>
 												</label>
 
-												<!-- <div class="custom-input custom-input--with-icon mt-3">
-													<label
-														class="custom-input__inner custom-input__inner-number"
-													>
-														<input
-															type="number"
-															class="custom-input__control"
-															placeholder=" "
-														/>
-														<span class="custom-input__label">Price</span>
-														<span class="custom-input__suffix"
-															>
-															<i class="icon-dollar"></i
-														></span>
-													</label>
-												</div> -->
+												
 											</div>
 
 											<div class="product-action__btn">
@@ -311,11 +331,17 @@
 														</button>
 													</span>
 												</div>
+													<button
+												type="button"
+												class="oqtane-btn text-danger fs-30 p-0 d-lg-none d-block"
+											>
+												<i class="icon-delete"></i>
+											</button>
 											</div>
 
 											<button
 												type="button"
-												class="oqtane-btn text-danger fs-30 p-0"
+												class="oqtane-btn text-danger fs-30 p-0 d-lg-flex d-none"
 											>
 												<i class="icon-delete"></i>
 											</button>
@@ -353,7 +379,7 @@
 								</div>
 
 						<div class="d-flex flex-column justify-content-start mt-4">
-								<table class="table">
+								<table class="table fs-16">
 									<thead class="table-header-grey">
 										<tr >
 											<th>Product Name</th>
