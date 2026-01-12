@@ -394,14 +394,18 @@ if (
 
 //Search input multiple option added
 (function () {
+			// suggestions as objects with id + name
 			var suggestions = [
-				"Cagrilintide Injectable Solution ",
-				"GHK-CU Injectable Solution",
-				"Thymosin Beta-4",
-				"BPC-157",
+				{ id: 'cagr', name: 'Cagrilintide Injectable Solution' },
+				{ id: 'ghk', name: 'GHK-CU Injectable Solution' },
+				{ id: 'thymosin', name: 'Thymosin Beta-4' },
+				{ id: 'bpc157', name: 'BPC-157' },
 			];
 
 			function attach(input) {
+				var keyField = input.dataset.multiKey || 'id';
+				var labelField = input.dataset.multiLabel || 'name';
+
 				var container = input.closest('.oqtane-search');
 				var wrapper = container.querySelector('.multi-select');
 				var chipsWrap = wrapper.querySelector('.selected-chips');
@@ -413,7 +417,7 @@ if (
 				list.className = 'suggestions-list';
 				var footer = document.createElement('div');
 				footer.className = 'dropdown-footer';
-				footer.innerHTML = '<a class="btn-sm-custom btn-cancel">Cancel</a><a class="btn-sm-custom btn-add">Add</a>';
+				footer.innerHTML = '<a class="btn-sm-custom btn-add">Add</a><a class="btn-sm-custom btn-cancel">Cancel</a>';
 
 				dropdownWrapper.appendChild(list);
 				dropdownWrapper.appendChild(footer);
@@ -422,28 +426,35 @@ if (
 				var menuList = container.querySelector('ul.suggestions-list.d-none');
 				if (menuList) menuList.remove(); // Clean up old list if exists
 
-
-				var selected = [];
+				var selected = [];// stored as ids
 				var tempSelected = [];
 
+				function findById(id) {
+					return suggestions.find(function (s) { return s[keyField] === id; });
+				}
+
 				function renderList(items) {
-					list.innerHTML = items.map(function (i) {
-						var isChecked = tempSelected.indexOf(i) !== -1 ? 'checked' : '';
-						return '<li><input type="checkbox" class="custom-checkbox" ' + isChecked + '><span>' + i + '</span></li>'
+					list.innerHTML = items.map(function (it) {
+						var id = it[keyField];
+						var text = it[labelField];
+						var isChecked = tempSelected.indexOf(id) !== -1 ? 'checked' : '';
+						return '<li data-id="' + id + '"><input type="checkbox" class="custom-checkbox" ' + isChecked + '><span>' + text + '</span></li>'
 					}).join('');
 				}
 
 				function renderChips() {
 					chipsWrap.innerHTML = selected.map(function (s, idx) {
-						return '<span class="chip" data-idx="' + idx + '">' + s + '<span class="remove" aria-hidden>×</span></span>'
+						var obj = findById(s);
+						var label = obj ? obj[labelField] : s;
+						return '<span class="chip" data-idx="' + idx + '">' + label + '<span class="remove" aria-hidden>×</span></span>'
 					}).join('');
 				}
 
 				function availableSuggestions(q) {
 					var ql = (q || '').toLowerCase();
 					return suggestions.filter(function (s) {
-						// Show all suggestions, check status handled in renderList
-						return (!ql || s.toLowerCase().indexOf(ql) !== -1);
+						var txt = (s[labelField] || '').toLowerCase();
+						return (!ql || txt.indexOf(ql) !== -1);
 					});
 				}
 
@@ -462,13 +473,12 @@ if (
 
 				// Toggle checkbox on list item click
 				list.addEventListener('mousedown', function (ev) {
-					// prevent input blur
 					ev.preventDefault();
 					var li = ev.target.closest('li');
 					if (!li) return;
-					var val = li.querySelector('span').textContent;
-					var idx = tempSelected.indexOf(val);
-					if (idx === -1) tempSelected.push(val);
+					var id = li.getAttribute('data-id');
+					var idx = tempSelected.indexOf(id);
+					if (idx === -1) tempSelected.push(id);
 					else tempSelected.splice(idx, 1);
 
 					// Re-render to update checkboxes
@@ -477,6 +487,30 @@ if (
 
 				// Footer actions
 				footer.addEventListener('mousedown', function (ev) { ev.preventDefault(); }); // Prevent blur
+
+				// Add / Cancel buttons
+				var btnAdd = footer.querySelector('.btn-add');
+				var btnCancel = footer.querySelector('.btn-cancel');
+
+				if (btnAdd) {
+					btnAdd.addEventListener('click', function (ev) {
+						ev.preventDefault();
+						selected = [...tempSelected];
+						// renderChips();
+						closeDropdown();
+						// Log selected values as objects
+						var selectedObjects = selected.map(function (id) { return findById(id); }).filter(Boolean);
+						console.log('Selected items:', selectedObjects);
+					});
+				}
+
+				if (btnCancel) {
+					btnCancel.addEventListener('click', function (ev) {
+						ev.preventDefault();
+						tempSelected = [...selected];
+						closeDropdown();
+					});
+				}
 
 				// remove chip
 				chipsWrap.addEventListener('click', function (ev) {
@@ -494,7 +528,7 @@ if (
 				});
 
 				// hide on blur 
-				input.addEventListener('blur', function () { setTimeout(closeDropdown, 200) });
+				// input.addEventListener('blur', function () { setTimeout(closeDropdown, 200) });
 			}
 
 			document.addEventListener('DOMContentLoaded', function () {
