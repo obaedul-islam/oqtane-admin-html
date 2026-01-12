@@ -198,34 +198,163 @@
 								<p class="mb-0">Selected Product</p>
 							</div>
 							<div class="oqtane-card__body">
-								<div class="site-products">
-									<div class="site-product__item">
-										<div class="site-product__img">
+								<div class="selected-products">
+									<div class="select-product__item">
+										<div class="select-product__img">
 											<img src="../img/product-1.png" alt="Product" />
 										</div>
-										<div class="site-product__content">
-											<h3 class="site-product__title">
-												Tirzepatide Injectable Solution
-											</h3>
-											<p class="site-product__price">$399</p>
-											<button class="oqtane-view-btn">View Intake Form</button>
-											<label class="custom-check mt-16">
-												<span class="custom-check__input">
-													<input type="checkbox" />
-													<span></span>
-												</span>
+										<div class="select-product__content">
+											<div>
+												<h3 class="select-product__title">
+													Tirzepatide Injectable Solution
+												</h3>
+												<p class="select-product__price">$399</p>
 
-												<span class="custom-check__label text-grey-3">
-													Compounded
-												</span>
-											</label>
+												<label class="custom-check mt-2">
+													<span class="custom-check__input">
+														<input type="checkbox" />
+														<span></span>
+													</span>
+
+													<span class="custom-check__label text-dark">
+														Do you want to change the original price?
+													</span>
+												</label>
+
+												<div class="custom-input custom-input--with-icon mt-3">
+													<label
+														class="custom-input__inner custom-input__inner-number"
+													>
+														<input
+															type="number"
+															class="custom-input__control"
+															placeholder=" "
+														/>
+														<span class="custom-input__label">Price</span>
+														<span class="custom-input__suffix"
+															><i class="icon-dollar"></i
+														></span>
+													</label>
+												</div>
+												<p class="text-primary mt-2"
+													>(You can only increase the price)</p
+												>
+											</div>
+
+											<div class="product-action__btn">
+												<div
+													class="input-group product-action__cart product-action__cart--primary product-action__cart--md"
+													data-aos="flip-left"
+													data-aos-duration="1000"
+													data-aos-once="true"
+												>
+													<span class="input-group-btn">
+														<button class="btn" type="button">
+															<i class="icon-minus"></i>
+														</button>
+													</span>
+													<input
+														type="text"
+														inputmode="numeric"
+														class="form-control text-dark fs-5 lh-1"
+														id="quantity"
+														value="1"
+													/>
+													<span class="input-group-btn">
+														<button class="btn" type="button">
+															<i class="icon-plus1"></i>
+														</button>
+													</span>
+												</div>
+											</div>
+
+											<button
+												type="button"
+												class="oqtane-btn text-danger fs-30 p-0"
+											>
+												<i class="icon-delete"></i>
+											</button>
+										</div>
+									</div>
+									<div class="select-product__item">
+										<div class="select-product__img">
+											<img src="../img/product-1.png" alt="Product" />
+										</div>
+										<div class="select-product__content">
+											<div>
+												<h3 class="select-product__title">
+													Tirzepatide Injectable Solution
+												</h3>
+												<p class="select-product__price">$399</p>
+
+												<label class="custom-check mt-2">
+													<span class="custom-check__input">
+														<input type="checkbox" />
+														<span></span>
+													</span>
+
+													<span class="custom-check__label text-dark">
+														Do you want to change the original price?
+													</span>
+												</label>
+
+												<div class="custom-input custom-input--with-icon mt-3">
+													<label
+														class="custom-input__inner custom-input__inner-number"
+													>
+														<input
+															type="number"
+															class="custom-input__control"
+															placeholder=" "
+														/>
+														<span class="custom-input__label">Price</span>
+														<span class="custom-input__suffix"
+															><i class="icon-dollar"></i
+														></span>
+													</label>
+												</div>
+											</div>
+
+											<div class="product-action__btn">
+												<div
+													class="input-group product-action__cart product-action__cart--primary product-action__cart--md"
+													data-aos="flip-left"
+													data-aos-duration="1000"
+													data-aos-once="true"
+												>
+													<span class="input-group-btn">
+														<button class="btn" type="button">
+															<i class="icon-minus"></i>
+														</button>
+													</span>
+													<input
+														type="text"
+														inputmode="numeric"
+														class="form-control text-dark fs-5 lh-1"
+														id="quantity"
+														value="1"
+													/>
+													<span class="input-group-btn">
+														<button class="btn" type="button">
+															<i class="icon-plus1"></i>
+														</button>
+													</span>
+												</div>
+											</div>
+
+											<button
+												type="button"
+												class="oqtane-btn text-danger fs-30 p-0"
+											>
+												<i class="icon-delete"></i>
+											</button>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 
-						<div class="oqtane-card list-card">
+						<div class="oqtane-card list-card mt-3">
 							<div class="oqtane-card__header">
 								<h3>Order Total & Discounts</h3>
 							</div>
@@ -285,7 +414,7 @@
 										<div class="col-12 col-md-auto col-lg-auto">
 											<button
 												type="button"
-												class="oqtane-btn oqtane-btn__primary--xl w-100"
+												class="oqtane-btn oqtane-btn__primary oqtane-btn__primary--xl w-100"
 											>
 												Apply
 											</button>
@@ -296,7 +425,7 @@
 											<div
 												class="bg-cyan-light rounded-30 d-flex text-blue justify-content-center align-items-center promo-code-container"
 											>
-												<h3 class="fs-30 fw-bold mb-0">$178</h3>
+												<h3 class="fw-bold mb-0">$178</h3>
 											</div>
 										</div>
 									</div>
@@ -353,7 +482,7 @@
 										<button
 											type="button"
 											id="answer-type-btn"
-											class="oqtane-btn oqtane-btn__primary--xl"
+											class="oqtane-btn oqtane-btn__primary oqtane-btn__primary--xl"
 										>
 											<span>Next</span>
 										</button>
