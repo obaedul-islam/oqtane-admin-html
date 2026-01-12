@@ -416,9 +416,9 @@ if (
 				var dropdownWrapper = document.createElement('div');
 				dropdownWrapper.className = 'dropdown-wrapper rounded-4';
 				var list = document.createElement('ul');
-				list.className = 'suggestions-list';
+				list.className = 'suggestions-list d-flex flex-column gap-3 suggestions-list--multi';
 				var footer = document.createElement('div');
-				footer.className = 'dropdown-footer rounded-4';
+				footer.className = 'dropdown-footer border-0 border-bottom rounded-4';
 				footer.innerHTML = '<a class="btn-sm-custom btn-add">Add</a><a class="btn-sm-custom btn-cancel">Cancel</a>';
 
 				dropdownWrapper.appendChild(list);
@@ -450,7 +450,7 @@ if (
 						var text = it[labelField];
 						var isChecked = tempSelected.indexOf(id) !== -1 ? 'checked' : '';
 						return [
-							'<li data-id="' + id + '" class="mt-4">',
+							'<li data-id="' + id + '"  class="px-3">',
 								'<label class="custom-check">',
 									'<span class="custom-check__input">',
 										'<input type="checkbox" ' + isChecked + '>',
