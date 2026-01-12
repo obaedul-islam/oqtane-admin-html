@@ -133,19 +133,47 @@
 
 			<div class="tw-main__content">
 				<div class="content">
-					<div class="actionbar">
+					<div>
+						<div class="actionbar">
 						<div class="actionbar__breadcrumb">
-									<p class="text-uppercase fs-20 mb-0 fw-600">
-										<a href="#" class="text-grey-3">ORDER LIST</a>
-										<span class="text-grey-3">/</span>
-										<a href="#" class="text-grey-3">...</a>
-										<span class="text-grey-3">/</span>
-										<a href="#" class="text-grey-3">MAKE A NEW SELL</a>
-                    <span class="text-grey-3">/</span>
-										<a href="#" class="text-primary">MANAGE PRODUCT</a>
-									</p>
+							<p class="text-uppercase fs-20 mb-0 fw-600">
+								<a href="#" class="text-grey-3">ORDER LIST</a>
+								<span class="text-grey-3">/</span>
+								<a href="#" class="text-grey-3">...</a>
+								<span class="text-grey-3">/</span>
+								<a href="#" class="text-grey-3">MAKE A NEW SELL</a>
+									<span class="text-grey-3">/</span>
+								<a href="#" class="text-primary">MANAGE PRODUCT</a>
+							</p>
+						</div>					
+					</div>
+					<div class="stepper">
+								<div class="stepper__status">
+									<div class="stepper__track">
+										<div class="stepper__step__wrapper">
+											<div class="stepper__step active">
+												<div class="stepper__step__bottom">
+													<span class="stepper__step-label active">Step 1</span>
+												</div>
+											</div>
+										</div>
+										<div class="stepper__step__wrapper">
+											<div class="stepper__step">
+												<div class="stepper__step__bottom">
+													<span class="stepper__step-label">Step 2</span>
+												</div>
+											</div>
+										</div>
+										<div class="stepper__step__wrapper">
+											<div class="stepper__step">
+												<div class="stepper__step__bottom">
+													<span class="stepper__step-label">Step 3</span>
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
-
+					</div>
 					</div>
 
           	<div class="oqtane-card list-card">
@@ -207,22 +235,308 @@
 									</tfoot>
 								</table>
 							</div>
+
+							
 					</div>
 				</div>
-        <div class="d-flex flex-column flex-lg-row justify-content-md-end justify-content-center align-items-center gap-3 ">
-        		<button
-									type="button"
-									class="oqtane-btn oqtane-btn__primary--outline oqtane-btn__primary--outline__xl "
-	
-								>
-									Back
-								</button>
 
-                <button type="button" class="oqtane-btn oqtane-btn__primary--xl">
-									Next
-								</button>
+				 <div class="mt-5">
+					<h3>Payment Details</h3>
+					<div class="row mt-30 g-3 mt-4">
+						<div class="col-md-6">
+							<div class="form-group">
+								<div class="d-flex items-start position-relative">
+									<div class="custom-input">
+										<label class="custom-input__inner">
+											<input
+												type="text"
+												class="custom-input__control custom-input__control--with-card-icons"
+												placeholder=" "
+											/>
+											<span class="custom-input__label"
+												>Card Number</span
+											>
+										</label>
+									</div>
+									<div class="card-icons d-flex ml-auto">
+										<img
+											src="/img/payment/visa.png"
+											alt="Visa Card"
+											class="mr-2"
+										/>
+										<img
+											src="/img/payment/master.png"
+											alt="Master Card"
+										/>
+										<img
+											src="/img/payment/amex.png"
+											alt="Amex Card"
+											class="ml-2"
+										/>
+										<img
+											src="/img/payment/jcb.png"
+											alt="Amex Card"
+											class="ml-2"
+										/>
+									</div>
+								</div>
+							</div>
+							
+							
+						</div>
+						<div class="col-md-6">
+							<div class="custom-input">
+								<label class="custom-input__inner">
+									<input
+										type="text"
+										class="custom-input__control"
+										placeholder=" "
+									/>
+									<span class="custom-input__label"
+										>Expiration Date</span
+									>
+								</label>
+							</div>
+						</div>
+						<div class="col-md-6">
+							
+							<div class="custom-input">
+								<label class="custom-input__inner">
+									<input
+										type="number"
+										class="custom-input__control"
+										placeholder=" "
+									/>
+									<span class="custom-input__label"
+										>Security Code</span
+									>
+								</label>
+							</div>
+							
+						</div>
+						<div class="col-md-6">
+							<div class="custom-input">
+								<label class="custom-input__inner">
+									<input
+										type="text"
+										class="custom-input__control"
+										placeholder=" "
+									/>
+									<span class="custom-input__label"
+										>Country</span
+									>
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				 <div class="mt-5">
+					<h3>Shipping Info</h3>
+					<div class="row mt-30 g-3 mt-4">
+						<div class="col-md-6">
+							<div class="custom-input">
+								<label class="custom-input__inner">
+									<input
+										type="text"
+										class="custom-input__control"
+										placeholder=" "
+									/>
+									<span class="custom-input__label"
+										>Name</span
+									>
+								</label>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="custom-input">
+								<label class="custom-input__inner">
+									<input
+										type="text"
+										class="custom-input__control"
+										placeholder=" "
+									/>
+									<span class="custom-input__label"
+										>State</span
+									>
+								</label>
+							</div>
+						</div>
+						<div class="col-md-6">
+							
+							<div class="custom-input">
+								<label class="custom-input__inner">
+									<input
+										type="number"
+										class="custom-input__control"
+										placeholder=" "
+									/>
+									<span class="custom-input__label"
+										>Address</span
+									>
+								</label>
+							</div>
+							
+						</div>
+						<div class="col-md-6">
+							<div class="custom-input">
+								<label class="custom-input__inner">
+									<input
+										type="text"
+										class="custom-input__control"
+										placeholder=" "
+									/>
+									<span class="custom-input__label"
+										>City</span
+									>
+								</label>
+							</div>
+						</div>
+						<div class="col-md-6">
+							
+							<div class="custom-input">
+								<label class="custom-input__inner">
+									<input
+										type="number"
+										class="custom-input__control"
+										placeholder=" "
+									/>
+									<span class="custom-input__label"
+										>Zip Code</span
+									>
+								</label>
+							</div>
+							
+						</div>
+						<div class="col-md-6">
+							<div class="custom-input">
+								<label class="custom-input__inner">
+									<input
+										type="text"
+										class="custom-input__control"
+										placeholder=" "
+									/>
+									<span class="custom-input__label"
+										>Email Address</span
+									>
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				 <div>
+					<div class="d-flex justify-content-between mt-5">
+						<h3>Billing Info</h3>
+						<label class="custom-check">
+							<span class="custom-check__input">
+								<input type="checkbox">
+								<span></span>
+							</span>
+							<span class="custom-check__label text-grey-3">
+								Same as shipping info
+							</span>
+						</label>
+					</div>
+					<div class="row mt-30 g-3 mt-4">
+						<div class="col-md-6">
+							<div class="custom-input">
+								<label class="custom-input__inner">
+									<input
+										type="text"
+										class="custom-input__control"
+										placeholder=" "
+									/>
+									<span class="custom-input__label"
+										>Name</span
+									>
+								</label>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="custom-input">
+								<label class="custom-input__inner">
+									<input
+										type="text"
+										class="custom-input__control"
+										placeholder=" "
+									/>
+									<span class="custom-input__label"
+										>State</span
+									>
+								</label>
+							</div>
+						</div>
+						<div class="col-md-6">
+							
+							<div class="custom-input">
+								<label class="custom-input__inner">
+									<input
+										type="number"
+										class="custom-input__control"
+										placeholder=" "
+									/>
+									<span class="custom-input__label"
+										>Address</span
+									>
+								</label>
+							</div>
+							
+						</div>
+						<div class="col-md-6">
+							<div class="custom-input">
+								<label class="custom-input__inner">
+									<input
+										type="text"
+										class="custom-input__control"
+										placeholder=" "
+									/>
+									<span class="custom-input__label"
+										>City</span
+									>
+								</label>
+							</div>
+						</div>
+						<div class="col-md-6">
+							
+							<div class="custom-input">
+								<label class="custom-input__inner">
+									<input
+										type="number"
+										class="custom-input__control"
+										placeholder=" "
+									/>
+									<span class="custom-input__label"
+										>Zip Code</span
+									>
+								</label>
+							</div>
+							
+						</div>
+						<div class="col-md-6">
+							<div class="custom-input">
+								<label class="custom-input__inner">
+									<input
+										type="text"
+										class="custom-input__control"
+										placeholder=" "
+									/>
+									<span class="custom-input__label"
+										>Email Address</span
+									>
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="d-flex flex-column flex-lg-row justify-content-md-end justify-content-center align-items-center mt-4 gap-3 ">
+					<button type="button" class="oqtane-btn oqtane-btn__primary--outline oqtane-btn__primary--outline__xl " >
+						Back
+					</button>
 
-                </div>
+					<button type="button" class="oqtane-btn oqtane-btn__primary oqtane-btn__primary--xl">
+						Next
+					</button>
+
+				</div>
 
 			</div>
 		</main>
