@@ -9,5 +9,19 @@
 }
 
 .promo-code-container {
-	padding: 16px 81px 16px 81px
+	padding: 16px 81px 16px 81px;
+
+	h3 {
+		font-size: 30px;
+	}
+}
+
+@media all and (max-width: 768px) {
+
+	h3 {
+		font-size: 14px !important;
+	}
+
+
+
 }
