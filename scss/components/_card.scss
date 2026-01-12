@@ -32,6 +32,16 @@
 		.range {
 			border: 1px solid $grey-3;
 		}
+
+		.multi-select {
+			padding: 0;
+			gap: 0;
+		}
+
+		.oqtane-search__input-alt__icon {
+			font-size: 16px;
+			left: 15px;
+		}
 	}
 
 	&__actions {
@@ -83,6 +93,7 @@
 		}
 	}
 }
+
 
 .list-card {
 	overflow: hidden;

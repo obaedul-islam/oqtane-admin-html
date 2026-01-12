@@ -157,4 +157,15 @@
       }
     }
   }
+
+  .product-action__cart--md.input-group .input-group-btn {
+    height: 35px;
+    width: 50px;
+  }
+
+  .product-action__cart--md.input-group .form-control {
+    height: 35px;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
 }

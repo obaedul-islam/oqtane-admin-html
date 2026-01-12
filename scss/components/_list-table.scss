@@ -195,6 +195,18 @@
   }
 }
 
-.table-header-grey th {
-  background-color: #eeeaea !important;
+.table-header-grey {
+  th {
+    background-color: #F1F1F1 !important;
+    font-weight: 500;
+  }
+
+}
+
+tbody {
+  tr {
+    td {
+      color: #7c7c7c !important;
+    }
+  }
 }
