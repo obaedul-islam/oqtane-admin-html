@@ -116,6 +116,10 @@
       transform: rotateY(180deg);
     }
   }
+
+  &__menu {
+    display: none;
+  }
 }
 
 
@@ -164,19 +168,28 @@
   /* Sidebar base - hidden by default on mobile */
   .sidebar {
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 70px;
+    right: 0;
     width: 100%;
     height: 100vh;
     background: #ffffff;
-    transform: translateX(-100%);
+    transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
     z-index: 1050;
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
     border-radius: 0;
 
+    &__items {
+      align-items: center;
+    }
+
+    &__link {
+      justify-content: center;
+    }
+
     &__menu {
+      display: block;
       background-color: transparent;
       padding: 0;
       margin: 0;
@@ -187,7 +200,7 @@
 
       i {
         color: $primary;
-        font-weight: 700;
+        // font-weight: 700;
       }
     }
   }
@@ -221,4 +234,10 @@
       opacity: 1;
     }
   }
+
+  .menubar__dropdown__desktop {
+    display: none !important;
+
+  }
+
 }
