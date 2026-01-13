@@ -131,15 +131,14 @@
 
   &__btn {
     display: flex;
-    flex-direction: column;
-    align-items: stretch;
     gap: 20px;
+    align-items: center;
 
-    .theme-btn {
-      flex-grow: 1;
-      flex-basis: 0;
-      height: 47px;
-    }
+    // .theme-btn {
+    //   flex-grow: 1;
+    //   flex-basis: 0;
+    //   height: 47px;
+    // }
   }
 }
 
