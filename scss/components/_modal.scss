@@ -212,12 +212,28 @@
 						font-size: 30px;
 						font-weight: 700;
 						color: $dark;
+
+						@media all and (max-width: 767px) {
+							font-size: 20px;
+						}
+					}
+
+					@media all and (max-width: 767px) {
+						height: 40px;
+						width: 40px;
+						display: flex;
+						align-items: center;
+						justify-content: center;
 					}
 				}
 
 				&::before,
 				&::after {
 					content: unset;
+				}
+
+				h4 {
+					margin-bottom: 0;
 				}
 			}
 
@@ -230,10 +246,10 @@
 					margin: 0 auto;
 					max-width: 1070px;
 
-					&-alt{
+					&-alt {
 						max-width: 658px;
 					}
-					
+
 					&__max-width {
 						max-width: 570px;
 					}
@@ -389,6 +405,7 @@
 }
 
 .if-modal {
+
 	&__title,
 	&__text {
 		font-size: $fs-18;
