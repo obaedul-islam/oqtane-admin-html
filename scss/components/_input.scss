@@ -51,7 +51,7 @@
         width: 546px;
         height: 67px !important;
       }
-      
+
       @media screen and (max-width: 992px) {
         max-width: 560px !important;
         width: 546px;
@@ -878,10 +878,12 @@
   }
 
 
-  .custom-input__control:focus ~ .custom-input__label, .custom-input__control:not(:placeholder-shown) ~ .custom-input__label {
+  .custom-input__control:focus~.custom-input__label,
+  .custom-input__control:not(:placeholder-shown)~.custom-input__label {
     top: 15px;
     font-size: 12px;
-}
+  }
+
   .radio-group {
     padding: 0;
     align-items: start;
@@ -906,6 +908,7 @@
 }
 
 @media all and (max-width: 768px) {
+
 
   .oqtane-search {
     &__input {
