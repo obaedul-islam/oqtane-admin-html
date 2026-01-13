@@ -44,15 +44,10 @@
 }
 
 .selected-products {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 25px 50px;
+
 
 	.select-product {
 		&__item {
-			flex-grow: 1;
-			display: flex;
-			align-items: start;
 			padding: 0;
 			gap: 20px;
 			border-bottom: 1px solid $border-color;
