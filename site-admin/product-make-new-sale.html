@@ -22,6 +22,8 @@
 					<img src="./../img/logo.svg" alt="Logo" class="menubar__logo" />
 				</a>
 
+
+
 				<div class="menubar__items">
 					<a class="menubar__item" href="#">
 						<i class="icon-message menubar__icon"></i>
@@ -32,7 +34,7 @@
 						<span class="menubar__badge"></span>
 					</a>
 
-					<div class="dropdown menubar__dropdown">
+					<div class="dropdown menubar__dropdown menubar__dropdown__desktop">
 						<button class="user dropdown-toggle" type="button" id="menu-dropdown" data-toggle="dropdown">
 							<img class="user__avatar" src="./../img/user.png" alt="avatar" />
 							<div class="user__info">
@@ -47,13 +49,35 @@
 							<li><a href="#">Something else here</a></li>
 						</ul>
 					</div>
+
+					<button type="button" class="sidebar__menu">
+						<i class="icon-hamburger-wide"></i>
+					</button>
 				</div>
 			</nav>
 		</header>
 
 		<main class="main">
-			<aside class="sidebar">
+			<aside class="sidebar ">
 				<ul class="sidebar__items">
+
+					<li class="sidebar__item d-md-none d-block">
+						<div class="dropdown menubar__dropdown menubar__dropdown__mob">
+						<button class="user dropdown-toggle" type="button" id="menu-dropdown" data-toggle="dropdown">
+							<img class="user__avatar" src="./../img/user.png" alt="avatar">
+							<div class="user__info">
+								<p class="user__name fs-18 lh-100 text-dark">David Wayne</p>
+								<p class="user__role fs-14 lh-100 text-grey-3">Super Admin</p>
+							</div>
+							<i class="icon-down_arrow"></i>
+						</button>
+						<ul class="dropdown-menu">
+							<li><a href="#">Action</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+						</ul>
+						</div>
+					</li>
 					<li class="sidebar__item"><a href="./dashboard.html" class="sidebar__link"><i
 								class="icon-dashboard sidebar__icon"></i><span
 								class="sidebar__text">Dashboard</span></a></li>
@@ -165,7 +189,7 @@
 												<h3 class="select-product__title">
 													Tirzepatide Injectable Solution
 												</h3>
-												<p class="select-product__price">$399</p>
+												<p class="select-product__price del">$399</p>
 											</div>
 
 											<div class="product-action__btn">
@@ -228,7 +252,7 @@
 												<h3 class="select-product__title">
 													Tirzepatide Injectable Solution
 												</h3>
-												<p class="select-product__price">$399</p>
+												<p class="select-product__price ">$399</p>
 											</div>
 
 											<div class="product-action__btn">
@@ -280,7 +304,7 @@
 						</div>
 
 						<div class="oqtane-card__body">
-							<div class="row g-3">
+							<div class="row g-5 ">
 								<div class="col-12 col-lg-5">
 									<div class="custom-input custom-input--with-icon">
 										<label class="custom-input__inner custom-input__inner-number">
@@ -289,6 +313,10 @@
 											<span class="custom-input__suffix"><i class="icon-dollar"></i></span>
 										</label>
 									</div>
+
+								</div>
+								<div class="col-12 col-lg-5 d-flex align-items-center">
+									<a href="" class="text-decoration-underline">Remove Promo Code</a>
 								</div>
 							</div>
 						</div>
@@ -333,58 +361,13 @@
 				</div>
 				<div
 					class="d-flex flex-column flex-lg-row justify-content-md-end justify-content-center align-items-center gap-3 mb-3">
-					<button type="button" data-bs-toggle="modal" data-bs-target="#rejectModal"
+					<button type="button"
 						class="oqtane-btn oqtane-btn__primary--outline oqtane-btn__primary--outline__xl ">
 						Back
 					</button>
 					<button type="button" class="oqtane-btn oqtane-btn__primary oqtane-btn__primary--xl">
 						Submit
 					</button>
-				</div>
-
-
-				<div class="modal edit fade" id="rejectModal" tabindex="-1" role="dialog"
-					aria-labelledby="rejectModalLabel">
-					<div class="modal-dialog w-100 m-0" role="document">
-						<div class="modal-content">
-							<div class="modal-header d-flex align-item-center">
-								<div class="d-flex w-100 align-item-center justify-content-space-between pe-40">
-									<h4 class="fs-24 lh-36 text-left" id="myModalLabel">
-										Add Offer Product
-									</h4>
-								</div>
-								<button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close">
-									<span class="icon-cross text-black" aria-hidden="true"></span>
-								</button>
-							</div>
-							<div class="modal-body mt-50">
-								<div class="modal-body--wrapper modal-body--wrapper__max-width">
-									<h4 class="fs-22 text-center mt-80 text-dark fw-semibold lh-lg" id="myModalLabel">
-										Go back to previous step?
-									</h4>
-									<p class="fs-18 text-grey-3">
-										If you go back, the products you’ve added in this step will be removed, and
-										you’ll need to start this section again.
-									</p>
-
-									<div class="answer-type mt-40">
-										<!-- <h3 class="answer-type__title">Select Answer Type</h3> -->
-										<div class="answer-type__actions justify-content-center">
-											<button type="button" data-bs-dismiss="modal" aria-label="Close"
-												class="oqtane-btn oqtane-btn__primary modal-button">
-												Go Back
-											</button>
-											<button type="button"
-												class="oqtane-btn oqtane-btn__primary--outline modal-button">
-												Stay Here
-											</button>
-
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
 				</div>
 		</main>
 
@@ -411,6 +394,41 @@
 	<script src="./../js/date-range-picker.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 	<script src="./../js/main.js"></script>
+
+	<!-- Hamburger Menu Toggle Script -->
+	<script>
+		$(document).ready(function () {
+			// Toggle sidebar when hamburger button is clicked
+			$('.sidebar__menu').on('click', function () {
+				$('.sidebar').toggleClass('sidebar--active');
+				$('body').toggleClass('sidebar-open');
+
+				// Toggle icon between hamburger and close
+				var icon = $(this).find('i');
+				if ($('.sidebar').hasClass('sidebar--active')) {
+					icon.removeClass('icon-hamburger-wide').addClass('icon-cross');
+				} else {
+					icon.removeClass('icon-cross').addClass('icon-hamburger-wide');
+				}
+			});
+
+			// Close sidebar when clicking outside of it
+			$(document).on('click', function (e) {
+				if (!$(e.target).closest('.sidebar, .sidebar__menu').length) {
+					$('.sidebar').removeClass('sidebar--active');
+					$('body').removeClass('sidebar-open');
+
+					// Reset icon to hamburger
+					$('.sidebar__menu i').removeClass('icon-cross').addClass('icon-hamburger-wide');
+				}
+			});
+
+			// Prevent sidebar clicks from closing it
+			$('.sidebar').on('click', function (e) {
+				e.stopPropagation();
+			});
+		});
+	</script>
 </body>
 
 </html>

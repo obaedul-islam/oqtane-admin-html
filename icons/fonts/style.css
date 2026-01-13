@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?aecvyq');
-  src:  url('fonts/icomoon.eot?aecvyq#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.woff2?aecvyq') format('woff2'),
-    url('fonts/icomoon.ttf?aecvyq') format('truetype'),
-    url('fonts/icomoon.woff?aecvyq') format('woff'),
-    url('fonts/icomoon.svg?aecvyq#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?xwx93s');
+  src:  url('fonts/icomoon.eot?xwx93s#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.woff2?xwx93s') format('woff2'),
+    url('fonts/icomoon.ttf?xwx93s') format('truetype'),
+    url('fonts/icomoon.woff?xwx93s') format('woff'),
+    url('fonts/icomoon.svg?xwx93s#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -52,6 +52,9 @@
 }
 .icon-search-rizz:before {
   content: "\e911";
+}
+.icon-cross-rizz:before {
+  content: "\e913";
 }
 .icon-star:before {
   content: "\e916";
@@ -259,9 +262,6 @@
 }
 .icon-email:before {
   content: "\e989";
-}
-.icon-cross-rizz:before {
-  content: "\e913";
 }
 .icon-facebook-new:before {
   content: "\e914";

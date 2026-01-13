@@ -116,44 +116,128 @@
       transform: rotateY(180deg);
     }
   }
+
+  &__menu {
+    display: none;
+  }
 }
 
 
 @media all and (max-width: 768px) {
-  .sidebar {
-    width: 150px;
+  // .sidebar {
+  //   width: 150px;
 
-    &--collapsed {
-      width: 60px;
-      padding: 15px 0px;
+  //   &--collapsed {
+  //     width: 50px;
+  //     padding: 15px 0px;
+
+  //     .sidebar__items {
+  //       padding: 0;
+  //     }
+  //   }
+
+  //   &__link {
+  //     padding: 5px;
+  //     justify-content: center;
+  //     gap: 5px;
+  //   }
+
+  //   &__icon {
+  //     font-size: 16px;
+  //   }
+
+  //   &__text {
+  //     font-size: 12px;
+  //   }
+
+  //   &__toggle {
+  //     width: 18px;
+  //     height: 30px;
+  //     border-radius: 5px 0 0 5px;
+
+  //     i {
+  //       font-size: 14px;
+  //     }
+  //   }
+
+  //   .sidebar__items {
+  //     align-items: center;
+  //   }
+  // }
+
+  /* Sidebar base - hidden by default on mobile */
+  .sidebar {
+    position: fixed;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background: #ffffff;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1050;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    border-radius: 0;
+
+    &__items {
+      align-items: center;
     }
 
     &__link {
-      padding: 5px;
       justify-content: center;
-      gap: 5px;
     }
 
-    &__icon {
-      font-size: 16px;
-    }
-
-    &__text {
-      font-size: 12px;
-    }
-
-    &__toggle {
-      width: 18px;
-      height: 30px;
-      border-radius: 5px 0 0 5px;
+    &__menu {
+      display: block;
+      background-color: transparent;
+      padding: 0;
+      margin: 0;
+      border: 0;
+      outline: 0;
+      box-shadow: none;
+      border-radius: 0;
 
       i {
-        font-size: 14px;
+        color: $primary;
+        // font-weight: 700;
       }
     }
+  }
 
-    .sidebar__items {
-      align-items: start;
+  /* When sidebar is active/visible */
+  .sidebar.sidebar--active {
+    transform: translateX(0);
+  }
+
+  /* Lock body scroll when sidebar is open */
+  body.sidebar-open {
+    overflow: hidden;
+  }
+
+  /* Overlay behind sidebar */
+  body.sidebar-open::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1040;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
     }
   }
+
+  .menubar__dropdown__desktop {
+    display: none !important;
+
+  }
+
 }
