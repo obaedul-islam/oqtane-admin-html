@@ -117,7 +117,7 @@
 
   &--multi {
     li:not(:last-child) {
-      border-bottom: 1px solid rgba( #F0F1F5, 0.6);
+      border-bottom: 1px solid rgba(#F0F1F5, 0.6);
     }
   }
 }
@@ -996,6 +996,7 @@
     &__label {
       font-size: 16px;
       line-height: 1;
+      text-wrap: wrap;
     }
   }
 
