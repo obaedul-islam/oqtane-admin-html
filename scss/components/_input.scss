@@ -51,6 +51,12 @@
         width: 546px;
         height: 67px !important;
       }
+      
+      @media screen and (max-width: 992px) {
+        max-width: 560px !important;
+        width: 546px;
+        height: 67px !important;
+      }
 
       &__icon {
         position: absolute;
@@ -111,7 +117,7 @@
 
   &--multi {
     li:not(:last-child) {
-      border-bottom: 1px solid rgba( #F0F1F5, 0.6);
+      border-bottom: 1px solid rgba(#F0F1F5, 0.6);
     }
   }
 }
@@ -836,7 +842,8 @@
   .custom-input {
     &__label {
       font-size: 16px;
-      top: 20px;
+      top: 50%;
+      transform: translateY(-50%);
     }
 
     // &__control {
@@ -870,6 +877,11 @@
     // }
   }
 
+
+  .custom-input__control:focus ~ .custom-input__label, .custom-input__control:not(:placeholder-shown) ~ .custom-input__label {
+    top: 15px;
+    font-size: 12px;
+}
   .radio-group {
     padding: 0;
     align-items: start;
@@ -920,6 +932,9 @@
       }
     }
 
+    &__inner {
+      padding: 5px 15px;
+    }
 
     &__icon {
       font-size: 16px;
@@ -981,6 +996,7 @@
     &__label {
       font-size: 16px;
       line-height: 1;
+      text-wrap: wrap;
     }
   }
 

@@ -16,12 +16,19 @@
 	}
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 992px) {
 
-	h3 {
-		font-size: 18px !important;
+	// h3 {
+	// 	font-size: 18px !important;
+	// }
+
+	.promo-code-container {
+		padding: 10px 15px;
+		font-size: 14px;
+
+		h3 {
+			font-size: 14px;
+		}
 	}
-
-
 
 }

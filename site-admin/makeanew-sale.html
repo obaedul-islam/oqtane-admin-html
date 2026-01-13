@@ -192,24 +192,74 @@
 								</div>
 							</div>
 						</div>
-
 						<div class="oqtane-card mb-0">
-							<div class="oqtane-card__header">
+							<div
+								class="oqtane-card__header d-flex justify-content-between align-items-md-center"
+							>
 								<p class="mb-0">Selected Product</p>
+								<div
+									class="oqtane-search position-relative d-inline-block w-auto"
+								>
+									<input
+										class="oqtane-search__input oqtane-search__input-alt2 with-suggestions"
+										type="text"
+										placeholder="Search"
+									/>
+									<i class="icon-search oqtane-search__input-alt__icon"></i>
+								</div>
 							</div>
-							<div class="oqtane-card__body">
+							<div class="oqtane-card__body p-0">
 								<div class="selected-products">
 									<div class="select-product__item">
 										<div class="select-product__img">
 											<img src="../img/product-1.png" alt="Product" />
 										</div>
 										<div class="select-product__content">
-											<div>
-												<h3 class="select-product__title">
-													Tirzepatide Injectable Solution
-												</h3>
-												<p class="select-product__price">$399</p>
+											<div
+												class="d-flex flex-xl-row flex-column gap-3 w-100 justify-content-between align-item-start"
+											>
+												<div>
+													<h3 class="select-product__title">
+														Tirzepatide Injectable Solution
+													</h3>
+													<p class="select-product__price">$399</p>
+												</div>
 
+												<div class="product-action__btn">
+													<div
+														class="input-group product-action__cart product-action__cart--primary product-action__cart--md"
+														data-aos="flip-left"
+														data-aos-duration="1000"
+														data-aos-once="true"
+													>
+														<span class="input-group-btn">
+															<button class="btn" type="button">
+																<i class="icon-minus"></i>
+															</button>
+														</span>
+														<input
+															type="text"
+															inputmode="numeric"
+															class="form-control text-dark fs-5 lh-1"
+															id="quantity"
+															value="1"
+														/>
+														<span class="input-group-btn">
+															<button class="btn" type="button">
+																<i class="icon-plus1"></i>
+															</button>
+														</span>
+													</div>
+													<button
+														type="button"
+														class="oqtane-btn text-danger fs-30 p-0"
+													>
+														<i class="icon-delete"></i>
+													</button>
+												</div>
+											</div>
+
+											<div>
 												<label class="custom-check mt-2">
 													<span class="custom-check__input">
 														<input type="checkbox" />
@@ -220,7 +270,6 @@
 														Do you want to change the original price?
 													</span>
 												</label>
-
 												<div class="custom-input custom-input--with-icon mt-3">
 													<label
 														class="custom-input__inner custom-input__inner-number"
@@ -231,49 +280,15 @@
 															placeholder=" "
 														/>
 														<span class="custom-input__label">Price</span>
-														<span class="custom-input__suffix"
-															><i class="icon-dollar"></i
-														></span>
+														<span class="custom-input__suffix">
+															<i class="icon-dollar"></i>
+														</span>
 													</label>
 												</div>
 												<p class="text-primary mt-2"
 													>(You can only increase the price)</p
 												>
 											</div>
-
-											<div class="product-action__btn">
-												<div
-													class="input-group product-action__cart product-action__cart--primary product-action__cart--md"
-													data-aos="flip-left"
-													data-aos-duration="1000"
-													data-aos-once="true"
-												>
-													<span class="input-group-btn">
-														<button class="btn" type="button">
-															<i class="icon-minus"></i>
-														</button>
-													</span>
-													<input
-														type="text"
-														inputmode="numeric"
-														class="form-control text-dark fs-5 lh-1"
-														id="quantity"
-														value="1"
-													/>
-													<span class="input-group-btn">
-														<button class="btn" type="button">
-															<i class="icon-plus1"></i>
-														</button>
-													</span>
-												</div>
-											</div>
-
-											<button
-												type="button"
-												class="oqtane-btn text-danger fs-30 p-0"
-											>
-												<i class="icon-delete"></i>
-											</button>
 										</div>
 									</div>
 									<div class="select-product__item">
@@ -281,12 +296,51 @@
 											<img src="../img/product-1.png" alt="Product" />
 										</div>
 										<div class="select-product__content">
-											<div>
-												<h3 class="select-product__title">
-													Tirzepatide Injectable Solution
-												</h3>
-												<p class="select-product__price">$399</p>
+											<div
+												class="d-flex flex-xl-row flex-column gap-3 w-100 justify-content-between align-item-start"
+											>
+												<div>
+													<h3 class="select-product__title">
+														Tirzepatide Injectable Solution
+													</h3>
+													<p class="select-product__price">$399</p>
+												</div>
 
+												<div class="product-action__btn">
+													<div
+														class="input-group product-action__cart product-action__cart--primary product-action__cart--md"
+														data-aos="flip-left"
+														data-aos-duration="1000"
+														data-aos-once="true"
+													>
+														<span class="input-group-btn">
+															<button class="btn" type="button">
+																<i class="icon-minus"></i>
+															</button>
+														</span>
+														<input
+															type="text"
+															inputmode="numeric"
+															class="form-control text-dark fs-5 lh-1"
+															id="quantity"
+															value="1"
+														/>
+														<span class="input-group-btn">
+															<button class="btn" type="button">
+																<i class="icon-plus1"></i>
+															</button>
+														</span>
+													</div>
+													<button
+														type="button"
+														class="oqtane-btn text-danger fs-30 p-0"
+													>
+														<i class="icon-delete"></i>
+													</button>
+												</div>
+											</div>
+
+											<div>
 												<label class="custom-check mt-2">
 													<span class="custom-check__input">
 														<input type="checkbox" />
@@ -297,57 +351,7 @@
 														Do you want to change the original price?
 													</span>
 												</label>
-
-												<div class="custom-input custom-input--with-icon mt-3">
-													<label
-														class="custom-input__inner custom-input__inner-number"
-													>
-														<input
-															type="number"
-															class="custom-input__control"
-															placeholder=" "
-														/>
-														<span class="custom-input__label">Price</span>
-														<span class="custom-input__suffix"
-															><i class="icon-dollar"></i
-														></span>
-													</label>
-												</div>
 											</div>
-
-											<div class="product-action__btn">
-												<div
-													class="input-group product-action__cart product-action__cart--primary product-action__cart--md"
-													data-aos="flip-left"
-													data-aos-duration="1000"
-													data-aos-once="true"
-												>
-													<span class="input-group-btn">
-														<button class="btn" type="button">
-															<i class="icon-minus"></i>
-														</button>
-													</span>
-													<input
-														type="text"
-														inputmode="numeric"
-														class="form-control text-dark fs-5 lh-1"
-														id="quantity"
-														value="1"
-													/>
-													<span class="input-group-btn">
-														<button class="btn" type="button">
-															<i class="icon-plus1"></i>
-														</button>
-													</span>
-												</div>
-											</div>
-
-											<button
-												type="button"
-												class="oqtane-btn text-danger fs-30 p-0"
-											>
-												<i class="icon-delete"></i>
-											</button>
 										</div>
 									</div>
 								</div>
@@ -392,7 +396,7 @@
 											</label>
 										</div>
 
-										<div class="col-12 col-md-6 col-lg-4">
+										<div class="col-12 col-md-12 col-lg-4">
 											<div class="custom-input custom-input--with-icon">
 												<label
 													class="custom-input__inner custom-input__inner-number"
