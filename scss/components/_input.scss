@@ -51,8 +51,8 @@
         width: 546px;
         height: 67px !important;
       }
-
-      @media screen and (max-width: 768px) {
+      
+      @media screen and (max-width: 992px) {
         max-width: 560px !important;
         width: 546px;
         height: 67px !important;
@@ -842,7 +842,8 @@
   .custom-input {
     &__label {
       font-size: 16px;
-      top: 20px;
+      top: 50%;
+      transform: translateY(-50%);
     }
 
     // &__control {
@@ -876,6 +877,11 @@
     // }
   }
 
+
+  .custom-input__control:focus ~ .custom-input__label, .custom-input__control:not(:placeholder-shown) ~ .custom-input__label {
+    top: 15px;
+    font-size: 12px;
+}
   .radio-group {
     padding: 0;
     align-items: start;
@@ -926,6 +932,9 @@
       }
     }
 
+    &__inner {
+      padding: 5px 15px;
+    }
 
     &__icon {
       font-size: 16px;
