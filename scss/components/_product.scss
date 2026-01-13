@@ -96,7 +96,13 @@
 		&__price {
 			font-size: 22px;
 			font-weight: 600;
-			color: #ED254E;
+			color: #7c7c7c;
+
+			&.del {
+				color: #ED254E;
+				text-decoration: line-through;
+
+			}
 		}
 	}
 }
