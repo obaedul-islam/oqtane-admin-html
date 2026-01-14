@@ -242,6 +242,10 @@
 				max-height: calc(100vh - 110px);
 				overflow-y: auto;
 
+				@media all and (max-width: 768px) {
+					padding: 15px;
+				}
+
 				&--wrapper {
 					margin: 0 auto;
 					max-width: 1070px;
