@@ -177,7 +177,7 @@
 }
 
 .modal {
-	z-index: 10000 !important;
+	z-index: 999999 !important;
 
 	&.edit {
 		.modal {
@@ -241,6 +241,10 @@
 				padding: 0 30px 30px;
 				max-height: calc(100vh - 110px);
 				overflow-y: auto;
+
+				@media all and (max-width: 768px) {
+					padding: 15px;
+				}
 
 				&--wrapper {
 					margin: 0 auto;

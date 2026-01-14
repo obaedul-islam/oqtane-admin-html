@@ -34,6 +34,16 @@
         outline: 0;
         box-shadow: none;
       }
+
+
+      &--xs {
+        @media all and (max-width: 768px) {
+          width: 60px;
+          height: 40px;
+          font-size: 12px;
+        }
+
+      }
     }
 
     &-alt {
@@ -568,6 +578,10 @@
   align-items: center;
   gap: 14px;
 
+  @media all and (max-width: 768px) {
+    align-items: center;
+  }
+
   &__label {
     font-size: $fs-18;
     line-height: $lh-28;
@@ -580,8 +594,8 @@
 
   &__input {
     display: inline-block;
-    width: 24px;
-    height: 24px;
+    width: 21px;
+    height: 21px;
     position: relative;
     cursor: pointer;
 
@@ -590,8 +604,8 @@
 
       &+span {
         display: inline-block;
-        width: 24px;
-        height: 24px;
+        // width: 24px;
+        // height: 24px;
         background-color: transparent;
         background-size: cover;
         background-repeat: no-repeat;
@@ -638,8 +652,8 @@
 
   &__input {
     display: inline-block;
-    width: 20px;
-    height: 20px;
+    // width: 20px;
+    // height: 20px;
     position: relative;
     cursor: pointer;
 
@@ -1011,8 +1025,8 @@
 
   .custom-check__input input[type=checkbox]+span {
     display: inline-block;
-    width: 24px;
-    height: 24px;
+    width: 21px;
+    height: 21px;
     background-color: transparent;
     background-size: cover;
     background-repeat: no-repeat;
