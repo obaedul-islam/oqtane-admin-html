@@ -9,7 +9,8 @@
 .content {
 	width: 100%;
 	position: relative;
-	& > a {
+
+	&>a {
 		display: inline;
 	}
 }
@@ -17,7 +18,7 @@
 @media all and (max-width: 768px) {
 	.tw-main {
 		&__content {
-			padding: 10px;
+			padding: 80px 10px 10px 10px;
 		}
 	}
 }

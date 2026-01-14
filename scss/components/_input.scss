@@ -76,6 +76,12 @@
       border: 1px solid $grey-3;
       width: 100%;
       min-width: 360px;
+
+      @media all and (max-width: 768px) {
+        min-width: 300px;
+        width: 100%;
+        max-width: 100% !important;
+      }
     }
 
     &--grey {
