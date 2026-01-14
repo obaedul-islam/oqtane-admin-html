@@ -30,9 +30,21 @@
 
 @media all and (max-width: 768px) {
   .footer {
+    height: unset;
+
     &__content {
       flex-direction: column;
       align-items: center;
+
+      p {
+        margin-top: 10px;
+        text-align: center;
+      }
+    }
+
+    &__links {
+      flex-direction: column;
+      gap: 10px;
     }
   }
 }
