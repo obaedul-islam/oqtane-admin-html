@@ -593,7 +593,8 @@
   }
 
   &__input {
-    display: inline-block;
+    display: inline-flex;
+    flex-shrink: 0;
     width: 21px;
     height: 21px;
     position: relative;
