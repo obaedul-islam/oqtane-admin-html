@@ -11,8 +11,11 @@
 			rel="stylesheet"
 			href="./../vendors/bootstrap/css/bootstrap.min.css"
 		/>
+		<link
+			rel="stylesheet"
+			href="./../vendors/bootstrap-datetimepicker/bootstrap-datetimepicker.css"
+		/>
 		<link rel="stylesheet" href="./../icons/style.css" />
-
 		<link rel="stylesheet" href="./../css/styles.css" />
 
 		<!--[if lt IE 9]>
@@ -39,38 +42,37 @@
 							<span class="menubar__badge"></span>
 						</a>
 
-						<div class="dropdown menubar__dropdown">
+						<div class="dropdown menubar__dropdown menubar__dropdown__desktop">
 							<button
 								class="user dropdown-toggle"
 								type="button"
 								id="menu-dropdown"
 								data-toggle="dropdown"
-								aria-haspopup="true"
-								aria-expanded="false"
 							>
 								<img
 									class="user__avatar"
 									src="./../img/user.png"
 									alt="avatar"
 								/>
-
 								<div class="user__info">
 									<p class="user__name fs-18 lh-100 text-dark">David Wayne</p>
 									<p class="user__role fs-14 lh-100 text-grey-3">Super Admin</p>
 								</div>
-
 								<i class="icon-down_arrow"></i>
 							</button>
-							<ul class="dropdown-menu" aria-labelledby="menu-dropdown">
+							<ul class="dropdown-menu">
 								<li><a href="#">Action</a></li>
 								<li><a href="#">Another action</a></li>
 								<li><a href="#">Something else here</a></li>
 							</ul>
 						</div>
+
+						<button type="button" class="sidebar__menu">
+							<i class="icon-hamburger-wide"></i>
+						</button>
 					</div>
 				</nav>
 			</header>
-
 			<main class="main">
 				<aside class="sidebar">
 					<ul class="sidebar__items">
@@ -153,7 +155,7 @@
 								</p>
 							</div>
 
-							<div class="d-flex gap-12">
+							<div class="d-flex flex-wrap gap-12">
 								<div class="actionbar__actions mx-">
 									<div class="oqtane-search">
 										<input
@@ -525,14 +527,17 @@
 			</footer>
 		</div>
 
-		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-		<script src="./../vendors/jquery/jquery-2.2.4.min.js"></script>
-		<script src="./../vendors/bootstrap/js/bootstrap.min.js"></script>
+		<script src="../js/vendors/jquery-3.7.1.min.js"></script>
+		<script src="../js/vendors/bootstrap.bundle.min.js"></script>
 		<script src="./../vendors/swiper/package/swiper-bundle.min.js"></script>
 		<script src="./../vendors/bootstrap-multiselect/js/bootstrap-multiselect.min.js"></script>
 		<script src="./../vendors/trumbowyg/trumbowyg.js"></script>
 		<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
-
+		<script src="./../vendors/moment/moment.js"></script>
+		<script src="./../vendors/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
+		<script src="./../js/datepicker.js"></script>
+		<script src="./../js/date-range-picker.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 		<script src="./../js/main.js"></script>
 	</body>
 </html>
