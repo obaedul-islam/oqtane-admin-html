@@ -130,6 +130,9 @@
 	border: 1px solid $border-color;
 	border-radius: 20px;
 	padding: 0px 20px 20px 20px;
+	@media all and (max-width: 992px) {
+		padding: 10px;
+	}
 }
 
 .no-data {
