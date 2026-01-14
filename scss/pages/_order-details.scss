@@ -15,6 +15,9 @@
 
 		&__info-text {
 			width: 330px;
+			@media all and (max-width: 1440px) {
+				width: 290px;
+			}
 
 			p {
 				text-wrap: nowrap;
