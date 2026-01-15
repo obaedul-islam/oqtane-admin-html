@@ -28,8 +28,41 @@
       }
     }
   }
+
+  &__input {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    box-shadow: none;
+    background: transparent;
+  }
 }
 
 .dropstart .dropdown-toggle::before {
   border: 0 !important;
+}
+
+
+.autocomplete-dropdown {
+  max-height: 300px;
+  overflow-y: auto;
+  display: none;
+  box-shadow: 0 6px 10px 0px #cbcbcb;
+  width: 100%;
+  margin-left: 0;
+
+  &.show {
+    display: block;
+  }
+
+  .dropdown-item {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    color: #212529;
+  }
+
+  &.dropdown-menu {
+    left: -10px;
+    top: 60px;
+  }
 }
