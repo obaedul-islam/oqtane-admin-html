@@ -3,7 +3,9 @@
 	gap: 32px;
 
 	&__left {
-		width: 330px;
+
+		min-width: 290px;
+		max-width: 330px;
 
 		.chip {
 			&__text {
