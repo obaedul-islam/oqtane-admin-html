@@ -109,15 +109,15 @@
 			font-weight: 600;
 			color: #7c7c7c;
 
-			&.del {
-				color: #ED254E;
-				text-decoration: line-through;
 
-			}
 		}
 	}
 }
 
+.del {
+	color: #ED254E;
+	text-decoration: line-through;
+}
 
 @media all and (max-width: 1170px) {
 	.selected-products {
