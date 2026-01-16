@@ -176,6 +176,20 @@
     }
   }
 
+  table {
+    thead {
+      th {
+        font-size: 14px;
+      }
+    }
+
+    tbody {
+      td {
+        font-size: 14px;
+      }
+    }
+  }
+
   .sales {
     &__header {
       display: flex;

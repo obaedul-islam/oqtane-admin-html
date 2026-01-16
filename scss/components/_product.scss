@@ -1,18 +1,34 @@
 .site-products {
-	display: flex;
-	flex-wrap: wrap;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
 	gap: 25px 50px;
+
+	@media all and (max-width: 1440px) {
+		gap: 10px;
+		grid-template-columns: repeat(1, 1fr) !important;
+	}
 
 	.site-product {
 		&__item {
-			max-width: 50%;
-			min-width: 528px;
+			// max-width: 50%;
+			min-width: 200px;
 			flex-grow: 1;
 			display: flex;
+			align-items: start;
 			padding: 20px;
 			background-color: white;
 			box-shadow: 6.12px 0px 30.6px 0px #2121210a;
 			border-radius: 18px;
+
+			// @media all and (max-width: 768px) {
+			// 	padding: 15px;
+			// }
+			@media all and (max-width: 568px) {
+				flex-direction: column;
+				align-items: center;
+				justify-content: start;
+				gap: 20px;
+			}
 		}
 
 		&__img {
@@ -20,25 +36,51 @@
 				width: 200px;
 				height: 220px;
 				border-radius: 15px;
+
+				@media all and (max-width: 768px) {
+					width: 90px;
+					height: 100px
+				}
 			}
 		}
 
 		&__content {
-			padding: 25px 20px;
+
+
+			padding: 0 0 0 15px;
+
+			@media all and (max-width: 768px) {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
 		}
 
 		&__title {
 			font-weight: 600;
+
+			@media all and (max-width: 768px) {
+				font-size: 14px;
+			}
 		}
 
 		&__type {
 			color: #949494;
+
+			@media all and (max-width: 768px) {
+				font-size: 14px;
+			}
 		}
 
 		&__price {
 			font-size: 22px;
 			font-weight: 600;
 			color: #7c7c7c;
+
+			@media all and (max-width: 768px) {
+				font-size: 14px;
+			}
 		}
 	}
 }
@@ -64,6 +106,8 @@
 			border-bottom: 1px solid $border-color;
 			display: flex;
 			gap: 20px;
+			align-items: start;
+
 
 			&:last-child {
 				border-bottom: 0;
@@ -77,6 +121,10 @@
 		}
 
 		&__img {
+			background-color: #B9CEFF;
+			flex-shrink: 0;
+			border-radius: 7px;
+
 			img {
 				width: 120px;
 				height: 120px;
@@ -99,6 +147,11 @@
 
 		&__title {
 			font-weight: 600;
+
+			@media all and (max-width: 768px) {
+				font-size: 16px;
+			}
+
 		}
 
 		&__type {
@@ -110,15 +163,15 @@
 			font-weight: 600;
 			color: #7c7c7c;
 
-			&.del {
-				color: #ED254E;
-				text-decoration: line-through;
 
-			}
 		}
 	}
 }
 
+.del {
+	color: #ED254E;
+	text-decoration: line-through;
+}
 
 @media all and (max-width: 1170px) {
 	.selected-products {

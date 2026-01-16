@@ -48,7 +48,7 @@
 								class="user dropdown-toggle"
 								type="button"
 								id="menu-dropdown"
-								data-toggle="dropdown"
+								data-bs-toggle="dropdown"
 								aria-haspopup="true"
 								aria-expanded="false"
 							>
@@ -169,7 +169,7 @@
 								</button>
 							</div>
 							<div class="oqtane-card__body">
-								<div class="patient-details">
+								<div class="patient-details d-flex flex-column flex-md-row">
 									<div class="patient-details__left">
 										<div class="patient-details__image">
 											<img src="../img/patient.png" alt="Patient" />
@@ -248,21 +248,21 @@
 												<h4 class="fs-22 lh-16 fw-600"
 													>Reports & Intake Forms:</h4
 												>
-												<ul class="oqtane-simple-card__list">
+												<ul class="oqtane-simple-card__list p-0">
 													<li>
 														<button>Test Report</button>
 													</li>
 													<li>
 														<button
-															data-toggle="modal"
-															data-target="#modal-intake-form-view"
+															data-bs-toggle="modal"
+															data-bs-target="#modal-intake-form-view"
 															>Intake Form</button
 														>
 													</li>
 													<li>
 														<button
-															data-toggle="modal"
-															data-target="#modal-intake-form-view"
+															data-bs-toggle="modal"
+															data-bs-target="#modal-intake-form-view"
 															>View Prescription</button
 														>
 													</li>
@@ -294,7 +294,7 @@
 												<h4 class="fs-22 lh-16 fw-600"
 													>Reports & Intake Forms:</h4
 												>
-												<ul class="oqtane-simple-card__list">
+												<ul class="oqtane-simple-card__list p-0">
 													<li>
 														<a href="">Test Report</a>
 													</li>
@@ -332,7 +332,7 @@
 												<h4 class="fs-22 lh-16 fw-600"
 													>Reports & Intake Forms:</h4
 												>
-												<ul class="oqtane-simple-card__list">
+												<ul class="oqtane-simple-card__list p-0">
 													<li>
 														<a href="">Test Report</a>
 													</li>
@@ -388,8 +388,8 @@
 								<button
 									type="button"
 									class="oqtane-btn oqtane-btn__primary"
-									data-toggle="modal"
-									data-target="#add-promocode-modal"
+									data-bs-toggle="modal"
+									data-bs-target="#add-promocode-modal"
 								>
 									Print
 								</button>
@@ -397,8 +397,8 @@
 								<button
 									type="button"
 									class="oqtane-btn oqtane-btn__primary"
-									data-toggle="modal"
-									data-target="#add-promocode-modal"
+									data-bs-toggle="modal"
+									data-bs-target="#add-promocode-modal"
 								>
 									Download PDF
 								</button>
@@ -406,7 +406,7 @@
 							<button
 								type="button"
 								class="close-btn"
-								data-dismiss="modal"
+								data-bs-dismiss="modal"
 								aria-label="Close"
 							>
 								<span class="icon-cross text-black" aria-hidden="true"></span>
@@ -555,8 +555,8 @@
 		</div>
 
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-		<script src="./../vendors/jquery/jquery-2.2.4.min.js"></script>
-		<script src="./../vendors/bootstrap/js/bootstrap.min.js"></script>
+		<script src="../js/vendors/jquery-3.7.1.min.js"></script>
+		<script src="../js/vendors/bootstrap.bundle.min.js"></script>
 		<script src="./../vendors/swiper/package/swiper-bundle.min.js"></script>
 		<script src="./../vendors/bootstrap-multiselect/js/bootstrap-multiselect.min.js"></script>
 		<script src="./../vendors/trumbowyg/trumbowyg.js"></script>
@@ -564,6 +564,8 @@
 		<script src="./../vendors/moment/moment.js"></script>
 		<script src="./../vendors/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
 		<script src="./../js/datepicker.js"></script>
+		<script src="./../js/date-range-picker.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 
 		<script src="./../js/main.js"></script>
 	</body>
