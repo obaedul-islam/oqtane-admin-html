@@ -107,6 +107,36 @@ $(document).ready(function () {
 		$(".sidebar").toggleClass("sidebar--collapsed");
 	});
 
+	$('.sidebar__menu').on('click', function () {
+				$('.sidebar').toggleClass('sidebar--active');
+				$('body').toggleClass('sidebar-open');
+
+				// Toggle icon between hamburger and close
+				var icon = $(this).find('i');
+				if ($('.sidebar').hasClass('sidebar--active')) {
+					icon.removeClass('icon-hamburger-wide').addClass('icon-cross');
+				} else {
+					icon.removeClass('icon-cross').addClass('icon-hamburger-wide');
+				}
+			});
+
+			// Close sidebar when clicking outside of it
+			$(document).on('click', function (e) {
+				if (!$(e.target).closest('.sidebar, .sidebar__menu').length) {
+					$('.sidebar').removeClass('sidebar--active');
+					$('body').removeClass('sidebar-open');
+
+					// Reset icon to hamburger
+					$('.sidebar__menu i').removeClass('icon-cross').addClass('icon-hamburger-wide');
+				}
+			});
+
+			// Prevent sidebar clicks from closing it
+			$('.sidebar').on('click', function (e) {
+				e.stopPropagation();
+			});
+		});
+
 	console.log("js js");
 
 	// Initialize the tooltip
