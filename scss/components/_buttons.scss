@@ -421,6 +421,12 @@
       width: 150px;
       height: 40px;
 
+      &--responsive {
+        @media screen and (max-width: 768px) {
+          width: 100%;
+        }
+      }
+
     }
 
     &__primary--outline__xl {
