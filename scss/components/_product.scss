@@ -85,6 +85,18 @@
 	}
 }
 
+.product{
+	&-blue-bg {
+    background-color: #B9CEFF;
+    display: inline-block;
+    border-radius: 10px;
+	}
+}
+
+.cursor-not-allowed {
+    cursor: auto;
+}
+
 .selected-products {
 
 
