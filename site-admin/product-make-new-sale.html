@@ -34,21 +34,31 @@
 						<span class="menubar__badge"></span>
 					</a>
 
-					<div class="dropdown menubar__dropdown menubar__dropdown__desktop">
-						<button class="user dropdown-toggle" type="button" id="menu-dropdown" data-bs-toggle="dropdown">
-							<img class="user__avatar" src="./../img/user.png" alt="avatar" />
-							<div class="user__info">
-								<p class="user__name fs-18 lh-100 text-dark">David Wayne</p>
-								<p class="user__role fs-14 lh-100 text-grey-3">Super Admin</p>
-							</div>
-							<i class="icon-down_arrow"></i>
-						</button>
-						<ul class="dropdown-menu">
-							<li><a href="#">Action</a></li>
-							<li><a href="#">Another action</a></li>
-							<li><a href="#">Something else here</a></li>
-						</ul>
-					</div>
+				<div class="dropdown menubar__dropdown menubar__dropdown__desktop">
+    <button
+        class="btn user dropdown-toggle d-flex align-items-center gap-2"
+        type="button"
+        id="menuDropdown"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+    >
+        <img class="user__avatar" src="./../img/user.png" alt="avatar" />
+
+        <div class="user__info text-start">
+            <p class="user__name fs-18 lh-100 text-dark mb-0">David Wayne</p>
+            <p class="user__role fs-14 lh-100 text-grey-3 mb-0">Super Admin</p>
+        </div>
+
+        <i class="icon-down_arrow ms-1"></i>
+    </button>
+
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="menuDropdown">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+    </ul>
+</div>
+
 
 					<button type="button" class="sidebar__menu">
 						<i class="icon-hamburger-wide"></i>
