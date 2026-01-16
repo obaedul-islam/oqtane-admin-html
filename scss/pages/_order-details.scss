@@ -12,15 +12,17 @@
 	&__table {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
+		gap: 30px;
 
 		&__info-text {
-			width: 330px;
+			width: 100%;
 			@media all and (max-width: 1440px) {
-				width: 290px;
+				width: 100%;
 			}
 
 			p {
-				text-wrap: nowrap;
+				text-wrap: wrap;
+				word-break: break-all;
 			}
 		}
 
@@ -34,11 +36,12 @@
 			}
 
 			.order__table__info-text {
-				width: 170px;
+				width: 100%;
 
 
 				p {
-					text-wrap: nowrap;
+					text-wrap: wrap;
+					word-break: break-all;
 				}
 
 
