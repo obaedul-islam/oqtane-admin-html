@@ -409,6 +409,37 @@
   }
 }
 
+@media all and (min-width: 769px) and (max-width: 991px) {
+
+  .oqtane-btn {
+
+
+    &__primary--xl {
+
+
+      width: 100%;
+
+
+      &--responsive {
+        @media screen and (max-width: 768px) {
+          width: 100%;
+        }
+      }
+
+    }
+
+    &__primary--outline__xl {
+
+      width: 100%;
+
+
+
+    }
+  }
+
+
+}
+
 @media all and (max-width: 768px) {
 
   .oqtane-btn {
