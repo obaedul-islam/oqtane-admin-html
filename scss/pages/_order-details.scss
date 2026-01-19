@@ -129,11 +129,11 @@
 
 		&--bottom {
 			top: 30px;
-			color: $primary;
-			font-weight: 600;
+			color: $primary-light;
+			font-weight: 400;
 
 			&:hover {
-				color: $primary;
+				color: $primary-light;
 			}
 		}
 	}
