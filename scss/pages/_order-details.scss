@@ -16,6 +16,7 @@
 
 		&__info-text {
 			width: 100%;
+
 			@media all and (max-width: 1440px) {
 				width: 100%;
 			}
@@ -148,6 +149,16 @@
 	}
 }
 
+
+
+@media all and (min-width: 1026px) and (max-width: 1169px) {
+	.order {
+		.order__track .tracker__single {
+			width: 23.5% !important;
+		}
+	}
+}
+
 @media all and (max-width: 1024px) {
 	.order {
 		&__table {
@@ -199,6 +210,14 @@
 
 	.order__track .tracker__single {
 		width: 24% !important;
+	}
+}
+
+@media all and (min-width: 771px) and (max-width: 799px) {
+	.order {
+		.order__track .tracker__single {
+			width: 22.5% !important;
+		}
 	}
 }
 
