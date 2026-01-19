@@ -195,6 +195,10 @@
 				display: flex;
 				justify-content: space-between;
 
+				@media all and (max-width: 767px) {
+							padding: 20px;
+						}
+
 				&__btns {
 					display: flex;
 					gap: 12px;
