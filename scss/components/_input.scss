@@ -415,6 +415,10 @@
     background-color: $white;
     margin-bottom: 0;
 
+    @media all and (max-width: 768px) {
+      width: 100%;
+    }
+
     &--textarea {
       border-radius: 40px;
       height: 150px;
@@ -561,6 +565,10 @@
   &--filter {
     height: 40px;
     width: 230px;
+
+    @media all and (max-width: 768px) {
+      width: 100%;
+    }
 
     .custom-input__select {
       padding: 5px 30px 5px 16px;
@@ -949,7 +957,7 @@
 
   .oqtane-search {
     &__input {
-      max-width: 200px;
+      max-width: 100%;
       height: 40px;
       border-radius: 30px;
       font-size: 14px !important;
@@ -959,7 +967,7 @@
 
   .custom-input {
     &--filter {
-      width: 170px;
+      width: 100%;
       height: 30px;
 
       &-alt {
