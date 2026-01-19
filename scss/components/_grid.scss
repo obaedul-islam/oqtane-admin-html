@@ -32,6 +32,10 @@ button.col-title[b-b7yucal7gj] {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  color: $dark !important;
+  &:hover, &:focus{
+    color: $dark !important;
+  }
 }
 
 /* _content/Microsoft.AspNetCore.Components.QuickGrid/Pagination/Paginator.razor.rz.scp.css */
