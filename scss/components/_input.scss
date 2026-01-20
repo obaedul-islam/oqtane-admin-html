@@ -333,7 +333,7 @@
 
 
 #table-border-bottom {
-  border-bottom: 1px solid #dee2e6 !important;
+    border-bottom: 1px solid #dee2e6 !important;
 }
 
 .dropzone {
@@ -467,9 +467,9 @@
       height: 112px;
       resize: none;
 
-      @media screen and (max-width: 768px) {
-        height: 30px;
-      }
+      // @media screen and (max-width: 768px) {
+      //   height: 30px;
+      // }
     }
   }
 
@@ -904,6 +904,10 @@
       font-size: 16px;
       top: 50%;
       transform: translateY(-50%);
+
+      &--textarea{
+        top: 30%;
+      }
     }
 
     // &__control {
@@ -1000,6 +1004,11 @@
 
     &__inner {
       padding: 5px 15px;
+      // height: 42px;
+
+      &--textarea{
+        height: 150px;
+      }
     }
 
     &__icon {
