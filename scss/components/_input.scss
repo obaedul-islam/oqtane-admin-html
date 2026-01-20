@@ -21,6 +21,11 @@
     padding: 10px 20px 10px 48px;
     color: $grey-3;
 
+    &--min-width {
+      min-width: 300px;
+      padding: 10px 15px 10px 48px;
+    }
+
     &-text {
       width: 80px;
       height: 53px;
@@ -474,9 +479,9 @@
       height: 112px;
       resize: none;
 
-      @media screen and (max-width: 768px) {
-        height: 30px;
-      }
+      // @media screen and (max-width: 768px) {
+      //   height: 30px;
+      // }
     }
   }
 
@@ -911,6 +916,10 @@
       font-size: 16px;
       top: 50%;
       transform: translateY(-50%);
+
+      &--textarea {
+        top: 30%;
+      }
     }
 
     // &__control {
@@ -994,7 +1003,7 @@
       min-width: 250px;
 
       &-alt {
-        height: 60px;
+        height: 40px;
       }
 
       .custom-input {
@@ -1007,6 +1016,11 @@
 
     &__inner {
       padding: 5px 15px;
+      // height: 42px;
+
+      &--textarea {
+        height: 150px;
+      }
     }
 
     &__icon {
