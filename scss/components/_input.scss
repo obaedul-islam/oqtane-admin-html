@@ -8,7 +8,8 @@
 
   &__input {
     display: block;
-    max-width: 300px;
+    max-width: 100%;
+
     background-color: $white;
     height: 42px;
     border-radius: 42px;
@@ -19,6 +20,8 @@
     font-weight: $fw-500;
     line-height: $lh-150;
     padding: 10px 20px 10px 48px;
+    min-width: 100%;
+
     color: $grey-3;
 
     &--min-width {
@@ -99,7 +102,7 @@
 
 
       @media all and (max-width: 768px) {
-        min-width: 300px;
+        min-width: 100%;
         width: 100%;
         max-width: 100% !important;
       }
@@ -344,9 +347,12 @@
 }
 
 
-#table-border-bottom {
-  border-bottom: 1px solid #dee2e6 !important;
-}
+// #table-border-bottom {
+//   outline: 0;
+//   box-shadow: none;
+//   border-bottom: 1px solid $gray-300 !important;
+//   border-color: $gray-300;
+// }
 
 .dropzone {
   input[type='file'] {
@@ -904,7 +910,8 @@
 @media all and (max-width: 992px) {
   .oqtane-search {
     &__input {
-      max-width: 200px;
+      max-width: 100%;
+
       border-radius: 30px;
       font-size: 14px !important;
       padding: 10px 15px 10px 40px;
@@ -983,9 +990,7 @@
   }
 }
 
-@media all and (max-width: 768px) {
-
-
+@media all and (max-width: 375px) {
   .oqtane-search {
     &__input {
       max-width: 100%;
@@ -995,6 +1000,12 @@
       padding: 10px 15px 10px 35px;
     }
   }
+}
+
+@media all and (max-width: 768px) {
+
+
+
 
   .custom-input {
     &--filter {
