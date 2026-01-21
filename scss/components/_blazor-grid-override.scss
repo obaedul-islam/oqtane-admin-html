@@ -4,16 +4,19 @@
 		// text-align: center;
 		thead {
 			tr {
+				border-bottom: 1px solid $border-color !important;
+
 				th {
 					color: $dark;
 					font-size: $fs-14;
-					padding-left: 11px !important;
+					padding: 15px 25px !important;
+
+					@media all and (max-width: 992px) {
+						padding: 8px 15px !important;
+					}
 
 					&:first-child {}
 
-					&:last-child {
-						padding-right: 40px !important;
-					}
 				}
 			}
 		}
@@ -25,17 +28,14 @@
 				}
 
 				td {
+					font-weight: 400 !important;
 					color: $dark !important;
-					padding-left: 10px !important;
+					padding: 15px 25px !important;
 
-					&:first-child {
-						padding-left: 15px !important;
-						// padding-right: 5px !important;
+					@media all and (max-width: 992px) {
+						padding: 8px 15px !important;
 					}
 
-					&:last-child {
-						padding-right: 15px !important;
-					}
 
 					.theme-btn__accent {
 						text-decoration: none;
@@ -61,6 +61,11 @@
 	border-top: 0 !important;
 	padding: 20px 10px !important;
 	gap: 15px !important;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd)>* {
+	background-color: rgba($grey-1, 0.4) !important;
+	--bs-table-bg-type: transparent !important;
 }
 
 .paginator nav {
