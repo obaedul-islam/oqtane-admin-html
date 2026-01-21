@@ -88,7 +88,13 @@ hr {
 	/* change color */
 	margin: 16px 0;
 }
+.verified-icon{
+	font-size: 40px;
 
+	@media all and (max-width: 768px) {
+		font-size: 30px;
+	}
+}
 @media all and (max-width: 768px) {
 	.dropdown-menu {
 		font-size: 12px;
