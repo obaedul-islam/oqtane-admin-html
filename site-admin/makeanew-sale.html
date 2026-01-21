@@ -143,7 +143,7 @@
 							</div>
 
 							<button type="button" class="oqtane-btn oqtane-btn__primary" data-bs-toggle="modal"
-																	data-bs-target="#makeSaleModal">
+								data-bs-target="#makeSaleModal">
 								Save
 							</button>
 						</div>
@@ -330,7 +330,7 @@
 									Promo Code</a>
 							</div>
 
-							<div class="row mt-4 gap-3">
+							<div class="row mt-4 gy-3">
 								<div class="col-12 col-md-12 col-lg-5">
 									<div class="custom-input custom-input--with-icon">
 										<label class="custom-input__inner custom-input__inner-number">
@@ -342,20 +342,39 @@
 								</div>
 
 								<!-- Apply Button -->
-								<div class="col-12 col-md-auto col-lg-auto">
+								<!-- <div class="col-12 col-md-auto col-lg-auto">
 									<button type="button"
 										class="oqtane-btn oqtane-btn__primary oqtane-btn__primary--xl w-100">
 										Apply
 									</button>
-								</div>
+								</div> -->
 
 								<!-- Price Display -->
-								<div class="col-12 col-md-auto col-lg-auto">
+								<div class="col-12 col-md-auto col-lg-auto d-md-flex align-items-center gap-4">
 									<div
 										class="bg-cyan-light rounded-30 d-flex text-blue justify-content-center align-items-center promo-code-container">
 										<h3 class="fw-bold mb-0">$178</h3>
 									</div>
+
+									<div class="d-flex align-items-center mt-4 mt-md-0 gap-3">
+
+										<i class="icon-completed verified-icon text-green-light"></i>
+										<span class="fs-18">
+											Verified
+										</span>
+									</div>
 								</div>
+
+								<!-- <div class="col-12 col-md-auto col-lg-auto">
+									<div
+										class="rounded-30 gap-3 d-flex text-blue justify-content-center align-items-center promo-code-container">
+
+										<i class="icon-completed fs-30 text-green-light"></i>
+										<h4 class="fw-bold mb-0 d-flex align-items-center gap-2">
+											Verified
+										</h4>
+									</div>
+								</div> -->
 							</div>
 
 						</div>
@@ -644,272 +663,279 @@
 
 
 
-<div class="modal edit fade" id="makeSaleModal" tabindex="-1" role="dialog" aria-labelledby="makeSaleModalLabel">
-	<div class="modal-dialog modal-xl m-0" role="document">
-		<div class="modal-content">
-			<!-- Modal Header -->
-			<div class="modal-header d-flex align-item-center">
-				<div class="d-flex w-100 align-item-center justify-content-space-between pe-40">
-					<h4 class="fs-24 lh-36 text-left" id="makeSaleModalLabel">
-						Add Product
-					</h4>
-				</div>
-				<button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close">
-					<span class="icon-cross text-black" aria-hidden="true"></span>
-				</button>
-			</div>
-
-			<!-- Modal Body with Scroll -->
-			<div class="modal-body" style="max-height: 80vh; overflow-y: auto;">
-				<!-- Selected Product Card -->
-				<div class="oqtane-card mb-3">
-					<div class="oqtane-card__header d-flex justify-content-between align-items-md-start">
-						<p class="mb-0">Selected Product</p>
-						<div class="oqtane-search position-relative d-inline-block w-auto">
-							<input class="oqtane-search__input oqtane-search__input-alt2 with-suggestions"
-								type="text" placeholder="Add More Products" />
-							<i class="icon-search oqtane-search__input-alt__icon"></i>
-						</div>
+	<div class="modal edit fade" id="makeSaleModal" tabindex="-1" role="dialog" aria-labelledby="makeSaleModalLabel">
+		<div class="modal-dialog modal-xl m-0" role="document">
+			<div class="modal-content">
+				<!-- Modal Header -->
+				<div class="modal-header d-flex align-item-center">
+					<div class="d-flex w-100 align-item-center justify-content-space-between pe-40">
+						<h4 class="fs-24 lh-36 text-left" id="makeSaleModalLabel">
+							Add Product
+						</h4>
 					</div>
-					<div class="oqtane-card__body p-0">
-						<div class="selected-products">
-							<div class="select-product__item">
-								<div class="select-product__img">
-									<img src="../img/product-1.png" alt="Product" />
-								</div>
-								<div class="select-product__content">
-									<div class="d-flex flex-xl-row flex-column gap-3 w-100 justify-content-between align-item-start">
-										<div>
-											<h3 class="select-product__title">
-												Tirzepatide Injectable Solution
-											</h3>
-											<p class="select-product__price">$399</p>
+					<button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close">
+						<span class="icon-cross text-black" aria-hidden="true"></span>
+					</button>
+				</div>
+
+				<!-- Modal Body with Scroll -->
+				<div class="modal-body" style="max-height: 80vh; overflow-y: auto;">
+					<!-- Selected Product Card -->
+					<div class="oqtane-card mb-3">
+						<div class="oqtane-card__header d-flex justify-content-between align-items-md-start">
+							<p class="mb-0">Selected Product</p>
+							<div class="oqtane-search position-relative d-inline-block w-auto">
+								<input class="oqtane-search__input oqtane-search__input-alt2 with-suggestions"
+									type="text" placeholder="Add More Products" />
+								<i class="icon-search oqtane-search__input-alt__icon"></i>
+							</div>
+						</div>
+						<div class="oqtane-card__body p-0">
+							<div class="selected-products">
+								<div class="select-product__item">
+									<div class="select-product__img">
+										<img src="../img/product-1.png" alt="Product" />
+									</div>
+									<div class="select-product__content">
+										<div
+											class="d-flex flex-xl-row flex-column gap-3 w-100 justify-content-between align-item-start">
+											<div>
+												<h3 class="select-product__title">
+													Tirzepatide Injectable Solution
+												</h3>
+												<p class="select-product__price">$399</p>
+											</div>
+
+											<div class="product-action__btn product-action__btn-alt">
+												<div class="input-group product-action__cart product-action__cart--primary product-action__cart--md"
+													data-aos="flip-left" data-aos-duration="1000" data-aos-once="true">
+													<span class="input-group-btn">
+														<button class="btn" type="button">
+															<i class="icon-minus"></i>
+														</button>
+													</span>
+													<input type="text" inputmode="numeric"
+														class="form-control text-dark fs-5 lh-1" id="quantity"
+														value="1" />
+													<span class="input-group-btn">
+														<button class="btn" type="button">
+															<i class="icon-plus1"></i>
+														</button>
+													</span>
+												</div>
+												<button type="button" class="oqtane-btn text-danger fs-30 p-0">
+													<i class="icon-delete"></i>
+												</button>
+											</div>
 										</div>
 
-										<div class="product-action__btn product-action__btn-alt">
-											<div class="input-group product-action__cart product-action__cart--primary product-action__cart--md"
-												data-aos="flip-left" data-aos-duration="1000" data-aos-once="true">
-												<span class="input-group-btn">
-													<button class="btn" type="button">
-														<i class="icon-minus"></i>
-													</button>
+										<div class="product-price-alt">
+											<label class="custom-check mt-2">
+												<span class="custom-check__input">
+													<input type="checkbox" />
+													<span></span>
 												</span>
-												<input type="text" inputmode="numeric"
-													class="form-control text-dark fs-5 lh-1" id="quantity"
-													value="1" />
-												<span class="input-group-btn">
-													<button class="btn" type="button">
-														<i class="icon-plus1"></i>
-													</button>
+
+												<span class="custom-check__label text-dark">
+													Do you want to change the original price?
 												</span>
+											</label>
+											<div class="custom-input custom-input--with-icon mt-3">
+												<label class="custom-input__inner custom-input__inner-number">
+													<input type="number" class="custom-input__control"
+														placeholder=" " />
+													<span class="custom-input__label">Price</span>
+													<span class="custom-input__suffix">
+														<i class="icon-dollar"></i>
+													</span>
+												</label>
 											</div>
-											<button type="button" class="oqtane-btn text-danger fs-30 p-0">
-												<i class="icon-delete"></i>
-											</button>
+											<p class="text-primary mt-2">(You can only increase the price)</p>
 										</div>
 									</div>
+								</div>
+								<div class="select-product__item">
+									<div class="select-product__img">
+										<img src="../img/product-1.png" alt="Product" />
+									</div>
+									<div class="select-product__content">
+										<div
+											class="d-flex flex-xl-row flex-column gap-3 w-100 justify-content-between align-item-start">
+											<div>
+												<h3 class="select-product__title">
+													Tirzepatide Injectable Solution
+												</h3>
+												<p class="select-product__price">$399</p>
+											</div>
 
-									<div class="product-price-alt">
-										<label class="custom-check mt-2">
-											<span class="custom-check__input">
-												<input type="checkbox" />
-												<span></span>
-											</span>
+											<div class="product-action__btn product-action__btn-alt">
+												<div class="input-group product-action__cart product-action__cart--primary product-action__cart--md"
+													data-aos="flip-left" data-aos-duration="1000" data-aos-once="true">
+													<span class="input-group-btn">
+														<button class="btn" type="button">
+															<i class="icon-minus"></i>
+														</button>
+													</span>
+													<input type="text" inputmode="numeric"
+														class="form-control text-dark fs-5 lh-1" id="quantity"
+														value="1" />
+													<span class="input-group-btn">
+														<button class="btn" type="button">
+															<i class="icon-plus1"></i>
+														</button>
+													</span>
+												</div>
+												<button type="button" class="oqtane-btn text-danger fs-30 p-0">
+													<i class="icon-delete"></i>
+												</button>
+											</div>
+										</div>
 
-											<span class="custom-check__label text-dark">
-												Do you want to change the original price?
-											</span>
-										</label>
-										<div class="custom-input custom-input--with-icon mt-3">
-											<label class="custom-input__inner custom-input__inner-number">
-												<input type="number" class="custom-input__control"
-													placeholder=" " />
-												<span class="custom-input__label">Price</span>
-												<span class="custom-input__suffix">
-													<i class="icon-dollar"></i>
+										<div class="product-price-alt">
+											<label class="custom-check mt-2">
+												<span class="custom-check__input">
+													<input type="checkbox" />
+													<span></span>
+												</span>
+
+												<span class="custom-check__label text-dark">
+													Do you want to change the original price?
 												</span>
 											</label>
 										</div>
-										<p class="text-primary mt-2">(You can only increase the price)</p>
 									</div>
 								</div>
 							</div>
-							<div class="select-product__item">
-								<div class="select-product__img">
-									<img src="../img/product-1.png" alt="Product" />
-								</div>
-								<div class="select-product__content">
-									<div class="d-flex flex-xl-row flex-column gap-3 w-100 justify-content-between align-item-start">
-										<div>
-											<h3 class="select-product__title">
-												Tirzepatide Injectable Solution
-											</h3>
-											<p class="select-product__price">$399</p>
-										</div>
+						</div>
+					</div>
 
-										<div class="product-action__btn product-action__btn-alt">
-											<div class="input-group product-action__cart product-action__cart--primary product-action__cart--md"
-												data-aos="flip-left" data-aos-duration="1000" data-aos-once="true">
-												<span class="input-group-btn">
-													<button class="btn" type="button">
-														<i class="icon-minus"></i>
-													</button>
-												</span>
-												<input type="text" inputmode="numeric"
-													class="form-control text-dark fs-5 lh-1" id="quantity"
-													value="1" />
-												<span class="input-group-btn">
-													<button class="btn" type="button">
-														<i class="icon-plus1"></i>
-													</button>
-												</span>
-											</div>
-											<button type="button" class="oqtane-btn text-danger fs-30 p-0">
-												<i class="icon-delete"></i>
-											</button>
-										</div>
-									</div>
+					<!-- Order Total & Discounts Card -->
+					<div class="oqtane-card list-card">
+						<div class="oqtane-card__header">
+							<h3>Order Total & Discounts</h3>
+						</div>
+						<div class="oqtane-card__body">
+							<div class="d-flex flex-wrap gap-4">
+								<label class="custom-radio">
+									<span class="custom-radio__input">
+										<input name="discount_type_modal" type="radio" value="promo_code" checked />
+										<span></span>
+									</span>
+									<span class="custom-radio__label">Apply Promo Code</span>
+								</label>
+								<label class="custom-radio">
+									<span class="custom-radio__input">
+										<input name="discount_type_modal" type="radio" value="discount" />
+										<span></span>
+									</span>
+									<span class="custom-radio__label">Discount Amount</span>
+								</label>
+								<a href="#" class="text-decoration-underline custom-radio__label text-primary">Remove
+									Promo Code</a>
+							</div>
 
-									<div class="product-price-alt">
-										<label class="custom-check mt-2">
-											<span class="custom-check__input">
-												<input type="checkbox" />
-												<span></span>
-											</span>
-
-											<span class="custom-check__label text-dark">
-												Do you want to change the original price?
-											</span>
+							<div class="row mt-4 gap-3">
+								<div class="col-12 col-md-12 col-lg-5">
+									<div class="custom-input custom-input--with-icon">
+										<label class="custom-input__inner custom-input__inner-number">
+											<input type="number" class="custom-input__control" placeholder=" " />
+											<span class="custom-input__label">LDGNKLERG</span>
+											<span class="custom-input__suffix"><i class="icon-dollar"></i></span>
 										</label>
 									</div>
 								</div>
+
+								<div class="col-12 col-md-auto col-lg-auto">
+									<button type="button"
+										class="oqtane-btn oqtane-btn__primary oqtane-btn__primary--xl w-100">
+										Apply
+									</button>
+								</div>
+
+								<div class="col-12 col-md-auto col-lg-auto">
+									<div
+										class="bg-cyan-light rounded-30 d-flex text-blue justify-content-center align-items-center promo-code-container">
+										<h3 class="fw-bold mb-0">$178</h3>
+									</div>
+								</div>
+							</div>
+
+							<div class="d-flex flex-column justify-content-start mt-4">
+								<table class="table">
+									<thead class="table-header-grey">
+										<tr>
+											<th>Product Name</th>
+											<th>Quantity</th>
+											<th>Price</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Cagrilintide Injectable Solution</td>
+											<td>2</td>
+											<td>$820</td>
+										</tr>
+										<tr>
+											<td>GHK-CU Injectable Solution</td>
+											<td>2</td>
+											<td>$860</td>
+										</tr>
+										<tr>
+											<td class="text-primary fw-bold">Shipping Charge</td>
+											<td></td>
+											<td class="text-primary fw-bold">$20</td>
+										</tr>
+										<tr>
+											<td class="text-primary fw-bold">Discount</td>
+											<td></td>
+											<td class="text-primary fw-bold">$178</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr style="border-top: 1px solid #eeeef0">
+											<td class="fw-bold">Total</td>
+											<td></td>
+											<td class="fw-bold">$1527</td>
+										</tr>
+									</tfoot>
+								</table>
 							</div>
 						</div>
 					</div>
 				</div>
 
-				<!-- Order Total & Discounts Card -->
-				<div class="oqtane-card list-card">
-					<div class="oqtane-card__header">
-						<h3>Order Total & Discounts</h3>
+				<!-- Modal Footer -->
+				<div class=" border-0 ">
+					<div
+						class="d-flex flex-column-reverse flex-lg-row justify-content-md-end justify-content-center align-items-center mt-md-4 gap-3 ">
+						<button type="button"
+							class="oqtane-btn oqtane-btn__primary--outline oqtane-btn__primary--outline__xl "
+							data-bs-dismiss="modal" aria-label="Close">
+							Cancel
+						</button>
+						<button type="button" class="oqtane-btn oqtane-btn__primary oqtane-btn__primary--xl">
+							Save
+						</button>
 					</div>
-					<div class="oqtane-card__body">
-						<div class="d-flex flex-wrap gap-4">
-							<label class="custom-radio">
-								<span class="custom-radio__input">
-									<input name="discount_type_modal" type="radio" value="promo_code" checked />
-									<span></span>
-								</span>
-								<span class="custom-radio__label">Apply Promo Code</span>
-							</label>
-							<label class="custom-radio">
-								<span class="custom-radio__input">
-									<input name="discount_type_modal" type="radio" value="discount" />
-									<span></span>
-								</span>
-								<span class="custom-radio__label">Discount Amount</span>
-							</label>
-							<a href="#" class="text-decoration-underline custom-radio__label text-primary">Remove Promo Code</a>
-						</div>
-
-						<div class="row mt-4 gap-3">
-							<div class="col-12 col-md-12 col-lg-5">
-								<div class="custom-input custom-input--with-icon">
-									<label class="custom-input__inner custom-input__inner-number">
-										<input type="number" class="custom-input__control" placeholder=" " />
-										<span class="custom-input__label">LDGNKLERG</span>
-										<span class="custom-input__suffix"><i class="icon-dollar"></i></span>
-									</label>
-								</div>
-							</div>
-
-							<div class="col-12 col-md-auto col-lg-auto">
-								<button type="button"
-									class="oqtane-btn oqtane-btn__primary oqtane-btn__primary--xl w-100">
-									Apply
-								</button>
-							</div>
-
-							<div class="col-12 col-md-auto col-lg-auto">
-								<div class="bg-cyan-light rounded-30 d-flex text-blue justify-content-center align-items-center promo-code-container">
-									<h3 class="fw-bold mb-0">$178</h3>
-								</div>
-							</div>
-						</div>
-
-						<div class="d-flex flex-column justify-content-start mt-4">
-							<table class="table">
-								<thead class="table-header-grey">
-									<tr>
-										<th>Product Name</th>
-										<th>Quantity</th>
-										<th>Price</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Cagrilintide Injectable Solution</td>
-										<td>2</td>
-										<td>$820</td>
-									</tr>
-									<tr>
-										<td>GHK-CU Injectable Solution</td>
-										<td>2</td>
-										<td>$860</td>
-									</tr>
-									<tr>
-										<td class="text-primary fw-bold">Shipping Charge</td>
-										<td></td>
-										<td class="text-primary fw-bold">$20</td>
-									</tr>
-									<tr>
-										<td class="text-primary fw-bold">Discount</td>
-										<td></td>
-										<td class="text-primary fw-bold">$178</td>
-									</tr>
-								</tbody>
-								<tfoot>
-									<tr style="border-top: 1px solid #eeeef0">
-										<td class="fw-bold">Total</td>
-										<td></td>
-										<td class="fw-bold">$1527</td>
-									</tr>
-								</tfoot>
-							</table>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<!-- Modal Footer -->
-			<div class=" border-0 ">
-				<div class="d-flex flex-column-reverse flex-lg-row justify-content-md-end justify-content-center align-items-center mt-md-4 gap-3 ">
-					<button type="button" class="oqtane-btn oqtane-btn__primary--outline oqtane-btn__primary--outline__xl " data-bs-dismiss="modal" aria-label="Close">
-						Cancel
-					</button>
-					<button type="button" class="oqtane-btn oqtane-btn__primary oqtane-btn__primary--xl">
-						Save
-					</button>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
-			</div>
-		</div>
+	</div>
+	</div>
 	</div>
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-		<script src="../js/vendors/jquery-3.7.1.min.js"></script>
-		<script src="../js/vendors/bootstrap.bundle.min.js"></script>
-		<script src="../vendors/swiper/package/swiper-bundle.min.js"></script>
-		<script src="vendors/bootstrap-multiselect/js/bootstrap-multiselect.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/summernote-bs4.min.js"></script>
-		<script src="js/richtext.js"></script>
-		<script src="js/vendors/cropper.min.js"></script>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="../js/vendors/jquery-3.7.1.min.js"></script>
+	<script src="../js/vendors/bootstrap.bundle.min.js"></script>
+	<script src="../vendors/swiper/package/swiper-bundle.min.js"></script>
+	<script src="vendors/bootstrap-multiselect/js/bootstrap-multiselect.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/summernote-bs4.min.js"></script>
+	<script src="js/richtext.js"></script>
+	<script src="js/vendors/cropper.min.js"></script>
 
 	<script src="./../js/main.js"></script>
 </body>
