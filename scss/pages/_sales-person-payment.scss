@@ -1,45 +1,55 @@
-.card-icons {
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-    display: flex;
-    align-items: center;
-    gap: 5px;
-
-    img {
-        height: 20px;
-        border-radius: 5px;
-    }
-
-    @media screen and (max-width: 992px) {
-        right: 20px;
-        top: 20px;
-    }
-
-    // @media screen and (max-width: 768px) {
-    //     right: 20%;
-    //     top: 15%;
-
-    //      img {
-    //         height: 15px;
-    //         border-radius: 5px;
-    //     }
-    // }
-    @media screen and (max-width: 570px) {
-        top: 15px;
-         img {
-            height: 12px;
-            border-radius: 5px;
+.card {
+    &-image {
+        img {
+            width: 50px;
+            border-radius: 12px;
         }
     }
 
-    
+    &-icons {
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        img {
+            height: 20px;
+            border-radius: 5px;
+        }
+
+        @media screen and (max-width: 992px) {
+            right: 20px;
+            top: 20px;
+        }
+
+        // @media screen and (max-width: 768px) {
+        //     right: 20%;
+        //     top: 15%;
+
+        //      img {
+        //         height: 15px;
+        //         border-radius: 5px;
+        //     }
+        // }
+        @media screen and (max-width: 570px) {
+            top: 15px;
+
+            img {
+                height: 12px;
+                border-radius: 5px;
+            }
+        }
+
+
+    }
 }
 
 .custom-input__control--with-card-icons {
     padding-right: 120px;
-    
+
 
     @media screen and (max-width: 992px) {
         padding-right: 0;

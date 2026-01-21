@@ -23,42 +23,46 @@
 		background-color: transparent;
 		cursor: pointer;
 
+
+
+
 		&-alt {
 			width: 130px;
 			padding-right: 10px;
 		}
+
+
 	}
 
-	// &::after {
-	// 	content: "\e91b";
-	// 	font-family: "icomoon";
-	// 	font-size: 20px;
-	// 	position: absolute;
-	// 	z-index: 0;
-	// 	top: 5px;
-	// 	right: 16px;
-	// }
+
+
+	&::after {
+		content: "\e91b";
+		font-family: "icomoon";
+		position: absolute;
+		top: 50%;
+		right: 15px;
+		transform: translateY(-50%);
+		font-size: 18px;
+		color: $dark;
+
+	}
 }
 
 .daterangepicker td.active,
 .daterangepicker td.active:hover {
 	background-color: $primary !important;
+	color: #ffffff !important;
 }
 
 @media all and (max-width: 992px) {
 	.range {
 		&__input {
 			width: 220px;
-			height: 35px;
+			height: 42px;
 			font-size: 14px;
 			line-height: 1;
 			padding: 10px 15px;
-		}
-
-		&::after {
-			font-size: 16px;
-			top: 5px;
-			right: 10px;
 		}
 	}
 }
@@ -68,16 +72,8 @@
 		&__input {
 			width: 200px;
 			border-radius: 30px;
-			height: 30px;
 			font-size: 12px;
-			line-height: 12px;
-			padding: 10px 15px 10px 15px;
-		}
 
-		&::after {
-			font-size: 14px;
-			top: 4px;
-			right: 16px;
 		}
 	}
 }
