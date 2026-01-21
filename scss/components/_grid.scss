@@ -33,7 +33,9 @@ button.col-title[b-b7yucal7gj] {
   overflow: hidden;
   white-space: nowrap;
   color: $dark !important;
-  &:hover, &:focus{
+
+  &:hover,
+  &:focus {
     color: $dark !important;
   }
 }
@@ -47,8 +49,42 @@ button.col-title[b-b7yucal7gj] {
   align-items: center;
 }
 
-.pagination-text[b-3qssc0bm46] {
-  margin: 0 0.5rem;
+.paginator {
+
+  @media all and (max-width:992px) {
+    gap: 5px;
+  }
+
+  .summary {
+    @media all and (max-width:992px) {
+      font-size: 12px;
+    }
+  }
+
+  .navigation {
+    @media all and (max-width:992px) {
+      gap: 0;
+    }
+  }
+}
+
+.paginator nav .go-previous,
+.paginator nav .go-next {
+
+  @media all and (max-width:992px) {
+    background-size: 16px;
+  }
+}
+
+.pagination {
+  &-text[b-3qssc0bm46] {
+    margin: 0 0.5rem;
+
+    @media all and (max-width:992px) {
+      font-size: 12px;
+      margin: 0;
+    }
+  }
 }
 
 nav[b-3qssc0bm46] {
