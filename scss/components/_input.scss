@@ -345,7 +345,10 @@
 
 
 #table-border-bottom {
-  border-bottom: 1px solid #dee2e6 !important;
+  outline: 0;
+  box-shadow: none;
+  border-bottom: 1px solid $gray-300 !important;
+  border-color: $gray-300;
 }
 
 .dropzone {
