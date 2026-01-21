@@ -82,7 +82,7 @@
       }
 
       &:nth-of-type(odd) {
-        background-color: $grey-1-40;
+        background-color: rgba($grey-1, 0.4);
       }
 
       th {
@@ -211,9 +211,24 @@
 }
 
 .table-header-grey {
+
+
   th {
     background-color: #F1F1F1 !important;
     font-weight: 500;
+    padding: 15px;
+    color: #3A494E;
+    line-height: 1;
+
+    &:first-child {
+      border-radius: 5px 0 0 5px;
+
+    }
+
+    &:last-child {
+      border-radius: 0 5px 5px 0;
+
+    }
   }
 
 }
@@ -221,7 +236,21 @@
 tbody {
   tr {
     td {
+      padding: 15px !important;
+      font-weight: 500;
+      line-height: 1;
       color: #7c7c7c !important;
+    }
+  }
+}
+
+tfoot {
+  tr {
+    td {
+      padding: 25px 15px 15px 15px !important;
+      font-weight: 500;
+      line-height: 1;
+      color: #0C0C0D !important;
     }
   }
 }
