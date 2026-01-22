@@ -145,3 +145,29 @@
   }
 
 }
+
+/* Target the month/year select dropdowns */
+.daterangepicker select.monthselect,
+.daterangepicker select.yearselect {
+  background-color: white !important;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* If using input fields instead of selects */
+.daterangepicker .calendar-table .month,
+.daterangepicker .calendar-table .year {
+  background-color: white !important;
+}
+
+/* Target the header area specifically */
+.daterangepicker .calendar-table th.month {
+  background-color: white !important;
+}
+
+/* For iOS Safari specific styling */
+@supports (-webkit-touch-callout: none) {
+  .daterangepicker select {
+    background-color: white !important;
+  }
+}
