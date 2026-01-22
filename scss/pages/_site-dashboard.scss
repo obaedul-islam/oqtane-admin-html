@@ -69,9 +69,9 @@
 }
 
 .matrix {
-  display: flex;
+  display: grid;
   gap: 24px 15px;
-  flex-wrap: wrap;
+  grid-template-columns: repeat(2, 1fr);
 
   &__item {
     display: flex;
