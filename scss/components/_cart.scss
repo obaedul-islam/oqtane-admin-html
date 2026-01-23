@@ -15,7 +15,12 @@
 		z-index: 20;
 
 		@media all and (max-width:576px) {
-			top: 220px;
+			top: 220px !important;
+
+		}
+
+		@media all and (max-width:359px) {
+			top: 240px !important;
 
 		}
 
