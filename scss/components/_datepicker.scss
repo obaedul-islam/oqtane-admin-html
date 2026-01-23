@@ -125,11 +125,50 @@
 
 .daterangepicker {
 
+  .drp-calendar {
+    max-width: 350px !important;
+  }
+
+  select.monthselect {
+    margin-right: 2%;
+    width: 50% !important;
+  }
+
+  select.yearselect {
+    width: 50% !important;
+ }
 
   @media all and (max-width: 768px) {
+    top: 167px !important;
     left: 9px !important;
     width: 100% !important;
+
+
   }
+
+  @media all and (max-width: 1024px) {
+    right: auto !important;
+  }
+
+  @media all and (max-width: 810px) {
+    left: 15px !important;
+    right: 15px !important;
+    .drp-calendar {
+      max-width: 280px !important;
+    }
+  }
+
+  @media all and (min-width: 330px) and (max-width: 560px) {
+    width: 85vw !important;
+    margin: auto !important;
+  }
+
+  // @media all and (max-width: 1024px) {
+  //   left: 15px !important;
+  //   right: 15px !important;
+  // }
+
+  
 
   // @media all and (max-width: 1024px) {
   //   left:  !important;
