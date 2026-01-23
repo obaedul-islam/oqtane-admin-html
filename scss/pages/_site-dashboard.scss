@@ -69,13 +69,13 @@
 }
 
 .matrix {
-  display: flex;
-  gap: 24px 15px;
-  flex-wrap: wrap;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
 
   &__item {
     display: flex;
-    width: calc(50% - 12px);
+    width: 100%;
     justify-content: space-between;
     padding: 22px 20px;
     border-radius: 12px;
@@ -165,7 +165,8 @@
 
 @media all and (max-width: 992px) {
   .matrix {
-    flex-direction: column;
+    grid-template-columns: repeat(1, 1fr);
+
 
     &__item {
       display: inline-flex;
@@ -214,8 +215,6 @@
   }
 
   .matrix {
-    flex-direction: column;
-    gap: 10px;
 
     &__count {
       p {
