@@ -150,8 +150,12 @@
 									<i class="icon-search oqtane-search__icon"></i>
 								</div> -->
 							<button class="oqtane-btn oqtane-btn__primary--outline mr-3" data-bs-toggle="modal"
-								data-bs-target="#rejectModal" type="button">
-								Skip
+								data-bs-target="#processModal" type="button">
+								Process Now
+							</button>
+								<button class="oqtane-btn oqtane-btn__primary--outline mr-3" data-bs-toggle="modal"
+								data-bs-target="#confirmProcessModal" type="button">
+								Confirm Process
 							</button>
 							<button data-bs-toggle="modal" data-bs-target="#addOfferProduct"
 								class="oqtane-btn oqtane-btn__primary" type="button">
@@ -622,7 +626,7 @@
 			<div class="modal-content">
 				<div class="modal-header d-flex align-item-center">
 					<div class="d-flex w-100 align-item-center justify-content-space-between pe-40">
-						<h4 class="fs-24 lh-36 text-left" id="myModalLabel">
+						<h4 class="modal__title fs-24 lh-36 text-left" id="myModalLabel">
 							Reject Offer
 						</h4>
 					</div>
@@ -632,7 +636,7 @@
 				</div>
 				<div class="modal-body mt-50">
 					<div class="modal-body--wrapper modal-body--wrapper__max-width">
-						<h4 class="fs-22 text-center mt-80 text-dark fw-semibold lh-lg" id="myModalLabel">
+						<h4 class="modal-main-text fs-22 text-center mt-80 text-dark fw-semibold lh-lg" id="myModalLabel">
 							Are you sure you want to skip <br> the upsell for this order?
 						</h4>
 
@@ -654,12 +658,94 @@
 		</div>
 	</div>
 
+		<div class="modal edit fade" id="processModal" tabindex="-1" role="dialog" aria-labelledby="processModalLabel">
+		<div class="modal-dialog w-100 m-0" role="document">
+			<div class="modal-content">
+				<div class="modal-header d-flex align-item-center">
+					<div class="d-flex w-100 align-item-center justify-content-space-between pe-40">
+						<h4 class="modal__title fs-24 lh-36 text-left text-dark" id="myModalLabel">
+						 Payment Processing
+						</h4>
+					</div>
+					<button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close">
+						<span class="icon-cross text-black" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="modal-body mt-50">
+					<div class="modal-body--wrapper modal-body--wrapper__max-width">
+						<h4 class="modal-main-text fs-30 text-center mt-80 text-modal-header  fw-bold lh-lg" id="myModalLabel">
+							Payment Processing
+						</h4>
+
+
+							<!-- <h3 class="answer-type__title">Select Answer Type</h3> -->
+							<div class="d-flex flex-column justify-content-center align-items-center">
+					<h4 class="modal-secondary-text fs-20 text-center text-modal-gray lh-lg">Your payment is being securely processed.<br />
+Please don't refresh or close this page.</h4>
+<svg width="223" height="192" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" class="spinner-svg mt-40"><defs><style>@keyframes s{0%{transform:rotate(0deg);animation-timing-function:cubic-bezier(.55,.085,.68,.53)}50%{transform:rotate(180deg);animation-timing-function:cubic-bezier(.25,.46,.45,.94)}100%{transform:rotate(360deg)}}.spinner{transform-origin:50% 50%;animation:s 1.4s ease-in-out infinite;will-change:transform}</style></defs><circle cx="50" cy="50" r="40" fill="none" stroke="#D6E9F8" stroke-width="12" stroke-linecap="butt"/><g class="spinner"><circle cx="50" cy="50" r="40" fill="none" stroke="#4A9FDB" stroke-width="12" stroke-dasharray="30 200" stroke-linecap="butt" transform="rotate(-90 50 50)"/></g></svg>
+
+
+            	<h4 class="modal-secondary-text fs-20 text-center  text-modal-gray lh-lg mt-40">This may take a few seconds.<br />
+Once completed, you'll be redirected automatically.</h4>
+					</div>
+					</div>
+</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="modal edit fade" id="confirmProcessModal" tabindex="-1" role="dialog" aria-labelledby="confirmProcessModalLabel">
+		<div class="modal-dialog w-100 m-0" role="document">
+			<div class="modal-content">
+				<div class="modal-header d-flex align-item-center">
+					<div class="d-flex w-100 align-item-center justify-content-space-between pe-40">
+						<h4 class="modal__title fs-24 lh-36 text-left text-dark" id="myModalLabel">
+						Process Now
+						</h4>
+					</div>
+					<button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close">
+						<span class="icon-cross text-black" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="modal-body mt-50">
+					<div class="modal-body--wrapper modal-body--wrapper__max-width">
+							<h4 class="modal-main-text fs-22 text-center mt-80 text-dark fw-semibold lh-lg" id="myModalLabel">
+									Are you sure you want to process <br />
+									the upsell for this order?
+								</h4>
+
+
+							<!-- <h3 class="answer-type__title">Select Answer Type</h3> -->
+						
+		<div class="answer-type mt-40">
+							<!-- <h3 class="answer-type__title">Select Answer Type</h3> -->
+							<div class="answer-type__actions justify-content-center">
+								<button type="button" class="oqtane-btn oqtane-btn__primary--outline modal-button">
+									Process Now
+								</button>
+								<button type="button" data-bs-dismiss="modal" aria-label="Close"
+									class="oqtane-btn oqtane-btn__primary modal-button">
+									Go Back
+								</button>
+							</div>
+					
+
+
+            	
+					</div>
+					</div>
+</div>
+			</div>
+		</div>
+	</div>
+
 	<!-- Modal Start-->
 	<div class="modal fade vr-modal" id="view-reports-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content overflow-h">
 				<div class="modal-header">
-					<h4 class="modal-title">Lab Reports</h4>
+					<h4 class="modal__title">Lab Reports</h4>
 
 					<button type="button" class="modal-close" data-dismiss="modal" aria-label="Close">
 						<i class="icon-cross"></i>
@@ -1374,7 +1460,7 @@
 						</div>
 						<div class="modal-body mt-50">
 							<div class="modal-body--wrapper modal-body--wrapper__max-width">
-								<h4 class="fs-22 text-center mt-80 text-dark fw-semibold lh-lg" id="myModalLabel">
+								<h4 class="modal-main-text fs-22 text-center mt-80 text-dark fw-semibold lh-lg" id="myModalLabel">
 									Are you sure you want to skip <br />
 									the upsell for this order?
 								</h4>
@@ -1404,7 +1490,7 @@
 				<div class="modal-dialog" role="document">
 					<div class="modal-content overflow-h">
 						<div class="modal-header">
-							<h4 class="modal-title">Lab Reports</h4>
+							<h4 class="modal__title">Lab Reports</h4>
 
 							<button type="button" class="modal-close" data-dismiss="modal" aria-label="Close">
 								<i class="icon-cross"></i>
@@ -1725,7 +1811,7 @@
 						</div>
 						<div class="modal-body mt-32">
 							<div class="modal-body--wrapper modal-body--wrapper__max-width mt-20">
-								<h4 class="fs-30 text-center mt-80" id="myModalLabel">
+								<h4 class="modal-main-text fs-30 text-center mt-80" id="myModalLabel">
 									Are you sure you want to issue a refund?
 								</h4>
 

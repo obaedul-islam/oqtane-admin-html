@@ -515,3 +515,36 @@
 		color: #1d242d;
 	}
 }
+
+.modal-secondary-text {
+	@media all and (max-width: 768px) {
+		font-size: 14px !important;
+	}
+}
+
+.modal-main-text {
+	@media all and (max-width: 768px) {
+		font-size: 16px !important;
+	}
+}
+
+.spinner-svg {
+
+	@media all and (max-width: 768px) {
+		width: 100px;
+		height: 100px;
+	}
+
+}
+
+.modal__title {
+
+	@media all and (max-width: 768px) {
+		font-size: 20px !important;
+	}
+
+	@media all and (max-width: 349px) {
+		font-size: 18px !important;
+	}
+
+}
