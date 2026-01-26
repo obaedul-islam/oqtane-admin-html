@@ -153,6 +153,10 @@
 								data-bs-target="#processModal" type="button">
 								Process Now
 							</button>
+								<button class="oqtane-btn oqtane-btn__primary--outline mr-3" data-bs-toggle="modal"
+								data-bs-target="#confirmProcessModal" type="button">
+								Confirm Process
+							</button>
 							<button data-bs-toggle="modal" data-bs-target="#addOfferProduct"
 								class="oqtane-btn oqtane-btn__primary" type="button">
 								Update (Add items)
@@ -683,6 +687,52 @@ Please don't refresh or close this page.</h4>
 
             	<h4 class="modal-secondary-text fs-20 text-center  text-modal-gray lh-lg mt-40">This may take a few seconds.<br />
 Once completed, you'll be redirected automatically.</h4>
+					</div>
+					</div>
+</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="modal edit fade" id="confirmProcessModal" tabindex="-1" role="dialog" aria-labelledby="confirmProcessModalLabel">
+		<div class="modal-dialog w-100 m-0" role="document">
+			<div class="modal-content">
+				<div class="modal-header d-flex align-item-center">
+					<div class="d-flex w-100 align-item-center justify-content-space-between pe-40">
+						<h4 class="modal__title fs-24 lh-36 text-left text-dark" id="myModalLabel">
+						Process Now
+						</h4>
+					</div>
+					<button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close">
+						<span class="icon-cross text-black" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="modal-body mt-50">
+					<div class="modal-body--wrapper modal-body--wrapper__max-width">
+							<h4 class="modal-main-text fs-22 text-center mt-80 text-dark fw-semibold lh-lg" id="myModalLabel">
+									Are you sure you want to process <br />
+									the upsell for this order?
+								</h4>
+
+
+							<!-- <h3 class="answer-type__title">Select Answer Type</h3> -->
+						
+		<div class="answer-type mt-40">
+							<!-- <h3 class="answer-type__title">Select Answer Type</h3> -->
+							<div class="answer-type__actions justify-content-center">
+								<button type="button" class="oqtane-btn oqtane-btn__primary--outline modal-button">
+									Process Now
+								</button>
+								<button type="button" data-bs-dismiss="modal" aria-label="Close"
+									class="oqtane-btn oqtane-btn__primary modal-button">
+									Go Back
+								</button>
+							</div>
+					
+
+
+            	
 					</div>
 					</div>
 </div>
