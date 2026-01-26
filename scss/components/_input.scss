@@ -494,12 +494,21 @@
   &__multiselect {
     position: relative;
 
+
     .dnn-multiselect__icon {
       position: absolute;
+      height: 22px;
+      width: 22px;
       top: 50%;
       right: 30px;
       transform: translateY(-50%);
+      font-size: 20px;
 
+      @media all and (max-width: 1171px) {
+        right: 15px;
+        font-size: 16px;
+
+      }
     }
   }
 
