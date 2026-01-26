@@ -139,7 +139,40 @@
 	}
 }
 
+.payment-table{
 
+	&-header{
+		display: flex;
+		font-size: 22px;
+		font-weight: 500;
+		padding: 0px !important;
+		// border-bottom: 1px solid $gray-border-light;
+
+		@media all and (max-width: 768px) {
+			display: none;
+			flex-direction: column;
+			margin-top: 20px;
+		}
+	}
+	
+	
+	&-body{
+		padding: 24px 10px;
+		// border-bottom: 1px solid $gray-border-light;
+		// align-items: center;
+
+		@media all and (max-width: 768px) {
+			flex-direction: column;
+		}
+	}
+
+	&-title{
+		display: none;
+		@media all and (max-width: 768px) {
+			display: block;
+		}
+	}
+}
 
 @media all and (max-width: 1440px) {
 	.order {

@@ -317,3 +317,20 @@ html[dir="rtl"] .col-justify-end .col-options[b-vznuo5fmpv] {
   content: "\2026";
   opacity: 0.75;
 }
+
+
+/* =====Grid Table Style===== */
+.grid{
+  &__table{
+    &__header{
+      padding: 5px 20px;
+    }
+    &__item{
+      padding-left:20px;
+      padding-right:20px;
+      &:nth-child(even){
+      background-color: rgba($grey-1, 0.4);
+    }
+    }
+  }
+}
