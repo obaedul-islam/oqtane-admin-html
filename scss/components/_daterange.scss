@@ -51,9 +51,21 @@
 
 .daterangepicker td.active,
 .daterangepicker td.active:hover {
-	background-color: $primary !important;
+	// background-color: $primary !important;
 	color: #ffffff !important;
 }
+
+
+.daterangepicker td.off, .daterangepicker td.off.in-range, .daterangepicker td.off.start-date, .daterangepicker td.off.end-date {
+    color: #999 !important;
+}
+
+.daterangepicker td.active,
+.daterangepicker td.active:hover {
+    /*    background-color: #214e9a !important;*/
+    color: #ffffff !important;
+}
+
 
 @media all and (max-width: 992px) {
 	.range {
