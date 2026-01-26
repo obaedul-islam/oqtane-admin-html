@@ -150,8 +150,8 @@
 									<i class="icon-search oqtane-search__icon"></i>
 								</div> -->
 							<button class="oqtane-btn oqtane-btn__primary--outline mr-3" data-bs-toggle="modal"
-								data-bs-target="#rejectModal" type="button">
-								Skip
+								data-bs-target="#processModal" type="button">
+								Process Now
 							</button>
 							<button data-bs-toggle="modal" data-bs-target="#addOfferProduct"
 								class="oqtane-btn oqtane-btn__primary" type="button">
@@ -650,6 +650,97 @@
 						</div>
 					</div>
 				</div>
+			</div>
+		</div>
+	</div>
+
+		<div class="modal edit fade" id="processModal" tabindex="-1" role="dialog" aria-labelledby="processModalLabel">
+		<div class="modal-dialog w-100 m-0" role="document">
+			<div class="modal-content">
+				<div class="modal-header d-flex align-item-center">
+					<div class="d-flex w-100 align-item-center justify-content-space-between pe-40">
+						<h4 class="fs-24 lh-36 text-left" id="myModalLabel">
+						 Payment Processing
+						</h4>
+					</div>
+					<button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close">
+						<span class="icon-cross text-black" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="modal-body mt-50">
+					<div class="modal-body--wrapper modal-body--wrapper__max-width">
+						<h4 class="fs-30 text-center mt-80 text-black fw-bold lh-lg" id="myModalLabel">
+							Payment Processing
+						</h4>
+
+
+							<!-- <h3 class="answer-type__title">Select Answer Type</h3> -->
+							<div class="d-flex flex-column justify-content-center align-items-center">
+					<h4 class="fs-20 text-center text-modal-gray lh-lg">Your payment is being securely processed.<br />
+Please don't refresh or close this page.</h4>
+<svg width="223px" height="192px" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <style>
+     @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      
+      @keyframes spinSmooth {
+        0% { 
+          transform: rotate(0deg);
+          animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+        }
+        50% { 
+          transform: rotate(180deg);
+          animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        100% { 
+          transform: rotate(360deg);
+        }
+      }
+      
+      .spinner {
+        transform-origin: 50% 50%;
+        animation: spinSmooth 1.4s ease-in-out infinite;
+        will-change: transform;
+      }
+    </style>
+  </defs>
+  
+  <!-- Background circle (light - static) -->
+  <circle 
+    cx="50" 
+    cy="50" 
+    r="40" 
+    fill="none" 
+    stroke="#D6E9F8" 
+    stroke-width="12"
+    stroke-linecap="butt"
+  />
+  
+  <g class="spinner">
+    <!-- Single dark blue segment that spins -->
+    <circle 
+      cx="50" 
+      cy="50" 
+      r="40" 
+      fill="none" 
+      stroke="#4A9FDB" 
+      stroke-width="12"
+      stroke-dasharray="30 200"  <!-- 30 visible, 200 gap -->
+      stroke-linecap="butt"
+      transform="rotate(-90 50 50)"
+    />
+  </g>
+</svg>
+
+
+            	<h4 class="fs-20 text-center  text-modal-gray lh-lg mt-40">This may take a few seconds.<br />
+Once completed, you'll be redirected automatically.</h4>
+					</div>
+					</div>
+</div>
 			</div>
 		</div>
 	</div>
