@@ -16,7 +16,7 @@
 		justify-content: center;
 		height: 100vh;
 		width: 850px;
-		max-width: 96%;
+		max-width: 100%;
 		margin-top: 0;
 
 		@media all and (max-width: 768px) {
@@ -29,6 +29,11 @@
 		border-radius: 12px;
 		max-height: calc(100% - 30px);
 		overflow-y: auto !important;
+
+		@media all and (max-width: 768px) {
+			width: 100% !important;
+
+		}
 	}
 
 	&-body {
@@ -509,4 +514,37 @@
 		font-size: 18px;
 		color: #1d242d;
 	}
+}
+
+.modal-secondary-text {
+	@media all and (max-width: 768px) {
+		font-size: 14px !important;
+	}
+}
+
+.modal-main-text {
+	@media all and (max-width: 768px) {
+		font-size: 16px !important;
+	}
+}
+
+.spinner-svg {
+
+	@media all and (max-width: 768px) {
+		width: 100px;
+		height: 100px;
+	}
+
+}
+
+.modal__title {
+
+	@media all and (max-width: 768px) {
+		font-size: 20px !important;
+	}
+
+	@media all and (max-width: 349px) {
+		font-size: 18px !important;
+	}
+
 }
