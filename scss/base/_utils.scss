@@ -449,6 +449,7 @@ $spacing-list: (
 	&-none {
 		box-shadow: none;
 	}
+
 }
 
 // Outline Utilities
@@ -466,6 +467,18 @@ $spacing-list: (
 
 	&-left-1 {
 		border-left: 1px solid $border-color;
+	}
+
+	&-grey {
+		box-shadow: 0px 0px 4px 0px #00000040;
+	}
+
+	&-radius-10 {
+		border-radius: 20px;
+
+		@media all and (max-width: 768px) {
+			border-radius: 15px;
+		}
 	}
 }
 
