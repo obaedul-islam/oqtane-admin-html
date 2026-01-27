@@ -204,7 +204,7 @@
 								<button
 									class="oqtane-btn oqtane-btn__primary--outline mr-3"
 									data-bs-toggle="modal"
-									data-bs-target="#paymentFailedModal"
+									data-bs-target="#paymentFailed"
 									type="button"
 								>
 									Payment Failed
@@ -1365,7 +1365,7 @@
 					<div class="modal-body mt-50">
 						<div class="modal-body--wrapper modal-body--wrapper__max-width">
 							<h4
-								class="modal-main-text fs-22 text-center mt-80 text-dark fw-semibold lh-lg"
+								class="fs-22 text-center mt-80 text-dark fw-semibold lh-lg"
 								id="myModalLabel"
 							>
 								Are you sure you want to process <br />
@@ -1430,7 +1430,7 @@
 					<div class="modal-body mt-50">
 						<div class="modal-body--wrapper modal-body--wrapper__max-width">
 							<h4
-								class="modal-main-text fs-30 text-center mt-80 text-modal-header fw-bold lh-lg"
+								class="fs-30 mt-50 text-center text-modal-header fw-bold lh-lg"
 								id="myModalLabel"
 							>
 								Payment Processing
@@ -1526,6 +1526,310 @@
 			</div>
 		</div>
 		<!-- Processing Modal End -->
+
+		<!-- Payment Failed Modal Start -->
+		<div
+			class="modal edit fade"
+			id="paymentFailed"
+			tabindex="-1"
+			role="dialog"
+			aria-labelledby="paymentFailedLabel"
+		>
+			<div class="modal-dialog w-100 m-0" role="document">
+				<div class="modal-content">
+					<div class="modal-header d-flex align-item-center">
+						<div
+							class="d-flex w-100 align-item-center justify-content-space-between pe-40"
+						>
+							<h4
+								class="modal__title fs-24 lh-36 text-left text-dark"
+								id="myModalLabel"
+							>
+								Payment failed
+							</h4>
+						</div>
+						<button
+							type="button"
+							class="close-btn"
+							data-bs-dismiss="modal"
+							aria-label="Close"
+						>
+							<span class="icon-cross text-black" aria-hidden="true"></span>
+						</button>
+					</div>
+					<div class="modal-body mt-50">
+						<div class="modal-body--wrapper">
+							<h4
+								class="fs-30 text-center mt-80 text-modal-header fw-bold lh-lg"
+								id="myModalLabel"
+							>
+								Payment failed!
+							</h4>
+
+							<div
+								class="d-flex flex-column justify-content-center align-items-center"
+							>
+								<h4
+									class="modal-secondary-text fs-20 text-center text-gray4 lh-lg"
+								>
+									Please choose another card or update your card information.
+								</h4>
+							</div>
+
+							<div
+								class="oqtane-card list-card mt-3 border-grey border-radius-20"
+							>
+								<div class="oqtane-card__header">
+									<h3>Payment Method</h3>
+								</div>
+
+								<div
+									class="cart-card payment__card--cart-summary"
+									data-aos="fade-up"
+									data-aos-duration="500"
+								>
+									<div class="grid__table">
+										<div class="grid__table__header">
+											<div class="payment-table-header mb-3 px-5">
+												<div class="col-md-6 fs-14 fw-semibold"
+													>Payment Options</div
+												>
+												<div class="col-md-3 fs-14 fw-semibold"
+													>Name On Card</div
+												>
+												<div class="col-md-3 fs-14 fw-semibold">Expires</div>
+											</div>
+										</div>
+										<div class="row align-items-center mb-3 grid__table__item">
+											<div class="payment-table-body d-md-flex fs-18">
+												<div class="col-md-6">
+													<div class="d-flex align-items-center gap-2">
+														<label class="custom-radio"
+															><span class="custom-radio__input">
+																<input type="radio" name="discountType" />
+																<span></span
+															></span>
+														</label>
+														<div class="card-image">
+															<img src="/img/payment/visa.png" alt="Visa" />
+														</div>
+														<span class="card-image__text">(****1390)</span>
+														<span class="status-pill status-pill--submitted"
+															>Default</span
+														>
+													</div>
+												</div>
+												<div class="col-md-3 table-my">
+													<p
+														class="mt-3 fs-md-22 fs-18 fw-medium payment-table-title mb-md-3 mb-1"
+													>
+														Name On Card
+													</p>
+													<p class="fs-md-18 fs-16">Dean Jones</p>
+												</div>
+												<div class="col-md-3 table-my">
+													<p
+														class="fs-md-22 fs-18 fw-medium payment-table-title mb-md-3 mb-1"
+														>Expires
+													</p>
+													<p class="fs-md-18 fs-16">11/2026</p>
+												</div>
+											</div>
+										</div>
+
+										<div class="row align-items-center mb-3 grid__table__item">
+											<div class="payment-table-body p-24 d-md-flex fs-18">
+												<div class="col-md-6">
+													<div class="d-flex align-items-center gap-2">
+														<label class="custom-radio"
+															><span class="custom-radio__input">
+																<input type="radio" name="discountType" />
+																<span></span
+															></span>
+														</label>
+														<div class="card-image">
+															<img
+																src="/img/payment/master.png"
+																alt="MasterCard"
+															/>
+														</div>
+														<span class="card-image__text">(****2467)</span>
+														<span class="status-pill">Make Default</span>
+													</div>
+												</div>
+												<div class="col-md-3 table-my">
+													<p
+														class="mt-3 fs-md-22 fs-18 fw-medium payment-table-title mb-md-3 mb-1"
+													>
+														Name On Card
+													</p>
+													<p class="fs-18">Dean Jones</p>
+												</div>
+												<div class="col-md-3 table-my">
+													<p
+														class="fs-md-22 fs-18 fw-medium payment-table-title mb-md-3 mb-1"
+														>Expires
+													</p>
+													<p class="fs-18">11/2026</p>
+												</div>
+											</div>
+										</div>
+
+										<div class="row align-items-center mb-3 grid__table__item">
+											<div class="payment-table-body p-24 d-md-flex fs-18">
+												<div class="col-md-6">
+													<div class="d-flex align-items-center gap-2">
+														<label class="custom-radio"
+															><span class="custom-radio__input">
+																<input type="radio" name="discountType" />
+																<span></span
+															></span>
+														</label>
+														<div class="card-image">
+															<img src="/img/payment/amex.png" alt="Amex" />
+														</div>
+														<span class="card-image__text">(****1390)</span>
+														<span class="status-pill status-pill--warning"
+															>Expired</span
+														>
+													</div>
+												</div>
+												<div class="col-md-3 table-my">
+													<p
+														class="mt-3 fs-md-22 fs-18 fw-medium payment-table-title mb-md-3 mb-1"
+													>
+														Name On Card
+													</p>
+													<p class="fs-18">Dean Jones</p>
+												</div>
+												<div class="col-md-3 table-my">
+													<p
+														class="fs-md-22 fs-18 fw-medium payment-table-title mb-md-3 mb-1"
+														>Expires
+													</p>
+													<p class="fs-18">11/2026</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="oqtane-card__body">
+									<label class="custom-radio">
+										<span class="custom-radio__input">
+											<input type="radio" name="discountType" />
+											<span></span>
+										</span>
+										<span class="custom-radio__label"
+											>New Credit/Debit Card</span
+										>
+									</label>
+
+									<div class="payment-card__body">
+										<div
+											class="payment__form payment__form--body payment__form--card"
+											id="payment-form"
+										>
+											<div
+												class="payment__form--inline-fields payment__form--inline-fields--alt mt-20"
+											>
+												<div class="row gx-3 gy-3">
+													<div class="col-md-6 form-group">
+														<div class="custom-input"
+															><label class="custom-input__inner"
+																><input
+																	type="text"
+																	class="custom-input__control"
+																	placeholder=" "
+																/><span class="custom-input__label"
+																	>Card Number</span
+																></label
+															>
+														</div>
+													</div>
+													<div class="col-md-6 form-group">
+														<div class="custom-input"
+															><label class="custom-input__inner"
+																><input
+																	type="text"
+																	class="custom-input__control"
+																	placeholder=" "
+																/><span class="custom-input__label"
+																	>Expiration Date</span
+																></label
+															>
+														</div>
+													</div>
+													<div class="col-md-6 form-group">
+														<div class="custom-input"
+															><label class="custom-input__inner"
+																><input
+																	type="text"
+																	class="custom-input__control"
+																	placeholder=" "
+																/><span class="custom-input__label"
+																	>Security code</span
+																></label
+															>
+														</div>
+													</div>
+													<div class="col-md-6 form-group">
+														<div class="custom-input"
+															><label class="custom-input__inner"
+																><input
+																	type="text"
+																	class="custom-input__control"
+																	placeholder=" "
+																/><span class="custom-input__label"
+																	>Country</span
+																></label
+															>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="mt-4">
+										<label class="custom-check">
+											<span class="custom-check__input">
+												<input type="checkbox" />
+												<span></span
+											></span>
+											<span class="custom-check__label text-grey-3">
+												Save this Information
+											</span>
+										</label>
+									</div>
+								</div>
+							</div>
+
+							<div class="row order__table order__table--alt">
+								<div class="answer-type__actions justify-content-center">
+									<div class="mt-20 d-md-flex gap-20">
+										<button
+											type="button"
+											class="oqtane-btn oqtane-btn__primary--outline modal-button"
+											data-bs-dismiss="modal"
+											aria-label="Close"
+										>
+											Cancel
+										</button>
+										<button
+											type="button"
+											class="oqtane-btn oqtane-btn__primary modal-button ml-20"
+										>
+											Confirm
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Payment Failed Modal End -->
 
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="../js/vendors/jquery-3.7.1.min.js"></script>
