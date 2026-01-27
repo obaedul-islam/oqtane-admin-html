@@ -175,7 +175,57 @@
 							</div>
 						</div>
 					</div>
+
 					<div class="oqtane-card mb-0">
+						<div class="oqtane-card__header d-flex justify-content-between align-items-md-start">
+							<p class="mb-0">Previously Purchased Product</p>
+							
+						</div>
+						<div class="oqtane-card__body p-0">
+							<div class="selected-products">
+								<div class="select-product__item">
+									<div class="select-product__img">
+										<img src="../img/product-1.png" alt="Product" />
+									</div>
+									<div class="select-product__content">
+										<div
+											class="d-flex flex-xl-row flex-column gap-3 w-100 justify-content-between align-item-start">
+											<div>
+												<h3 class="select-product__title">
+													Tirzepatide Injectable Solution
+												</h3>
+												<p class="select-product__price">$399</p>
+											</div>
+
+											<div class="product-action__btn product-action__btn-alt">
+												<div class="input-group product-action__cart product-action__cart--primary product-action__cart--md"
+													data-aos="flip-left" data-aos-duration="1000" data-aos-once="true">
+													<span class="input-group-btn">
+														<button class="btn" type="button">
+															<i class="icon-minus"></i>
+														</button>
+													</span>
+													<input type="text" inputmode="numeric"
+														class="form-control text-dark fs-5 lh-1" id="quantity"
+														value="1" />
+													<span class="input-group-btn">
+														<button class="btn" type="button">
+															<i class="icon-plus1"></i>
+														</button>
+													</span>
+												</div>
+												<button type="button" class="oqtane-btn text-danger fs-30 p-0">
+													<i class="icon-delete"></i>
+												</button>
+											</div>
+										</div>	
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="oqtane-card mt-3">
 						<div class="oqtane-card__header d-flex justify-content-between align-items-md-start">
 							<p class="mb-0">Selected Product</p>
 							<div class="oqtane-search position-relative d-inline-block w-auto">
@@ -379,7 +429,7 @@
 
 						</div>
 
-						<div class="d-flex flex-column justify-content-start mt-4">
+						<div class="d-flex flex-column justify-content-start mt-4 px-3">
 							<table class="table">
 								<thead class="table-header-grey">
 									<tr>
@@ -390,9 +440,21 @@
 								</thead>
 								<tbody>
 									<tr>
+										<td class="text-green-lighter fst-italic">Previously Purchased Product</td>
+									</tr>
+						
+									<tr>
 										<td>Cagrilintide Injectable Solution</td>
 										<td>2</td>
 										<td>$820</td>
+									</tr>
+									<tr>
+										<td class="text-primary fw-bold">Discount</td>
+										<td></td>
+										<td class="text-primary fw-bold">$178</td>
+									</tr>
+									<tr>
+										<td class="text-green-lighter fst-italic">Selected Additional Product</td>
 									</tr>
 									<tr>
 										<td>GHK-CU Injectable Solution</td>
@@ -400,15 +462,16 @@
 										<td>$860</td>
 									</tr>
 									<tr>
-										<td class="text-primary fw-bold">Shipping Charge</td>
-										<td></td>
-										<td class="text-primary fw-bold">$20</td>
-									</tr>
-									<tr>
 										<td class="text-primary fw-bold">Discount</td>
 										<td></td>
 										<td class="text-primary fw-bold">$178</td>
 									</tr>
+									<tr>
+										<td class="text-primary fw-bold">Shipping Charge</td>
+										<td></td>
+										<td class="text-primary fw-bold">$20</td>
+									</tr>
+								
 								</tbody>
 								<tfoot>
 									<tr style="border-top: 1px solid #eeeef0">
