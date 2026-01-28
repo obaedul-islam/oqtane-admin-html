@@ -235,7 +235,31 @@
 		align-items: center;
 	}
 }
+.subscribe {
+	&__card{
+		background-color: #F6F7F9;
+		border-radius: 20px;
 
+		&--field{
+			label{
+				background-color: #C8E3FF;
+				border: 0;
+			}
+		}
+	}
+	    
+}
+
+.bullet-point{
+	&__add{
+		a{
+		text-decoration: underline;
+		margin-left: 20px;
+		color: $primary-light;
+	}
+	}
+	
+}
 @media all and (max-width: 992px) {
 	.oqtane-card {
 		&__body {
