@@ -481,6 +481,11 @@ $spacing-list: (
 			border-radius: 15px;
 		}
 	}
+
+	&-dashed {
+		border-top: 1px dashed #8E8E8E;
+		width: 100%;
+	}
 }
 
 // Border Radius Utilities

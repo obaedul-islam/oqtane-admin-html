@@ -32,3 +32,46 @@
     color: $primary-light;
   }
 }
+
+.tooltip {
+  &-inner {
+    max-width: 230px !important;
+  }
+}
+
+.status {
+  &-tooltip {
+    background-color: $dark;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    &--list {
+      margin: 0;
+      padding: 0;
+
+      li {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: $fs-14;
+        text-align: left;
+
+        i {
+          color: $blue-3;
+          font-size: $fs-20;
+        }
+      }
+    }
+  }
+}
+
+.tooltip-inner {
+  padding: 12px;
+  background-color: $dark;
+}
+
+.tooltip.top .tooltip-arrow {
+  border-top-color: $dark;
+}

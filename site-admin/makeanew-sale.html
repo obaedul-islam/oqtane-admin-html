@@ -244,8 +244,16 @@
 										<div
 											class="d-flex flex-xl-row flex-column gap-3 w-100 justify-content-between align-item-start">
 											<div>
-												<h3 class="select-product__title">
-													Tirzepatide Injectable Solution
+												<label class="custom-radio">
+													<span class="custom-radio__input">
+														<input name="discount_type" type="radio" value="promo_code" checked="">
+														<span></span>
+													</span>
+
+													<span class="custom-radio__label text-primary fs-22 fw-bold">One-time</span>
+												</label>
+												<h3 class="select-product__title mt-1 mb-0">
+													WOLVERINE BLEND (5MG BPC, 5MG TB-500) 5MG BPC/5MG TB-500
 												</h3>
 												<p class="select-product__price">$399</p>
 											</div>
@@ -274,7 +282,7 @@
 										</div>
 
 										<div class="product-price-alt">
-											<label class="custom-check mt-2">
+											<label class="custom-check">
 												<span class="custom-check__input">
 													<input type="checkbox" />
 													<span></span>
@@ -295,6 +303,63 @@
 												</label>
 											</div>
 											<p class="text-primary mt-2">(You can only increase the price)</p>
+										</div>
+										<div class="border-dashed"></div>
+
+											<div
+											class="d-flex flex-xl-row flex-column gap-3 w-100 justify-content-between align-item-start mt-2">
+											<div>
+												<label class="custom-radio">
+													<span class="custom-radio__input">
+														<input name="discount_type" type="radio" value="promo_code" checked="">
+														<span></span>
+													</span>
+
+													<div>
+														<span class="custom-radio__label text-primary fs-22 fw-bold">Subscribe & Save</span>
+															<button
+																type="button"
+																class="oqtane-btn text-danger fs-30 p-0 statusTooltipBtn ms-1"
+																title="
+                                  <ul class='status-tooltip status-tooltip--list'>
+                                      <li>
+																				<i class='icon-tick'></i>
+																				<span>A Quarter Billion+ nights made (and counting)</span>
+																			</li>
+                                      <li>
+																				<i class='icon-tick'></i>
+																				<span>Easily charge or cancel any time</span>
+																			</li>
+                                      <li>
+																				<i class='icon-tick'></i>
+																				<span>Delivered every 30 days</span>
+																			</li>
+																		</ul>
+                              		"
+															>
+																<i class="icon-info-circle fs-20 fw-500 text-primary"></i>
+															</button>
+														
+													</div>
+												</label>
+												<h3 class="select-product__title mt-1 mb-0">
+													WOLVERINE BLEND (5MG BPC, 5MG TB-500) 5MG BPC/5MG TB-500
+												</h3>
+												<div class="d-flex align-items-center gap-3">
+													<p class="select-product__price">$399</p>
+													<p class="select-product__price text-decoration-line-through text-delete">$340</p>
+													<span class="status-pill status-pill--success fw-normal">
+															16.67% Savings
+													</span>
+												</div>
+											</div>
+
+											<div class="product-action__btn product-action__btn-alt">
+												
+												<button type="button" class="oqtane-btn text-danger fs-30 p-0">
+													<i class="icon-delete"></i>
+												</button>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -1169,6 +1234,7 @@
 	<script src="js/vendors/cropper.min.js"></script>
 
 	<script src="./../js/main.js"></script>
+	<script src="./../js/tooltip.js"></script>
 </body>
 
 </html>
