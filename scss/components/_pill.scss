@@ -27,6 +27,14 @@
     background-color: $secondary-light;
   }
 
+  &--expired {
+    background-color: $expired-light;
+  }
+
+  &--default-light {
+    background-color: $default-light;
+  }
+
   &--primary {
     background-color: $blue-light;
     color: $primary-light;
