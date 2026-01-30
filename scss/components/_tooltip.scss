@@ -1,0 +1,21 @@
+.statusTooltipBtn{
+    border:none;
+    background:none;
+    padding:0;
+    margin-left:5px;
+    color:#007bff;
+    cursor:pointer;
+
+}
+
+.tooltip-inner {
+        padding: 12px !important;
+        background-color: $dark;
+
+        ul{
+            list-style: none;
+            padding-left: 2px;
+            margin-bottom:5px;
+        }
+
+}
