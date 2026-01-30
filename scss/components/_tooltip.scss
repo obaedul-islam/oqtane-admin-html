@@ -19,3 +19,11 @@
         }
 
 }
+
+.bs-tooltip-auto[data-popper-placement^=bottom], .bs-tooltip-bottom {
+    padding: 0;
+}
+
+.bs-tooltip-auto[data-popper-placement^=bottom] .tooltip-arrow::before, .bs-tooltip-bottom .tooltip-arrow::before {
+    border-bottom-color: $dark;
+}
