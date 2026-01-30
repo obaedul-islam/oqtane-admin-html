@@ -498,6 +498,10 @@
     bottom: 12px;
     background-color: transparent;
 
+    &-alt{
+      padding: 0;
+    }
+
     &--textarea {
       height: 112px;
       resize: none;
