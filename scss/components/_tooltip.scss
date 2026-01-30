@@ -1,0 +1,29 @@
+.statusTooltipBtn{
+    border:none;
+    background:none;
+    padding:0;
+    margin-left:5px;
+    color:#007bff;
+    cursor:pointer;
+
+}
+
+.tooltip-inner {
+        padding: 12px !important;
+        background-color: $dark;
+
+        ul{
+            list-style: none;
+            padding-left: 2px;
+            margin-bottom:5px;
+        }
+
+}
+
+.bs-tooltip-auto[data-popper-placement^=bottom], .bs-tooltip-bottom {
+    padding: 0;
+}
+
+.bs-tooltip-auto[data-popper-placement^=bottom] .tooltip-arrow::before, .bs-tooltip-bottom .tooltip-arrow::before {
+    border-bottom-color: $dark;
+}
