@@ -98,6 +98,33 @@
 	}
 }
 
+.badge {
+	&__card {
+		background-color: $gray-normal;
+		padding: 20px;
+		border-radius: 12px;
+
+		p {
+			font-size: $fs-20;
+			font-weight: 600;
+			line-height: 1.5;
+			color: $primary-light;
+			text-transform: uppercase;
+			margin-bottom: 0;
+			text-align: center;
+		}
+
+		@media all and (max-width: 768px) {
+			padding: 10px;
+			border-radius: 8px;
+
+			p {
+				font-size: $fs-16;
+			}
+
+		}
+	}
+}
 
 .list-card {
 	overflow: hidden;
@@ -235,31 +262,33 @@
 		align-items: center;
 	}
 }
+
 .subscribe {
-	&__card{
+	&__card {
 		background-color: #F6F7F9;
 		border-radius: 20px;
 
-		&--field{
-			label{
+		&--field {
+			label {
 				background-color: #C8E3FF;
 				border: 0;
 			}
 		}
 	}
-	    
+
 }
 
-.bullet-point{
-	&__add{
-		a{
-		text-decoration: underline;
-		margin-left: 20px;
-		color: $primary-light;
+.bullet-point {
+	&__add {
+		a {
+			text-decoration: underline;
+			margin-left: 20px;
+			color: $primary-light;
+		}
 	}
-	}
-	
+
 }
+
 @media all and (max-width: 992px) {
 	.oqtane-card {
 		&__body {
