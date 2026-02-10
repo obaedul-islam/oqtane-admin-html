@@ -29,7 +29,7 @@
             align-items: center;
             gap: 15px;
             color: $white;
-            font-weight: 400;
+            font-weight: 400 !important;
             font-family: "Poppins", sans-serif;
 
             i {
@@ -47,7 +47,7 @@
 
 .bs-tooltip-auto[data-popper-placement^=bottom] .tooltip-arrow::before,
 .bs-tooltip-bottom .tooltip-arrow::before {
-    border-bottom-color: $dark;
+    border-bottom-color: $dark !important;
 }
 
 .tooltip.show {
