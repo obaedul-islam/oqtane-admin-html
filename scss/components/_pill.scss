@@ -27,6 +27,10 @@
     background-color: $secondary-light;
   }
 
+  &--yellow {
+    background-color: $secondary;
+  }
+
   &--primary {
     background-color: $blue-light;
     color: $primary-light;

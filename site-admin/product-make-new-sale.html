@@ -259,13 +259,23 @@
 										<div
 											class="d-flex flex-xl-row flex-column gap-3 w-100 justify-content-between align-item-start">
 											<div>
-												<h3 class="select-product__title">
-													Tirzepatide Injectable Solution
+												<label class="custom-radio">
+													<span class="custom-radio__input">
+														<input name="discount_type" type="radio" value="promo_code"
+															checked="">
+														<span></span>
+													</span>
+
+													<span
+														class="custom-radio__label text-primary fs-22 fw-bold">One-time</span>
+												</label>
+												<h3 class="select-product__title mt-1 mb-0">
+													WOLVERINE BLEND (5MG BPC, 5MG TB-500) 5MG BPC/5MG TB-500
 												</h3>
-												<p class="select-product__price ">$399</p>
+												<p class="select-product__price">$399</p>
 											</div>
 
-											<div class="product-action__btn">
+											<div class="product-action__btn product-action__btn-alt">
 												<div class="input-group product-action__cart product-action__cart--primary product-action__cart--md"
 													data-aos="flip-left" data-aos-duration="1000" data-aos-once="true">
 													<span class="input-group-btn">
@@ -288,7 +298,77 @@
 											</div>
 										</div>
 
-										<div>
+										<div class="product-price-alt">
+											<label class="custom-check">
+												<span class="custom-check__input">
+													<input type="checkbox" />
+													<span></span>
+												</span>
+
+												<span class="custom-check__label text-dark">
+													Do you want to change the original price?
+												</span>
+											</label>
+											<div class="custom-input custom-input--with-icon mt-3">
+												<label class="custom-input__inner custom-input__inner-number">
+													<input type="number" class="custom-input__control"
+														placeholder=" " />
+													<span class="custom-input__label">Price</span>
+													<span class="custom-input__suffix">
+														<i class="icon-dollar"></i>
+													</span>
+												</label>
+											</div>
+											<p class="text-primary mt-2">(You can only increase the price)</p>
+										</div>
+										<div class="border-dashed"></div>
+										<div
+											class="d-flex flex-xl-row flex-column gap-3 w-100 justify-content-between align-item-center mt-2">
+											<div>
+												<label class="custom-radio">
+													<span class="custom-radio__input">
+														<input name="discount_type" type="radio" value="promo_code"
+															checked="">
+														<span></span>
+													</span>
+
+													<div>
+														<span
+															class="custom-radio__label text-primary fs-22 fw-bold">Subscribe
+															& Save</span>
+														<button type="button"
+															class="statusTooltipBtn theme-btn theme-btn__icon-only"
+															data-bs-html="true" title="<ul>
+																<li>Delivered every 30 days</li>
+															</ul>">
+															<i class="icon-info-circle fs-24"></i>
+														</button>
+
+
+													</div>
+												</label>
+												<h3 class="select-product__title mt-1 mb-0">
+													WOLVERINE BLEND (5MG BPC, 5MG TB-500) 5MG BPC/5MG TB-500
+												</h3>
+												<div class="d-flex align-items-center gap-3">
+													<p class="select-product__price">$399</p>
+													<p
+														class="select-product__price text-decoration-line-through text-delete">
+														$340</p>
+													<span class="status-pill status-pill--success fw-normal">
+														16.67% Savings
+													</span>
+												</div>
+											</div>
+
+											<div class="product-action__btn product-action__btn-alt">
+
+												<button type="button" class="oqtane-btn text-danger fs-30 p-0">
+													<i class="icon-delete"></i>
+												</button>
+											</div>
+										</div>
+										<div class="product-price-alt col-md-7">
 											<label class="custom-check mt-2">
 												<span class="custom-check__input">
 													<input type="checkbox" />
@@ -299,9 +379,24 @@
 													Do you want to change the original price?
 												</span>
 											</label>
+											<div class="d-flex align-items-center flex-wrap gap-3 mt-3">
+												<div class="custom-input custom-input-alt custom-input--with-icon ">
+												<label class="custom-input__inner custom-input__inner-number">
+													<input type="number" class="custom-input__control"
+														placeholder=" " />
+													<span class="custom-input__label">Price</span>
+													<span class="custom-input__suffix">
+														<i class="icon-dollar"></i>
+													</span>
+												</label>
+											</div>
+											<span class="status-pill status-pill--yellow fw-normal">
+														2% over price
+													</span>
+											</div>
+											<p class="text-primary mt-2">(You can increase/decrease the price)</p>
 										</div>
 									</div>
-
 								</div>
 
 							</div>
