@@ -445,10 +445,23 @@
   display: block;
   width: 100%;
 
-  &-alt{
+  &-alt {
     width: 70%;
+
     @media all and (max-width: 1024px) {
       width: 100%;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+    @media all and (max-width: 768px) {
+      gap: 15px;
+      flex-direction: column;
+      align-items: start;
     }
   }
 
@@ -476,6 +489,12 @@
     }
 
     &-number {
+      min-width: 450px;
+
+      @media all and (max-width: 768px) {
+        min-width: 100%;
+        // max-width: 300px;
+      }
 
       /* Chrome, Edge, Safari */
       input[type=number]::-webkit-inner-spin-button,
@@ -505,7 +524,7 @@
     bottom: 12px;
     background-color: transparent;
 
-    &-alt{
+    &-alt {
       padding: 0;
     }
 
