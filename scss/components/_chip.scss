@@ -6,6 +6,17 @@
 		background-color: $secondary-light;
 		border-radius: 30px;
 
+		&__alt {
+			background-color: white;
+			color: $dark;
+			font-weight: 500;
+			font-size: $fs-16;
+
+			.icon-cross1 {
+				color: $dark !important;
+			}
+		}
+
 		button {
 			box-shadow: none;
 			border: none;

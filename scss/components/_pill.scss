@@ -75,3 +75,24 @@
 .tooltip.top .tooltip-arrow {
   border-top-color: $dark;
 }
+
+.dot {
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  border-radius: 50%;
+
+  &__primary {
+    background-color: $primary;
+  }
+
+  &__green {
+    background-color: $green-lightest;
+  }
+
+}
+
+.pipe {
+  color: $grey-3;
+  padding: 0 7px;
+}
