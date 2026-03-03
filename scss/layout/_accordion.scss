@@ -126,6 +126,84 @@
   }
 }
 
+/* Hide both icons by default */
+.arrow-icon {
+  display: none;
+}
+
+.accordion {
+
+  &__custom {
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &-item {
+    &__custom {
+
+      border: 0;
+    }
+  }
+
+  &-header {
+    &__custom {
+      background-color: transparent;
+      border: 0;
+    }
+  }
+
+  &-body {
+    &__custom {
+      background-color: transparent;
+      border: 0;
+    }
+  }
+}
+
+.accordion-button__custom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border: 0;
+  outline: 0;
+  box-shadow: none;
+  background-color: transparent;
+}
+
+/* Show DOWN arrow when collapsed */
+.accordion-button__custom:not(.collapsed) {
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  box-shadow: none;
+}
+
+.accordion-button__custom.collapsed {
+  background-color: transparent;
+}
+
+/* Show UP arrow when expanded */
+.accordion-button__custom:not(.collapsed) .icon-up_arrow {
+  display: inline-block;
+  background-color: transparent;
+}
+
+
+.accordion-button__custom.collapsed .icon-down_arrow {
+  display: inline-block;
+}
+
+.accordion-button__custom::after {
+  display: none;
+}
+
+.accordion-button__custom:not(.collapsed)::after {
+  display: none;
+}
+
 @media all and (max-width: 992px) {
   .oqtane-accordion {
     &__header {
