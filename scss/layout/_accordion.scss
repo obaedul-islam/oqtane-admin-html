@@ -142,8 +142,12 @@
 
   &-item {
     &__custom {
-
       border: 0;
+      border-bottom: 1px solid $grey-3;
+
+      &:last-child {
+        border-bottom: 0;
+      }
     }
   }
 
@@ -158,6 +162,7 @@
     &__custom {
       background-color: transparent;
       border: 0;
+      padding: 20px 0;
     }
   }
 }
@@ -171,6 +176,11 @@
   outline: 0;
   box-shadow: none;
   background-color: transparent;
+  padding: 20px 0;
+
+  p {
+    margin-bottom: 0;
+  }
 }
 
 /* Show DOWN arrow when collapsed */
