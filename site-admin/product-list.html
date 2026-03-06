@@ -171,7 +171,7 @@
 											aria-controls="pills-single"
 											aria-selected="true"
 										>
-											<i class="icon-product_list"></i>
+											<i class="icon-single"></i>
 											<span>Single</span>
 										</button>
 									</li>
@@ -186,7 +186,7 @@
 											aria-controls="pills-package"
 											aria-selected="false"
 										>
-											<i class="icon-calendar"></i>
+											<i class="icon-package"></i>
 											<span>Package</span>
 										</button>
 									</li>
@@ -202,6 +202,21 @@
 									/>
 									<i class="icon-search oqtane-search__icon"></i>
 								</div>
+
+								<button
+									class="oqtane-btn oqtane-btn__primary dropdown-toggle"
+									type="button"
+									data-bs-toggle="dropdown"
+									aria-expanded="false"
+								>
+									Add New Product
+								</button>
+
+								<ul class="dropdown-menu dropdown-list">
+									<li><a class="dropdown-item" href="#">Single Product</a></li>
+									<li><a class="dropdown-item" href="#">Product Package</a></li>
+									<li><a class="dropdown-item" href="#">Import Product</a></li>
+								</ul>
 
 								<button type="button" class="oqtane-btn oqtane-btn__primary">
 									Create New Sale
@@ -284,13 +299,17 @@
 														<td>Hair fall</td>
 														<td>14 August, 2024</td>
 														<td>$40.00</td>
-														<td>
-															<button
-																type="button"
+														<td class="d-flex gap-3">
+															<a
+																class="oqtane-btn oqtane-btn__icon list-table__action"
+															>
+																<i class="icon-edit"></i>
+															</a>
+															<a
 																class="oqtane-btn oqtane-btn__icon list-table__action"
 															>
 																<i class="icon-link"></i>
-															</button>
+															</a>
 														</td>
 													</tr>
 													<tr>
@@ -312,13 +331,17 @@
 														<td>Hair fall</td>
 														<td>14 August, 2024</td>
 														<td>$40.00</td>
-														<td>
-															<button
-																type="button"
+														<td class="d-flex gap-3">
+															<a
+																class="oqtane-btn oqtane-btn__icon list-table__action"
+															>
+																<i class="icon-edit"></i>
+															</a>
+															<a
 																class="oqtane-btn oqtane-btn__icon list-table__action"
 															>
 																<i class="icon-link"></i>
-															</button>
+															</a>
 														</td>
 													</tr>
 													<tr>

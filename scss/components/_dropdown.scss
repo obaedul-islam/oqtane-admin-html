@@ -45,6 +45,32 @@
     top: 50%;
     transform: translateY(-50%);
   }
+
+  &-list {
+    border-radius: 20px;
+    border: 0;
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.12);
+    padding: 5px 15px;
+
+    li {
+      border-bottom: 1px solid $grey-1;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+
+
+      a {
+        padding: 8px 0;
+        border-radius: 5px;
+
+        &:hover {
+          background-color: rgba($grey-1, 0.5);
+          color: $dark;
+        }
+      }
+    }
+  }
 }
 
 .dropstart .dropdown-toggle::before {

@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?aecvyq');
-  src:  url('fonts/icomoon.eot?aecvyq#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.woff2?aecvyq') format('woff2'),
-    url('fonts/icomoon.ttf?aecvyq') format('truetype'),
-    url('fonts/icomoon.woff?aecvyq') format('woff'),
-    url('fonts/icomoon.svg?aecvyq#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?9i4cay');
+  src:  url('fonts/icomoon.eot?9i4cay#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.woff2?9i4cay') format('woff2'),
+    url('fonts/icomoon.ttf?9i4cay') format('truetype'),
+    url('fonts/icomoon.woff?9i4cay') format('woff'),
+    url('fonts/icomoon.svg?9i4cay#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -101,6 +101,12 @@
 .icon-Checkbox_check_RIZZ:before {
   content: "\e963";
 }
+.icon-single:before {
+  content: "\e99c";
+}
+.icon-package:before {
+  content: "\e99d";
+}
 .icon-warehouse:before {
   content: "\e992";
 }
@@ -178,9 +184,6 @@
 }
 .icon-arrow1:before {
   content: "\e948";
-}
-.icon-delivery:before {
-  content: "\e949";
 }
 .icon-discount:before {
   content: "\e94a";
@@ -275,6 +278,12 @@
 .icon-StateOff:before {
   content: "\e966";
 }
+.icon-Percentage:before {
+  content: "\e99b";
+}
+.icon-money:before {
+  content: "\e99a";
+}
 .icon-hamburger-wide:before {
   content: "\e999";
 }
@@ -301,6 +310,9 @@
 }
 .icon-Payment-Cancel:before {
   content: "\e964";
+}
+.icon-delivery:before {
+  content: "\e949";
 }
 .icon-humburger:before {
   content: "\e94c";
