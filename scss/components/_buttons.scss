@@ -119,7 +119,7 @@
     }
   }
 
-  &__disable {
+  &:disabled {
     background-color: #D6D6D6;
     color: $gray-4;
     cursor: not-allowed;
