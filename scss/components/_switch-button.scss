@@ -2,12 +2,15 @@
 	position: relative;
 	width: 50px;
 	height: 30px;
+
 	input {
 		opacity: 0;
 		width: 0;
 		height: 0;
-		&:checked + .slider {
+
+		&:checked+.slider {
 			background-color: $primary;
+
 			&:before {
 				-webkit-transform: translateX(20px);
 				-ms-transform: translateX(20px);
@@ -15,6 +18,7 @@
 			}
 		}
 	}
+
 	.slider {
 		position: absolute;
 		cursor: pointer;
@@ -46,6 +50,36 @@
 
 		&.round:before {
 			border-radius: 50%;
+		}
+	}
+}
+
+
+.switch {
+	&-tabs {
+		background-color: $cyan-light;
+		border-radius: 24px;
+	}
+
+	&-tab {
+		&__btn {
+			display: flex;
+			gap: 10px;
+			align-items: center;
+			font-size: $fs-14;
+			font-weight: $fw-600;
+			color: $dark;
+			border-radius: 24px !important;
+
+			&:hover {
+				color: $dark;
+			}
+
+			&.active {
+				background-color: $primary-light !important;
+				color: $white !important;
+				font-weight: $fw-600 !important;
+			}
 		}
 	}
 }

@@ -149,10 +149,48 @@
 				<div class="tw-main__content">
 					<div class="content">
 						<div class="actionbar">
-							<div class="actionbar__title">
+							<div
+								class="actionbar__title d-flex flex-wrap align-items-center gap-20"
+							>
 								<p class="text-uppercase text-primary fs-20 mb-0 fw-600 lh-150">
 									Product List
 								</p>
+								<ul
+									class="nav nav-pills switch-tabs"
+									id="products-tab"
+									role="tablist"
+								>
+									<li class="nav-item switch-tab" role="presentation">
+										<button
+											class="nav-link active switch-tab__btn"
+											id="single-product"
+											data-bs-toggle="pill"
+											data-bs-target="#pills-single"
+											type="button"
+											role="tab"
+											aria-controls="pills-single"
+											aria-selected="true"
+										>
+											<i class="icon-product_list"></i>
+											<span>Single</span>
+										</button>
+									</li>
+									<li class="nav-item switch-tab" role="presentation">
+										<button
+											class="nav-link switch-tab__btn"
+											id="package-product"
+											data-bs-toggle="pill"
+											data-bs-target="#pills-package"
+											type="button"
+											role="tab"
+											aria-controls="pills-package"
+											aria-selected="false"
+										>
+											<i class="icon-calendar"></i>
+											<span>Package</span>
+										</button>
+									</li>
+								</ul>
 							</div>
 
 							<div class="actionbar__actions mt-2">
@@ -193,287 +231,584 @@
 							</div>
 
 							<div class="oqtane-card__body">
-								<div class="list-card__table list-table">
-									<div class="table-responsive">
-										<table class="table table-striped">
-											<thead>
-												<tr>
-													<!-- <th></th> -->
-													<th>Product Image</th>
-													<th>Product Name</th>
-													<th>Product Type</th>
-													<th>Category</th>
-													<th>Last Update</th>
-													<th>Price</th>
-													<th>Action</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td class="d-flex">
-														<label class="custom-check">
-															<span class="custom-check__input">
-																<input type="checkbox" />
-																<span></span>
-															</span>
-															<span class="custom-check__label text-grey-3">
-															</span>
-														</label>
-														<div class="list-table__img">
-															<img src="./../img/product-1.png" alt="" />
-														</div>
-													</td>
-													<td>
-														<div>
-															<span>Hair Fast</span>
-															<span
-																class="statusTooltipBtn status-pill status-pill--info font-medium px-2 py-1"
-																data-bs-html="true"
-																title="<span>GLP-1, AOD-9604, Semaglutide, Cagrilintide Injectable Solution </span>"
+								<div class="tab-content" id="products-tabContent">
+									<div
+										class="list-card__table list-table tab-pane fade show active"
+										id="pills-single"
+										role="tabpanel"
+										aria-labelledby="single-product"
+										tabindex="0"
+									>
+										<div class="table-responsive">
+											<table class="table table-striped">
+												<thead>
+													<tr>
+														<!-- <th></th> -->
+														<th>Product Image</th>
+														<th>Product Name</th>
+														<th>Product Type</th>
+														<th>Category</th>
+														<th>Last Update</th>
+														<th>Price</th>
+														<th>Action</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td class="d-flex">
+															<label class="custom-check">
+																<span class="custom-check__input">
+																	<input type="checkbox" />
+																	<span></span>
+																</span>
+																<span class="custom-check__label text-grey-3">
+																</span>
+															</label>
+															<div class="list-table__img">
+																<img src="./../img/product-1.png" alt="" />
+															</div>
+														</td>
+														<td>
+															<div>
+																<span>Hair Fast</span>
+																<span
+																	class="statusTooltipBtn status-pill status-pill--info font-medium px-2 py-1"
+																	data-bs-html="true"
+																	title="<span>GLP-1, AOD-9604, Semaglutide, Cagrilintide Injectable Solution </span>"
+																>
+																	+4
+																</span>
+															</div>
+														</td>
+														<td>Capsule</td>
+														<td>Hair fall</td>
+														<td>14 August, 2024</td>
+														<td>$40.00</td>
+														<td>
+															<button
+																type="button"
+																class="oqtane-btn oqtane-btn__icon list-table__action"
 															>
-																+4
-															</span>
-														</div>
-													</td>
-													<td>Capsule</td>
-													<td>Hair fall</td>
-													<td>14 August, 2024</td>
-													<td>$40.00</td>
-													<td>
-														<button
-															type="button"
-															class="oqtane-btn oqtane-btn__icon list-table__action"
-														>
-															<i class="icon-link"></i>
-														</button>
-													</td>
-												</tr>
-												<tr>
-													<td class="d-flex">
-														<label class="custom-check">
-															<span class="custom-check__input">
-																<input type="checkbox" />
-																<span></span>
-															</span>
-															<span class="custom-check__label text-grey-3">
-															</span>
-														</label>
-														<div class="list-table__img">
-															<img src="./../img/product-1.png" alt="" />
-														</div>
-													</td>
-													<td>Hair Fast</td>
-													<td>Capsule</td>
-													<td>Hair fall</td>
-													<td>14 August, 2024</td>
-													<td>$40.00</td>
-													<td>
-														<button
-															type="button"
-															class="oqtane-btn oqtane-btn__icon list-table__action"
-														>
-															<i class="icon-link"></i>
-														</button>
-													</td>
-												</tr>
-												<tr>
-													<td class="d-flex">
-														<label class="custom-check">
-															<span class="custom-check__input">
-																<input type="checkbox" />
-																<span></span>
-															</span>
-															<span class="custom-check__label text-grey-3">
-															</span>
-														</label>
-														<div class="list-table__img">
-															<img src="./../img/product-1.png" alt="" />
-														</div>
-													</td>
-													<td>Hair Fast</td>
-													<td>Capsule</td>
-													<td>Hair fall</td>
-													<td>14 August, 2024</td>
-													<td>$40.00</td>
-													<td>
-														<button
-															type="button"
-															class="oqtane-btn oqtane-btn__icon list-table__action"
-														>
-															<i class="icon-link"></i>
-														</button>
-													</td>
-												</tr>
-												<tr>
-													<td class="d-flex">
-														<label class="custom-check">
-															<span class="custom-check__input">
-																<input type="checkbox" />
-																<span></span>
-															</span>
-															<span class="custom-check__label text-grey-3">
-															</span>
-														</label>
-														<div class="list-table__img">
-															<img src="./../img/product-1.png" alt="" />
-														</div>
-													</td>
-													<td>Hair Fast</td>
-													<td>Capsule</td>
-													<td>Hair fall</td>
-													<td>14 August, 2024</td>
-													<td>$40.00</td>
-													<td>
-														<button
-															type="button"
-															class="oqtane-btn oqtane-btn__icon list-table__action"
-														>
-															<i class="icon-link"></i>
-														</button>
-													</td>
-												</tr>
-												<tr>
-													<td class="d-flex">
-														<label class="custom-check">
-															<span class="custom-check__input">
-																<input type="checkbox" />
-																<span></span>
-															</span>
-															<span class="custom-check__label text-grey-3">
-															</span>
-														</label>
-														<div class="list-table__img">
-															<img src="./../img/product-1.png" alt="" />
-														</div>
-													</td>
-													<td>Hair Fast</td>
-													<td>Capsule</td>
-													<td>Hair fall</td>
-													<td>14 August, 2024</td>
-													<td>$40.00</td>
-													<td>
-														<button
-															type="button"
-															class="oqtane-btn oqtane-btn__icon list-table__action"
-														>
-															<i class="icon-link"></i>
-														</button>
-													</td>
-												</tr>
-												<tr>
-													<td class="d-flex">
-														<label class="custom-check">
-															<span class="custom-check__input">
-																<input type="checkbox" />
-																<span></span>
-															</span>
-															<span class="custom-check__label text-grey-3">
-															</span>
-														</label>
-														<div class="list-table__img">
-															<img src="./../img/product-1.png" alt="" />
-														</div>
-													</td>
-													<td>Hair Fast</td>
-													<td>Capsule</td>
-													<td>Hair fall</td>
-													<td>14 August, 2024</td>
-													<td>$40.00</td>
-													<td>
-														<button
-															type="button"
-															class="oqtane-btn oqtane-btn__icon list-table__action"
-														>
-															<i class="icon-link"></i>
-														</button>
-													</td>
-												</tr>
-												<tr>
-													<td class="d-flex">
-														<label class="custom-check">
-															<span class="custom-check__input">
-																<input type="checkbox" />
-																<span></span>
-															</span>
-															<span class="custom-check__label text-grey-3">
-															</span>
-														</label>
-														<div class="list-table__img">
-															<img src="./../img/product-1.png" alt="" />
-														</div>
-													</td>
-													<td>Hair Fast</td>
-													<td>Capsule</td>
-													<td>Hair fall</td>
-													<td>14 August, 2024</td>
-													<td>$40.00</td>
-													<td>
-														<button
-															type="button"
-															class="oqtane-btn oqtane-btn__icon list-table__action"
-														>
-															<i class="icon-link"></i>
-														</button>
-													</td>
-												</tr>
-												<tr>
-													<td class="d-flex">
-														<label class="custom-check">
-															<span class="custom-check__input">
-																<input type="checkbox" />
-																<span></span>
-															</span>
-															<span class="custom-check__label text-grey-3">
-															</span>
-														</label>
-														<div class="list-table__img">
-															<img src="./../img/product-1.png" alt="" />
-														</div>
-													</td>
-													<td>Hair Fast</td>
-													<td>Capsule</td>
-													<td>Hair fall</td>
-													<td>14 August, 2024</td>
-													<td>$40.00</td>
-													<td>
-														<button
-															type="button"
-															class="oqtane-btn oqtane-btn__icon list-table__action"
-														>
-															<i class="icon-link"></i>
-														</button>
-													</td>
-												</tr>
-												<tr>
-													<td class="d-flex">
-														<label class="custom-check">
-															<span class="custom-check__input">
-																<input type="checkbox" />
-																<span></span>
-															</span>
-															<span class="custom-check__label text-grey-3">
-															</span>
-														</label>
-														<div class="list-table__img">
-															<img src="./../img/product-1.png" alt="" />
-														</div>
-													</td>
-													<td>Hair Fast</td>
-													<td>Capsule</td>
-													<td>Hair fall</td>
-													<td>14 August, 2024</td>
-													<td>$40.00</td>
-													<td>
-														<button
-															type="button"
-															class="oqtane-btn oqtane-btn__icon list-table__action"
-														>
-															<i class="icon-link"></i>
-														</button>
-													</td>
-												</tr>
-											</tbody>
-										</table>
+																<i class="icon-link"></i>
+															</button>
+														</td>
+													</tr>
+													<tr>
+														<td class="d-flex">
+															<label class="custom-check">
+																<span class="custom-check__input">
+																	<input type="checkbox" />
+																	<span></span>
+																</span>
+																<span class="custom-check__label text-grey-3">
+																</span>
+															</label>
+															<div class="list-table__img">
+																<img src="./../img/product-1.png" alt="" />
+															</div>
+														</td>
+														<td>Hair Fast</td>
+														<td>Capsule</td>
+														<td>Hair fall</td>
+														<td>14 August, 2024</td>
+														<td>$40.00</td>
+														<td>
+															<button
+																type="button"
+																class="oqtane-btn oqtane-btn__icon list-table__action"
+															>
+																<i class="icon-link"></i>
+															</button>
+														</td>
+													</tr>
+													<tr>
+														<td class="d-flex">
+															<label class="custom-check">
+																<span class="custom-check__input">
+																	<input type="checkbox" />
+																	<span></span>
+																</span>
+																<span class="custom-check__label text-grey-3">
+																</span>
+															</label>
+															<div class="list-table__img">
+																<img src="./../img/product-1.png" alt="" />
+															</div>
+														</td>
+														<td>Hair Fast</td>
+														<td>Capsule</td>
+														<td>Hair fall</td>
+														<td>14 August, 2024</td>
+														<td>$40.00</td>
+														<td>
+															<button
+																type="button"
+																class="oqtane-btn oqtane-btn__icon list-table__action"
+															>
+																<i class="icon-link"></i>
+															</button>
+														</td>
+													</tr>
+													<tr>
+														<td class="d-flex">
+															<label class="custom-check">
+																<span class="custom-check__input">
+																	<input type="checkbox" />
+																	<span></span>
+																</span>
+																<span class="custom-check__label text-grey-3">
+																</span>
+															</label>
+															<div class="list-table__img">
+																<img src="./../img/product-1.png" alt="" />
+															</div>
+														</td>
+														<td>Hair Fast</td>
+														<td>Capsule</td>
+														<td>Hair fall</td>
+														<td>14 August, 2024</td>
+														<td>$40.00</td>
+														<td>
+															<button
+																type="button"
+																class="oqtane-btn oqtane-btn__icon list-table__action"
+															>
+																<i class="icon-link"></i>
+															</button>
+														</td>
+													</tr>
+													<tr>
+														<td class="d-flex">
+															<label class="custom-check">
+																<span class="custom-check__input">
+																	<input type="checkbox" />
+																	<span></span>
+																</span>
+																<span class="custom-check__label text-grey-3">
+																</span>
+															</label>
+															<div class="list-table__img">
+																<img src="./../img/product-1.png" alt="" />
+															</div>
+														</td>
+														<td>Hair Fast</td>
+														<td>Capsule</td>
+														<td>Hair fall</td>
+														<td>14 August, 2024</td>
+														<td>$40.00</td>
+														<td>
+															<button
+																type="button"
+																class="oqtane-btn oqtane-btn__icon list-table__action"
+															>
+																<i class="icon-link"></i>
+															</button>
+														</td>
+													</tr>
+													<tr>
+														<td class="d-flex">
+															<label class="custom-check">
+																<span class="custom-check__input">
+																	<input type="checkbox" />
+																	<span></span>
+																</span>
+																<span class="custom-check__label text-grey-3">
+																</span>
+															</label>
+															<div class="list-table__img">
+																<img src="./../img/product-1.png" alt="" />
+															</div>
+														</td>
+														<td>Hair Fast</td>
+														<td>Capsule</td>
+														<td>Hair fall</td>
+														<td>14 August, 2024</td>
+														<td>$40.00</td>
+														<td>
+															<button
+																type="button"
+																class="oqtane-btn oqtane-btn__icon list-table__action"
+															>
+																<i class="icon-link"></i>
+															</button>
+														</td>
+													</tr>
+													<tr>
+														<td class="d-flex">
+															<label class="custom-check">
+																<span class="custom-check__input">
+																	<input type="checkbox" />
+																	<span></span>
+																</span>
+																<span class="custom-check__label text-grey-3">
+																</span>
+															</label>
+															<div class="list-table__img">
+																<img src="./../img/product-1.png" alt="" />
+															</div>
+														</td>
+														<td>Hair Fast</td>
+														<td>Capsule</td>
+														<td>Hair fall</td>
+														<td>14 August, 2024</td>
+														<td>$40.00</td>
+														<td>
+															<button
+																type="button"
+																class="oqtane-btn oqtane-btn__icon list-table__action"
+															>
+																<i class="icon-link"></i>
+															</button>
+														</td>
+													</tr>
+													<tr>
+														<td class="d-flex">
+															<label class="custom-check">
+																<span class="custom-check__input">
+																	<input type="checkbox" />
+																	<span></span>
+																</span>
+																<span class="custom-check__label text-grey-3">
+																</span>
+															</label>
+															<div class="list-table__img">
+																<img src="./../img/product-1.png" alt="" />
+															</div>
+														</td>
+														<td>Hair Fast</td>
+														<td>Capsule</td>
+														<td>Hair fall</td>
+														<td>14 August, 2024</td>
+														<td>$40.00</td>
+														<td>
+															<button
+																type="button"
+																class="oqtane-btn oqtane-btn__icon list-table__action"
+															>
+																<i class="icon-link"></i>
+															</button>
+														</td>
+													</tr>
+													<tr>
+														<td class="d-flex">
+															<label class="custom-check">
+																<span class="custom-check__input">
+																	<input type="checkbox" />
+																	<span></span>
+																</span>
+																<span class="custom-check__label text-grey-3">
+																</span>
+															</label>
+															<div class="list-table__img">
+																<img src="./../img/product-1.png" alt="" />
+															</div>
+														</td>
+														<td>Hair Fast</td>
+														<td>Capsule</td>
+														<td>Hair fall</td>
+														<td>14 August, 2024</td>
+														<td>$40.00</td>
+														<td>
+															<button
+																type="button"
+																class="oqtane-btn oqtane-btn__icon list-table__action"
+															>
+																<i class="icon-link"></i>
+															</button>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+									<div
+										class="list-card__table list-table tab-pane fade"
+										id="pills-package"
+										role="tabpanel"
+										aria-labelledby="package-product"
+										tabindex="0"
+									>
+										<div class="table-responsive">
+											<table class="table table-striped">
+												<thead>
+													<tr>
+														<!-- <th></th> -->
+														<th>Product Image</th>
+														<th>Product Name</th>
+														<th>Product Type</th>
+														<th>Category</th>
+														<th>Last Update</th>
+														<th>Price</th>
+														<th>Action</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td class="d-flex">
+															<label class="custom-check">
+																<span class="custom-check__input">
+																	<input type="checkbox" />
+																	<span></span>
+																</span>
+																<span class="custom-check__label text-grey-3">
+																</span>
+															</label>
+															<div class="list-table__img">
+																<img src="./../img/product-1.png" alt="" />
+															</div>
+														</td>
+														<td>
+															<div>
+																<span>Hair Fast</span>
+																<span
+																	class="statusTooltipBtn status-pill status-pill--info font-medium px-2 py-1"
+																	data-bs-html="true"
+																	title="<span>GLP-1, AOD-9604, Semaglutide, Cagrilintide Injectable Solution </span>"
+																>
+																	+4
+																</span>
+															</div>
+														</td>
+														<td>Capsule</td>
+														<td>Hair fall</td>
+														<td>14 August, 2024</td>
+														<td>$40.00</td>
+														<td>
+															<button
+																type="button"
+																class="oqtane-btn oqtane-btn__icon list-table__action"
+															>
+																<i class="icon-link"></i>
+															</button>
+														</td>
+													</tr>
+													<tr>
+														<td class="d-flex">
+															<label class="custom-check">
+																<span class="custom-check__input">
+																	<input type="checkbox" />
+																	<span></span>
+																</span>
+																<span class="custom-check__label text-grey-3">
+																</span>
+															</label>
+															<div class="list-table__img">
+																<img src="./../img/product-1.png" alt="" />
+															</div>
+														</td>
+														<td>Hair Fast</td>
+														<td>Capsule</td>
+														<td>Hair fall</td>
+														<td>14 August, 2024</td>
+														<td>$40.00</td>
+														<td>
+															<button
+																type="button"
+																class="oqtane-btn oqtane-btn__icon list-table__action"
+															>
+																<i class="icon-link"></i>
+															</button>
+														</td>
+													</tr>
+													<tr>
+														<td class="d-flex">
+															<label class="custom-check">
+																<span class="custom-check__input">
+																	<input type="checkbox" />
+																	<span></span>
+																</span>
+																<span class="custom-check__label text-grey-3">
+																</span>
+															</label>
+															<div class="list-table__img">
+																<img src="./../img/product-1.png" alt="" />
+															</div>
+														</td>
+														<td>Hair Fast</td>
+														<td>Capsule</td>
+														<td>Hair fall</td>
+														<td>14 August, 2024</td>
+														<td>$40.00</td>
+														<td>
+															<button
+																type="button"
+																class="oqtane-btn oqtane-btn__icon list-table__action"
+															>
+																<i class="icon-link"></i>
+															</button>
+														</td>
+													</tr>
+													<tr>
+														<td class="d-flex">
+															<label class="custom-check">
+																<span class="custom-check__input">
+																	<input type="checkbox" />
+																	<span></span>
+																</span>
+																<span class="custom-check__label text-grey-3">
+																</span>
+															</label>
+															<div class="list-table__img">
+																<img src="./../img/product-1.png" alt="" />
+															</div>
+														</td>
+														<td>Hair Fast</td>
+														<td>Capsule</td>
+														<td>Hair fall</td>
+														<td>14 August, 2024</td>
+														<td>$40.00</td>
+														<td>
+															<button
+																type="button"
+																class="oqtane-btn oqtane-btn__icon list-table__action"
+															>
+																<i class="icon-link"></i>
+															</button>
+														</td>
+													</tr>
+													<tr>
+														<td class="d-flex">
+															<label class="custom-check">
+																<span class="custom-check__input">
+																	<input type="checkbox" />
+																	<span></span>
+																</span>
+																<span class="custom-check__label text-grey-3">
+																</span>
+															</label>
+															<div class="list-table__img">
+																<img src="./../img/product-1.png" alt="" />
+															</div>
+														</td>
+														<td>Hair Fast</td>
+														<td>Capsule</td>
+														<td>Hair fall</td>
+														<td>14 August, 2024</td>
+														<td>$40.00</td>
+														<td>
+															<button
+																type="button"
+																class="oqtane-btn oqtane-btn__icon list-table__action"
+															>
+																<i class="icon-link"></i>
+															</button>
+														</td>
+													</tr>
+													<tr>
+														<td class="d-flex">
+															<label class="custom-check">
+																<span class="custom-check__input">
+																	<input type="checkbox" />
+																	<span></span>
+																</span>
+																<span class="custom-check__label text-grey-3">
+																</span>
+															</label>
+															<div class="list-table__img">
+																<img src="./../img/product-1.png" alt="" />
+															</div>
+														</td>
+														<td>Hair Fast</td>
+														<td>Capsule</td>
+														<td>Hair fall</td>
+														<td>14 August, 2024</td>
+														<td>$40.00</td>
+														<td>
+															<button
+																type="button"
+																class="oqtane-btn oqtane-btn__icon list-table__action"
+															>
+																<i class="icon-link"></i>
+															</button>
+														</td>
+													</tr>
+													<tr>
+														<td class="d-flex">
+															<label class="custom-check">
+																<span class="custom-check__input">
+																	<input type="checkbox" />
+																	<span></span>
+																</span>
+																<span class="custom-check__label text-grey-3">
+																</span>
+															</label>
+															<div class="list-table__img">
+																<img src="./../img/product-1.png" alt="" />
+															</div>
+														</td>
+														<td>Hair Fast</td>
+														<td>Capsule</td>
+														<td>Hair fall</td>
+														<td>14 August, 2024</td>
+														<td>$40.00</td>
+														<td>
+															<button
+																type="button"
+																class="oqtane-btn oqtane-btn__icon list-table__action"
+															>
+																<i class="icon-link"></i>
+															</button>
+														</td>
+													</tr>
+													<tr>
+														<td class="d-flex">
+															<label class="custom-check">
+																<span class="custom-check__input">
+																	<input type="checkbox" />
+																	<span></span>
+																</span>
+																<span class="custom-check__label text-grey-3">
+																</span>
+															</label>
+															<div class="list-table__img">
+																<img src="./../img/product-1.png" alt="" />
+															</div>
+														</td>
+														<td>Hair Fast</td>
+														<td>Capsule</td>
+														<td>Hair fall</td>
+														<td>14 August, 2024</td>
+														<td>$40.00</td>
+														<td>
+															<button
+																type="button"
+																class="oqtane-btn oqtane-btn__icon list-table__action"
+															>
+																<i class="icon-link"></i>
+															</button>
+														</td>
+													</tr>
+													<tr>
+														<td class="d-flex">
+															<label class="custom-check">
+																<span class="custom-check__input">
+																	<input type="checkbox" />
+																	<span></span>
+																</span>
+																<span class="custom-check__label text-grey-3">
+																</span>
+															</label>
+															<div class="list-table__img">
+																<img src="./../img/product-1.png" alt="" />
+															</div>
+														</td>
+														<td>Hair Fast</td>
+														<td>Capsule</td>
+														<td>Hair fall</td>
+														<td>14 August, 2024</td>
+														<td>$40.00</td>
+														<td>
+															<button
+																type="button"
+																class="oqtane-btn oqtane-btn__icon list-table__action"
+															>
+																<i class="icon-link"></i>
+															</button>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
 									</div>
 								</div>
 							</div>
