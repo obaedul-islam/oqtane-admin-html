@@ -247,6 +247,91 @@
 
 							<div class="oqtane-card__body">
 								<div class="tab-content" id="products-tabContent">
+									<div class="custom-multiselect dropdown">
+										<button
+											class="multiselect-toggle"
+											type="button"
+											id="labMultiSelect"
+											data-bs-toggle="dropdown"
+											data-bs-auto-close="outside"
+											aria-expanded="false"
+										>
+											<div class="multiselect-label">Select Lab</div>
+											<div class="multiselect-value" id="selectedText"
+												>Quest Lab</div
+											>
+											<span class="multiselect-arrow">⌄</span>
+										</button>
+
+										<div
+											class="dropdown-menu multiselect-menu"
+											aria-labelledby="labMultiSelect"
+										>
+											<div class="multiselect-header" id="selectAllLabs"
+												>Select All</div
+											>
+
+											<div class="multiselect-options">
+												<label class="multiselect-option">
+													<input
+														type="checkbox"
+														class="lab-option"
+														value="ANASTROZOLE 0.5 mg"
+														checked
+													/>
+													<span>ANASTROZOLE 0.5 mg</span>
+												</label>
+
+												<label class="multiselect-option">
+													<input
+														type="checkbox"
+														class="lab-option"
+														value="ANASTROZOLE 0.125 mg"
+														checked
+													/>
+													<span>ANASTROZOLE 0.125 mg</span>
+												</label>
+
+												<label class="multiselect-option">
+													<input
+														type="checkbox"
+														class="lab-option"
+														value="ANASTROZOLE 0.5 mg (2)"
+														checked
+													/>
+													<span>ANASTROZOLE 0.5 mg</span>
+												</label>
+
+												<label class="multiselect-option">
+													<input
+														type="checkbox"
+														class="lab-option"
+														value="ANASTROZOLE 0.5 mg (3)"
+														checked
+													/>
+													<span>ANASTROZOLE 0.5 mg</span>
+												</label>
+
+												<label class="multiselect-option">
+													<input
+														type="checkbox"
+														class="lab-option"
+														value="ANASTROZOLE 0.5 mg (4)"
+													/>
+													<span>ANASTROZOLE 0.5 mg</span>
+												</label>
+
+												<label class="multiselect-option">
+													<input
+														type="checkbox"
+														class="lab-option"
+														value="ANASTROZOLE 0.5 mg (5)"
+													/>
+													<span>ANASTROZOLE 0.5 mg</span>
+												</label>
+											</div>
+										</div>
+									</div>
 									<div
 										class="list-card__table list-table tab-pane fade show active"
 										id="pills-single"
@@ -907,5 +992,39 @@
 		<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 		<script src="./../js/tooltip.js"></script>
 		<script src="./../js/main.js"></script>
+
+		<script>
+			$(document).ready(function () {
+				function updateSelectedText() {
+					let selected = [];
+
+					$(".lab-option:checked").each(function () {
+						selected.push($(this).val());
+					});
+
+					if (selected.length === 0) {
+						$("#selectedText").text("Select Lab");
+					} else if (selected.length === 1) {
+						$("#selectedText").text(selected[0]);
+					} else {
+						$("#selectedText").text(selected.length + " items selected");
+					}
+				}
+
+				updateSelectedText();
+
+				$(document).on("change", ".lab-option", function () {
+					updateSelectedText();
+				});
+
+				$("#selectAllLabs").on("click", function () {
+					let allChecked =
+						$(".lab-option").length === $(".lab-option:checked").length;
+
+					$(".lab-option").prop("checked", !allChecked);
+					updateSelectedText();
+				});
+			});
+		</script>
 	</body>
 </html>
