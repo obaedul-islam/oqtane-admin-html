@@ -300,22 +300,87 @@
 										</div>
 									</div>
 									<div class="col-md-6">
-										<div class="custom-input">
-											<label class="custom-input__inner">
-												<select
-													class="custom-input__control custom-input__select"
+										<div class="custom-multiselect dropdown">
+											<button
+												class="multiselect-toggle"
+												type="button"
+												id="labMultiSelect"
+												data-bs-toggle="dropdown"
+												data-bs-auto-close="outside"
+												aria-expanded="false"
+											>
+												<div class="multiselect-label">Add Medication</div>
+												<div class="multiselect-value" id="selectedText"
+													>Select</div
 												>
-													<option value="tablet">Quest Lab</option>
-													<option value="tablet">Vpep Lab</option
-													><option value="capsule">Med Lab</option>
-												</select>
-
-												<span class="custom-input__label">Select Lab</span>
-												<span class="custom-input__icon custom-input__suffix">
+												<span class="multiselect-arrow">
 													<i class="icon-down_arrow"></i>
 												</span>
-											</label>
+											</button>
+
+											<div
+												class="dropdown-menu multiselect-menu"
+												aria-labelledby="labMultiSelect"
+											>
+												<div class="multiselect-header" id="selectAllLabs"
+													>Select All</div
+												>
+
+												<div class="multiselect-options">
+													<label class="multiselect-option">
+														<input
+															type="checkbox"
+															class="lab-option"
+															value="Semaglutide"
+															checked
+														/>
+														<span>Semaglutide</span>
+													</label>
+
+													<label class="multiselect-option">
+														<input
+															type="checkbox"
+															class="lab-option"
+															value="Tirzepatide"
+															checked
+														/>
+														<span>Tirzepatide</span>
+													</label>
+
+													<label class="multiselect-option">
+														<input
+															type="checkbox"
+															class="lab-option"
+															value="Gluthione"
+															checked
+														/>
+														<span>Gluthione</span>
+													</label>
+
+													<label class="multiselect-option">
+														<input
+															type="checkbox"
+															class="lab-option"
+															value="Anastrozole"
+														/>
+														<span>Anastrozole</span>
+													</label>
+
+													<label class="multiselect-option">
+														<input
+															type="checkbox"
+															class="lab-option"
+															value="Metformin"
+														/>
+														<span>Metformin</span>
+													</label>
+												</div>
+											</div>
 										</div>
+										<div
+											class="d-flex flex-wrap gap-3 mt-3"
+											id="selectedItemsWrap"
+										></div>
 									</div>
 									<div class="col-md-6">
 										<div class="custom-input">
@@ -775,5 +840,53 @@
 		<script src="js/vendors/cropper.min.js"></script>
 
 		<script src="js/main.js"></script>
+
+		<script>
+			$(document).ready(function () {
+				function updateSelectedUI() {
+					let selected = [];
+					let chipsHtml = "";
+
+					$(".lab-option:checked").each(function () {
+						let value = $(this).val();
+						selected.push(value);
+
+						chipsHtml += `
+											<p class="chip__text chip__text__info">
+												${value}
+												<button type="button" class="chip-remove" data-value="${value}">
+													<i class="icon-cross1"></i>
+												</button>
+											</p>
+				`;
+					});
+
+					$("#selectedText").text("Select");
+
+					$("#selectedItemsWrap").html(chipsHtml);
+				}
+
+				updateSelectedUI();
+
+				$(document).on("change", ".lab-option", function () {
+					updateSelectedUI();
+				});
+
+				$("#selectAllLabs").on("click", function () {
+					let allChecked =
+						$(".lab-option").length === $(".lab-option:checked").length;
+
+					$(".lab-option").prop("checked", !allChecked);
+					updateSelectedUI();
+				});
+
+				$(document).on("click", ".chip-remove", function () {
+					let value = $(this).data("value");
+
+					$('.lab-option[value="' + value + '"]').prop("checked", false);
+					updateSelectedUI();
+				});
+			});
+		</script>
 	</body>
 </html>
