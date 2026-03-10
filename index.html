@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
@@ -712,8 +712,8 @@
 											</div>
 										</div>
 
-										<div class="row mt-40">
-											<div class="col-md-6">
+										<div class="row gy-3 mt-40">
+											<div class="col-md-12">
 												<div class="radio-group">
 													<p class="radio-group__label">Lab Report Required</p>
 
@@ -740,38 +740,17 @@
 											</div>
 
 											<div class="col-md-6">
-												<div class="custom-input custom-input__multiselect">
-													<div class="oqtane-multiselect mt-16">
-														<select id="oqtane-state-dd" multiple="multiple">
-															<option value="lab">Select Lab Report</option>
-															<option value="lab2">Lab Report 2</option>
-															<option value="lab3">Lab Report 3</option>
-															<option value="lab4">Lab Report 4</option>
-															<option value="lab5">Lab Report 5</option>
-															<option value="lab6">Lab Report 6</option>
-														</select>
-														<span class="dnn-multiselect__icon">
-															<i class="icon-down_arrow"></i>
-														</span>
-													</div>
-												</div>
-											</div>
-										</div>
-
-										<div class="row mt-16">
-											<div class="col-md-6">
 												<div class="custom-input">
 													<label class="custom-input__inner">
 														<select
 															class="custom-input__control custom-input__select"
 														>
-															<option value="tablet">All </option>
-															<option value="tablet">State 1</option>
-															<option value="capsule">State 2</option>
-															<option value="syrup">State 3</option>
+															<option value="lab1">Quest Lab 1</option>
+															<option value="lab2">Quest Lab 2</option
+															><option value="lab3">Quest Lab 3</option>
 														</select>
 
-														<span class="custom-input__label">State</span>
+														<span class="custom-input__label">Select Lab</span>
 														<span
 															class="custom-input__icon custom-input__suffix"
 														>
@@ -779,6 +758,145 @@
 														</span>
 													</label>
 												</div>
+											</div>
+
+											<div class="col-md-6">
+												<div class="custom-input">
+													<label class="custom-input__inner">
+														<select
+															class="custom-input__control custom-input__select"
+														>
+															<option value="tablet">Package 1</option>
+															<option value="tablet">Package 2</option
+															><option value="capsule">Package 3</option>
+														</select>
+
+														<span class="custom-input__label"
+															>Initial Lab Package</span
+														>
+														<span
+															class="custom-input__icon custom-input__suffix"
+														>
+															<i class="icon-down_arrow"></i>
+														</span>
+													</label>
+												</div>
+											</div>
+
+											<div class="col-md-6">
+												<div class="custom-input">
+													<label class="custom-input__inner">
+														<input
+															type="text"
+															class="custom-input__control"
+															placeholder=" "
+														/>
+														<span class="custom-input__label"
+															>Lab Fee for All State</span
+														>
+														<span class="custom-input__suffix">$</span>
+													</label>
+												</div>
+											</div>
+
+											<div class="col-md-6">
+												<div class="custom-input">
+													<label class="custom-input__inner">
+														<input
+															type="text"
+															class="custom-input__control"
+															placeholder=" "
+														/>
+														<span class="custom-input__label"
+															>Lab Fee for Selected State</span
+														>
+														<span class="custom-input__suffix">$</span>
+													</label>
+												</div>
+											</div>
+
+											<div class="col-md-6">
+												<div class="custom-multiselect dropdown">
+													<button
+														class="multiselect-toggle"
+														type="button"
+														id="labMultiSelect"
+														data-bs-toggle="dropdown"
+														data-bs-auto-close="outside"
+														aria-expanded="false"
+													>
+														<div class="multiselect-label">State</div>
+														<div class="multiselect-value" id="selectedText"
+															>All</div
+														>
+														<span class="multiselect-arrow">
+															<i class="icon-down_arrow"></i>
+														</span>
+													</button>
+
+													<div
+														class="dropdown-menu multiselect-menu"
+														aria-labelledby="labMultiSelect"
+													>
+														<div class="multiselect-header" id="selectAllLabs"
+															>Select All</div
+														>
+
+														<div class="multiselect-options">
+															<label class="multiselect-option">
+																<input
+																	type="checkbox"
+																	class="lab-option"
+																	value="Texas"
+																	checked
+																/>
+																<span>Texas</span>
+															</label>
+
+															<label class="multiselect-option">
+																<input
+																	type="checkbox"
+																	class="lab-option"
+																	value="New York"
+																	checked
+																/>
+																<span>New York</span>
+															</label>
+
+															<label class="multiselect-option">
+																<input
+																	type="checkbox"
+																	class="lab-option"
+																	value="California"
+																	checked
+																/>
+																<span>California</span>
+															</label>
+
+															<label class="multiselect-option">
+																<input
+																	type="checkbox"
+																	class="lab-option"
+																	value="Los Angels"
+																/>
+																<span>Los Angels</span>
+															</label>
+
+															<label class="multiselect-option">
+																<input
+																	type="checkbox"
+																	class="lab-option"
+																	value="Wasington"
+																/>
+																<span>Wasington</span>
+															</label>
+														</div>
+													</div>
+												</div>
+												<div
+													class="d-flex flex-wrap gap-3 mt-3"
+													id="selectedItemsWrap"
+												></div>
 											</div>
 
 											<div class="col-md-6">
@@ -802,23 +920,6 @@
 															<i class="icon-down_arrow"></i>
 														</span>
 													</label>
-												</div>
-											</div>
-
-											<div class="col-md-6">
-												<div class="oqtane-multiselect mt-16">
-													<select id="oqtane-state-dd" multiple="multiple">
-														<option value="state1">State 1</option>
-														<option value="state2">State 2</option>
-														<option value="state3">State 3</option>
-														<option value="state4">State 4</option>
-														<option value="state5">State 5</option>
-														<option value="state6">State 6</option>
-													</select>
-
-													<span class="oqtane-multiselect__icon">
-														<i class="icon-down_arrow"></i>
-													</span>
 												</div>
 											</div>
 										</div>
@@ -868,6 +969,53 @@
 		<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/summernote-bs4.min.js"></script>
 		<script src="js/richtext.js"></script>
+		<script>
+			$(document).ready(function () {
+				function updateSelectedUI() {
+					let selected = [];
+					let chipsHtml = "";
+
+					$(".lab-option:checked").each(function () {
+						let value = $(this).val();
+						selected.push(value);
+
+						chipsHtml += `
+											<p class="chip__text chip__text__info">
+												${value}
+												<button type="button" class="chip-remove" data-value="${value}">
+													<i class="icon-cross1"></i>
+												</button>
+											</p>
+				`;
+					});
+
+					$("#selectedText").text("Select");
+
+					$("#selectedItemsWrap").html(chipsHtml);
+				}
+
+				updateSelectedUI();
+
+				$(document).on("change", ".lab-option", function () {
+					updateSelectedUI();
+				});
+
+				$("#selectAllLabs").on("click", function () {
+					let allChecked =
+						$(".lab-option").length === $(".lab-option:checked").length;
+
+					$(".lab-option").prop("checked", !allChecked);
+					updateSelectedUI();
+				});
+
+				$(document).on("click", ".chip-remove", function () {
+					let value = $(this).data("value");
+
+					$('.lab-option[value="' + value + '"]').prop("checked", false);
+					updateSelectedUI();
+				});
+			});
+		</script>
 
 		<script src="js/main.js"></script>
 	</body>
