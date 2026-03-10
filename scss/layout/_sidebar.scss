@@ -1,5 +1,5 @@
 .sidebar {
-  width: 232px;
+  width: 220px;
   background-color: $white;
   border-radius: 20px 0 0 20px;
   padding: 0;
@@ -14,7 +14,7 @@
     margin: 0;
     padding: 20px 12px;
     list-style: none;
-    gap: 8px;
+    gap: 5px;
     min-height: 100%;
     overflow-y: auto;
   }
@@ -27,8 +27,8 @@
   &__link {
     display: flex;
     align-items: center;
-    gap: 12px;
-    padding: 16px;
+    gap: 8px;
+    padding: 12px;
     background-color: $white;
     color: $dark;
     text-decoration: none;
@@ -59,11 +59,12 @@
     justify-content: center;
     width: 24px;
     height: 24px;
-    font-size: 20px;
+    font-size: 16px;
   }
 
   &__text {
     white-space: normal;
+    font-size: 13px;
     line-height: 1.2;
   }
 

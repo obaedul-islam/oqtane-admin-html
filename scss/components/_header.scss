@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;
   gap: 42px;
-  padding: 22px 0;
+  padding: 18px 0;
 
   &__brand {
     display: inline-flex;
@@ -41,10 +41,10 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    height: 56px;
-    width: 56px;
+    height: 50px;
+    width: 50px;
     background-color: $grey-1-60;
-    border-radius: 56px;
+    border-radius: 50px;
     position: relative;
 
     &__user {
@@ -124,8 +124,8 @@
   padding: 0 !important;
 
   &__avatar {
-    width: 56px;
-    height: 56px;
+    width: 50px;
+    height: 50px;
     border-radius: 56px;
   }
 

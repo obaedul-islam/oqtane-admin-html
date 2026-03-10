@@ -8,7 +8,7 @@
 
 				th {
 					color: $dark;
-					font-size: $fs-14;
+					font-size: 13px;
 					padding: 15px 25px !important;
 
 					@media all and (max-width: 992px) {
@@ -28,6 +28,7 @@
 				}
 
 				td {
+					font-size: 13px;
 					font-weight: 400 !important;
 					color: $dark !important;
 					padding: 15px 25px !important;
