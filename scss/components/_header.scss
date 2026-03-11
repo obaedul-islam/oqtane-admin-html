@@ -1,18 +1,17 @@
 .header {
-  padding: 0 24px 0 45px;
+  padding: 0 20px;
 }
 
 .menubar {
   display: flex;
   align-items: center;
   gap: 42px;
-  padding: 18px 0;
+  padding: 8px 0;
 
   &__brand {
     display: inline-flex;
     align-items: center;
     justify-content: start;
-    height: 56px;
     text-decoration: none;
     cursor: pointer;
   }
@@ -20,7 +19,7 @@
   &__logo {
     height: 100%;
     display: inline-block;
-    max-height: 56px;
+    max-height: 25px;
   }
 
   &__search {
@@ -41,10 +40,10 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    height: 50px;
-    width: 50px;
+    height: 30px;
+    width: 30px;
     background-color: $grey-1-60;
-    border-radius: 50px;
+    border-radius: 30px;
     position: relative;
 
     &__user {
@@ -53,21 +52,28 @@
       border-bottom-right-radius: 56px;
       border-top-left-radius: 56px;
       border-bottom-left-radius: 56px;
-      padding: 15px;
-      padding-right: 16px;
+      padding: 8px 10px;
       color: #444 !important;
+      font-size: 13px;
+      font-weight: 500;
+      text-align: center;
+      width: auto;
+      line-height: 1;
+      border: 1px solid #999fb9;
     }
 
     &__logout {
       background-color: rgba(240, 241, 245, 0.6);
       border-radius: 50px;
-      border-color: $grey-3;
+      border-color: #999fb9;
       border-width: 1px;
-      padding: 15px;
-      padding-right: 16px;
+      padding: 8px 10px;
       color: $primary;
       outline: 0;
       box-shadow: none;
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 1;
 
       &:focus {
         border-color: $grey-3;
@@ -81,7 +87,7 @@
     display: inline-block;
     width: 26px;
     height: 26px;
-    font-size: 26px;
+    font-size: 22px;
     color: $dark;
   }
 
@@ -92,7 +98,7 @@
     height: 10px;
     background-color: $danger;
     top: 14px;
-    left: 30px;
+    left: 15px;
     border-radius: 10px;
   }
 
