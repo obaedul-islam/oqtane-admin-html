@@ -544,7 +544,7 @@
 
   &__control:focus~&__label,
   &__control:not(:placeholder-shown)~&__label {
-    top: 10px;
+    top: 8px;
     font-size: $fs-12;
   }
 
