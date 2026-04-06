@@ -852,6 +852,42 @@
   }
 }
 
+
+.input {
+  &-validation {
+    border-color: red;
+
+    &-wrapper {
+      position: relative;
+
+      &::after {
+        content: "\e93c";
+        font-family: 'icomoon' !important;
+        font-style: normal;
+        font-weight: normal;
+
+        position: absolute;
+        z-index: 10;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+
+        font-size: 16px;
+        color: $danger;
+
+        pointer-events: none;
+
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+
+        line-height: 1;
+      }
+    }
+  }
+}
+
+
+
 .textarea {
   &__wrapper {
     width: 100%;
