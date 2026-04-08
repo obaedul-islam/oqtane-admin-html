@@ -16,7 +16,7 @@
   &__list {
     margin-top: 24px;
     padding: 20px;
-    box-shadow: 0px 0px 22.8px 3px #d4d4d433;
+    box-shadow: 0px 0px 22.8px 3px #d4d4d480;
     border-radius: 12px;
   }
 
@@ -54,7 +54,9 @@
   }
 
   &__view-link {
-    font-size: 18px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
     color: $grey-3;
     text-decoration: underline !important;
 
@@ -71,7 +73,7 @@
 .matrix {
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 
   &__item {
     display: flex;
@@ -211,6 +213,8 @@
 
     &__view-link {
       font-size: 14px;
+      font-weight: bold;
+      text-transform: uppercase;
     }
   }
 

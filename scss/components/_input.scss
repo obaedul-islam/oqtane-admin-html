@@ -454,6 +454,20 @@
     }
   }
 
+  &__date{
+  /* Custom calendar icon via pseudo-element */
+  &::after {
+  content: "\e91b";
+  font-family: "icomoon";
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #444444;
+  }
+  }
+
   &__inner {
     display: block;
     height: 44px;
@@ -464,6 +478,8 @@
     background-color: $white;
     margin-bottom: 0;
     font-size: 13px;
+
+    
 
     @media all and (max-width: 768px) {
       width: 100%;
@@ -507,6 +523,19 @@
     position: absolute;
     bottom: 7px;
     background-color: transparent;
+
+    &__date {
+    /* Hide default browser date picker icon */
+    &::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+    }
+    
+    /* Firefox */
+    &::-moz-calendar-picker-indicator {
+    display: none;
+    }
+    }
 
     &-alt {
       padding: 0;
