@@ -469,7 +469,10 @@
     }
   }
 
+  &__inner-alt {
+    bottom: 15px !important;
 
+  }
 
   &__inner {
     display: block;
@@ -520,13 +523,14 @@
     display: inline-block;
     width: calc(100% - 60px);
     height: 12px;
+    bottom: 6px;
     font-size: 13px;
     font-weight: $fw-400;
     border: 0;
     outline: 0;
     padding: 0;
     position: absolute;
-    bottom: 7px;
+
     background-color: transparent;
 
     &__date {
