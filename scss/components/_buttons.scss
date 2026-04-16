@@ -14,8 +14,10 @@
   text-align: center;
   text-wrap: nowrap;
   height: 44px;
-  align-items: center; /* vertical center */
-  justify-content: center; /* horizontal center */
+  align-items: center;
+  /* vertical center */
+  justify-content: center;
+  /* horizontal center */
 
   &:hover {
     text-decoration: none;
@@ -538,4 +540,9 @@
   &.d-none {
     display: none !important;
   }
+}
+
+.oqtane-btn__primary-alt {
+  width: 268px !important;
+  height: 42px !important;
 }
