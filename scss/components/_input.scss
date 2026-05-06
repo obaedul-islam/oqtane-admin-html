@@ -471,6 +471,7 @@
   &__inner {
     display: block;
     height: 44px;
+    width: 100%;
     border: 1px solid $grey-3;
     padding: 0 30px;
     border-radius: 40px;
@@ -491,10 +492,12 @@
     }
 
     &--alt {
-      height: 42px;
+      height: 44px;
     }
 
     &-number {
+      border: 0;
+      padding: 0;
 
       /* Chrome, Edge, Safari */
       input[type=number]::-webkit-inner-spin-button,
@@ -513,16 +516,41 @@
 
   &__control {
     display: inline-block;
-    width: calc(100% - 60px);
-    height: 12px;
+    width: 100%;
+    height: 44px;
     font-size: 13px;
     font-weight: $fw-400;
-    border: 0;
-    outline: 0;
-    padding: 0;
-    position: absolute;
+    // border: 0;
+    // outline: 0;
+    // padding: 0;
+    // position: absolute;
     bottom: 7px;
     background-color: transparent;
+    border: 1px solid #999fb9;
+    border-radius: 40px;
+    padding: 5px 40px 5px 16px;
+    // margin-top: 8px;
+
+    &__alt {
+      background-color: transparent;
+    appearance: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 8px;
+    padding: 5px 40px 5px 16px;
+    z-index: 10;
+    color: $dark;
+    border:0;
+    }
+
+    &:focus-visible {
+    border-color: 0;
+    outline: 0;
+  }
 
     &__date {
     /* Hide default browser date picker icon */
@@ -579,13 +607,16 @@
   }
 
   &__label {
-    font-size: 13px;
-    line-height: $lh-100;
-    color: $grey-3;
-    font-weight: $fw-400;
-    position: absolute;
-    top: 15px;
-    transition: all 0.25s ease-in-out;
+    font-size: 16px;
+    font-weight: $fw-700;
+    // color: $label-color;
+    margin-bottom: 8px;
+    // line-height: $lh-100;
+    // color: $grey-3;
+    // font-weight: $fw-400;
+    // position: absolute;
+    // top: 15px;
+    // transition: all 0.25s ease-in-out;
   }
 
   &__suffix {
@@ -609,13 +640,14 @@
     width: 100%;
     height: 100%;
     position: absolute;
-    left: 15px;
-    top: 65%;
+    left: 0;
+    top: 60%;
     transform: translateY(-50%);
     border-radius: 40px;
     padding: 5px 40px 5px 16px;
     z-index: 10;
     color: $dark;
+    border:0;
 
     &__alt {
     top: 50% !important;
@@ -673,7 +705,7 @@
   }
 
   &--filter {
-    height: 40px;
+    height: 44px;
     width: 230px;
 
     @media all and (max-width: 768px) {
@@ -682,7 +714,7 @@
 
     .custom-input__select {
       height: 44px;
-      padding: 5px 30px 5px 16px;
+      padding: 5px 30px 15px 16px;
       font-size: 13px;
       color: $dark;
     }
@@ -1270,3 +1302,281 @@
     }
   }
 }
+
+
+
+// .custom-input2 {
+//   display: block;
+//   width: 100%;
+//   font-size: 13px;
+
+//   &-alt {
+//     width: 70%;
+
+//     @media all and (max-width: 1024px) {
+//       width: 100%;
+//     }
+//   }
+
+//   &__date{
+//   /* Custom calendar icon via pseudo-element */
+//   &::after {
+//   content: "\e91b";
+//   font-family: "icomoon";
+//   position: absolute;
+//   top: 50%;
+//   right: 15px;
+//   transform: translateY(-50%);
+//   font-size: 18px;
+//   color: #444444;
+//   }
+//   }
+
+//   &__inner {
+//     display: block;
+//     height: 44px;
+//     width: 100%;
+//     border: 1px solid $grey-3;
+//     padding: 0 30px;
+//     border-radius: 8px;
+//     position: relative;
+//     background-color: $white;
+//     margin-bottom: 0;
+//     font-size: 13px;
+
+    
+
+//     @media all and (max-width: 768px) {
+//       width: 100%;
+//     }
+
+//     &--textarea {
+//       border-radius: 40px;
+//       height: 150px;
+//     }
+
+//     &--alt {
+//       height: 44px;
+//     }
+
+//     &-number {
+
+//       /* Chrome, Edge, Safari */
+//       input[type=number]::-webkit-inner-spin-button,
+//       input[type=number]::-webkit-outer-spin-button {
+//         -webkit-appearance: none;
+//         margin: 0;
+//       }
+
+//       /* Firefox */
+//       input[type=number] {
+//         -moz-appearance: textfield;
+//       }
+
+//     }
+//   }
+
+//   &__control {
+//     display: inline-block;
+//     width: 100%;
+//     height: 44px;
+//     font-size: 13px;
+//     font-weight: $fw-400;
+//     // border: 0;
+//     // outline: 0;
+//     // padding: 0;
+//     // position: absolute;
+//     bottom: 7px;
+//     background-color: transparent;
+//     border: 1px solid #999fb9;
+//     border-radius: 8px;
+//     padding: 5px 40px 5px 16px;
+//     // margin-top: 8px;
+
+//     &:focus-visible {
+//     border-color: 0;
+//     outline: 0;
+//   }
+
+//     &__date {
+//     /* Hide default browser date picker icon */
+//     &::-webkit-calendar-picker-indicator {
+//     display: none;
+//     -webkit-appearance: none;
+//     }
+    
+//     /* Firefox */
+//     &::-moz-calendar-picker-indicator {
+//     display: none;
+//     }
+//     }
+
+//     &-alt {
+//       padding: 0;
+//     }
+
+//     &--textarea {
+//       height: 112px;
+//       resize: none;
+
+//       // @media screen and (max-width: 768px) {
+//       //   height: 30px;
+//       // }
+//     }
+//   }
+
+//   &__multiselect {
+//     position: relative;
+
+
+//     .dnn-multiselect__icon {
+//       position: absolute;
+//       height: 22px;
+//       width: 22px;
+//       top: 50%;
+//       right: 30px;
+//       transform: translateY(-50%);
+//       font-size: 20px;
+
+//       @media all and (max-width: 1171px) {
+//         right: 15px;
+//         font-size: 16px;
+
+//       }
+//     }
+//   }
+
+//   &__control:focus~&__label,
+//   &__control:not(:placeholder-shown)~&__label {
+//     top: 7px;
+//     font-size: 11px;
+//   }
+
+//   &__label {
+//     font-size: 16px;
+//     font-weight: $fw-700;
+//     // color: $label-color;
+//     margin-bottom: 8px;
+//     // line-height: $lh-100;
+//     // color: $grey-3;
+//     // font-weight: $fw-400;
+//     // position: absolute;
+//     // top: 15px;
+//     // transition: all 0.25s ease-in-out;
+//   }
+
+//   &__suffix {
+//     position: absolute;
+//     display: inline-flex;
+//     align-items: center;
+//     justify-content: center;
+//     width: 22px;
+//     height: 22px;
+//     font-size: 20px;
+//     font-weight: 400;
+//     color: $grey-3;
+//     right: 30px;
+//     top: 50%;
+//     transform: translateY(-50%);
+//   }
+
+//   &__select {
+//     background-color: transparent;
+//     appearance: none;
+//     width: 100%;
+//     height: 100%;
+//     position: absolute;
+//     left: 0;
+//     top: 50%;
+//     transform: translateY(-50%);
+//     border-radius: 8px;
+//     padding: 5px 40px 5px 16px;
+//     z-index: 10;
+//     color: $dark;
+//     border:0;
+
+//     &__alt {
+//     top: 50% !important;
+//     }
+
+//     @media all and (max-width: 1170px) {
+//       padding: 10px 40px 10px 5px;
+//     }
+
+//     @media all and (max-width: 992px) {
+//       padding: 10px 40px 10px 0;
+//       left: 10px;
+//     }
+
+//     @media all and (max-width: 768px) {
+
+//       left: 13px;
+//     }
+
+//     &--alt {
+//       padding: 10px 50px 15px 16px;
+
+//       @media all and (max-width: 1170px) {
+//         padding: 10px 40px 10px 0;
+//       }
+//     }
+//   }
+
+//   &__icon {
+//     font-weight: 600;
+//     color: $dark;
+//   }
+
+//   &--disabled {
+//     opacity: 0.5;
+//     cursor: not-allowed;
+
+//     * {
+//       cursor: not-allowed;
+//     }
+//   }
+
+//   &--centered &__inner {
+//     display: flex;
+//     align-items: center;
+//   }
+
+//   &--centered &__select {
+//     padding: 0 30px;
+//     padding-right: 60px;
+//   }
+
+//   &--centered &__control {
+//     bottom: 22px;
+//   }
+
+//   &--filter {
+//     height: 44px;
+//     width: 230px;
+
+//     @media all and (max-width: 768px) {
+//       width: 100%;
+//     }
+
+//     .custom-input__select {
+//       height: 44px;
+//       padding: 5px 30px 15px 16px;
+//       font-size: 13px;
+//       color: $dark;
+//     }
+
+//     .custom-input__suffix {
+//       top: 20px;
+//       right: 15px;
+//     }
+//   }
+
+//   &__error {
+//     display: inline-block;
+//     font-size: $fs-14;
+//     color: $danger;
+//     font-weight: $fw-400;
+//     margin: 0;
+//     margin-left: 20px;
+//   }
+// }
