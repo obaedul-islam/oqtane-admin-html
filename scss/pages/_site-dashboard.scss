@@ -32,6 +32,12 @@
     }
   }
 
+  .list-table {
+    &__mobile-label {
+      display: none;
+    }
+  }
+
   &__heading {
     margin-bottom: 20px;
     display: flex;
@@ -93,6 +99,11 @@
     justify-content: space-between;
     padding: 22px 20px;
     border-radius: 12px;
+    
+    @media all and (max-width: 768px) {
+      height: auto
+      
+    }
 
     &.bg-success {
       background-color: $secondary-light !important;
@@ -243,6 +254,90 @@
       font-size: 14px;
       font-weight: bold;
       text-transform: uppercase;
+    }
+    &__list {
+      padding: 10px 0;
+
+      .table-responsive {
+        max-height: none;
+        overflow-x: visible;
+      }
+
+      .list-table {
+        .table {
+          display: block;
+          margin-bottom: 0;
+
+          .table-responsive__header-fixed {
+            display: none;
+          }
+
+          tbody{
+            display: block;
+            width: 100%;
+          }
+
+          tr {
+            display: block;
+            height: auto;
+            padding: 18px 0;
+            border: 0;
+            border-bottom: 1px solid #dadada !important;
+            border-radius: 0;
+            background-color: transparent !important;
+
+            &:last-child {
+              border-bottom: 0 !important;
+            }
+          }
+
+          td {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: 14px;
+            width: 100%;
+            min-height: 34px;
+            padding: 8px 0 !important;
+            border: 0 !important;
+            background-color: transparent !important;
+            color: $dark !important;
+            font-size: 14px;
+            line-height: 1.45;
+            text-align: left;
+            word-break: break-word;
+          }
+        }
+
+        &__mobile-label {
+          display: inline-flex;
+          flex: 0 0 48%;
+          max-width: 180px;
+          min-width: 0;
+          color: $dark;
+          font-weight: $fw-600;
+          line-height: 1.45;
+        }
+
+        .list-table__mobile-label + * {
+          margin-left: 0;
+        }
+
+        td {
+          > :not(.list-table__mobile-label) {
+            min-width: 0;
+            text-align: left;
+          }
+        }
+
+        .status-pill {
+          white-space: normal;
+        }
+
+        .oqtane-btn__icon {
+          flex: 0 0 auto;
+        }
+      }
     }
   }
 
