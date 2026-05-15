@@ -1,6 +1,6 @@
 .oqtane-card {
 	background-color: $white;
-	border-radius: 20px;
+	// border-radius: 20px;
 	margin-bottom: 24px;
 
 	&__left-img {
@@ -32,7 +32,7 @@
 	}
 
 	&__header {
-		// padding: 20px;
+		padding: 20px;
 		font-size: 24px;
 		color: $grey-3 !important;
 		line-height: 1;
@@ -384,6 +384,7 @@
 
 	.list-card__table {
 		margin: 0;
+		
 	}
 
 	.oqtane-simple-card {

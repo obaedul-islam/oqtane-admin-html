@@ -576,6 +576,9 @@
       // @media screen and (max-width: 768px) {
       //   height: 30px;
       // }
+      &__alt {
+        height: 150px;
+      }
     }
   }
 
@@ -650,6 +653,10 @@
     border:0;
 
     &__alt {
+    top: 63% !important;
+    }
+
+    &__alt2 {
     top: 50% !important;
     }
 
@@ -703,6 +710,12 @@
   &--centered &__control {
     bottom: 22px;
   }
+
+  &__prefix {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    }
 
   &--filter {
     height: 44px;
