@@ -207,6 +207,103 @@
 	}
 }
 
+.lab-cost-grid {
+	row-gap: 20px;
+}
+
+.lab-cost-card {
+	padding: 24px;
+	border-radius: 30px 20px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 24px;
+
+	&__content {
+		flex: 1 1 auto;
+		min-width: 0;
+		border-right: 1px solid #8AB9E9;
+	}
+
+	&__heading {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		// margin-bottom: 8px;
+		justify-content: space-between;
+		margin-right: 16px;
+
+		h4 {
+			color: $dark;
+			font-size: $fs-18;
+			font-weight: $fw-700;
+		}
+
+		i {
+			// background-color: $primary-light;
+			border-radius: 50%;
+			color:  $primary-light;
+			font-size: 20px;
+			line-height: 1;
+			flex: 0 0 auto;
+		}
+	}
+
+	&__text{
+		color: $dark;
+		font-size: $fs-18;
+		font-weight: $fw-700;
+	}
+
+	p {
+		margin: 0;
+		color: $dark;
+		font-size: $fs-16;
+		line-height: $lh-150;
+	}
+
+	&__amount {
+		min-width: 130px;
+		padding-left: 24px;
+		color: $dark;
+		font-size: $fs-30;
+		font-weight: $fw-700;
+		line-height: $lh-120;
+		text-align: right;
+	}
+
+	&--field {
+		display: block;
+	}
+
+	&__notice {
+		width: 100%;
+		margin-top: 14px;
+		padding: 4px 14px;
+		border: 1px dashed #8AB9E9;
+		border-radius: 20px;
+		background-color: $secondary-light;
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		color: $dark;
+		font-size: $fs-14;
+		line-height: $lh-150;
+
+		i {
+			// background-color: $primary-light;
+			border-radius: 50%;
+			color:  $primary-light;
+			font-size: 20px;
+			flex: 0 0 auto;
+		}
+	}
+
+	&__input {
+		margin-top: 14px;
+	}
+}
+
 .no-data {
 	min-height: calc(100vh - 360px);
 	display: flex;
@@ -403,6 +500,23 @@
 		margin-top: 15px;
 		border-radius: 10px;
 		padding: 10px;
+	}
+
+	.lab-cost-card {
+		min-height: auto;
+		padding: 18px;
+		flex-direction: column;
+		align-items: stretch;
+		gap: 16px;
+
+		&__amount {
+			min-width: 0;
+			padding-left: 0;
+			padding-top: 16px;
+			border-left: 0;
+			border-top: 1px solid #8AB9E9;
+			text-align: left;
+		}
 	}
 
 	// .table-responsive {

@@ -205,7 +205,7 @@
 							</div>
 						</div>
 
-						<div class="oqtane-card list-card">
+						<!-- <div class="oqtane-card list-card">
 							<div class="oqtane-card__header">
 								<h3>Basic Info</h3>
 							</div>
@@ -263,8 +263,35 @@
 									</div>
 								</div>
 							</div>
-						</div>
+						</div> -->
+						
+						<div class="oqtane-card list-card rounded-20">
+							<div class="oqtane-card__header">
+								<h3>Basic Info</h3>
+							</div>
+							<div class="oqtane-card__body">
+								<div class="row">
+									<div class="col-md-3">
+										<label class="oqtane-card__label">Name</label>
+										<p class="oqtane-card__text">Quest Lab</p>
+									</div>
+									<div class="col-md-3">
+										<label class="oqtane-card__label">Contact Person Name</label>
+										<p class="oqtane-card__text">John Mayer</p>
+									</div>
+									<div class="col-md-3">
+										<label class="oqtane-card__label">Phone Number</label>
+										<p class="oqtane-card__text">012345678</p>
+									</div>
+									<div class="col-md-3">
+										<label class="oqtane-card__label">Email address</label>
+										<p class="oqtane-card__text">john@gmail.com</p>
+									</div>
+								</div>
+							</div>
+							</div>
 
+						
 						<div class="oqtane-card list-card">
 							<div class="oqtane-card__header">
 								<h3>Lab Tests Package</h3>
@@ -296,16 +323,11 @@
 									<div class="row">
 										<div class="col-md-6">
 											<div class="custom-input mt-20">
-												<label class="custom-input__inner">
-													<input
-														type="text"
-														class="custom-input__control"
-														placeholder=" "
-													/>
-													<span class="custom-input__label"
-														>Lab Package Name</span
+												<label class="custom-input__label">Lab Package Name</label>
+												<input type="text" class="custom-input__control" placeholder=" " />
+												<!-- <label class="custom-input__inner">
 													>
-												</label>
+												</label> -->
 											</div>
 										</div>
 									</div>
@@ -315,13 +337,14 @@
 									<div class="row">
 										<div class="col-md-6">
 											<div class="custom-input">
-												<label class="custom-input__inner">
+												<label class="custom-input__label">Add Lab Tests</label>
+												<label class="custom-input__inner border-0 p-0">
 													<input
 														type="text"
 														class="custom-input__control"
 														placeholder=" "
 													/>
-													<span class="custom-input__label">Add Lab Tests</span>
+													
 													<span class="custom-input__suffix">
 														<i class="icon-cross"></i>
 													</span>
@@ -330,43 +353,44 @@
 										</div>
 										<div class="col-md-6">
 											<div class="custom-input">
-												<label class="custom-input__inner">
+												<label class="custom-input__label">Test Code</label>
+												<label class="custom-input__inner border-0 p-0">
 													<input
 														type="text"
 														class="custom-input__control"
 														placeholder=" "
 													/>
-													<span class="custom-input__label">Test Code</span>
+													<!-- <span class="custom-input__label">Test Code</span> -->
 													<span class="custom-input__suffix">&dollar;</span>
 												</label>
 											</div>
 										</div>
 										<div class="col-md-6">
 											<div class="custom-input mt-20">
-												<label class="custom-input__inner">
+												<label class="custom-input__label">Lab Price (All State)</label>
+												<label class="custom-input__inner border-0 p-0">
 													<input
 														type="text"
 														class="custom-input__control"
 														placeholder=" "
 													/>
-													<span class="custom-input__label"
+													<!-- <span class="custom-input__label"
 														>Lab Price (All State)</span
-													>
+													> -->
 													<span class="custom-input__suffix">&dollar;</span>
 												</label>
 											</div>
 										</div>
 										<div class="col-md-6">
 											<div class="custom-input mt-20">
-												<label class="custom-input__inner">
+												<label class="custom-input__label">Lab Price (Selected State)</label>
+												<label class="custom-input__inner border-0 p-0">
 													<input
 														type="text"
 														class="custom-input__control"
 														placeholder=" "
 													/>
-													<span class="custom-input__label"
-														>Lab Price (Selected State)</span
-													>
+													
 													<span class="custom-input__suffix">&dollar;</span>
 												</label>
 											</div>
@@ -468,27 +492,36 @@
 										</div>
 									</div>
 
-									<div class="row mt-20">
+									<div class="row lab-cost-grid mt-20">
 										<div class="col-md-6">
-											<div
-												class="bg-cyan rounded-30 d-flex text-blue justify-content-between align-items-center promo-code-container p-20"
-											>
-												<p class="fs-18 fw-500 mb-0"
-													>Total Lab Price (All State)</p
-												>
-												<h3 class="fw-bold mb-0">$178</h3>
+											<div class="lab-cost-card bg-cyan">
+												<div class="lab-cost-card__content">
+													<div>
+														<h4 class="lab-cost-card__text">Thrivewell RX Lab Cost</h4>
+														<h4 class="lab-cost-card__text">(All State)</h4>
+													</div>
+													<p>What Dosevana charges you for this lab package</p>
+												</div>
+												<div class="lab-cost-card__amount">$120.4</div>
 											</div>
 										</div>
 										<div class="col-md-6">
-											<div
-												class="bg-green-2 rounded-30 d-flex text-blue justify-content-between align-items-center promo-code-container p-20"
-											>
-												<p class="fs-18 fw-500 mb-0"
-													>Total Lab Price (All State)</p
-												>
-												<h3 class="fw-bold mb-0">$178</h3>
-											</div>
-										</div>
+											<div class="lab-cost-card bg-green-2">
+												<div class="lab-cost-card__content">
+													<div class="lab-cost-card__heading">
+														<h4>Thrivewell RX Lab Cost</h4>
+														<i class="icon-info-fill"></i>
+													</div>
+													<h4 class="lab-cost-card__text">(Selected State)</h4>
+													<p>
+														What Dosevana charges you for this lab package in the
+														selected state
+													</p>
+												</div>
+												<div class="lab-cost-card__amount">$120.4</div>
+												</div>
+												</div>
+												</div> -->
 									</div>
 								</div>
 
@@ -523,7 +556,7 @@
 													aria-controls="collapseOne"
 												>
 													<h3 class="fs-24 lh-100 text-grey-3 mb-0"
-														>Day 1 Lab Package</h3
+														>Day 2 Lab Package</h3
 													>
 													<div class="d-flex gap-10">
 														<button
@@ -636,25 +669,61 @@
 																</div>
 															</div>
 
-															<div class="row mt-20">
+															<div class="row lab-cost-grid mt-20">
 																<div class="col-md-6">
-																	<div
-																		class="bg-cyan rounded-30 d-flex text-blue justify-content-between align-items-center promo-code-container p-20"
-																	>
-																		<p class="fs-18 fw-500 mb-0"
-																			>Total Lab Price (All State)</p
-																		>
-																		<h3 class="fw-bold mb-0">$178</h3>
+																	<div class="lab-cost-card bg-cyan">
+																		<div class="lab-cost-card__content">
+																			<div class="lab-cost-card__heading">
+																				<h4>Thrivewell RX Lab Cost</h4>
+																				<h4>(All State)</h4>
+																			</div>
+																			<p>What Dosevana charges you for this lab
+																				package</p>
+																		</div>
+																		<div class="lab-cost-card__amount">$120.4</div>
 																	</div>
 																</div>
 																<div class="col-md-6">
-																	<div
-																		class="bg-green-2 rounded-30 d-flex text-blue justify-content-between align-items-center promo-code-container p-20"
-																	>
-																		<p class="fs-18 fw-500 mb-0"
-																			>Total Lab Price (All State)</p
-																		>
-																		<h3 class="fw-bold mb-0">$178</h3>
+																	<div class="lab-cost-card bg-green-2">
+																		<div class="lab-cost-card__content">
+																			<div class="lab-cost-card__heading">
+																				<h4>Thrivewell RX Lab Cost</h4>
+																				<h4>(Selected State)</h4>
+																				<i class="icon-info-fill"></i>
+																			</div>
+																			<p>
+																				What Dosevana charges you for this lab
+																				package in the selected state
+																			</p>
+																		</div>
+																		<div class="lab-cost-card__amount">$120.4</div>
+																	</div>
+																</div>
+																<div class="col-md-6">
+																		<div class="lab-cost-card bg-cyan">
+																			<div class="lab-cost-card__content">
+																				<div class="lab-cost-card__heading">
+																					<h4>Set Patient Lab Cost</h4>
+																					<h4>(All State)</h4>
+																				</div>
+																				<p>Set the lab price your patient will be
+																					charged</p>
+																			</div>
+																			<div class="lab-cost-card__amount">$140.4</div>
+																	</div>
+																</div>
+																<div class="col-md-6">
+																	<div class="lab-cost-card bg-green-2">
+																		<div class="lab-cost-card__content">
+																			<div class="lab-cost-card__heading">
+																				<h4>Set Patient Lab Cost</h4>
+																				<h4>(Selected State)</h4>
+																				<i class="icon-info-fill"></i>
+																			</div>
+																			<p>Set the lab price your patient will be
+																				charged</p>
+																		</div>
+																		<div class="lab-cost-card__amount">$180.4</div>
 																	</div>
 																</div>
 															</div>
@@ -790,25 +859,82 @@
 																</div>
 															</div>
 
-															<div class="row mt-20">
+															<div class="row lab-cost-grid mt-20">
 																<div class="col-md-6">
-																	<div
-																		class="bg-cyan rounded-30 d-flex text-blue justify-content-between align-items-center promo-code-container p-20"
-																	>
-																		<p class="fs-18 fw-500 mb-0"
-																			>Total Lab Price (All State)</p
-																		>
-																		<h3 class="fw-bold mb-0">$178</h3>
+																	<div class="lab-cost-card bg-cyan">
+																		<div class="lab-cost-card__content">
+																			<div>
+																				<h4 class="lab-cost-card__text">Thrivewell RX Lab Cost</h4>
+																				<h4 class="lab-cost-card__text">(All State)</h4>
+																			</div>
+																			<p>What Dosevana charges you for this lab package</p>
+																		</div>
+																		<div class="lab-cost-card__amount">$120.4</div>
+																	</div>
+																</div>
+																<div class="col-md-6">
+																	<div class="lab-cost-card bg-green-2">
+																		<div class="lab-cost-card__content">
+																			<div class="lab-cost-card__heading">
+																				<h4>Thrivewell RX Lab Cost</h4>
+																				<i class="icon-info-fill"></i>
+																			</div>
+																			<h4 class="lab-cost-card__text">(Selected State)</h4>
+																			<p>
+																				What Dosevana charges you for this lab package in the
+																				selected state
+																			</p>
+																		</div>
+																		<div class="lab-cost-card__amount">$120.4</div>
+																	</div>
+																</div>
+																<div class="col-md-6">
+																	<div class="lab-cost-card lab-cost-card--field bg-cyan">
+																		<div class="lab-cost-card__content border-0">
+																			<div class="lab-cost-card__heading">
+																				<h4>Set Patient Lab Cost (All State)</h4>
+																			</div>
+																			<p>Set the lab price your patient will be
+																				charged</p>
+																		</div>
+																		<div class="lab-cost-card__notice">
+																			<i class="icon-info-fill"></i>
+																			<span>You must set the amount $1200.00 or
+																				more</span>
+																		</div>
+																		<div class="custom-input lab-cost-card__input">
+																			<label class="custom-input__label">Set Patient Lab Cost</label>
+																			<label class="custom-input__inner border-0 p-0">
+																				<input type="text" class="custom-input__control" value="60" placeholder=" " />
+																	
+																				<span class="custom-input__suffix">&dollar;</span>
+																			</label>
+																		</div>
 																	</div>
 																</div>
 																<div class="col-md-6">
 																	<div
-																		class="bg-green-2 rounded-30 d-flex text-blue justify-content-between align-items-center promo-code-container p-20"
+																		class="lab-cost-card lab-cost-card--field bg-green-2"
 																	>
-																		<p class="fs-18 fw-500 mb-0"
-																			>Total Lab Price (All State)</p
-																		>
-																		<h3 class="fw-bold mb-0">$178</h3>
+																		<div class="lab-cost-card__content border-0">
+																			<div class="lab-cost-card__heading">
+																				<h4>Set Patient Lab Cost (Selected State)</h4>
+																			</div>
+																			<p>Set the lab price your patient will be
+																				charged</p>
+																		</div>
+																		<div class="lab-cost-card__notice">
+																			<i class="icon-info-fill"></i>
+																			<span>You must set the amount $120.00 or
+																				more</span>
+																		</div>
+																		<div class="custom-input lab-cost-card__input">
+																			<label class="custom-input__label">Set Patient Lab Cost</label>
+																			<label class="custom-input__inner border-0 p-0">
+																				<input type="text" class="custom-input__control" value="60" placeholder=" " />
+																				<span class="custom-input__suffix">&dollar;</span>
+																			</label>
+																		</div>
 																	</div>
 																</div>
 															</div>

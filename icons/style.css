@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?9i4cay');
-  src:  url('fonts/icomoon.eot?9i4cay#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.woff2?9i4cay') format('woff2'),
-    url('fonts/icomoon.ttf?9i4cay') format('truetype'),
-    url('fonts/icomoon.woff?9i4cay') format('woff'),
-    url('fonts/icomoon.svg?9i4cay#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?jv05db');
+  src:  url('fonts/icomoon.eot?jv05db#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.woff2?jv05db') format('woff2'),
+    url('fonts/icomoon.ttf?jv05db') format('truetype'),
+    url('fonts/icomoon.woff?jv05db') format('woff'),
+    url('fonts/icomoon.svg?jv05db#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -100,6 +100,15 @@
 }
 .icon-Checkbox_check_RIZZ:before {
   content: "\e963";
+}
+.icon-State:before {
+  content: "\e9a2";
+}
+.icon-Ware-house:before {
+  content: "\e9a3";
+}
+.icon-Health-benefit:before {
+  content: "\e9a4";
 }
 .icon-single:before {
   content: "\e99c";
@@ -215,9 +224,6 @@
 .icon-questions:before {
   content: "\e933";
 }
-.icon-tablet:before {
-  content: "\e934";
-}
 .icon-copy:before {
   content: "\e931";
 }
@@ -278,6 +284,12 @@
 .icon-StateOff:before {
   content: "\e966";
 }
+.icon-referral-order:before {
+  content: "\e9a0";
+}
+.icon-Referral-user-count:before {
+  content: "\e9a1";
+}
 .icon-Percentage:before {
   content: "\e99b";
 }
@@ -316,6 +328,15 @@
 }
 .icon-humburger:before {
   content: "\e94c";
+}
+.icon-promo-code:before {
+  content: "\e944";
+}
+.icon-order-list:before {
+  content: "\e942";
+}
+.icon-tablet:before {
+  content: "\e934";
 }
 .icon-left-arrow:before {
   content: "\e92e";
@@ -401,6 +422,15 @@
 .icon-tick1:before {
   content: "\e93b";
 }
+.icon-info-circle:before {
+  content: "\e93c";
+}
+.icon-refresh:before {
+  content: "\e99f";
+}
+.icon-info-fill:before {
+  content: "\e99e";
+}
 .icon-tiktok-flex:before {
   content: "\e990";
 }
@@ -418,9 +448,6 @@
 }
 .icon-linkedin1:before {
   content: "\e940";
-}
-.icon-info-circle:before {
-  content: "\e93c";
 }
 .icon-upload:before {
   content: "\e952";
@@ -493,12 +520,6 @@
 }
 .icon-due-bill:before {
   content: "\e945";
-}
-.icon-promo-code:before {
-  content: "\e944";
-}
-.icon-order-list:before {
-  content: "\e942";
 }
 .icon-sales-associate:before {
   content: "\e943";
