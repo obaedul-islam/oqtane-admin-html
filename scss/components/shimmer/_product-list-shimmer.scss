@@ -1,0 +1,128 @@
+// Variables
+$shimmer-base: #e9ecef;
+$shimmer-highlight: #f8f9fa;
+$border-color: #e2e8f0;
+
+// Keyframe Animation
+@keyframes shimmerWave {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.product-list-shimmer {
+  width: 100%;
+  padding: 18px 20px;
+
+  // Base Shimmer Box Modifier Class
+  &__box {
+    background: linear-gradient(
+      90deg,
+      $shimmer-base 25%,
+      $shimmer-highlight 50%,
+      $shimmer-base 75%
+    );
+    background-size: 200% 100%;
+    animation: shimmerWave 1.5s linear infinite;
+    border-radius: 6px;
+  }
+
+  // Header Elements
+  &__title {
+    width: 160px;
+    height: 28px;
+  }
+
+  &__search-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 6px;
+  }
+
+  &__create-btn {
+    width: 140px;
+    height: 38px;
+    border-radius: 6px;
+  }
+
+  // Card Wrapper
+  &__card {
+    background-color: #ffffff;
+    border: 1px solid $border-color;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+  }
+
+  // Table Elements
+  &__table-header {
+    border-bottom: 1px solid $border-color;
+  }
+
+  &__checkbox-col {
+    width: 5%;
+    min-width: 32px;
+  }
+
+  &__checkbox {
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+  }
+
+  &__image {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+  }
+
+  &__th {
+    height: 18px;
+  }
+
+  &__tr {
+    border-bottom: 1px solid $border-color;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__td {
+    height: 18px;
+  }
+
+  &__badge {
+    width: 65px;
+    height: 24px;
+    border-radius: 12px;
+  }
+
+  // Mobile Responsiveness (max-width: 768px)
+  @media (max-width: 768px) {
+    &__actions {
+      width: 100%;
+
+      .product-list-shimmer__create-btn {
+        flex-grow: 1;
+      }
+    }
+
+    &__tr {
+      flex-direction: column;
+      align-items: flex-start !important;
+      gap: 12px;
+
+      > div {
+        width: 100% !important;
+      }
+    }
+
+    &__img-col {
+      display: flex;
+      justify-content: flex-start;
+    }
+  }
+}

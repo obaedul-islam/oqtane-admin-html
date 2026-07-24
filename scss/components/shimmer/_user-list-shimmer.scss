@@ -1,0 +1,114 @@
+// Shimmer Animation Keyframes
+@keyframes shimmerAnimation {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+// BEM Component Base
+.user-list-shimmer {
+  width: 100%;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+
+  // Base Shimmer Line Class
+  .shimmer-line {
+    background: #e9ecef;
+    background-image: linear-gradient(
+      90deg,
+      #e9ecef 0px,
+      #f8f9fa 50px,
+      #e9ecef 100px
+    );
+    background-size: 200px 100%;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+    animation: shimmerAnimation 1.5s infinite linear;
+
+    // Modifiers for specific dimensions
+    &--title {
+      width: 120px;
+      height: 24px;
+    }
+
+    &--input {
+      width: 180px;
+      height: 38px;
+      border-radius: 20px;
+    }
+
+    &--btn {
+      width: 38px;
+      height: 38px;
+      border-radius: 6px;
+    }
+
+    &--th {
+      width: 80%;
+      height: 25px;
+    }
+
+    &--td {
+      height: 25px;
+    }
+
+    &--text {
+      width: 60px;
+      height: 14px;
+    }
+
+    &--nav {
+      width: 140px;
+      height: 20px;
+    }
+  }
+
+  // Card Block Styling
+  &__card {
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  // Table Row Adjustments
+  &__tr {
+    th,
+    td {
+      padding: 1rem 0.75rem;
+      border-bottom: 1px solid #f1f3f5;
+    }
+  }
+
+  // Mobile Responsiveness (max-width: 768px)
+  @media (max-width: 768px) {
+    padding: 1rem;
+
+    &__header {
+      flex-direction: column;
+      align-items: flex-start !important;
+      gap: 1rem;
+
+      .user-list-shimmer__controls {
+        width: 100%;
+        justify-content: space-between;
+
+        .shimmer-line--input {
+          width: 75%;
+        }
+      }
+    }
+
+    &__tr {
+      th,
+      td {
+        padding: 0.75rem 0.5rem;
+      }
+    }
+
+    &__pagination {
+      justify-content: center !important;
+    }
+  }
+}

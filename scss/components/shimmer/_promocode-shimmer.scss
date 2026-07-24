@@ -1,0 +1,136 @@
+// Variables
+$shimmer-base: #e9ecef;
+$shimmer-highlight: #f8f9fa;
+$border-color: #e2e8f0;
+
+// Keyframe Animation
+@keyframes shimmerWave {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.promocode-shimmer {
+  width: 100%;
+  padding: 20px;
+
+  // Reusable Shimmer Background Base
+  &__box {
+    background: linear-gradient(
+      90deg,
+      $shimmer-base 25%,
+      $shimmer-highlight 50%,
+      $shimmer-base 75%
+    );
+    background-size: 200% 100%;
+    animation: shimmerWave 1.5s linear infinite;
+    border-radius: 6px;
+  }
+
+  // Header Elements
+  &__title {
+    width: 180px;
+    height: 28px;
+  }
+
+  &__search-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 6px;
+  }
+
+  &__select {
+    width: 150px;
+    height: 38px;
+    border-radius: 6px;
+  }
+
+  &__add-btn {
+    width: 120px;
+    height: 38px;
+    border-radius: 6px;
+  }
+
+  // Main Card Wrapper
+  &__card {
+    background-color: #ffffff;
+    border: 1px solid $border-color;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+  }
+
+  // Table Elements
+  &__table-header {
+    border-bottom: 1px solid $border-color;
+  }
+
+  &__th {
+    height: 25px;
+  }
+
+  &__tr {
+    border-bottom: 1px solid $border-color;
+    min-height: 25px;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__td {
+    height: 25px;
+  }
+
+  &__status-badge {
+    height: 24px;
+    border-radius: 12px;
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+  }
+
+  // Pagination Elements
+  &__page-text {
+    width: 60px;
+    height: 16px;
+  }
+
+  &__page-btn {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+  }
+
+  // Mobile Responsiveness (max-width: 768px)
+  @media (max-width: 768px) {
+    &__actions {
+      width: 100%;
+
+      .promocode-shimmer__select {
+        flex-grow: 1;
+      }
+    }
+
+    &__tr {
+      flex-direction: column;
+      align-items: flex-start !important;
+      gap: 10px;
+    }
+
+    &__td,
+    &__status-badge,
+    &__action-icons {
+      width: 100% !important;
+    }
+
+    &__pagination {
+      justify-content: center !important;
+    }
+  }
+}

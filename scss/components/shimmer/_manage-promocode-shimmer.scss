@@ -1,0 +1,105 @@
+// Shimmer Wave Keyframes
+@keyframes promoShimmerPulse {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+// BEM Root Block
+.manage-promocode-shimmer {
+  width: 100%;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+
+  // Base Class for Shimmer Element Lines
+  &__line {
+    background: #e9ecef;
+    background-image: linear-gradient(
+      90deg,
+      #e9ecef 0px,
+      #f8f9fa 50px,
+      #e9ecef 100px
+    );
+    background-size: 200px 100%;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+    animation: promoShimmerPulse 1.5s infinite linear;
+
+    // Sizing Modifiers
+    &--title {
+      width: 200px;
+      height: 24px;
+    }
+
+    &--label {
+      width: 120px;
+      height: 14px;
+    }
+
+    &--input {
+      width: 100%;
+      height: 42px;
+      border-radius: 6px;
+    }
+
+    &--text {
+      height: 14px;
+    }
+
+    &--checkbox {
+      width: 20px;
+      height: 20px;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+
+    &--btn {
+      width: 150px;
+      height: 40px;
+      border-radius: 6px;
+    }
+  }
+
+  // Width Utility classes for dynamic text sizes
+  .w-60 {
+    width: 60px;
+  }
+  .w-80 {
+    width: 80px;
+  }
+  .w-120 {
+    width: 120px;
+  }
+
+  // Card Holder
+  &__card {
+    border-radius: 8px;
+    background-color: #ffffff;
+  }
+
+  // Mobile Responsiveness (max-width: 768px)
+  @media (max-width: 768px) {
+    padding: 1rem;
+
+    &__card {
+      .card-body {
+        padding: 1rem !important;
+      }
+    }
+
+    &__checkboxes {
+      flex-direction: column;
+      align-items: flex-start !important;
+      gap: 1rem !important;
+    }
+
+    &__actions {
+      .manage-promocode-shimmer__line--btn {
+        flex: 1;
+      }
+    }
+  }
+}

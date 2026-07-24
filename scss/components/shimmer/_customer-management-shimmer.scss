@@ -1,0 +1,123 @@
+// Shimmer Animation Keyframe
+@keyframes shimmerWave {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+// BEM Component Root
+.customer-management-shimmer {
+  width: 100%;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+
+  // Base Shimmer Line Styles
+  &__shimmer-line {
+    background: #e9ecef;
+    background-image: linear-gradient(
+      90deg,
+      #e9ecef 0px,
+      #f8f9fa 50px,
+      #e9ecef 100px
+    );
+    background-size: 200px 100%;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+    animation: shimmerWave 1.5s infinite linear;
+
+    // Line Modifiers
+    &--title {
+      width: 220px;
+      height: 24px;
+    }
+
+    &--input {
+      width: 200px;
+      height: 38px;
+      border-radius: 20px;
+    }
+
+    &--square-btn {
+      width: 38px;
+      height: 38px;
+      border-radius: 6px;
+    }
+
+    &--btn-export {
+      width: 130px;
+      height: 38px;
+      border-radius: 6px;
+    }
+
+    &--th {
+      height: 25px;
+    }
+
+    &--td {
+      height: 25px;
+    }
+
+    &--icon {
+      width: 25px;
+      height: 25px;
+      border-radius: 4px;
+    }
+
+    &--text {
+      width: 60px;
+      height: 14px;
+    }
+
+    &--pagination-controls {
+      width: 150px;
+      height: 20px;
+    }
+  }
+
+  // Card Block Styling
+  &__card {
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: #ffffff;
+  }
+
+  // Table Row Adjustments
+  &__tr {
+    th,
+    td {
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid #f1f3f5;
+    }
+  }
+
+  // Mobile Responsiveness (Max width: 768px)
+  @media (max-width: 768px) {
+    padding: 1rem;
+
+    &__header {
+      flex-direction: column;
+      align-items: flex-start !important;
+    }
+
+    &__actions {
+      width: 100%;
+      flex-wrap: wrap;
+
+      .customer-management-shimmer__shimmer-line--input {
+        flex: 1 1 100%;
+        width: 100%;
+      }
+
+      .customer-management-shimmer__shimmer-line--btn-export {
+        flex: 1;
+      }
+    }
+
+    &__pagination {
+      justify-content: center !important;
+    }
+  }
+}

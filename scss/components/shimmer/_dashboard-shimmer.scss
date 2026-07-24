@@ -1,0 +1,154 @@
+// Variables
+$shimmer-base-color: #e8ecef;
+$shimmer-highlight-color: #f5f7f9;
+$border-radius-sm: 6px;
+$border-radius-lg: 12px;
+
+// Animation Keyframe
+@keyframes shimmerWave {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.dashboard-shimmer {
+  max-width: 100%;
+  padding: 18px 20px;
+
+  // Reusable Shimmer Element Base Class
+  &__box {
+    background: linear-gradient(
+      90deg,
+      $shimmer-base-color 25%,
+      $shimmer-highlight-color 50%,
+      $shimmer-base-color 75%
+    );
+    background-size: 200% 100%;
+    animation: shimmerWave 1.5s infinite linear;
+    border-radius: $border-radius-sm;
+  }
+
+  // Header Elements
+  &__title {
+    width: 160px;
+    height: 24px;
+  }
+
+  &__input {
+    width: 180px;
+    height: 38px;
+    border-radius: 20px;
+  }
+
+  &__icon-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+  }
+
+  // Metric Cards
+  &__card {
+    padding: 20px;
+    border-radius: $border-radius-lg;
+    background-color: #ffffff;
+    border: 1px solid #f0f0f0;
+    height: 146px;
+  }
+
+  &__stat-number {
+    @extend .dashboard-shimmer__box;
+    width: 80px;
+    height: 36px;
+  }
+
+  &__badge-icon {
+    @extend .dashboard-shimmer__box;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+
+  &__stat-text {
+    @extend .dashboard-shimmer__box;
+    width: 110px;
+    height: 16px;
+  }
+
+  // Section Panels
+  &__section {
+    background-color: #ffffff;
+    border-radius: $border-radius-lg;
+    border: 1px solid #f0f0f0;
+  }
+
+  &__section-title {
+    width: 180px;
+    height: 28px;
+  }
+
+  &__dropdown {
+    width: 140px;
+    height: 36px;
+    border-radius: 8px;
+  }
+
+  &__link {
+    width: 70px;
+    height: 20px;
+  }
+
+  &__toggle {
+    width: 180px;
+    height: 36px;
+    border-radius: 20px;
+  }
+
+  // Table Shimmer Elements
+  &__table-header {
+    border-bottom: 1px solid #eeeeee;
+  }
+
+  &__th {
+    height: 16px;
+  }
+
+  &__td {
+    height: 20px;
+  }
+
+  // Chart Placeholder
+  &__chart {
+    width: 100%;
+    height: 260px;
+    border-radius: $border-radius-lg;
+  }
+
+  // Mobile Responsiveness (max-width: 768px)
+  @media (max-width: 768px) {
+    &__tr {
+      flex-direction: column;
+      align-items: flex-start !important;
+      gap: 8px;
+      padding-bottom: 12px;
+      border-bottom: 1px dashed #e0e0e0;
+    }
+
+    &__td {
+      width: 100% !important;
+      height: 16px;
+    }
+
+    &__input,
+    &__dropdown,
+    &__toggle {
+      width: 100%;
+    }
+
+    &__actions {
+      width: 100%;
+    }
+  }
+}

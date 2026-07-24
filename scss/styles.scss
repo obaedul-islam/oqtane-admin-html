@@ -54,6 +54,19 @@
 @import "components/dropdown";
 @import "components/quantity-selector";
 @import "components/cart";
+@import "components/shimmer/dashboard-shimmer";
+@import "components/shimmer/promocode-shimmer";
+@import "components/shimmer/referral-shimmer";
+@import "components/shimmer/product-list-shimmer";
+@import "components/shimmer/manage-lab-shimmer";
+@import "components/shimmer/user-list-shimmer";
+@import "components/shimmer/customer-management-shimmer";
+@import "components/shimmer/order-management-shimmer";
+@import "components/shimmer/order-details-shimmer";
+@import "components/shimmer/manage-promocode-shimmer";
+@import "components/shimmer/lab-details-shimmer";
+@import "components/shimmer/make-new-sale-shimmer";
+@import "components/shimmer/customer-management-details-shimmer";
 
 @import "pages/add-product";
 @import "pages/product-details";

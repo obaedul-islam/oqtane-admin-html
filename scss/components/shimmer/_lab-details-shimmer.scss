@@ -1,0 +1,210 @@
+// Shimmer Wave Keyframes
+@keyframes labShimmerPulse {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+// BEM Root Block
+.lab-details-shimmer {
+  width: 100%;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+
+  // Base Class for Shimmer Skeleton Elements
+  &__line {
+    background: #e9ecef;
+    background-image: linear-gradient(
+      90deg,
+      #e9ecef 0px,
+      #f8f9fa 50px,
+      #e9ecef 100px
+    );
+    background-size: 200px 100%;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+    animation: labShimmerPulse 1.5s infinite linear;
+
+    // Sizing Modifiers
+    &--page-title {
+      width: 140px;
+      height: 24px;
+    }
+
+    &--section-heading {
+      width: 160px;
+      height: 20px;
+    }
+
+    &--title {
+      width: 100px;
+      height: 20px;
+    }
+
+    &--sub-heading {
+      width: 180px;
+      height: 16px;
+    }
+
+    &--label {
+      width: 70px;
+      height: 12px;
+    }
+
+    &--value {
+      height: 16px;
+    }
+
+    &--desc {
+      height: 12px;
+    }
+
+    &--icon {
+      width: 20px;
+      height: 20px;
+      border-radius: 4px;
+    }
+
+    &--badge {
+      width: 200px;
+      height: 32px;
+      border-radius: 16px;
+    }
+
+    &--price {
+      width: 80px;
+      height: 28px;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+
+    &--alert-pill {
+      width: 100%;
+      height: 28px;
+      border-radius: 14px;
+    }
+
+    &--input {
+      width: 100%;
+      height: 38px;
+      border-radius: 6px;
+    }
+  }
+
+  // Cards & Layout Containers
+  &__card {
+    border-radius: 8px;
+    background-color: #ffffff;
+  }
+
+  &__accordion {
+    background-color: #ffffff;
+    border-color: #e9ecef !important;
+  }
+
+  &__inner-container {
+    background-color: #f1f3f5;
+  }
+
+  // Info Pricing Boxes
+  &__info-box {
+    min-height: 130px;
+    &--blue {
+      background-color: #dbeafe;
+      border-left: 4px solid #93c5fd;
+
+      .lab-details-shimmer__line {
+        background: #bfdbfe;
+        background-image: linear-gradient(
+          90deg,
+          #bfdbfe 0px,
+          #dbeafe 50px,
+          #bfdbfe 100px
+        );
+        background-size: 200px 100%;
+      }
+    }
+
+    &--green {
+      background-color: #dcfce7;
+      border-left: 4px solid #86efac;
+
+      .lab-details-shimmer__line {
+        background: #bbf7d0;
+        background-image: linear-gradient(
+          90deg,
+          #bbf7d0 0px,
+          #dcfce7 50px,
+          #bbf7d0 100px
+        );
+        background-size: 200px 100%;
+      }
+    }
+  }
+
+  &__info-content {
+    flex-grow: 1;
+  }
+
+  // Input Block Styling
+  &__input-box {
+    min-height: 230px;
+    &--blue {
+      background-color: #dbeafe;
+
+      .lab-details-shimmer__line {
+        background: #bfdbfe;
+        background-image: linear-gradient(
+          90deg,
+          #bfdbfe 0px,
+          #dbeafe 50px,
+          #bfdbfe 100px
+        );
+        background-size: 200px 100%;
+      }
+    }
+
+    &--green {
+      background-color: #dcfce7;
+
+      .lab-details-shimmer__line {
+        background: #bbf7d0;
+        background-image: linear-gradient(
+          90deg,
+          #bbf7d0 0px,
+          #dcfce7 50px,
+          #bbf7d0 100px
+        );
+        background-size: 200px 100%;
+      }
+    }
+  }
+
+  // Mobile Responsiveness (max-width: 768px)
+  @media (max-width: 768px) {
+    padding: 1rem;
+
+    &__card {
+      .card-body {
+        padding: 1rem !important;
+      }
+    }
+
+    &__inner-container {
+      padding: 0.75rem !important;
+    }
+
+    &__info-box {
+      flex-direction: column;
+      align-items: flex-start !important;
+      gap: 1rem;
+
+      .lab-details-shimmer__line--price {
+        margin-left: 0 !important;
+      }
+    }
+  }
+}
