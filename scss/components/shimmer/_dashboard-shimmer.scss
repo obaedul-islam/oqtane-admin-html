@@ -16,7 +16,7 @@ $border-radius-lg: 12px;
 
 .dashboard-shimmer {
   max-width: 100%;
-  padding: 18px 20px;
+  // padding: 18px 20px;
 
   // Reusable Shimmer Element Base Class
   &__box {
@@ -81,7 +81,7 @@ $border-radius-lg: 12px;
   &__section {
     background-color: #ffffff;
     border-radius: $border-radius-lg;
-    border: 1px solid #f0f0f0;
+    // border: 1px solid #f0f0f0;
   }
 
   &__section-title {
