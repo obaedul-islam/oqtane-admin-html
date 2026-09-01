@@ -81,10 +81,10 @@
   gap: 20px;
   grid-template-columns: repeat(4, 1fr);
 
-   &__count {
+  &__count {
     display: flex;
     flex-direction: column;
-      justify-content: space-between;
+    justify-content: space-between;
 
     &__p {
       color: #212121;
@@ -99,10 +99,9 @@
     justify-content: space-between;
     padding: 22px 20px;
     border-radius: 12px;
-    
+
     @media all and (max-width: 768px) {
       height: auto
-      
     }
 
     &.bg-success {
@@ -110,15 +109,15 @@
     }
 
     &.bg-mint {
-      background-color: #CFFFC8  !important;
+      background-color: #CFFFC8 !important;
     }
 
     &.bg-apricot {
-      background-color: $blue-light  !important;
+      background-color: $blue-light !important;
     }
 
     &.bg-canary {
-      background-color: $purple  !important;
+      background-color: $purple !important;
     }
 
     &--purple {
@@ -255,6 +254,7 @@
       font-weight: bold;
       text-transform: uppercase;
     }
+
     &__list {
       padding: 10px 0;
 
@@ -272,7 +272,7 @@
             display: none;
           }
 
-          tbody{
+          tbody {
             display: block;
             width: 100%;
           }
@@ -319,7 +319,7 @@
           line-height: 1.45;
         }
 
-        .list-table__mobile-label + * {
+        .list-table__mobile-label+* {
           margin-left: 0;
         }
 
@@ -381,4 +381,157 @@
       }
     }
   }
+}
+
+
+:root {
+  /* Series colours, in the order a chart should use them. Brand primary first. */
+  --chart-1: #9eba29;
+  --chart-2: #d7e29e;
+  --chart-3: #e0a500;
+  --chart-4: #e74848;
+  --chart-5: #0079ad;
+  --chart-6: #6f63c4;
+  /* Two accents outside the series palette: the soft red for a lapsed or abandoned
+     state, and the near-black for the top customer tier. */
+  --chart-brand-alert: #ff7777;
+  --chart-brand-ink: #111914;
+  /* "Other" rows and anything not yet measured. */
+  --chart-muted: #999fb9;
+  /* Good and bad outcomes always use these two, on every chart. */
+  --chart-positive: #00ad85;
+  --chart-negative: #e74848;
+  /* Chart furniture. */
+  --chart-font: "Manrope", sans-serif;
+  --chart-grid: #eef0f5;
+  --chart-axis-text: #525252;
+  --chart-on-brand: #ffffff;
+  /* Map bands, palest first. The Top 5 lists use the same ramp for their swatches. */
+  --chart-map-1: #f2f6e5;
+  --chart-map-2: #e2ebc2;
+  --chart-map-3: #cfdd9b;
+  --chart-map-4: #b8cc6d;
+  --chart-map-5: #9eba29;
+  --chart-map-6: #7a921f;
+  --chart-map-null: #f2f3ee;
+  --chart-map-stroke: #ffffff;
+  --chart-map-hover: #7a921f;
+  /* Chart card surface. Same on every theme; only the colours above are per-brand. */
+  --chart-card-bg: #ffffff;
+  --chart-card-border: #eef0f5;
+  --chart-card-radius: 12px;
+  --chart-card-pad: 20px;
+  --chart-gap: 16px;
+}
+
+
+.chart-empty-map {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  min-height: 240px;
+  padding: 24px;
+  text-align: center;
+}
+
+.chart-empty-map__art {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  margin-bottom: 12px;
+}
+
+.chart-empty-map__land {
+  fill: var(--chart-map-null);
+  stroke: var(--chart-card-border);
+  stroke-width: 1.5;
+}
+
+/* Faint divisions, so the outline reads as a map rather than one flat blob. */
+.chart-empty-map__seam {
+  fill: none;
+  stroke: var(--chart-map-stroke);
+  stroke-width: 1.5;
+}
+
+/* The six bands the real map paints, drawn empty. */
+.chart-empty-map__ramp {
+  opacity: 0.5;
+}
+
+.chart-empty-map__title {
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--chart-axis-text);
+}
+
+.chart-empty-map__text {
+  margin-bottom: 0;
+  max-width: 46ch;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--chart-muted);
+}
+
+.apexcharts-toolbar {
+  z-index: 3;
+}
+
+.apexcharts-menu-icon svg {
+  fill: var(--chart-muted);
+}
+
+.apexcharts-menu-icon:hover svg {
+  fill: var(--chart-axis-text);
+}
+
+.apexcharts-menu {
+  min-width: 148px;
+  padding: 4px;
+  background: var(--chart-card-bg);
+  border: 1px solid var(--chart-card-border);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(17, 24, 39, 0.12);
+}
+
+.apexcharts-menu-item {
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-family: var(--chart-font);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--chart-axis-text);
+  white-space: nowrap;
+}
+
+.apexcharts-menu-item:hover {
+  background: var(--chart-card-border);
+}
+
+.oqtane-card.chart-card,
+.oqtane-card.data-card {
+  background-color: var(--chart-card-bg);
+  border: 1px solid var(--chart-card-border);
+  border-radius: var(--chart-card-radius);
+  /* Column, so the body can stretch. That is what pins the closing note to the foot of
+       the card and lets two cards in a row line up under uneven plots. */
+  display: flex;
+  flex-direction: column;
+}
+
+
+.chart-daterange {
+  margin: 0 0 12px;
+  font-family: var(--chart-font);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--chart-axis-text);
 }
