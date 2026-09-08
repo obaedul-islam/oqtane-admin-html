@@ -139,9 +139,9 @@
 	}
 }
 
-.payment-table{
+.payment-table {
 
-	&-header{
+	&-header {
 		display: flex;
 		font-size: 22px;
 		font-weight: 500;
@@ -154,9 +154,9 @@
 			margin-top: 20px;
 		}
 	}
-	
-	
-	&-body{
+
+
+	&-body {
 		padding: 24px 10px;
 		// border-bottom: 1px solid $gray-border-light;
 		// align-items: center;
@@ -166,8 +166,9 @@
 		}
 	}
 
-	&-title{
+	&-title {
 		display: none;
+
 		@media all and (max-width: 768px) {
 			display: block;
 		}
@@ -429,4 +430,318 @@
 	.order__track .tracker__single {
 		width: 24% !important;
 	}
+}
+
+
+/*# sourceMappingURL=styles.css.map */
+
+
+/* =====================================================================================
+   View Status popup - NEW (Figma "View Status", node 17487-36590)
+
+   Used only by Thrivewellrx.Module.SiteAdmin.Client -> Components/OrderStatusModal.razor
+   (the View Status button on Order management and on the dashboard order list).
+
+   Every colour below is an existing theme colour, reused as is:
+     #101a14 ink, #a8c22f lime (latest step), #e4e7da hairline, #d6dac8 card border,
+     #8b9483 muted grey, #f8faf4 tint. No new palette entry.
+   ===================================================================================== */
+
+/* Header row: the title keeps the left, the close square keeps the top right corner.
+   .modal__text was not used here - it centres its only child, so the title and the
+   close button ended up side by side in the middle. */
+.order-status-modal__header {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 16px;
+	position: sticky;
+	top: 0;
+	z-index: 3;
+	margin: -40px -30px 0;
+	padding: 30px 30px 18px;
+	background-color: #ffffff;
+	border-bottom: 1px solid #e4e7da;
+	border-radius: 18px 18px 0 0;
+}
+
+/* The gap the design leaves between the header and the first medication row. The .mt-30
+         class the markup carries is not declared anywhere in this theme, so the space is set
+         here instead. It sits below the bar, so it closes up as the list scrolls underneath. */
+.order-status-modal__header+div {
+	margin-top: 24px;
+}
+
+@media all and (max-width: 768px) {
+
+	/* .modal-body drops to 25px/15px padding at this width - the bar follows it. */
+	.order-status-modal__header {
+		margin: -25px -15px 0;
+		padding: 25px 15px 16px;
+	}
+}
+
+.order-status-modal__close {
+	flex: 0 0 auto;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 32px;
+	height: 32px;
+	padding: 0;
+	border: 0;
+	border-radius: 8px;
+	background-color: #f2f2ea;
+	line-height: 1;
+}
+
+.order-status-modal__close:hover {
+	background-color: #e4e7da;
+}
+
+.order-status-modal__close span {
+	font-size: 12px;
+}
+
+.order-status-item {
+	border: 1px solid #d6dac8;
+	border-radius: 12px;
+	background-color: #ffffff;
+	margin-bottom: 12px;
+}
+
+.order-status-item:last-child {
+	margin-bottom: 0;
+}
+
+/* The accordion header: name on the left, status pill and chevron on the right. */
+.order-status-item__summary {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	padding: 14px 16px;
+	cursor: pointer;
+	list-style: none;
+}
+
+/* Hides the browsers own disclosure triangle, so only our chevron shows. */
+.order-status-item__summary::-webkit-details-marker {
+	display: none;
+}
+
+.order-status-item__name {
+	flex: 1 1 auto;
+	min-width: 0;
+	font-size: 15px;
+	font-weight: 600;
+	color: #101a14;
+}
+
+.order-status-item__chevron {
+	display: inline-flex;
+	color: #8b9483;
+	font-size: 12px;
+	transition: transform 0.3s ease;
+}
+
+.order-status-item[open] .order-status-item__chevron {
+	transform: rotate(180deg);
+}
+
+.order-status-item__body {
+	border-top: 1px solid #e4e7da;
+	padding: 16px;
+}
+
+/* ---- vertical timeline ---- */
+
+.order-status-timeline {
+	position: relative;
+	padding-left: 6px;
+}
+
+/* One rail behind every dot. Stops short at both ends so it never sticks out. */
+.order-status-timeline__rail {
+	position: absolute;
+	top: 10px;
+	bottom: 10px;
+	left: 10px;
+	width: 1px;
+	background-color: #e4e7da;
+}
+
+.order-status-timeline__row {
+	position: relative;
+	display: flex;
+	gap: 14px;
+	padding-bottom: 18px;
+}
+
+.order-status-timeline__row:last-child {
+	padding-bottom: 0;
+}
+
+.order-status-timeline__dot {
+	position: relative;
+	z-index: 1;
+	flex: 0 0 auto;
+	width: 9px;
+	height: 9px;
+	margin-top: 5px;
+	border: 1px solid #8b9483;
+	border-radius: 50%;
+	background-color: #ffffff;
+}
+
+/* Newest entry, filled in the theme lime. */
+.order-status-timeline__dot--latest {
+	border-color: #a8c22f;
+	background-color: #a8c22f;
+}
+
+.order-status-timeline__body {
+	min-width: 0;
+}
+
+.order-status-timeline__title {
+	margin-bottom: 2px;
+	font-size: 14px;
+	font-weight: 600;
+	color: #101a14;
+}
+
+.order-status-timeline__time {
+	margin-bottom: 2px;
+	font-size: 12px;
+	font-weight: 400;
+	color: #8b9483;
+}
+
+.order-status-timeline__note {
+	margin-bottom: 0;
+	font-size: 12px;
+	font-weight: 400;
+	color: #3a463c;
+}
+
+
+/* -------------------------------------------------------------------------------------
+   View Status popup - package fill cycles - NEW (same Figma frame as above)
+
+   The card the popup shows for a package medication: the cycle summary row and the
+   medication table under it. Colours are the same existing ones listed at the top of
+   the block above - nothing new.
+   ------------------------------------------------------------------------------------- */
+
+.order-status-fill {
+	border: 1px solid #e4e7da;
+	border-radius: 10px;
+	background-color: #f8faf4;
+	margin-bottom: 12px;
+}
+
+.order-status-fill:last-child {
+	margin-bottom: 0;
+}
+
+/* Holds the header row and the summary row, so a closed card still shows both. */
+.order-status-fill__summary {
+	display: block;
+	padding: 12px 14px;
+	cursor: pointer;
+	list-style: none;
+}
+
+.order-status-fill__summary::-webkit-details-marker {
+	display: none;
+}
+
+/* Cycle header: "Order Type: Fill", the Active / Upcoming pill, then the chevron. */
+.order-status-fill__header {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.order-status-fill__label {
+	font-size: 14px;
+	font-weight: 600;
+	color: #101a14;
+}
+
+.order-status-fill__chevron {
+	margin-left: auto;
+	display: inline-flex;
+	color: #8b9483;
+	font-size: 11px;
+	transition: transform 0.3s ease;
+}
+
+.order-status-fill[open] .order-status-fill__chevron {
+	transform: rotate(180deg);
+}
+
+/* Six labelled cells in one row, wrapping on a narrow screen. */
+.order-status-fill__grid {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 16px 24px;
+	padding-top: 14px;
+}
+
+.order-status-fill__cell {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	align-items: flex-start;
+}
+
+.order-status-fill__cell-label {
+	font-size: 11px;
+	font-weight: 400;
+	color: #8b9483;
+}
+
+.order-status-fill__cell-value {
+	font-size: 13px;
+	font-weight: 500;
+	color: #101a14;
+}
+
+/* ---- medication table of one cycle ---- */
+
+.order-status-meds {
+	border-top: 1px solid #e4e7da;
+	background-color: #ffffff;
+	border-radius: 0 0 10px 10px;
+	overflow-x: auto;
+}
+
+.order-status-meds__head,
+.order-status-meds__row {
+	display: grid;
+	grid-template-columns: 2fr 1fr 3fr 1fr 1.2fr;
+	gap: 12px;
+	align-items: center;
+	min-width: 620px;
+	padding: 10px 14px;
+}
+
+.order-status-meds__head {
+	background-color: #f8faf4;
+	font-size: 11px;
+	font-weight: 400;
+	color: #8b9483;
+}
+
+.order-status-meds__row {
+	border-top: 1px solid #e4e7da;
+	font-size: 13px;
+	font-weight: 400;
+	color: #101a14;
+}
+
+/* The head is the first child, so this stripes every second data row. */
+.order-status-meds__row:nth-child(odd) {
+	background-color: #f8faf4;
 }
