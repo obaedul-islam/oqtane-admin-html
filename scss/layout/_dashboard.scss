@@ -22,3 +22,19 @@
     height: 40px;
   }
 }
+
+
+.svg-theme {
+  --theme-hue: 218;
+  --no-data-bg: hsl(var(--theme-hue), 65%, 79%);
+  --no-data-shadow: hsl(var(--theme-hue), 55%, 78%);
+  --no-data-line: hsl(var(--theme-hue), 75%, 44%);
+  --no-data-fill: hsl(var(--theme-hue), 60%, 67%);
+  --no-data-accent: hsl(var(--theme-hue), 73%, 29%);
+}
+
+.no-data {
+  &__bg {
+    background-color: white !important;
+  }
+}
